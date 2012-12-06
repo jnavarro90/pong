@@ -1,0 +1,7 @@
+img_
+snd_
+ttf_
+sfc_
+net_
+CClase
+..._t
