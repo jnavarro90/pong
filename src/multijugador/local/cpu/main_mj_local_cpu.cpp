@@ -13,10 +13,10 @@ bool multijugador_local_cargar_cpu()
   if(img_fondo == NULL || img_Pad == NULL || img_Pelota == NULL)
     return false;
 
-  ttf_fuente_texto = TTF_OpenFont("media/ttf/bit.ttf", 16);
-  ttf_fuente_marcador = TTF_OpenFont("media/ttf/bit.ttf", TEXTO_MARCADOR_ANCHO);
+  //ttf_fuente_texto = TTF_OpenFont("media/ttf/bit.ttf", 16);
+  ttf_bitM = TTF_OpenFont("media/ttf/bit.ttf", TEXTO_MARCADOR_ANCHO);
 
-  if(ttf_fuente_texto == NULL || ttf_fuente_marcador == NULL)
+  if(/*ttf_fuente_texto == NULL || */ttf_bitM == NULL)
     return false;
 
   return true;
@@ -28,19 +28,15 @@ void multijugador_local_cpu_limpiar()
   SDL_FreeSurface(img_Pad);
   SDL_FreeSurface(img_Pelota);
 
+  //TTF_CloseFont(ttf_fuente_texto);
+  TTF_CloseFont(ttf_bitM);
+
   return;
 }
 
 
 int main_mj_local_cpu()
 {
-  CTemporizador fps;
-
-  CPelota_CPU pelota;
-  CMarcador marcador;
-  CPad_MJ_local PJ1(false, SDLK_w, SDLK_s);
-  CPad_CPU PJ2;
-
   //bool cap = true;
   int frame = 0;
   int partido = 0;
@@ -51,8 +47,14 @@ int main_mj_local_cpu()
   if(multijugador_local_cargar_cpu() == false)
     return -1;
 
-  if(SDL_Flip(pantalla) == -1)
-    return -1;
+  CTemporizador fps;
+
+  SDL_Color color_blanco = { 255, 255, 255 };
+
+  CPelota_CPU pelota;
+  CMarcador marcador(ttf_bitM, &color_blanco);
+  CPad_MJ_local PJ1(false, SDLK_w, SDLK_s);
+  CPad_CPU PJ2;
 
   pelota.empezar();
 

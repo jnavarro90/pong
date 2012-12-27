@@ -8,10 +8,11 @@
 
 const int FRAMES_PER_SECOND = 60;
 
-int menu_mj_main()
+int menu_mj_online_main()
 {
   if(!menu_cargar())
     return -1;
+
   CTemporizador fps;
   int frame = 0;
 
@@ -19,42 +20,39 @@ int menu_mj_main()
   SDL_Color color_blanco = {255, 255, 255};
   SDL_Rect cajas = {100, 200, 150, 25};
 
-  CBoton* botones = new CBoton[4];
-  botones[0] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "VS Local");
+  CBoton* botones = new CBoton[3];
+  botones[0] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Crear Partida");
   cajas.y += 30;
-  botones[1] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "VS Online");
+  botones[1] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Unirse a Partida");
   cajas.y += 30;
-  botones[2] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "VS Máquina");
-  cajas.y += 30;
-  botones[3] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Volver");
+  botones[2] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Volver");
 
-
-  CMenu menu(botones, 4);
+  CMenu menu(botones, 3);
 
   int caso = 0;
 
   while(caso == 0)
   {
-	fps.empezar();
-	while(SDL_PollEvent(&event))
-	{
-	  caso = menu.eventuar();
+    fps.empezar();
+    while(SDL_PollEvent(&event))
+    {
+      caso = menu.eventuar();
       if(event.type == SDL_QUIT)
       {
         caso = -1;
       }
-	}
-	if(caso > 0 && caso != 4)
-	{
-	  caso += INSTANCIA_MJ;
-	}
-	if(caso == 4)
-	{
-	  caso = INSTANCIA_VOLVER;
-	}
+    }
+    if(caso > 0 && caso != 3)
+    {
+      caso += INSTANCIA_MJ_ONLINE_M;
+    }
+    if(caso == 3)
+    {
+      caso = INSTANCIA_VOLVER;
+    }
 
-	aplicar_superficie(0, 0, img_fondo_menu, pantalla);
-	menu.mostrar();
+    aplicar_superficie(0, 0, img_fondo_menu, pantalla);
+    menu.mostrar();
 
     if(SDL_Flip(pantalla) == -1)
       return 0;
@@ -70,3 +68,5 @@ int menu_mj_main()
   menu_limpiar();
   return caso;
 }
+
+

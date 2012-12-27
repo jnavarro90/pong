@@ -13,7 +13,7 @@ extern SDL_Surface* ttf_txt_menu;
 
 extern SDL_Color ttf_color_txt_menu;
 
-extern TTF_Font* ttf_consolas;
+//extern TTF_Font* ttf_consolas;
 
 extern Uint32 color;
 

@@ -10,11 +10,7 @@ float PELOTA_1J_INF_VELOCIDAD = 6.0;
 float PELOTA_1J_INF_VELOCIDAD_MAX = PELOTA_1J_INF_VELOCIDAD*FACTOR1;
 float PELOTA_1J_INF_VELOCIDAD_INC = PELOTA_1J_INF_VELOCIDAD*FACTOR2;
 
-const int MOMENTO_INC = 15;
 const int PELOTA_1J_INF_TAM_MIN = 6; //px
-
-const int OUT_RANGE = 9999;
-
 
 CPelota_1J_INF::CPelota_1J_INF()
 {
@@ -57,7 +53,7 @@ int CPelota_1J_INF::mover(CPad_1J_INF A)
 {
   if(stop)
   {
-    return 0;
+    return perder;
   }
 
   caja.x += xVel;
@@ -67,15 +63,17 @@ int CPelota_1J_INF::mover(CPad_1J_INF A)
     caja.x = 0;
     stop = true;
     Mix_PlayChannel( -1, snd_pung, 0 );
-    return 1;
+    return perder;
   }
+
+  int salida = juego;
 
   if(caja.x + caja.w > PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL) // Si choca contra la pared derecha
   {
     caja.x -= xVel;
     xVel = -xVel;
     Mix_PlayChannel( -1, snd_pong, 0 );
-    //return 0;
+    salida = rebote;
   }
 
   // Si la pelota está bloqueada, ignora a los rebotes con los pads. La partida sigue en curso hasta que toque un borde.
@@ -83,7 +81,7 @@ int CPelota_1J_INF::mover(CPad_1J_INF A)
   if(lock)
   {
     yVel = 0;
-    return 0;
+    return juego;
   }
 
   caja.y += yVel;
@@ -94,6 +92,7 @@ int CPelota_1J_INF::mover(CPad_1J_INF A)
     caja.y -= yVel;
     yVel = -yVel;
     Mix_PlayChannel( -1, snd_pong, 0 );
+    salida = rebote;
   }
 
   SDL_Rect Pad = A.getCaja();
@@ -106,6 +105,7 @@ int CPelota_1J_INF::mover(CPad_1J_INF A)
     if(pos == OUT_RANGE)
     {
       lock = true;
+      salida = juego;
     }
     else
     {
@@ -114,10 +114,11 @@ int CPelota_1J_INF::mover(CPad_1J_INF A)
       // Además, vamos a hacer que la pelota no "atraviese" el pad colocándola justo en frente de éste.
       caja.x = Pad.x + Pad.w;
       Mix_PlayChannel( -1, snd_pong, 0 );
+      salida = rebote_pad;
     }
   }
 
-  return 0;
+  return salida;
 }
 
 // Suponemos que siempre aumenta su velocidad (hasta el infinito!)
@@ -127,6 +128,8 @@ void CPelota_1J_INF::incVel(float n)
 
   PELOTA_1J_INF_VELOCIDAD_MAX = PELOTA_1J_INF_VELOCIDAD*FACTOR1;
   PELOTA_1J_INF_VELOCIDAD_INC = PELOTA_1J_INF_VELOCIDAD*FACTOR2;
+
+  // Si la pelota se mueve, recalcular la velocidad, ¿no?
 }
 
 void CPelota_1J_INF::decTam(float n)

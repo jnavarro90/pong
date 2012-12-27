@@ -3,19 +3,18 @@
 CMenu::CMenu(CBoton* b, int n)
 {
   botones = b;
-  size = n;
+  nBotones = n;
 }
 
 CMenu::~CMenu()
 {
-  delete botones;
   botones = NULL;
-  size = 0;
+  nBotones = 0;
 }
 
 void CMenu::mostrar()
 {
-  for(int i = 0; i < size; i++)
+  for(int i = 0; i < nBotones; i++)
   {
     botones[i].mostrar();
   }
@@ -25,7 +24,7 @@ int CMenu::eventuar()
 {
   if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT)
   {
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i < nBotones; i++)
     {
 	  if(botones[i].encima())
 	    return i+1;

@@ -34,15 +34,17 @@ void limpiar_1j_inf()
 int main_1j_inf()
 {
   CTemporizador fps;
+  int frame = 0;
 
   CPelota_1J_INF pelota;
   CPad_1J_INF PJ1;
 
-  int frame = 0;
-  //int partido = 0;
   bool salir = false;
-
   int salida = -1;
+
+  int estado = 0;
+  int dificultad = 8;
+  int dificultad_contador = 0;
 
   if(cargar_1j_inf() == false)
     return -1;
@@ -73,27 +75,45 @@ int main_1j_inf()
       }
       if(event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_p)
       {
-      	pelota.decTam(-2);
+      	PJ1.decTam(-2);
     	//pelota.incVel(1);
       	cout << "inc" << endl;
       }
       if(event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_m)
       {
-      	pelota.decTam(1);
+      	PJ1.decTam(1);
     	//pelota.incVel(-2);
       }
       if(event.type == SDL_QUIT)
         salir = true;
     }
+
     // Calcular posiciones
-    pelota.mover(PJ1);
+    estado = pelota.mover(PJ1);
     PJ1.mover();
+
+    if(estado != juego)
+      dificultad_contador++;
+
+    if(dificultad_contador == dificultad)
+    {
+      switch(estado)
+      {
+        case perder: cout << "Pierdes." << endl; break;
+        case juego: break;
+        case rebote_pad: pelota.incVel(0.25); PJ1.decTam(1); break;
+        case rebote: pelota.decTam(1); break;
+        default: break;
+      }
+      dificultad_contador = 0;
+
+      if(dificultad > 1)
+        dificultad--;
+    }
 
     // Mostrar por pantalla
     aplicar_superficie(0, 0, img_1j_inf_fondo, pantalla);
-
     PJ1.mostrar();
-
     pelota.mostrar();
 
     if(SDL_Flip(pantalla) == -1)

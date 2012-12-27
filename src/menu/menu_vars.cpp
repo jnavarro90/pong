@@ -10,6 +10,6 @@ SDL_Surface* ttf_txt_menu = NULL;
 
 SDL_Color ttf_color_txt_menu = {0, 0, 0};
 
-TTF_Font* ttf_consolas = NULL;
+//TTF_Font* ttf_consolas = NULL;
 
 Uint32 color;
