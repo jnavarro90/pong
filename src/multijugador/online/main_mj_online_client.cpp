@@ -73,10 +73,13 @@ int main_mj_online_client()
   CClientSocket* tcpclient = new CClientSocket();
   CIpAddress* remoteip = NULL;
 
-  network_data_client_t datos_client = {0};
-  network_data_server_t datos_server = {0, 0, 0, 0, 0, 0, 0, 0};
+  //network_data_client_t datos_client = {0};
+  //network_data_server_t datos_server = {0, 0, 0, 0, 0, 0, 0, 0};
 
-  char buffer[12] = {0, 0, 0, 0, 0, 0, 0, 0};
+  CNetwork_Data_Server datos_server;
+  CNetwork_Data_Client datos_cliente;
+
+  //char buffer[12] = {0, 0, 0, 0, 0, 0, 0, 0};
 
   bool conectado = false;
   CTemporizador timeOut;
@@ -210,7 +213,7 @@ int main_mj_online_client()
 
 	   while(SDL_PollEvent(&event))
 	   {
-	     PJ1.eventuar(datos_client.evento);
+	     PJ1.eventuar(datos_cliente.evento);
 	     if(event.type == SDL_QUIT)
 	     {
 		      salida = -1;
@@ -240,9 +243,11 @@ int main_mj_online_client()
       }
 	   }
 
-    if(conectado && datos_client.evento && !salir)
+    if(conectado && datos_cliente.evento && !salir)
     {
-      msgC.LoadByte(datos_client.evento);
+      //msgC.LoadByte(datos_client.evento);
+      datos_cliente.makeBuffer();
+      msgC.LoadByte(datos_cliente.getBuffer());
       if(!tcpclient->Send(msgC))
       {
         #ifdef DEBUG
@@ -259,8 +264,12 @@ int main_mj_online_client()
         {
           if(tcpclient->Receive(msgS))
           {
+            char buffer[NETWORK_SERVER_DATA_SIZE];
             msgS.UnLoad_NET_BYTES_Bytes(buffer);
-            charToSdata((unsigned char*)buffer, &datos_server);
+            //charToSdata((unsigned char*)buffer, &datos_server);
+            datos_server.readBuffer((uchar*)buffer);
+
+            //cout << "buffer_client: " << buffer << endl;
 
 #ifdef DEBUG
             cout << "buffer: ";

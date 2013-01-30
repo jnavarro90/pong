@@ -7,9 +7,10 @@ class CMarcador_Online: public CMarcador
 {
   public:
     CMarcador_Online(TTF_Font* f, SDL_Color* c);
+    ~CMarcador_Online();
 
-    void setM1(int n){marca1 = n;}
-    void setM2(int n){marca2 = n;}
+    void setM1(int n);
+    void setM2(int n);
 };
 
 

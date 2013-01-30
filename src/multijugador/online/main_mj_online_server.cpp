@@ -149,10 +149,13 @@ int main_mj_online_server()
   CMarcador marcador(ttf_bitM, &color_blanco);
   // Para el cliente, CPelota_MJ_Online_Zombi
 
-  network_data_client_t datos_cliente = {0};
-  network_data_server_t datos_server = {0, 0, 0, 0, 0, 0, 0, 0};
+  //network_data_client_t datos_cliente = {0};
+  //network_data_server_t datos_server = {0, 0, 0, 0, 0, 0, 0, 0};
 
-  char buffer[12] = {0, 0, 0, 0, 0, 0, 0, 0};
+  CNetwork_Data_Server datos_server;
+  CNetwork_Data_Client datos_cliente;
+
+  //char buffer[12] = {0, 0, 0, 0, 0, 0, 0, 0};
 
   frame = 0;
   pelota.empezar();
@@ -205,7 +208,8 @@ int main_mj_online_server()
           #ifdef DEBUG
     	     cout << "Mensaje recibido" << endl;
           #endif
-    	     datos_cliente.evento = msgC.UnLoadByte();
+    	     //datos_cliente.evento = msgC.UnLoadByte();
+    	     datos_cliente.readBuffer(msgC.UnLoadByte());
     	   }
     	   else
     	   {
@@ -240,7 +244,8 @@ int main_mj_online_server()
     datos_server.marcador1 = marcador.getM1();
     datos_server.marcador2 = marcador.getM2();
 
-    SdataToChar(&datos_server, (unsigned char*)buffer);
+    //SdataToChar(&datos_server, (unsigned char*)buffer);
+    datos_server.makeBuffer();
 
 #ifdef DEBUG
     cout << "Buffer_int: ";
@@ -257,7 +262,9 @@ int main_mj_online_server()
     // Para evitar colapsos, mando los datos cada 2 frames
     if(conectado && frame % 2 == 0)
     {
-      msgS.Load_NET_BYTES_Bytes(buffer);
+      //msgS.Load_NET_BYTES_Bytes(buffer);
+      msgS.Load_NET_BYTES_Bytes(datos_server.getBuffer());
+      cerr << "buffer_server: " << datos_server.getBuffer() << endl;
       if(!tcpclient->Send(msgS))
       {
         #ifdef DEBUG
