@@ -74,7 +74,7 @@ int CInstance_Menu_MJ::OnExecute()
 {
   if(!Init())
   {
-    cerr << ERROR_STR_INIT << endl;
+    cerr << ERROR_STR_INIT << " MENU_MJ" << endl;
     return ERROR_CODE_GENERAL;
   }
 
@@ -152,6 +152,7 @@ void CInstance_Menu_MJ::OnRender()
 
   if(SDL_Flip(pantalla) == -1)
   {
+    cerr << ERROR_STR_FLIP << endl;
     i_running = false;
   }
 }

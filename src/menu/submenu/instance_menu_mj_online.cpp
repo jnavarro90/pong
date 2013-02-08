@@ -73,14 +73,15 @@ int CInstance_Menu_MJ_Online::OnExecute()
 {
   if(!Init())
   {
-    cerr << ERROR_STR_INIT << endl;
+    cerr << ERROR_STR_INIT << " MENU_MJ_ONLINE" << endl;
     return ERROR_CODE_GENERAL;
   }
 
   int frame = 0;
   CTemporizador fps;
 
-  int salida = I_SALIDA;
+  //int caso = 0;
+  int salida = I_MENU_MJ;
 
   while(i_running)
   {
@@ -89,7 +90,7 @@ int CInstance_Menu_MJ_Online::OnExecute()
     {
       OnEvent(salida);
     }
-    OnLoop(salida);
+    //OnLoop(salida);
     OnRender();
 
     frame++;
@@ -102,16 +103,17 @@ int CInstance_Menu_MJ_Online::OnExecute()
   return salida;
 }
 
-void CInstance_Menu_MJ_Online::OnLoop(int& caso)
+void CInstance_Menu_MJ_Online::OnEvent(int& caso)
 {
+  caso = menu->eventuar();
   switch(caso)
   {
-    case 1: // cliente
-      caso = I_MJ_ONLINE_CLIENT;
+    case 1: // servidor
+      caso = I_MJ_ONLINE_SERVER;
       i_running = false;
     break;
-    case 2: // servidor
-      caso = I_MJ_ONLINE_SERVER;
+    case 2: // cliente
+      caso = I_MJ_ONLINE_CLIENT;
       i_running = false;
     break;
     case 3: // volver
@@ -120,11 +122,7 @@ void CInstance_Menu_MJ_Online::OnLoop(int& caso)
     break;
     default: break;
   }
-}
 
-void CInstance_Menu_MJ_Online::OnEvent(int& caso)
-{
-  caso = menu->eventuar();
   if(event.type == SDL_QUIT)
   {
     caso = I_SALIDA;
@@ -134,10 +132,10 @@ void CInstance_Menu_MJ_Online::OnEvent(int& caso)
   {
     if(event.key.keysym.sym == SDLK_ESCAPE)
     {
-      caso = I_MENU_MJ;
       i_running = false;
     }
   }
+
 }
 
 void CInstance_Menu_MJ_Online::OnRender()
@@ -147,6 +145,7 @@ void CInstance_Menu_MJ_Online::OnRender()
 
   if(SDL_Flip(pantalla) == -1)
   {
+    cerr << ERROR_STR_FLIP << endl;
     i_running = false;
   }
 }

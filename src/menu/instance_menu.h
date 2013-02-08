@@ -4,7 +4,6 @@
 #include "../instance.h"
 
 #include "menu.h"
-#include "menu_vars.h"
 #include "../temporizador.h"
 
 const int FRAMES_PER_SECOND = 60;

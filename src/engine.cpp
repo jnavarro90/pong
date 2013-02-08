@@ -5,7 +5,10 @@
 #include "menu/instance_menu.h"
 #include "menu/submenu/instance_menu.h"
 
+#include "1jugador/infinito/instancia.h"
+
 #include "multijugador/local/instancia.h"
+#include "multijugador/online/instancia.h"
 #include "multijugador/local/cpu/instancia.h"
 
 CEngine::CEngine()
@@ -38,7 +41,7 @@ bool CEngine::Init()
   if(!LoadFiles())
     return false;
 
-  BindInstances();
+  //BindInstances();
 
   pantalla = SDL_SetVideoMode(PANTALLA_ANCHO, PANTALLA_ALTO, PANTALLA_BPP, SDL_SWSURFACE); // Usar SDL_HWSURFACE?
   if(pantalla == NULL)
@@ -62,11 +65,6 @@ bool CEngine::LoadFiles()
   return true;
 }
 
-void CEngine::BindInstances()
-{
-
-}
-
 void CEngine::Close()
 {
   UnLoadFiles();
@@ -85,19 +83,29 @@ void CEngine::UnLoadFiles()
 int CEngine::OnExecute()
 {
   if(!Init())
+  {
+    cerr << ERROR_STR_INIT << " ENGINE" << endl;
     return -1;
+  }
 
   CInstance_Menu_Main i_menu;
   CInstance_Menu_MJ i_menu_mj;
   instance[I_MENU_MAIN] = &i_menu;
   instance[I_MENU_MJ] = &i_menu_mj;
 
+  CInstance_1J_INF i_1j_inf;
+  instance[I_1J_INF] = &i_1j_inf;
+
   CInstance_Menu_MJ_Online i_mj_online;
   CInstance_MJ_Local i_mj_local;
   CInstance_MJ_CPU i_mj_cpu;
+  CInstance_MJ_Online_Client i_mj_online_client;
+  CInstance_MJ_Online_Server i_mj_online_server;
   instance[I_MJ_ONLINE] = &i_mj_online;
   instance[I_MJ_LOCAL] = &i_mj_local;
   instance[I_MJ_CPU] = &i_mj_cpu;
+  instance[I_MJ_ONLINE_CLIENT] = &i_mj_online_client;
+  instance[I_MJ_ONLINE_SERVER] = &i_mj_online_server;
 
   int menu = I_MENU_MAIN;
 

@@ -3,7 +3,6 @@
 
 #include "pelota_mj_local.h"
 #include "pad_mj_local.h"
-#include "vars.h"
 
 #include "../marcador.h"
 

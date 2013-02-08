@@ -8,7 +8,7 @@ class CPelota_MJ_Online: public CPelota_MJ
 {
   public:
 	   void empezar();
-	   int mover(CPad PJ1, CPad PJ2, flags& f);
+	   int mover(CPad& PJ1, CPad& PJ2, flags& f);
 };
 
 class CPelota_MJ_Online_Client: public CPelota

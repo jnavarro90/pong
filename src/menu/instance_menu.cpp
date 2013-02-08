@@ -72,7 +72,7 @@ int CInstance_Menu_Main::OnExecute()
 {
   if(!Init())
   {
-    cerr << ERROR_STR_INIT << endl;
+    cerr << ERROR_STR_INIT << " MENU_MAIN" << endl;
     return ERROR_CODE_GENERAL;
   }
 
@@ -116,7 +116,8 @@ void CInstance_Menu_Main::OnLoop(int& caso)
   switch(caso)
   {
     case 1:
-      caso = I_MENU_1J;
+      //caso = I_MENU_1J;
+      caso = I_1J_INF;
       i_running = false;
     break;
     case 2:
@@ -142,6 +143,7 @@ void CInstance_Menu_Main::OnRender()
 
   if(SDL_Flip(pantalla) == -1)
   {
+    cerr << ERROR_STR_FLIP << endl;
     i_running = false;
   }
 }

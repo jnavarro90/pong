@@ -8,9 +8,13 @@
 
 class CPad_MJ: public CPad
 {
+  protected:
+    float yVel;
   public:
-	CPad_MJ();
-	~CPad_MJ();
+	   CPad_MJ();
+	   ~CPad_MJ();
+
+	   float getVel(){return yVel;};
 
 	//void mostrar();
 };

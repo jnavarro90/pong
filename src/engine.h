@@ -3,8 +3,6 @@
 #ifndef ENGINE_H_
 #define ENGINE_H_
 
-#define N_INSTANCES 10
-
 #include "instance.h"
 
 class CEngine
@@ -19,7 +17,7 @@ class CEngine
 
     virtual bool Init();
       virtual bool LoadFiles();
-      virtual void BindInstances();
+      //virtual void BindInstances();
     virtual void Close();
       virtual void UnLoadFiles();
 

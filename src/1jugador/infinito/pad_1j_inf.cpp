@@ -11,6 +11,17 @@ CPad_1J_INF::CPad_1J_INF()
   KUp = SDLK_w;
   KDown = SDLK_s;
 
+  yVel = 0;
+  if(SDL_GetKeyState(NULL)[KUp])
+  {
+    yVel -= PAD_1J_INF_VELOCIDAD;
+  }
+  if(SDL_GetKeyState(NULL)[KDown])
+  {
+    yVel += PAD_1J_INF_VELOCIDAD;
+  }
+
+
   caja.w = PAD_ANCHO;
   caja.h = PAD_ALTO;
 
@@ -18,7 +29,7 @@ CPad_1J_INF::CPad_1J_INF()
   caja.x = PANTALLA_MARGEN_LATERAL;
 
   //yVel = PAD_VELOCIDAD;
-  yVel = 0;
+  //yVel = 0;
   momento = 0;
 }
 
@@ -34,17 +45,6 @@ CPad_1J_INF::~CPad_1J_INF()
   momento = 0;
 }
 
-void CPad_1J_INF::mostrar()
-{
-  //aplicar_superficie(caja.x, caja.y, img_pad, pantalla);
-  SDL_Rect aux;
-  aux.x = (int)caja.x;
-  aux.y = (int)caja.y;
-  aux.h = (int)caja.h;
-  aux.w = (int)caja.w;
-  SDL_FillRect(pantalla, &aux, color_1j_inf);
-}
-
 void CPad_1J_INF::mover()
 {
   if(yVel < 0)
@@ -53,11 +53,11 @@ void CPad_1J_INF::mover()
   }
   else if(yVel > 0)
   {
-	momento = -1;
+	   momento = -1;
   }
   else if(yVel == 0)
   {
-	momento = 0;
+	   momento = 0;
   }
 
   caja.y += yVel;

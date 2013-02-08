@@ -19,6 +19,15 @@ CPad_MJ_Online::CPad_MJ_Online(enum lado lado, SDLKey U, SDLKey D)
   KDown = D;
 
   yVel = 0;
+  if(SDL_GetKeyState(NULL)[KUp])
+  {
+    yVel -= PAD_VELOCIDAD;
+  }
+  if(SDL_GetKeyState(NULL)[KDown])
+  {
+    yVel += PAD_VELOCIDAD;
+  }
+
   momento = 0;
 }
 

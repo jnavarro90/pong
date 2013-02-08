@@ -7,6 +7,7 @@ class CPelota_MJ: public CPelota
 {
   protected:
 	   bool stop, lock;
+	   float xVel, yVel;
   public:
 	   CPelota_MJ(): stop(false), lock(false) {};
 	   virtual ~CPelota_MJ() {};

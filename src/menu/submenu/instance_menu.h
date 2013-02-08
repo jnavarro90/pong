@@ -4,7 +4,6 @@
 #include "../../instance.h"
 
 #include "../menu.h"
-#include "../menu_vars.h"
 #include "../../temporizador.h"
 
 class CInstance_Menu_MJ: public CInstance
@@ -56,7 +55,7 @@ class CInstance_Menu_MJ_Online: public CInstance
 
     int OnExecute();
 
-    void OnLoop(int& caso);
+    //void OnLoop(int& caso);
     void OnEvent(int& caso);
     void OnRender();
 };

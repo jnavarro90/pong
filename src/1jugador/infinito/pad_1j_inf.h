@@ -13,19 +13,19 @@ const int PAD_1J_INF_MIN_VEL = PAD_VELOCIDAD/4;
 class CPad_1J_INF: public CPad
 {
   private:
-	SDLKey KUp, KDown;
+	   SDLKey KUp, KDown;
+	   float yVel;
   public:
-	CPad_1J_INF();
-	~CPad_1J_INF();
+   	CPad_1J_INF();
+   	~CPad_1J_INF();
 
-	void decTam(int n); // Decrementar tamaño
-	void incVel(float n); // Decrementar velocidad
+	   void decTam(int n); // Decrementar tamaño
+	   void incVel(float n); // Decrementar velocidad
 
-	void mostrar();
-	void mover();
-	void eventuar();
+   	void mover();
+   	void eventuar();
 
-	int getTam(){return caja.h;}
+   	int getTam(){return caja.h;}
 };
 
 

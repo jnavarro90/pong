@@ -38,7 +38,7 @@ bool CInstance_MJ_Local::Init()
   PJ1 = new CPad_MJ_Local(false, SDLK_w, SDLK_s);
   PJ2 = new CPad_MJ_Local(true, SDLK_UP, SDLK_DOWN);
 
-  pelota = new CPelota_MJ_Local();
+  pelota = new CPelota_MJ_Local;
   marcador = new CMarcador(ttf_bitM, &color_blanco_t);
 
   return true;
@@ -90,7 +90,7 @@ int CInstance_MJ_Local::OnExecute()
 {
   if(!Init())
   {
-    cerr << ERROR_STR_INIT << endl;
+    cerr << ERROR_STR_INIT << "MJ_LOCAL" << endl;
     return I_SALIDA;
   }
 
@@ -149,9 +149,7 @@ void CInstance_MJ_Local::OnEvent()
 
 void CInstance_MJ_Local::OnLoop()
 {
-  int partido = 0;
-
-  partido = pelota->mover(*PJ1, *PJ2);
+  int partido = pelota->mover(*PJ1, *PJ2);
 
   PJ1->mover();
   PJ2->mover();
@@ -177,7 +175,7 @@ void CInstance_MJ_Local::OnRender()
 
   if(SDL_Flip(pantalla) == -1)
   {
-    cerr << "Error volcando contenido por pantalla" << endl;
+    cerr << ERROR_STR_FLIP << endl;
     i_running = false;
   }
 }

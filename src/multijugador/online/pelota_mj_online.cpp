@@ -21,7 +21,7 @@ void CPelota_MJ_Online::empezar()
 // Vamos a usar un sistema de flags para enviar los "sonidos" al cliente.
 enum fSnd_pelota {fsnd_pong = 0x1, fsnd_pung = 0x2};
 
-int CPelota_MJ_Online::mover(CPad A, CPad B, flags& f)
+int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
 {
   if(stop)
     return 0;

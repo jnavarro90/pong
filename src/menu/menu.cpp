@@ -26,8 +26,8 @@ int CMenu::eventuar()
   {
     for(int i = 0; i < nBotones; i++)
     {
-	  if(botones[i].encima())
-	    return i+1;
+	     if(botones[i].encima())
+	       return i+1;
     }
   }
   return 0;

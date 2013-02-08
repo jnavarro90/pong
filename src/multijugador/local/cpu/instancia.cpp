@@ -92,7 +92,7 @@ int CInstance_MJ_CPU::OnExecute()
 {
   if(!Init())
   {
-    cerr << ERROR_STR_INIT << endl;
+    cerr << ERROR_STR_INIT << "MJ_CPU" << endl;
     return I_SALIDA;
   }
 
@@ -173,7 +173,7 @@ void CInstance_MJ_CPU::OnRender()
 
   if(SDL_Flip(pantalla) == -1)
   {
-    cerr << "Error volcando contenido por pantalla" << endl;
+    cerr << ERROR_STR_FLIP << endl;
     i_running = false;
   }
 }

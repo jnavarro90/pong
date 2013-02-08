@@ -37,19 +37,8 @@ CPelota_1J_INF::~CPelota_1J_INF()
   yVel = 0;
 }
 
-void CPelota_1J_INF::mostrar()
-{
-  SDL_Rect aux;
-  aux.x = (int)caja.x;
-  aux.y = (int)caja.y;
-  aux.h = (int)caja.h;
-  aux.w = (int)caja.w;
-
-  SDL_FillRect(pantalla, &aux, color_1j_inf);
-}
-
 /* Editar:  ¿? */
-int CPelota_1J_INF::mover(CPad_1J_INF A)
+int CPelota_1J_INF::mover(CPad_1J_INF& A)
 {
   if(stop)
   {
