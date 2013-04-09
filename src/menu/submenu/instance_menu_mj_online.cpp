@@ -1,4 +1,4 @@
-#include "instance_menu.h"
+#include "instance_menu_mj.h"
 
 const int FRAMES_PER_SECOND = 60;
 
@@ -33,11 +33,12 @@ bool CInstance_Menu_MJ_Online::Init()
 
 bool CInstance_Menu_MJ_Online::LoadFiles()
 {
-  fondo = cargar_img("media/img/fondo_menu.png", false);
+  //fondo = cargar_img("media/img/fondo_menu.png", false);
+  fondo = SDL_CreateRGBSurface(SDL_SWSURFACE, opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP, 0x00, 0x00, 0x00, 0x00);
 
   if(fondo == NULL)
   {
-    cerr << ERROR_STR_FILE << "media/img/fondo_menu.png" << endl;
+    cout << ERROR_STR_SURFACE << "MENU_1J -> fondo" << endl;
     return false;
   }
 
@@ -45,7 +46,7 @@ bool CInstance_Menu_MJ_Online::LoadFiles()
 
   if(ttf_consolas == NULL)
   {
-    cerr << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
+    cout << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
     return false;
   }
 
@@ -73,7 +74,7 @@ int CInstance_Menu_MJ_Online::OnExecute()
 {
   if(!Init())
   {
-    cerr << ERROR_STR_INIT << " MENU_MJ_ONLINE" << endl;
+    cout << ERROR_STR_INIT << " MENU_MJ_ONLINE" << endl;
     return ERROR_CODE_GENERAL;
   }
 

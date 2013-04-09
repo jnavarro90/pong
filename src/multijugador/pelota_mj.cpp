@@ -15,9 +15,9 @@ int CPelota_MJ::mover(CPad A, CPad B)
     Mix_PlayChannel( -1, snd_pung, 0 );
     return 2;
   }
-  else if(caja.x + caja.w >= PANTALLA_ANCHO) // Gana el pad izq (j1)
+  else if(caja.x + caja.w >= opciones->PANTALLA_ANCHO) // Gana el pad izq (j1)
   {
-    caja.x = PANTALLA_ANCHO - PELOTA_ANCHO;
+    caja.x = opciones->PANTALLA_ANCHO - opciones->PELOTA_ANCHO;
     stop = true;
     Mix_PlayChannel( -1, snd_pung, 0 );
     return 1;
@@ -32,7 +32,7 @@ int CPelota_MJ::mover(CPad A, CPad B)
 
   caja.y += yVel;
   // Si choca contra los bordes superiores, rebota sin más.
-  if(caja.y < PANTALLA_MARGEN_SUPERIOR || caja.y + caja.h > PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR)
+  if(caja.y < PANTALLA_MARGEN_SUPERIOR || caja.y + caja.h > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR)
   {
     caja.y -= yVel;
     yVel = -yVel;

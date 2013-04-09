@@ -10,7 +10,7 @@ void CTurbo::Init()
 {
   img = NULL;
   img = cargar_img("media/img/turbo.png", true);
-  cout << "img:" << img << endl;
+
   cheatCount = 0;
   frame = 0;
 
@@ -129,7 +129,7 @@ void CTurbo::OnRender()
   }
 }
 
-void CTurbo::OnExecute()
+void CTurbo::OnLoop()
 {
   if(running)
   {

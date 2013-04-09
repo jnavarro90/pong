@@ -1,10 +1,10 @@
 #include "pad_mj.h"
 #include "../globals.h"
 
-CPad_MJ::CPad_MJ()
+CPad_MJ::CPad_MJ():CPad()
 {
-  caja.x = caja.y = caja.w = caja.h = 0;
-  yVel = momento = 0;
+  //caja.x = caja.y = caja.w = caja.h = 0;
+  yVel = 0;
 }
 
 CPad_MJ::~CPad_MJ()

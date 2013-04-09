@@ -1,7 +1,7 @@
 #include "pad_mj_online.h"
 #include "../../globals.h"
 
-CPad_MJ_Online::CPad_MJ_Online(enum lado lado, SDLKey U, SDLKey D)
+CPad_MJ_Online::CPad_MJ_Online(enum lado lado, SDLKey U, SDLKey D): CPad_MJ()
 {
   if(lado == izq)
   {
@@ -9,26 +9,23 @@ CPad_MJ_Online::CPad_MJ_Online(enum lado lado, SDLKey U, SDLKey D)
   }
   else if(lado == der)
   {
-    caja.x = PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL;
+    caja.x = opciones->PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL - opciones->PAD_ANCHO;
   }
-  caja.y = PANTALLA_ALTO/2 - PAD_ALTO/2;
-  caja.h = PAD_ALTO;
-  caja.w = PAD_ANCHO;
+  caja.y = opciones->PANTALLA_ALTO/2 - opciones->PAD_ALTO/2;
+  caja.h = opciones->PAD_ALTO;
+  caja.w = opciones->PAD_ANCHO;
 
   KUp = U;
   KDown = D;
 
-  yVel = 0;
   if(SDL_GetKeyState(NULL)[KUp])
   {
-    yVel -= PAD_VELOCIDAD;
+    yVel -= opciones->PAD_VEL;
   }
   if(SDL_GetKeyState(NULL)[KDown])
   {
-    yVel += PAD_VELOCIDAD;
+    yVel += opciones->PAD_VEL;
   }
-
-  momento = 0;
 }
 
 CPad_MJ_Online::~CPad_MJ_Online()
@@ -44,22 +41,22 @@ void CPad_MJ_Online::eventuar()
   {
 	if(event.key.keysym.sym == KUp)
 	{
-	  yVel -= PAD_VELOCIDAD;
+	  yVel -= opciones->PAD_VEL;
 	}
 	else if(event.key.keysym.sym == KDown)
 	{
-	  yVel += PAD_VELOCIDAD;
+	  yVel += opciones->PAD_VEL;
 	}
   }
   if(event.type == SDL_KEYUP)
   {
 	if(event.key.keysym.sym == KUp)
 	{
-	  yVel += PAD_VELOCIDAD;
+	  yVel += opciones->PAD_VEL;
 	}
 	else if(event.key.keysym.sym == KDown)
 	{
-	  yVel -= PAD_VELOCIDAD;
+	  yVel -= opciones->PAD_VEL;
 	}
   }
 }
@@ -67,13 +64,13 @@ void CPad_MJ_Online::eventuar()
 void CPad_MJ_Online::mover()
 {
   caja.y += yVel;
-  if(caja.y < PANTALLA_MARGEN_SUPERIOR || caja.y + caja.h > PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR)
+  if(caja.y < PANTALLA_MARGEN_SUPERIOR || caja.y + caja.h > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR)
   {
 	caja.y -= yVel;
   }
 }
 
-CPad_MJ_Online_Zombi::CPad_MJ_Online_Zombi(enum lado lado)
+CPad_MJ_Online_Zombi::CPad_MJ_Online_Zombi(enum lado lado):CPad_MJ()
 {
   if(lado == izq)
   {
@@ -81,11 +78,11 @@ CPad_MJ_Online_Zombi::CPad_MJ_Online_Zombi(enum lado lado)
   }
   else if(lado == der)
   {
-    caja.x = PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL;
+    caja.x = opciones->PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL  - opciones->PAD_ANCHO;
   }
-  caja.y = PANTALLA_ALTO/2 - PAD_ALTO/2;
-  caja.h = PAD_ALTO;
-  caja.w = PAD_ANCHO;
+  caja.y = opciones->PANTALLA_ALTO/2 - opciones->PAD_ALTO/2;
+  caja.h = opciones->PAD_ALTO;
+  caja.w = opciones->PAD_ANCHO;
 }
 
 CPad_MJ_Online_Zombi::~CPad_MJ_Online_Zombi()
@@ -97,12 +94,12 @@ void CPad_MJ_Online_Zombi::mover(int8 mov)
 {
   if(mov == arriba)
   {
-    yVel = -PAD_VELOCIDAD;
+    yVel = -opciones->PAD_VEL;
     momento = arriba;
   }
   else if(mov == abajo)
   {
-	yVel = PAD_VELOCIDAD;
+	yVel = opciones->PAD_VEL;
 	momento = abajo;
   }
   else if(mov == quieto)
@@ -112,10 +109,8 @@ void CPad_MJ_Online_Zombi::mover(int8 mov)
   }
 
   caja.y += yVel;
-  cout << "Caja.y: " << caja.y << " yVel: " << yVel << endl;
-  if(caja.y < PANTALLA_MARGEN_INFERIOR || caja.y + caja.h > PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR)
+  if(caja.y < PANTALLA_MARGEN_INFERIOR || caja.y + caja.h > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR)
   {
-	cout << "limite" << endl;
     caja.y -= yVel;
   }
 }
@@ -129,11 +124,11 @@ CPad_MJ_Online_Client::CPad_MJ_Online_Client(enum lado lado, SDLKey U, SDLKey D)
   }
   else if(lado == der)
   {
-    caja.x = PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL;
+    caja.x = opciones->PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL  - opciones->PAD_ANCHO;
   }
-  caja.y = PANTALLA_ALTO/2 - PAD_ALTO/2;
-  caja.h = PAD_ALTO;
-  caja.w = PAD_ANCHO;
+  caja.y = opciones->PANTALLA_ALTO/2 - opciones->PAD_ALTO/2;
+  caja.h = opciones->PAD_ALTO;
+  caja.w = opciones->PAD_ANCHO;
   KUp = U;
   KDown = D;
 
@@ -181,11 +176,11 @@ CPad_MJ_Online_Client_Zombi::CPad_MJ_Online_Client_Zombi(enum lado lado)
   }
   else if(lado == der)
   {
-    caja.x = PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL;
+    caja.x = opciones->PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL  - opciones->PAD_ANCHO;
   }
-  caja.y = PANTALLA_ALTO/2 - PAD_ALTO/2;
-  caja.h = PAD_ALTO;
-  caja.w = PAD_ANCHO;
+  caja.y = opciones->PANTALLA_ALTO/2 - opciones->PAD_ALTO/2;
+  caja.h = opciones->PAD_ALTO;
+  caja.w = opciones->PAD_ANCHO;
 }
 
 

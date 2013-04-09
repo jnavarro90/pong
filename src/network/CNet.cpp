@@ -98,41 +98,41 @@ char CNetMessage1::UnLoadByte()
    return c[0];
 }
 
-int CNetMessage_NET_BYTES_::NumToLoad()
+int CNetMessage12::NumToLoad()
 {
   if (state == EMPTY)
-   return _NET_BYTES_;
+   return 12;
   else
    return 0;
 }
 
-int CNetMessage_NET_BYTES_::NumToUnLoad()
+int CNetMessage12::NumToUnLoad()
 {
   if (state == FULL)
-   return _NET_BYTES_;
+   return 12;
   else
    return 0;
 }
 
-void CNetMessage_NET_BYTES_::Load_NET_BYTES_Bytes(char entrada[_NET_BYTES_])
+void CNetMessage12::Load12Bytes(char entrada[12])
 {
   charbuf c;
 
-  for(int i = 0; i < _NET_BYTES_; i++)
+  for(int i = 0; i < 12; i++)
     c[i] = entrada[i];
 
-  LoadBytes(c, _NET_BYTES_);
+  LoadBytes(c, 12);
   finish();
 }
 
-void CNetMessage_NET_BYTES_::UnLoad_NET_BYTES_Bytes(char salida[_NET_BYTES_])
+void CNetMessage12::UnLoad12Bytes(char salida[12])
 {
   charbuf c;
 
   UnLoadBytes(c);
 
-  for(int i = 0; i < _NET_BYTES_; i++)
-	salida[i] = c[i];
+  for(int i = 0; i < 12; i++)
+	   salida[i] = c[i];
 }
 
 

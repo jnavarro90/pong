@@ -63,7 +63,7 @@ class CNetMessage1 : public CNetMessage
     char UnLoadByte();
 };
 
-class CNetMessage_NET_BYTES_ : public CNetMessage
+class CNetMessage12 : public CNetMessage
 {
   private:
 //Virtual function that indicates how many bytes may have to be loaded onto the object. Overrides the parent class function member to work with only a byte
@@ -72,9 +72,9 @@ class CNetMessage_NET_BYTES_ : public CNetMessage
     virtual int NumToUnLoad();
   public:
 //Function simpler than LoadBytes(), inherited from the parent class, as it only works with one byte
-    void Load_NET_BYTES_Bytes(char c[_NET_BYTES_]);
+    void Load12Bytes(char c[12]);
 //Function simpler than UnLoadBytes(), inherited from the parent class, as it only works with one byte
-    void UnLoad_NET_BYTES_Bytes(char c[_NET_BYTES_]);
+    void UnLoad12Bytes(char c[12]);
 };
 
 //***********************

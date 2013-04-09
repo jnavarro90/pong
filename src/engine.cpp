@@ -2,14 +2,24 @@
 
 #include "engine.h"
 
+#include "opciones/opciones.h"
+#include "opciones/tablero.h"
+
 #include "menu/instance_menu.h"
-#include "menu/submenu/instance_menu.h"
+#include "menu/submenu/instance_menu_mj.h"
+#include "menu/submenu/instance_menu_1j.h"
 
 #include "1jugador/infinito/instancia.h"
 
 #include "multijugador/local/instancia.h"
 #include "multijugador/online/instancia.h"
 #include "multijugador/local/cpu/instancia.h"
+
+/**
+ * @brief Constructor por defecto
+ *
+ * Asigna valores por defecto o punteros nulos.
+ */
 
 CEngine::CEngine()
 {
@@ -18,12 +28,27 @@ CEngine::CEngine()
   running = true;
 }
 
+/**
+ * @brief Destructor por defecto
+ *
+ * Asigna valores por defecto o punteros nulos.
+ */
+
 CEngine::~CEngine()
 {
   pantalla = NULL;
 
   running = false;
 }
+
+/**
+ * @brief Inicializador del motor
+ *
+ * Inicia las librerias de SDL, tanto TTF como Mixer. Carga archivos de uso global y genera
+ * las superficies de pantalla (SDL_Surface* pantalla), además de sus atributos.
+ *
+ * @return Devuelve false si ha fallado algo. Devuelve true si todo ha sido cargado correctamente.
+ */
 
 bool CEngine::Init()
 {
@@ -41,10 +66,12 @@ bool CEngine::Init()
   if(!LoadFiles())
     return false;
 
-  //BindInstances();
+  opciones = new COpciones("auto.conf");
+  tablero_mp = new CTablero;
+  tablero_mp->construir(opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP);
 
-  pantalla = SDL_SetVideoMode(PANTALLA_ANCHO, PANTALLA_ALTO, PANTALLA_BPP, SDL_SWSURFACE); // Usar SDL_HWSURFACE?
-  if(pantalla == NULL)
+
+  if(!initPantalla())
     return false;
 
   SDL_WM_SetCaption( "Pong C++", "media/img/p++.ico" );
@@ -52,6 +79,12 @@ bool CEngine::Init()
 
   return true;
 }
+
+/**
+ * @brief Carga archivos de uso global (principalmente, sonidos).
+ *
+ * @return Devuelve false si ha fallado algo. Devuelve true si todo ha sido cargado correctamente.
+ */
 
 bool CEngine::LoadFiles()
 {
@@ -65,13 +98,30 @@ bool CEngine::LoadFiles()
   return true;
 }
 
+/**
+ * @brief Cierra/Descarga el motor del juego
+ *
+ * Desactiva y descarga todo lo realizado en la función Init()
+ */
+
 void CEngine::Close()
 {
   UnLoadFiles();
+  //closePantalla(); // no necesario
+
   TTF_Quit();
   Mix_CloseAudio();
   SDL_Quit();
+
+  delete opciones;
+  delete tablero_mp;
 }
+
+/**
+ * @brief Descarga los ficheros.
+ *
+ * Descarga todo lo cargado desde la función LoadFiles()
+ */
 
 void CEngine::UnLoadFiles()
 {
@@ -79,6 +129,44 @@ void CEngine::UnLoadFiles()
   Mix_FreeChunk(snd_ping);
   Mix_FreeChunk(snd_pung);
 }
+
+/**
+ * @brief Función de ejecucion principal
+ *
+ * La función se encarga de ejecutar el bucle principal del juego, desde el cual se cargarán las
+ * diversas estancias. La estructura es bastante sencilla:
+ *
+ * @code
+ * int CEngine::OnExecute()
+ * {
+ *   if(!Init())
+ *     return -1;
+ *
+ *   int menu = I_MENU_MAIN;
+ *
+ *   while(running)
+ *   {
+ *     if(menu == I_SALIDA)
+ *     {
+ *       running = false;
+ *     }
+ *     else
+ *     {
+ *       menu = instance[menu]->OnExecute();
+ *     }
+ *   }
+ *   Close();
+ *   return menu;
+ * }
+ * @endcode
+ *
+ * Ademas, las declaraciones del contenido del array de punteros instance se hacen en esta propia función.
+ *
+ * @return En caso de fallo, devuelve I_SALIDA (-1). En caso de finalizar correctamente, devuelve la
+ * última estancia llamada por las funciones de CInstance::OnExecute() correspondiente.
+ *
+ *
+ */
 
 int CEngine::OnExecute()
 {
@@ -89,9 +177,12 @@ int CEngine::OnExecute()
   }
 
   CInstance_Menu_Main i_menu;
+  CInstance_Menu_1J i_menu_1j;
   CInstance_Menu_MJ i_menu_mj;
   instance[I_MENU_MAIN] = &i_menu;
+  instance[I_MENU_1J] = &i_menu_1j;
   instance[I_MENU_MJ] = &i_menu_mj;
+
 
   CInstance_1J_INF i_1j_inf;
   instance[I_1J_INF] = &i_1j_inf;
@@ -117,6 +208,9 @@ int CEngine::OnExecute()
     }
     else
     {
+      #ifdef DEBUG
+      system("CLS");
+      #endif
       menu = instance[menu]->OnExecute();
     }
   }

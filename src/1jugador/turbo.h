@@ -26,7 +26,7 @@ class CTurbo
 
     void OnEvent();
     void OnRender();
-    void OnExecute();
+    void OnLoop();
 };
 
 #endif /* TURBO_H_ */

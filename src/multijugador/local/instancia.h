@@ -7,6 +7,8 @@
 #include "../marcador.h"
 
 #include "../../instance.h"
+#include "../../temporizador.h"
+#include "../../warning.h"
 
 class CInstance_MJ_Local: public CInstance
 {
@@ -15,6 +17,21 @@ class CInstance_MJ_Local: public CInstance
     CPad_MJ_Local* PJ2;
     CPelota_MJ_Local* pelota;
     CMarcador* marcador;
+
+    CWarning* wrGameset;
+    CWarning* wrGamepoint;
+
+    CTemporizador gameset_timer;
+    CTemporizador gamepoint_timer;
+
+    SDL_Color color_blanco;
+    SDL_Color color_rojo;
+
+    bool gameset;
+    bool gamepoint;
+    int gamepoint_offset_x;
+
+    gamepoint_pj_t gamepoint_pj;
   public:
     CInstance_MJ_Local();
     ~CInstance_MJ_Local();
@@ -27,10 +44,14 @@ class CInstance_MJ_Local: public CInstance
 
     int OnExecute();
 
-    void OnEvent();
+    void OnEvent(int& salida);
     void OnLoop();
 
     void OnRender();
+
+#ifdef DEBUG
+    void OnDebug();
+#endif
 };
 
 #endif /* INSTANCIA_MJ_LOCAL_H_ */

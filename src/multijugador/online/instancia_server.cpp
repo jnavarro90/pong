@@ -1,6 +1,7 @@
 #include "instancia.h"
 
 #include "../../temporizador.h"
+#include "../../opciones/tablero.h"
 
 using namespace std;
 
@@ -69,21 +70,21 @@ bool CInstance_MJ_Online_Server::Init()
   color_rojo.r = 0xFF;
   color_rojo.g = color_rojo.b = 0x00;
 
-  PJ1 = new CPad_MJ_Online (izq, SDLK_w, SDLK_s);
+  /*PJ1 = new CPad_MJ_Online (izq, SDLK_w, SDLK_s);
   PJ2 = new CPad_MJ_Online_Zombi(der);
   pelota = new CPelota_MJ_Online;
-  marcador = new CMarcador(ttf_bitM, &color_blanco);
+  marcador = new CMarcador(ttf_bitM, &color_blanco);*/
 
   tcpclient = new CClientSocket;
-  tcplistener = new CHostSocket(PORT_MJ);
+  tcplistener = new CHostSocket(NET_MJ_PORT);
 
   datos_server = new CNetwork_Data_Server;
   datos_cliente = new CNetwork_Data_Client;
 
   msgC = new CNetMessage1;
-  msgS = new CNetMessage_NET_BYTES_;
+  msgS = new CNetMessage12;
 
-  SDL_Rect caja = {PANTALLA_ANCHO/2 - 150/2, 300, 150, 25};
+  SDL_Rect caja = {opciones->PANTALLA_ANCHO/2 - 150/2, 300, 150, 25};
 
   botones = NULL;
   botones = new CBoton(ttf_consolas, &color_negro, &color_blanco, &caja, "Volver");
@@ -101,12 +102,12 @@ bool CInstance_MJ_Online_Server::Init()
 
 bool CInstance_MJ_Online_Server::LoadFiles()
 {
-  fondo = cargar_img("media/img/fondo_mj.png", false);
+  /*fondo = cargar_img("media/img/fondo_mj.png", false);
   if(fondo == NULL)
   {
     cerr << ERROR_STR_FILE << "media/img/fondo_mj_local.png" << endl;
     return false;
-  }
+  }*/
 
   fondo_menu = cargar_img("media/img/fondo_menu_server.png");
   if(fondo_menu == NULL)
@@ -132,6 +133,14 @@ bool CInstance_MJ_Online_Server::LoadFiles()
   return true;
 }
 
+void CInstance_MJ_Online_Server::LoadObjects()
+{
+  PJ1 = new CPad_MJ_Online (izq, SDLK_w, SDLK_s);
+  PJ2 = new CPad_MJ_Online_Zombi(der);
+  pelota = new CPelota_MJ_Online;
+  marcador = new CMarcador(ttf_bitM, &color_blanco);
+}
+
 void CInstance_MJ_Online_Server::Close()
 {
   UnLoadFiles();
@@ -139,10 +148,10 @@ void CInstance_MJ_Online_Server::Close()
   i_running = false;
   fondo = fondo_menu = NULL;
 
-  delete PJ1;
+  /*delete PJ1;
   delete PJ2;
   delete pelota;
-  delete marcador;
+  delete marcador;*/
 
   delete tcpclient;
   delete tcplistener;
@@ -168,11 +177,19 @@ void CInstance_MJ_Online_Server::Close()
 
 void CInstance_MJ_Online_Server::UnLoadFiles()
 {
-  SDL_FreeSurface(fondo);
+  //SDL_FreeSurface(fondo);
   SDL_FreeSurface(fondo_menu);
 
   TTF_CloseFont(ttf_consolas);
   TTF_CloseFont(ttf_bitM);
+}
+
+void CInstance_MJ_Online_Server::UnLoadObjects()
+{
+  delete PJ1;
+  delete PJ2;
+  delete pelota;
+  delete marcador;
 }
 
 void CInstance_MJ_Online_Server::OnEventMenu(int& s)
@@ -198,10 +215,18 @@ void CInstance_MJ_Online_Server::OnLoopMenu(flags& F)
     // Conectando con cliente...
     if(tcplistener->Accept(*tcpclient))
     {
-      conectado = true;
-      F = 0x00;
-      F |= eConectado;
-      // Se debería enviar y recibir un mensaje para verificar que todo anda correctamente
+      // Enviar la configuración al cliente
+      CNetMessage12 msg_settings;
+      CNetwork_Data_Settings network_data_settings;
+      network_data_settings.makeBuffer();
+      msg_settings.Load12Bytes(network_data_settings.getBuffer());
+
+      if(tcpclient->Send(msg_settings))
+      {
+        conectado = true;
+        F = 0x00;
+        F |= eConectado;
+      }
     }
   }
 }
@@ -255,7 +280,10 @@ int CInstance_MJ_Online_Server::OnExecute()
     if((fps.getTicks() < (1000 / FRAMES_PER_SECOND)))
       SDL_Delay((1000 / FRAMES_PER_SECOND ) - fps.getTicks());
   }
+  LoadObjects();
+
   pelota->empezar();
+
   while(i_running)
   {
     fps.empezar();
@@ -271,6 +299,8 @@ int CInstance_MJ_Online_Server::OnExecute()
     if((fps.getTicks() < (1000 / FRAMES_PER_SECOND)))
       SDL_Delay((1000 / FRAMES_PER_SECOND ) - fps.getTicks());
   }
+
+  UnLoadObjects();
   Close();
 
   return salida;
@@ -355,22 +385,10 @@ void CInstance_MJ_Online_Server::OnLoop(int& frame)
   //SdataToChar(&datos_server, (unsigned char*)buffer);
   datos_server->makeBuffer();
 
-#ifdef DEBUG
-  cout << "Buffer_int: ";
-  for(int i = 0; i < 4; i++)
-    cout << buffer_int[i] << " ";
-  cout << endl;
-
-  cout << "Buffer: ";
-  for(int i = 0; i < 8; i++)
-    cout << buffer[i] << " ";
-  cout << endl;
-#endif
-
   // Para evitar colapsos, mando los datos cada 2 frames
   if(conectado && frame % 2 == 0)
   {
-    msgS->Load_NET_BYTES_Bytes(datos_server->getBuffer());
+    msgS->Load12Bytes(datos_server->getBuffer());
     if(!tcpclient->Send(*msgS))
     {
       #ifdef DEBUG
@@ -384,7 +402,8 @@ void CInstance_MJ_Online_Server::OnLoop(int& frame)
 
 void CInstance_MJ_Online_Server::OnRender()
 {
-  aplicar_superficie(0, 0, fondo, pantalla);
+  //aplicar_superficie(0, 0, fondo, pantalla);
+  tablero_mp->mostrar();
 
   PJ1->mostrar();
   PJ2->mostrar();

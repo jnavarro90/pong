@@ -15,7 +15,8 @@ CMarcador_Online::CMarcador_Online(TTF_Font* f, SDL_Color* c)
   ss.str("");
   ss.clear();
 
-  MARCADOR_OFFSET_J1 = PANTALLA_ANCHO/2 - MARCADOR_OFFSET - srf_marca1->w + MARCADOR_OFFSET_FIX;
+  MARCADOR_OFFSET_J1 = opciones->PANTALLA_ANCHO/2 - MARCADOR_OFFSET - srf_marca1->w + MARCADOR_OFFSET_FIX;
+  MARCADOR_OFFSET_J2 = opciones->PANTALLA_ANCHO/2 + MARCADOR_OFFSET;
 
   ss << marca2;
   srf_marca2 = TTF_RenderText_Solid(ttf_fuente, ss.str().c_str(), *color);
@@ -47,7 +48,7 @@ void CMarcador_Online::setM1(int n)
   SDL_FreeSurface(srf_marca1); // liberamos para evitar lagunas de memoria
   srf_marca1 = TTF_RenderText_Solid(ttf_fuente, ss.str().c_str(), *color);
 
-  MARCADOR_OFFSET_J1 = PANTALLA_ANCHO/2 - MARCADOR_OFFSET - srf_marca1->w + MARCADOR_OFFSET_FIX;
+  MARCADOR_OFFSET_J1 = opciones->PANTALLA_ANCHO/2 - MARCADOR_OFFSET - srf_marca1->w + MARCADOR_OFFSET_FIX;
 }
 
 void CMarcador_Online::setM2(int n)

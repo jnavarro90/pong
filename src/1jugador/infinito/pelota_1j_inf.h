@@ -16,7 +16,7 @@ class CPelota_1J_INF: public CPelota
 	  CPelota_1J_INF();
 	  ~CPelota_1J_INF();
 
-	  int mover(CPad_1J_INF& PJ1);
+	  int mover(CPad_1J_INF& PJ1, bool setVel = false);
 
 	  void incVel(float n);
 	  void decTam(float n);

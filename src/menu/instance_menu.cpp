@@ -32,11 +32,12 @@ bool CInstance_Menu_Main::Init()
 
 bool CInstance_Menu_Main::LoadFiles()
 {
-  fondo = cargar_img("media/img/fondo_menu.png", false);
+  fondo = SDL_CreateRGBSurface(SDL_SWSURFACE, opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP, 0x00, 0x00, 0x00, 0x00);
+  /*fondo = cargar_img("media/img/fondo_menu.png", false);*/
 
   if(fondo == NULL)
   {
-    cerr << ERROR_STR_FILE << "media/img/fondo_menu.png" << endl;
+    cout << ERROR_STR_SURFACE << "MENU_MAIN -> fondo" << endl;
     return false;
   }
 
@@ -109,6 +110,14 @@ void CInstance_Menu_Main::OnEvent(int& caso)
     caso = I_SALIDA;
     i_running = false;
   }
+  else if(event.type == SDL_KEYDOWN)
+  {
+    if(event.key.keysym.sym == SDLK_ESCAPE)
+    {
+      caso = I_SALIDA;
+      i_running = false;
+    }
+  }
 }
 
 void CInstance_Menu_Main::OnLoop(int& caso)
@@ -116,8 +125,7 @@ void CInstance_Menu_Main::OnLoop(int& caso)
   switch(caso)
   {
     case 1:
-      //caso = I_MENU_1J;
-      caso = I_1J_INF;
+      caso = I_MENU_1J;
       i_running = false;
     break;
     case 2:
@@ -143,7 +151,7 @@ void CInstance_Menu_Main::OnRender()
 
   if(SDL_Flip(pantalla) == -1)
   {
-    cerr << ERROR_STR_FLIP << endl;
+    cout << ERROR_STR_FLIP << endl;
     i_running = false;
   }
 }

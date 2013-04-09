@@ -22,6 +22,8 @@ class CInstance_1J_INF: public CInstance
     CTurbo* turbo;
 
     bool fin;
+    bool incVel;
+    bool decTam;
   public:
     CInstance_1J_INF();
 

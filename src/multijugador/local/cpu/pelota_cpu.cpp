@@ -1,48 +1,40 @@
-#include "pelota_mj_online.h"
+/*
+ * pelota_cpu.cpp
+ *
+ *  Created on: 25/03/2013
+ *      Author: Dani
+ */
 
-CPelota_MJ_Online::CPelota_MJ_Online(): CPelota_MJ()
-{
-  VELOCIDAD_MAX = opciones->PELOTA_VEL;
-  //VELOCIDAD = 5;
-  VELOCIDAD_INC_MAX = (opciones->PELOTA_VEL*7)/8;
-  MOMENTO_INC = (opciones->PAD_ALTO)/8;
-}
-
-void CPelota_MJ_Online::empezar()
+#include "pelota_cpu.h"
+/*
+void CPelota_CPU::empezar(enum gamepoint_pj_t gamepoint_pj)
 {
   lock = false;
   stop = false;
-  caja.x = opciones->PANTALLA_ANCHO/2 - opciones->PELOTA_ANCHO/2;
-  caja.y = rand() % (opciones->PANTALLA_ALTO - (PANTALLA_MARGEN_INFERIOR + PANTALLA_MARGEN_SUPERIOR + opciones->PELOTA_ANCHO)) + PANTALLA_MARGEN_SUPERIOR;
+  caja.x = PANTALLA_ANCHO/2 - PELOTA_ANCHO/2;
+  caja.y = rand() % (PANTALLA_ALTO - (PANTALLA_MARGEN_INFERIOR + PANTALLA_MARGEN_SUPERIOR + PELOTA_ANCHO)) + PANTALLA_MARGEN_SUPERIOR;
 
-  if(rand() % 2 == 0)
+  if(gamepoint_pj == gamepoint_pj1)
   {
-    xVel = opciones->PELOTA_VEL/2;
+    xVel = VELOCIDAD/2;
   }
   else
   {
-    xVel = -opciones->PELOTA_VEL/2;
+    xVel = -VELOCIDAD/2;
   }
-
   yVel = 0;
-}
-
-// Vamos a usar un sistema de flags para enviar los "sonidos" al cliente.
-enum fSnd_pelota {fsnd_pong = 0x1, fsnd_pung = 0x2};
-
-int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
+}*/
+int CPelota_MJ_CPU::mover(CPad& A, CPad& B)
 {
   if(stop)
     return 0;
 
-  // pq no se mueve?
   caja.x += xVel;
   if(caja.x <= 0) // Fin de la partida al salirse de rango. Pierda el pad izq. Gana el pad der (j2)
   {
     caja.x = 0;
     stop = true;
     Mix_PlayChannel( -1, snd_pung, 0 );
-    f = f | fsnd_pung; // Activar flags de sonido "pung" para el cliente
     return 2;
   }
   else if(caja.x + caja.w >= opciones->PANTALLA_ANCHO) // Gana el pad izq (j1)
@@ -50,7 +42,7 @@ int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
     caja.x = opciones->PANTALLA_ANCHO - opciones->PELOTA_ANCHO;
     stop = true;
     Mix_PlayChannel( -1, snd_pung, 0 );
-    f = f | fsnd_pung;
+    B.setCalcular();
     return 1;
   }
   // Si la pelota está bloqueada, ignora a los rebotes con los pads. La partida sigue en curso hasta que toque un borde.
@@ -63,12 +55,11 @@ int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
 
   caja.y += yVel;
   // Si choca contra los bordes superiores, rebota sin más.
-  if(caja.y < PANTALLA_MARGEN_SUPERIOR || caja.y + caja.h > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR)
+  if(caja.y < PANTALLA_MARGEN_SUPERIOR + TABLERO_LINEAS_GROSOR || caja.y + caja.h > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR - TABLERO_LINEAS_GROSOR)
   {
     caja.y -= yVel;
     yVel = -yVel;
     Mix_PlayChannel( -1, snd_pong, 0 );
-    f = f | fsnd_pong;
   }
 
   SDL_Rect Pad1 = A.getCaja();
@@ -82,6 +73,7 @@ int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
     if(pos == OUT_RANGE)
     {
       lock = true;
+      color = SDL_MapRGB(pantalla->format, 0xFF, 0x00, 0x00); // teñir la pelota de rojo (visible)
     }
     else
     {
@@ -91,7 +83,6 @@ int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
       caja.x = Pad1.x + Pad1.w;
 
       Mix_PlayChannel( -1, snd_pong, 0 );
-      f = f | fsnd_pong;
     }
   }
   // Si choca contra el pad derecho
@@ -100,6 +91,7 @@ int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
     pos = getPos(this->getCaja(), Pad2);
     if(pos == OUT_RANGE)
     {
+      color = SDL_MapRGB(pantalla->format, 0xFF, 0x00, 0x00); // teñir la pelota de rojo (visible)
       lock = true;
     }
     else
@@ -110,15 +102,10 @@ int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
       caja.x = Pad2.x - caja.w;
 
       Mix_PlayChannel( -1, snd_pong, 0 );
-      f = f | fsnd_pong;
     }
   }
   return 0;
 }
 
-void CPelota_MJ_Online_Client::setXY(int x, int y)
-{
-  caja.x = x;
-  caja.y = y;
-}
+
 

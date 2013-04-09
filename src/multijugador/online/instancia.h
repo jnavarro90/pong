@@ -45,7 +45,7 @@ class CInstance_MJ_Online_Client: public CInstance
     CNetwork_Data_Client* datos_cliente;
 
     CNetMessage1* msgC;
-    CNetMessage_NET_BYTES_* msgS;
+    CNetMessage12* msgS;
 
     // Menu
     CBoton* botones;
@@ -72,9 +72,11 @@ class CInstance_MJ_Online_Client: public CInstance
 
     bool Init();
       bool LoadFiles();
+    void LoadObjects();
 
     void Close();
       void UnLoadFiles();
+    void UnLoadObjects();
 
     int OnExecute();
 
@@ -107,7 +109,7 @@ class CInstance_MJ_Online_Server: public CInstance
     CNetwork_Data_Client* datos_cliente;
 
     CNetMessage1* msgC;
-    CNetMessage_NET_BYTES_* msgS;
+    CNetMessage12* msgS;
 
     // Menu
     CBoton* botones;
@@ -131,9 +133,11 @@ class CInstance_MJ_Online_Server: public CInstance
 
     bool Init();
       bool LoadFiles();
+      void LoadObjects();
 
     void Close();
       void UnLoadFiles();
+      void UnLoadObjects();
 
     int OnExecute();
 

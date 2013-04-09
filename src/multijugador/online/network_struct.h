@@ -5,8 +5,7 @@
 
 // Por simplicidad, vamos a suponer que un jugador hace de servidor, y otro, de cliente
 
-//enum datos { pelota_x = 0, pelota_y, pad1_y, pad2_y }; // falta snd_pong, snd_pung (flags); marcador1, marcador2 (4 bytes)
-enum fSnd_pelota {fsnd_pong = 0x1, fsnd_pung = 0x2};
+enum fSnd_pelota {fsnd_empty = 0x00, fsnd_pong = 0x1, fsnd_pung = 0x2};
 /*
 // Total: 12 bytes
 struct network_data_server_t // lo que envia el servidor = lo que recibe el cliente
@@ -39,7 +38,8 @@ class CNetwork_Data_Client
   private:
     char buffer;
   public:
-    int8 evento;
+    int8 evento; // 1 byte
+    // Total: 1 byte
   public:
     CNetwork_Data_Client();
 
@@ -52,16 +52,40 @@ class CNetwork_Data_Client
 class CNetwork_Data_Server
 {
   private:
-    char buffer[NETWORK_SERVER_DATA_SIZE];
+    char buffer[NET_MJ_SERVERDATA_SIZE];
   public:
-    int16 pelota_x, pelota_y;
-    int16 pad1_y;
-    int16 pad2_y;
-    flags fs;
-    uint8 marcador1, marcador2;
-    uint8 sinUso;
+    int16 pelota_x, pelota_y; // 2 + 2 bytes
+    int16 pad1_y; // 2 bytes
+    int16 pad2_y; // 2 bytes
+    flags fs; // 1 byte
+    uint8 marcador1, marcador2; // 1 + 1 bytes
+    uint8 sinUso; // 1 byte
+    // Total: 12 bytes
   public:
     CNetwork_Data_Server();
+
+    void makeBuffer();
+    char* getBuffer();
+
+    void readBuffer(uchar* b);
+};
+
+class CNetwork_Data_Settings
+{
+  private:
+    char buffer[NET_MJ_SETTINGS_SIZE];
+  public:
+    int16 PANTALLA_ANCHO; // 2 bytes
+    int16 PANTALLA_ALTO; // 2 bytes
+
+    int16 PAD_ALTO; // 2 bytes
+    int16 PAD_ANCHO; // 2 bytes
+
+    int16 PELOTA_ALTO; // 2 bytes
+    int16 unused; // 2 bytes
+    // Total: 12 bytes
+  public:
+    CNetwork_Data_Settings();
 
     void makeBuffer();
     char* getBuffer();

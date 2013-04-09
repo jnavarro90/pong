@@ -25,6 +25,8 @@ bool CInstance_1J_INF::Init()
 
   i_running = true;
   fin = false;
+  incVel = false;
+  decTam = false;
 
   PJ1 = new CPad_1J_INF();
   pelota = new CPelota_1J_INF();
@@ -40,17 +42,16 @@ bool CInstance_1J_INF::Init()
 bool CInstance_1J_INF::LoadFiles()
 {
   fondo = cargar_img("media/img/fondo_1j_inf.png", false);
-
   if(fondo == NULL)
   {
-    cerr << ERROR_STR_FILE << "media/img/fondo_1j_inf.png" << endl;
+    cout << ERROR_STR_FILE << "media/img/fondo_1j_inf.png" << endl;
     return false;
   }
 
   ttf_consolas = TTF_OpenFont("media/ttf/consolab.ttf", 16);
   if(ttf_consolas == NULL)
   {
-    cerr << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
+    cout << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
     return false;
   }
 
@@ -85,7 +86,7 @@ int CInstance_1J_INF::OnExecute()
 {
   if(!Init())
   {
-    cerr << ERROR_STR_INIT << " 1J_INF" << endl;
+    cout << ERROR_STR_INIT << " 1J_INF" << endl;
     return I_SALIDA;
   }
 
@@ -106,7 +107,6 @@ int CInstance_1J_INF::OnExecute()
     }
     OnLoop(salida);
     OnRender();
-
 
     frame++;
     if((fps.getTicks() < (1000 / FRAMES_PER_SECOND)))
@@ -142,10 +142,15 @@ void CInstance_1J_INF::OnEvent(int& salida)
 
 void CInstance_1J_INF::OnLoop(int& salida)
 {
-  turbo->OnExecute();
-  PJ1->mover();
   // enum returns {perder = 0, juego, rebote, rebote_pad};
+  static int dificultad = 0;
+
+  // ¿¿¿???
+  // Aumentar la velocidad del pad y la pelota cada X rebotes contra la pared
+  // Disminuir el tamaño del pad y de la pelota cada Y rebotes contra el pad <- ¿?
+
   int partido = pelota->mover(*PJ1);
+  incVel = decTam = false;
   if(partido == perder)
   {
     if(!fin)
@@ -163,11 +168,19 @@ void CInstance_1J_INF::OnLoop(int& salida)
     }
     return;
   }
+  else if(partido == rebote)
+  {
+    dificultad++;
+    if(dificultad > 5)
+    {
+      dificultad = 0;
+      pelota->decTam(5);
+      PJ1->decTam(10);
+    }
+  }
 
-
-
-
-  // continuar codigo
+  turbo->OnLoop();
+  PJ1->mover();
 }
 
 void CInstance_1J_INF::OnRender()

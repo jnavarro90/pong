@@ -10,6 +10,8 @@ float PELOTA_1J_INF_VELOCIDAD = 6.0;
 float PELOTA_1J_INF_VELOCIDAD_MAX = PELOTA_1J_INF_VELOCIDAD*FACTOR1;
 float PELOTA_1J_INF_VELOCIDAD_INC = PELOTA_1J_INF_VELOCIDAD*FACTOR2;
 
+float PELOTA_1J_INF_VELOCIDAD_SUP = 0.15;
+
 const int PELOTA_1J_INF_TAM_MIN = 6; //px
 
 CPelota_1J_INF::CPelota_1J_INF()
@@ -38,7 +40,7 @@ CPelota_1J_INF::~CPelota_1J_INF()
 }
 
 /* Editar:  ¿? */
-int CPelota_1J_INF::mover(CPad_1J_INF& A)
+int CPelota_1J_INF::mover(CPad_1J_INF& A, bool setVel)
 {
   if(stop)
   {
@@ -99,6 +101,11 @@ int CPelota_1J_INF::mover(CPad_1J_INF& A)
     else
     {
       // Calcular velocidades
+      if(setVel)
+      {
+        incVel(PELOTA_1J_INF_VELOCIDAD_SUP);
+      }
+
       setVel_1j_inf(yVel, xVel, pos, A.getMomento());
       // Además, vamos a hacer que la pelota no "atraviese" el pad colocándola justo en frente de éste.
       caja.x = Pad.x + Pad.w;

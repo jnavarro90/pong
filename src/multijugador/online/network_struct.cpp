@@ -1,66 +1,7 @@
 #include "network_struct.h"
+#include "../../opciones/opciones.h"
 
-// Datos servidor
-/*void SdataToChar(network_data_server_t* t, uchar c[_NET_BYTES_])
-{
-  // Pelota
-  c[0] = (t->pelota_x >> 8);
-  c[1] = t->pelota_x;
-  c[2] = (t->pelota_y >> 8);
-  c[3] = t->pelota_y;
-
-  // Pad1
-  c[4] = (t->pad1_y >> 8);
-  c[5] = t->pad1_y;
-
-  // Pad2
-  c[6] = (t->pad2_y >> 8);
-  c[7] = t->pad2_y;
-
-  // Flags
-  c[8] = t->fs;
-
-  // Marcador
-  c[9] = (t->marcador1);
-  c[10] = (t->marcador2);
-
-  // Sin usar
-  c[11] = (t->sinUso);
-
-}
-
-void charToSdata(uchar c[_NET_BYTES_], network_data_server_t* t)
-{
-  // Pelota
-  t->pelota_x = (c[0] << 8) | c[1];
-  t->pelota_y = (c[2] << 8) | c[3];
-
-  // Pad1
-  t->pad1_y = (c[4] << 8) | c[5];
-
-  // Pad2
-  t->pad2_y = (c[6] << 8) | c[7];
-
-  // Flags
-  t->fs = c[8];
-
-  // Marcador;
-  t->marcador1 = c[9];
-  t->marcador2 = c[10];
-
-  // Sin usar
-  t->sinUso = c[11];
-}
-
-// Datos cliente
-void CdataToChar(network_data_client_t* t, uchar& c)
-{
-  c = t->evento;
-}
-void charToCdata(uchar& c, network_data_client_t* t)
-{
-  t->evento = c;
-}*/
+// Cliente
 
 CNetwork_Data_Client::CNetwork_Data_Client()
 {
@@ -81,6 +22,8 @@ void CNetwork_Data_Client::readBuffer(char b)
 {
   evento = b;
 }
+
+// Servidor
 
 CNetwork_Data_Server::CNetwork_Data_Server()
 {
@@ -146,23 +89,64 @@ void CNetwork_Data_Server::readBuffer(uchar* c)
   sinUso = c[11];
 }
 
+// SETTINGS
 
-
-/*void int16ToChar(uint16 in[4], unsigned char c[8])
+CNetwork_Data_Settings::CNetwork_Data_Settings()
 {
-  for(int i = 0; i < 8; i+=2)
-  {
-	   c[i] = (in[i/2] >> 8);
-	   c[i+1] = (in[i/2]);
-  }
+  PANTALLA_ANCHO = opciones->PANTALLA_ANCHO;
+  PANTALLA_ALTO = opciones->PANTALLA_ALTO;
+  PAD_ANCHO = opciones->PAD_ANCHO;
+  PAD_ALTO = opciones->PAD_ALTO;
+  PELOTA_ALTO = opciones->PELOTA_ALTO;
+  unused = 0;
 }
 
-void charToInt16(unsigned char c[8], uint16 in[4])
+void CNetwork_Data_Settings::makeBuffer()
 {
-  for(int j = 0; j < 4; j++)
-  {
-	   in[j] = (c[j*2] << 8) | c[j*2 + 1];
-  }
-}*/
+  // PANTALLA
+  buffer[0] = (PANTALLA_ANCHO >> 8);
+  buffer[1] = PANTALLA_ANCHO;
+  buffer[2] = (PANTALLA_ALTO >> 8);
+  buffer[3] = PANTALLA_ALTO;
 
+  // PAD_ALTO
+  buffer[4] = PAD_ALTO >> 8;
+  buffer[5] = PAD_ALTO;
+
+  // PAD_ANCHO
+  buffer[6] = PAD_ANCHO >> 8;
+  buffer[7] = PAD_ANCHO;
+
+  // PELOTA_ALTO
+  buffer[8] = PELOTA_ALTO >> 8;
+  buffer[9] = PELOTA_ALTO;
+
+  // unused
+  buffer[10] = unused >> 8;
+  buffer[11] = unused;
+}
+
+char* CNetwork_Data_Settings::getBuffer()
+{
+  return buffer;
+}
+
+void CNetwork_Data_Settings::readBuffer(uchar* c)
+{
+  // PANTALLA
+  PANTALLA_ANCHO = (c[0] << 8) | c[1];
+  PANTALLA_ALTO = (c[2] << 8) | c[3];
+
+  // PAD_ALTO
+  PAD_ALTO = (c[4] << 8) | c[5];
+
+  // PAD_ANCHO
+  PAD_ANCHO = (c[6] << 8) | c[7];
+
+  // PELOTA_ALTO
+  PELOTA_ALTO = (c[8] << 8) | c[9];
+
+  // unused
+  unused = (buffer[10] << 8) | c[11];
+}
 

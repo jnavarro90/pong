@@ -1,8 +1,8 @@
-#include "instance_menu_mj.h"
+#include "instance_menu_1j.h"
 
 const int FRAMES_PER_SECOND = 60;
 
-CInstance_Menu_MJ::CInstance_Menu_MJ()
+CInstance_Menu_1J::CInstance_Menu_1J()
 {
   color_negro.r = color_negro.g = color_negro.b = 0x00;
   color_blanco.r = color_blanco.g = color_blanco.b = 0xFF;
@@ -11,20 +11,19 @@ CInstance_Menu_MJ::CInstance_Menu_MJ()
   menu = NULL;
 }
 
-bool CInstance_Menu_MJ::Init()
+bool CInstance_Menu_1J::Init()
 {
   if(!LoadFiles())
     return false;
 
   SDL_Rect cajas = {100, 200, 150, 25};
 
-  botones = new CBoton[4];
-  botones[0] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "VS Local");cajas.y += 30;
-  botones[1] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "VS Online");cajas.y += 30;
-  botones[2] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "VS Máquina");cajas.y += 30;
-  botones[3] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Volver");
+  botones = new CBoton[3];
+  botones[0] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Modo Historia");cajas.y += 30;
+  botones[1] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Modo Infinito");cajas.y += 30;
+  botones[2] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Volver");
 
-  menu = new CMenu(botones, 4);
+  menu = new CMenu(botones, 3);
 
   i_running = true;
   botones = new CBoton[4];
@@ -32,7 +31,7 @@ bool CInstance_Menu_MJ::Init()
   return true;
 }
 
-bool CInstance_Menu_MJ::LoadFiles()
+bool CInstance_Menu_1J::LoadFiles()
 {
   //fondo = cargar_img("media/img/fondo_menu.png", false);
   fondo = SDL_CreateRGBSurface(SDL_SWSURFACE, opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP, 0x00, 0x00, 0x00, 0x00);
@@ -47,23 +46,22 @@ bool CInstance_Menu_MJ::LoadFiles()
 
   if(ttf_consolas == NULL)
   {
-    cerr << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
+    cout << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
     return false;
   }
 
   return true;
 }
 
-void CInstance_Menu_MJ::Close()
+void CInstance_Menu_1J::Close()
 {
   UnLoadFiles();
 
   delete []botones;
   delete menu;
-
 }
 
-void CInstance_Menu_MJ::UnLoadFiles()
+void CInstance_Menu_1J::UnLoadFiles()
 {
   SDL_FreeSurface(fondo);
   TTF_CloseFont(ttf_consolas);
@@ -71,11 +69,11 @@ void CInstance_Menu_MJ::UnLoadFiles()
 
 
 
-int CInstance_Menu_MJ::OnExecute()
+int CInstance_Menu_1J::OnExecute()
 {
   if(!Init())
   {
-    cerr << ERROR_STR_INIT << " MENU_MJ" << endl;
+    cout << ERROR_STR_INIT << " MENU_1J" << endl;
     return ERROR_CODE_GENERAL;
   }
 
@@ -104,7 +102,7 @@ int CInstance_Menu_MJ::OnExecute()
   return salida;
 }
 
-void CInstance_Menu_MJ::OnEvent(int& caso)
+void CInstance_Menu_1J::OnEvent(int& caso)
 {
   caso = menu->eventuar();
   if(event.type == SDL_QUIT)
@@ -122,23 +120,19 @@ void CInstance_Menu_MJ::OnEvent(int& caso)
   }
 }
 
-void CInstance_Menu_MJ::OnLoop(int& caso)
+void CInstance_Menu_1J::OnLoop(int& caso)
 {
   switch(caso)
   {
     case 1:
-      caso = I_MJ_LOCAL;
+      caso = I_1J_HISTORIA;
       i_running = false;
     break;
     case 2:
-      caso = I_MJ_ONLINE;
+      caso = I_1J_INF;
       i_running = false;
     break;
     case 3:
-      caso = I_MJ_CPU;
-      i_running = false;
-    break;
-    case 4:
       caso = I_MENU_MAIN;
       i_running = false;
     break;
@@ -146,7 +140,7 @@ void CInstance_Menu_MJ::OnLoop(int& caso)
   }
 }
 
-void CInstance_Menu_MJ::OnRender()
+void CInstance_Menu_1J::OnRender()
 {
   aplicar_superficie(0, 0, fondo, pantalla);
   menu->mostrar();
