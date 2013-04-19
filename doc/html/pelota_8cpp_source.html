@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Pong++: Fichero Fuente src/pelota.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pong++
+   &#160;<span id="projectnumber">Beta1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pelota.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pelota_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pelota_8h.html" title="Declaración de la clase abstracta CPelota y funciones relacionadas.">pelota.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="pelota_8h.html#a95ccd08f8550582ca5cefa54a6c755ea">    9</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pelota_8cpp.html#a95ccd08f8550582ca5cefa54a6c755ea">PELOTA_VEL_MIN</a> = 3;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="pelota_8h.html#a50f6cc80a838af91f3c006d0e2f822b9">   11</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="pelota_8cpp.html#a50f6cc80a838af91f3c006d0e2f822b9">VELOCIDAD_MAX</a> = 4.5;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="pelota_8h.html#ab62d3bf4dc864df1e30e2e208746ba0a">   12</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="pelota_8cpp.html#ab62d3bf4dc864df1e30e2e208746ba0a">VELOCIDAD</a> = 5;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="pelota_8h.html#a9e35cd891a17cca8a519a705f1e6b85f">   13</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="pelota_8cpp.html#a9e35cd891a17cca8a519a705f1e6b85f">VELOCIDAD_INC_MAX</a> = 2.0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="pelota_8h.html#a76dfd3460e1d2849a3b2635289fe31d4">   15</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pelota_8cpp.html#a76dfd3460e1d2849a3b2635289fe31d4">MOMENTO_INC</a> = 10;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="class_c_pelota.html#a0b774dea23a729038f497869e428f46f">   26</a></span>&#160;<a class="code" href="class_c_pelota.html#a0b774dea23a729038f497869e428f46f" title="Constructor por defecto.">CPelota::CPelota</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  color = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#ab9ae4c33d77aab0bfb15d9fa09be0586">PELOTA_COLOR</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  caja.x = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  caja.y = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  caja.w = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a47102f4c6f1058195e8990733be5284f">PELOTA_ANCHO</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  caja.h = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a47102f4c6f1058195e8990733be5284f">PELOTA_ANCHO</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="class_c_pelota.html#a901a20f9b8965515dddb5f1e01a79cf0">   41</a></span>&#160;<a class="code" href="class_c_pelota.html#a901a20f9b8965515dddb5f1e01a79cf0">CPelota::~CPelota</a>()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  caja.x = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  caja.y = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  caja.w = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  caja.h = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="class_c_pelota.html#afcb8ccdb1234e17d714a7819084c2500">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_pelota.html#afcb8ccdb1234e17d714a7819084c2500" title="Mostrar por pantalla.">CPelota::mostrar</a>()</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  SDL_Rect aux = getCaja();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  SDL_FillRect(<a class="code" href="globals_8cpp.html#a58be6bd8478a38995e6c3ce5161a9fbe">pantalla</a>, &amp;aux, color);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="pelota_8h.html#a3144fe227389323e8fb7edc8f4ee6d6a">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pelota_8cpp.html#a3144fe227389323e8fb7edc8f4ee6d6a" title="Calcular velocidad posterior al rebote.">setVel</a>(<span class="keywordtype">float</span>&amp; yVel, <span class="keywordtype">float</span>&amp; xVel, <span class="keywordtype">int</span> pos_actual, <span class="keywordtype">int</span> momento) <span class="comment">//</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; <span class="keywordflow">if</span>(momento &gt; 0) <span class="comment">// momento == 1 (abajo)</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;   pos_actual += <a class="code" href="pelota_8cpp.html#a76dfd3460e1d2849a3b2635289fe31d4">MOMENTO_INC</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; <span class="keywordflow">if</span>(momento &lt; 0) <span class="comment">// momento == -1 (abajo)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;   pos_actual -= <a class="code" href="pelota_8cpp.html#a76dfd3460e1d2849a3b2635289fe31d4">MOMENTO_INC</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; <span class="keywordtype">float</span> equivVel = -pos_actual*<a class="code" href="pelota_8cpp.html#a9e35cd891a17cca8a519a705f1e6b85f">VELOCIDAD_INC_MAX</a>/<a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a2d69aeb21db70a6cca55391e15dd1df6">PAD_ALTO</a>/2;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; yVel = yVel + equivVel;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; <span class="keywordflow">if</span>(yVel &gt; <a class="code" href="pelota_8cpp.html#a50f6cc80a838af91f3c006d0e2f822b9">VELOCIDAD_MAX</a>)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;   yVel = <a class="code" href="pelota_8cpp.html#a50f6cc80a838af91f3c006d0e2f822b9">VELOCIDAD_MAX</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; <span class="keywordflow">else</span> <span class="keywordflow">if</span>(yVel &lt; -<a class="code" href="pelota_8cpp.html#a50f6cc80a838af91f3c006d0e2f822b9">VELOCIDAD_MAX</a>)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   yVel = -<a class="code" href="pelota_8cpp.html#a50f6cc80a838af91f3c006d0e2f822b9">VELOCIDAD_MAX</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; <span class="keywordtype">float</span> vel = sqrt(<a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a7beac8e2b834bd2c08231de9355ad51b">PELOTA_VEL</a>*<a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a7beac8e2b834bd2c08231de9355ad51b">PELOTA_VEL</a> - yVel*yVel);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; <span class="keywordflow">if</span>(xVel &gt; 0)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   xVel = -vel;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   xVel = vel;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="code" href="pelota_8h.html#a2e4bc334cc94ddf8a142860447b7e346">  145</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pelota_8cpp.html#a2e4bc334cc94ddf8a142860447b7e346" title="Devuelve la posición relativa.">getPos</a>(SDL_Rect pelota, SDL_Rect pad)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; <span class="comment">// Esta comprobación se realiza cuando la pelota &quot;atraviesa&quot; por una esquina el pad, antes de reajustas posiciones.</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; <span class="comment">// Si no esta en el rango del pad, devuelve un valor &quot;nulo&quot;</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; <span class="keywordflow">if</span>(pelota.y +  pelota.h &lt;= pad.y || pelota.y &gt;= pad.y + pad.h)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="pelota_8h.html#abdd4cc886adae889bea4fc3496a7e48d">OUT_RANGE</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; <span class="comment">// Si entra en el rango del PAD, devolvemos la posición relativa.</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; <span class="keywordflow">else</span> <span class="keywordflow">if</span>(pelota.y + pelota.h &gt; pad.y &amp;&amp; pelota.y &lt; pad.y + pad.h)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;   <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(pad.y + pad.h/2 - (pelota.y + pelota.h/2 ));</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Viernes, 19 de Abril de 2013 16:44:01 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

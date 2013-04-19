@@ -1,10 +1,13 @@
-#include "globals.h"
+/**
+ * @file
+ * @brief Declara la clase CEngine
+ */
 
 #ifndef ENGINE_H_
 #define ENGINE_H_
 
+#include "globals.h"
 #include "instance.h"
-
 
 /**
  * @brief Clase principal del juego.

@@ -1,3 +1,7 @@
+/** @file
+ * @brief Declaración de la clase CWarning
+ */
+
 #ifndef WARNING_H_
 #define WARNING_H_
 

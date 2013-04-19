@@ -6,28 +6,24 @@
  */
 
 #include "pelota_cpu.h"
-/*
-void CPelota_CPU::empezar(enum gamepoint_pj_t gamepoint_pj)
-{
-  lock = false;
-  stop = false;
-  caja.x = PANTALLA_ANCHO/2 - PELOTA_ANCHO/2;
-  caja.y = rand() % (PANTALLA_ALTO - (PANTALLA_MARGEN_INFERIOR + PANTALLA_MARGEN_SUPERIOR + PELOTA_ANCHO)) + PANTALLA_MARGEN_SUPERIOR;
 
-  if(gamepoint_pj == gamepoint_pj1)
-  {
-    xVel = VELOCIDAD/2;
-  }
-  else
-  {
-    xVel = -VELOCIDAD/2;
-  }
-  yVel = 0;
-}*/
+float CPelota_MJ_CPU::getxVel()
+{
+  return (stop)? 0 : xVel;
+}
+
+float CPelota_MJ_CPU::getyVel()
+{
+  return (lock)? 0: yVel;
+}
+
 int CPelota_MJ_CPU::mover(CPad& A, CPad& B)
 {
   if(stop)
+  {
+    B.setCalcular();
     return 0;
+  }
 
   caja.x += xVel;
   if(caja.x <= 0) // Fin de la partida al salirse de rango. Pierda el pad izq. Gana el pad der (j2)
@@ -42,7 +38,6 @@ int CPelota_MJ_CPU::mover(CPad& A, CPad& B)
     caja.x = opciones->PANTALLA_ANCHO - opciones->PELOTA_ANCHO;
     stop = true;
     Mix_PlayChannel( -1, snd_pung, 0 );
-    B.setCalcular();
     return 1;
   }
   // Si la pelota está bloqueada, ignora a los rebotes con los pads. La partida sigue en curso hasta que toque un borde.

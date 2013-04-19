@@ -1,14 +1,19 @@
-/*
- * entidad.h
- *
- *  Created on: 05/04/2013
- *      Author: Dani
+/**
+ * @file
+ * @brief Declaración y definición de CEntidad
  */
 
 #ifndef ENTIDAD_H_
 #define ENTIDAD_H_
 
 #include "globals.h"
+
+/**
+ * @brief Clase principal de objeto del juego.
+ *
+ * Esta clase abstracta se usará para derivar otras clases con caracterísitcas comunes (alto, ancho, pos. x, pos. y ).
+ * Se emplea en las clases CPad y CPelota
+ */
 
 class CEntidad
 {

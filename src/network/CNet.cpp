@@ -61,6 +61,12 @@ void CNetMessage::LoadBytes(charbuf& inputbuffer, int n) {
     state = READING;
 }
 
+/*void CNetMessage::UnLoadBytes(charbuf& destbuffer) {
+    for (int i=0; i < this->NumToUnLoad(); i++)
+        destbuffer[i] = buffer[i];
+    reset();
+}*/
+
 void CNetMessage::UnLoadBytes(charbuf& destbuffer) {
     for (int i=0; i < this->NumToUnLoad(); i++)
         destbuffer[i] = buffer[i];
@@ -94,44 +100,44 @@ void CNetMessage1::LoadByte(char ID)
 char CNetMessage1::UnLoadByte()
 {
    charbuf c;
-   UnLoadBytes (c);
+   UnLoadBytes(c);
    return c[0];
 }
 
-int CNetMessage12::NumToLoad()
+int CNetMessageN::NumToLoad()
 {
   if (state == EMPTY)
-   return 12;
+   return buffer_size;
   else
    return 0;
 }
 
-int CNetMessage12::NumToUnLoad()
+int CNetMessageN::NumToUnLoad()
 {
   if (state == FULL)
-   return 12;
+   return buffer_size;
   else
    return 0;
 }
 
-void CNetMessage12::Load12Bytes(char entrada[12])
+void CNetMessageN::LoadNBytes(char* entrada)
 {
   charbuf c;
 
-  for(int i = 0; i < 12; i++)
+  for(uint i = 0; i < buffer_size; i++)
     c[i] = entrada[i];
 
-  LoadBytes(c, 12);
+  LoadBytes(c, buffer_size);
   finish();
 }
 
-void CNetMessage12::UnLoad12Bytes(char salida[12])
+void CNetMessageN::UnLoadNBytes(char* salida)
 {
   charbuf c;
 
   UnLoadBytes(c);
 
-  for(int i = 0; i < 12; i++)
+  for(uint i = 0; i < buffer_size; i++)
 	   salida[i] = c[i];
 }
 

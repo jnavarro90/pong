@@ -10,17 +10,26 @@ CNetwork_Data_Client::CNetwork_Data_Client()
 
 void CNetwork_Data_Client::makeBuffer()
 {
-  buffer = evento;
+  buffer[0] = evento;
+  buffer[1] = unused;
+
+  buffer[2] = ticks >> 24;
+  buffer[3] = ticks >> 16;
+  buffer[4] = ticks >> 8;
+  buffer[5] = ticks;
 }
 
-char CNetwork_Data_Client::getBuffer()
+char* CNetwork_Data_Client::getBuffer()
 {
   return buffer;
 }
 
-void CNetwork_Data_Client::readBuffer(char b)
+void CNetwork_Data_Client::readBuffer(char* b)
 {
-  evento = b;
+  evento = b[0];
+  unused = b[1];
+
+  ticks = (buffer[2] << 24 ) | (buffer[3] << 16 ) | (buffer[4] << 8 ) | buffer[5];
 }
 
 // Servidor
@@ -59,6 +68,11 @@ void CNetwork_Data_Server::makeBuffer()
 
   // Sin usar
   buffer[11] = sinUso;
+
+  buffer[12] = ticks >> 24;
+  buffer[13] = ticks >> 16;
+  buffer[14] = ticks >> 8;
+  buffer[15] = ticks;
 }
 
 char* CNetwork_Data_Server::getBuffer()
@@ -87,6 +101,13 @@ void CNetwork_Data_Server::readBuffer(uchar* c)
 
   // Sin usar
   sinUso = c[11];
+
+  // Ticks
+  ticks = (buffer[12] << 24 ) | (buffer[13] << 16 ) | (buffer[14] << 8 ) | buffer[15];
+  buffer[12] = ticks >> 24;
+  buffer[13] = ticks >> 16;
+  buffer[14] = ticks >> 8;
+  buffer[15] = ticks;
 }
 
 // SETTINGS

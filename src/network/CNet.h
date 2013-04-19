@@ -45,7 +45,8 @@ class CNetMessage
     virtual int NumToUnLoad();
 
     void LoadBytes(charbuf& inputbuffer, int n); //Load a char set into the message buffer
-    void UnLoadBytes(charbuf& destbuffer); //Unload a char set from the buffer
+    //void UnLoadBytes(charbuf& destbuffer); //Unload a char set from the buffer
+    void UnLoadBytes(charbuf& destbuffer);
     void finish(); //set the state object to full. No more data to be loaded
 };
 
@@ -63,18 +64,20 @@ class CNetMessage1 : public CNetMessage
     char UnLoadByte();
 };
 
-class CNetMessage12 : public CNetMessage
+class CNetMessageN : public CNetMessage
 {
   private:
+    uint buffer_size;
 //Virtual function that indicates how many bytes may have to be loaded onto the object. Overrides the parent class function member to work with only a byte
     virtual int NumToLoad();
 //Virtual function that indicates how many bytes may have to be downloaded from the object. Overrides the parent class function member to work with only a byte
     virtual int NumToUnLoad();
   public:
+    CNetMessageN(uint n): CNetMessage(), buffer_size(n) {};
 //Function simpler than LoadBytes(), inherited from the parent class, as it only works with one byte
-    void Load12Bytes(char c[12]);
+    void LoadNBytes(char* in);
 //Function simpler than UnLoadBytes(), inherited from the parent class, as it only works with one byte
-    void UnLoad12Bytes(char c[12]);
+    void UnLoadNBytes(char* out);
 };
 
 //***********************

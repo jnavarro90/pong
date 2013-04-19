@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Declaración de CInstance
+ *
+ */
+
 #ifndef INSTANCE_H_
 #define INSTANCE_H_
 
@@ -17,20 +23,20 @@ class CInstance
     SDL_Surface* fondo; /**< Superficie que contendrá la imagen cargada en el fondo. */
     bool i_running; /**< Como running en CEngine, pero propia a cada estancia. */
   public:
-    CInstance(){};
-    virtual ~CInstance(){};
+    CInstance(){}; /**< Constructor vacío. */
+    virtual ~CInstance(){}; /**< Destructor vacío. */
 
     virtual bool Init();
       virtual bool LoadFiles();
 
-    virtual void Close(){}
-      virtual void UnLoadFiles(){}
+    virtual void Close(){} /**< Des-inicializador. */
+      virtual void UnLoadFiles(){} /**< Des-cargador de archivos. */
 
     virtual int OnExecute();
 
-    virtual void OnLoop(){};
-    virtual void OnEvent(){};
-    virtual void OnRender(){};
+    virtual void OnLoop(){}; /**< Gestionar datos. */
+    virtual void OnEvent(){}; /**< Gestionar eventos de entrada. */
+    virtual void OnRender(){};  /**< Mostrar por pantalla. */
 };
 
 

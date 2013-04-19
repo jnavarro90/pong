@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Pong++: Fichero Fuente src/multijugador/online/network_struct.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pong++
+   &#160;<span id="projectnumber">Beta1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f5cc26e192ea4ca3f901bed5295e2dbb.html">multijugador</a></li><li class="navelem"><a class="el" href="dir_4cb17976b572e5061e1e3b85c87843a5.html">online</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">network_struct.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="network__struct_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NETWORK_STRUCT_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NETWORK_STRUCT_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../../globals.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Por simplicidad, vamos a suponer que un jugador hace de servidor, y otro, de cliente</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="network__struct_8h.html#a7a27eafa7338ac45a650fb892f111575a7b77b685060204116d7d2b81c83fd1cd">    8</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="network__struct_8h.html#a7a27eafa7338ac45a650fb892f111575">fSnd_pelota</a> {<a class="code" href="network__struct_8h.html#a7a27eafa7338ac45a650fb892f111575a5c3a0ee4906e73eb7a5598d917d76e38">fsnd_empty</a> = 0x00, <a class="code" href="network__struct_8h.html#a7a27eafa7338ac45a650fb892f111575a68aba2322cccd4c57a22994020dca643">fsnd_pong</a> = 0x1, <a class="code" href="network__struct_8h.html#a7a27eafa7338ac45a650fb892f111575a7b77b685060204116d7d2b81c83fd1cd">fsnd_pung</a> = 0x2};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Total: 12 bytes</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">struct network_data_server_t // lo que envia el servidor = lo que recibe el cliente</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  int16 pelota_x, pelota_y;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">  int16 pad1_y;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  int16 pad2_y;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  flags fs;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  uint8 marcador1, marcador2;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">  uint8 sinUso;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">}; // Falta añadir datos del marcador.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Total: 1 byte</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">struct network_data_client_t // Lo que envia el cliente = lo que recibe el servidor</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">  int8 evento;// Si se mueve hacia arriba, hacia abajo o si se queda quieto</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">};</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Datos servidor</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">extern void SdataToChar(network_data_server_t* t, uchar c[_NET_BYTES_]);</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">extern void charToSdata(uchar c[_NET_BYTES_], network_data_server_t* t);</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Datos cliente</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">extern void CdataToChar(network_data_client_t* t, uchar&amp; c);</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">extern void charToCdata(uchar&amp; c, network_data_client_t* t);</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_network___data___client.html">CNetwork_Data_Client</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">   39</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[<a class="code" href="globals_8h.html#a0f610c595c7472387e5fc7b060c52cf8">NET_MJ_CLIENTDATA_SIZE</a>];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#ae5f689104cff8a272e64ad51bb57730c">   41</a></span>&#160;    <a class="code" href="globals_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a> <a class="code" href="class_c_network___data___client.html#ae5f689104cff8a272e64ad51bb57730c">evento</a>; <span class="comment">// 1 byte</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#afd26353c1950520098155c126c4c586e">   42</a></span>&#160;    <a class="code" href="globals_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a> <a class="code" href="class_c_network___data___client.html#afd26353c1950520098155c126c4c586e">unused</a>; <span class="comment">// 1 byte</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">   43</a></span>&#160;    Uint32 <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a>; <span class="comment">// 4 bytes</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Total: 6 bytes</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_c_network___data___client.html#aa867a655f8eb138b86ec41c7bbb16d44">CNetwork_Data_Client</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_network___data___client.html#a715b1b97ecc951d51b5746e7879e0926">makeBuffer</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="class_c_network___data___client.html#a2b2d9702af5a3a124c435ccc7db30cdf">getBuffer</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_network___data___client.html#a2f9874e212a12b78a3ff32c9957deff1">readBuffer</a>(<span class="keywordtype">char</span>* b);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_network___data___server.html">CNetwork_Data_Server</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">   57</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[<a class="code" href="globals_8h.html#a1343ed9aa4ab92e8d5e42ed55f4bb187">NET_MJ_SERVERDATA_SIZE</a>];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">   59</a></span>&#160;    <a class="code" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code" href="class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207">pelota_x</a>, <a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">pelota_y</a>; <span class="comment">// 2 + 2 bytes</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">   60</a></span>&#160;    <a class="code" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">pad1_y</a>; <span class="comment">// 2 bytes</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">   61</a></span>&#160;    <a class="code" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">pad2_y</a>; <span class="comment">// 2 bytes</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a253ae84bf12b4d7375c4dd2efe3ee21b">   62</a></span>&#160;    <a class="code" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a> <a class="code" href="class_c_network___data___server.html#a253ae84bf12b4d7375c4dd2efe3ee21b">fs</a>; <span class="comment">// 1 byte</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a4d285628a834727bbe3ae404ad0395d4">   63</a></span>&#160;    <a class="code" href="globals_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> <a class="code" href="class_c_network___data___server.html#ab20333970632a4a49eea992e6eee8e59">marcador1</a>, <a class="code" href="class_c_network___data___server.html#a4d285628a834727bbe3ae404ad0395d4">marcador2</a>; <span class="comment">// 1 + 1 bytes</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a305fbf7e13ac9e82f6cb6612cf32a4f9">   64</a></span>&#160;    <a class="code" href="globals_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> <a class="code" href="class_c_network___data___server.html#a305fbf7e13ac9e82f6cb6612cf32a4f9">sinUso</a>; <span class="comment">// 1 byte</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// ticks usado  para tratar retardos y saltar frames</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">   66</a></span>&#160;    Uint32 <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a>; <span class="comment">// 4 bytes</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Total: 12 + 4 bytes</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_c_network___data___server.html#a9b746858763b46d4e4019ead32c7870a">CNetwork_Data_Server</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_network___data___server.html#a9a9dd678ca736ac0610d234fd58b29d1">makeBuffer</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="class_c_network___data___server.html#a321ece98cbbae7b66f5c485b0c1be5b2">getBuffer</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_network___data___server.html#a7aa22d097831e9c65ba179947415c65c">readBuffer</a>(<a class="code" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* b);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html">   77</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_network___data___settings.html">CNetwork_Data_Settings</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">   80</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[<a class="code" href="globals_8h.html#a4b8c1970483989f795ef6a7ab33905d6">NET_MJ_SETTINGS_SIZE</a>];</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">   82</a></span>&#160;    <a class="code" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">PANTALLA_ANCHO</a>; <span class="comment">// 2 bytes</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">   83</a></span>&#160;    <a class="code" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">PANTALLA_ALTO</a>; <span class="comment">// 2 bytes</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">   85</a></span>&#160;    <a class="code" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">PAD_ALTO</a>; <span class="comment">// 2 bytes</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">   86</a></span>&#160;    <a class="code" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">PAD_ANCHO</a>; <span class="comment">// 2 bytes</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">   88</a></span>&#160;    <a class="code" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">PELOTA_ALTO</a>; <span class="comment">// 2 bytes</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">   89</a></span>&#160;    <a class="code" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">unused</a>; <span class="comment">// 2 bytes</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// Total: 12 bytes</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="class_c_network___data___settings.html#a130a940b362cdc6a3b71cbfb1ff528f7">CNetwork_Data_Settings</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_network___data___settings.html#aecddfedd66150b32bb065d7f51702e49">makeBuffer</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="class_c_network___data___settings.html#a240fab79764af5f87457628a726402d4">getBuffer</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_network___data___settings.html#a7e775da62fe849a60f7567d807e61a09">readBuffer</a>(<a class="code" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* b);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* NETWORK_STRUCT_H_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Viernes, 19 de Abril de 2013 16:44:01 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

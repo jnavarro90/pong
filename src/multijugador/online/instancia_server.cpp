@@ -81,10 +81,11 @@ bool CInstance_MJ_Online_Server::Init()
   datos_server = new CNetwork_Data_Server;
   datos_cliente = new CNetwork_Data_Client;
 
-  msgC = new CNetMessage1;
-  msgS = new CNetMessage12;
+  msgC = new CNetMessageN(NET_MJ_CLIENTDATA_SIZE);
+  //msgS = new CNetMessage12;
+  msgS = new CNetMessageN(NET_MJ_SERVERDATA_SIZE);
 
-  SDL_Rect caja = {opciones->PANTALLA_ANCHO/2 - 150/2, 300, 150, 25};
+  SDL_Rect caja = {100, 200, 180, 25};
 
   botones = NULL;
   botones = new CBoton(ttf_consolas, &color_negro, &color_blanco, &caja, "Volver");
@@ -96,23 +97,17 @@ bool CInstance_MJ_Online_Server::Init()
 
   // Temporizador
   timeOut = new CTemporizador;
+  timeFrameSkip = new CTemporizador;
 
   return true;
 }
 
 bool CInstance_MJ_Online_Server::LoadFiles()
 {
-  /*fondo = cargar_img("media/img/fondo_mj.png", false);
-  if(fondo == NULL)
-  {
-    cerr << ERROR_STR_FILE << "media/img/fondo_mj_local.png" << endl;
-    return false;
-  }*/
-
-  fondo_menu = cargar_img("media/img/fondo_menu_server.png");
+  fondo_menu = SDL_CreateRGBSurface(SDL_SWSURFACE, opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP, 0x00, 0x00, 0x00, 0x00);
   if(fondo_menu == NULL)
   {
-    cerr << ERROR_STR_FILE << "media/img/fondo_menu_server.png" << endl;
+    cout << ERROR_STR_SURFACE << "MENU_MJ_ONLINE_SERVER -> fondo" << endl;
     return false;
   }
 
@@ -129,6 +124,18 @@ bool CInstance_MJ_Online_Server::LoadFiles()
     cerr << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
     return false;
   }
+
+  // Linea blanca para dar un estilo minimalista
+  SDL_Rect caja = {80, 200, 8, 115};
+  SDL_FillRect(fondo_menu, &caja, SDL_MapRGB(pantalla->format, 0xFF, 0xFF, 0xFF) );
+
+  // Escribir texto
+  stringstream ss;
+  ss << "Esperando conexión del cliente en el puerto " << NET_MJ_PORT << "...";
+  SDL_Color texto_color = {255, 255, 255, 0};
+  SDL_Surface* texto_connect = TTF_RenderText_Blended(ttf_consolas, ss.str().c_str(), texto_color);
+  aplicar_superficie(80, 180, texto_connect, fondo_menu);
+  SDL_FreeSurface(texto_connect);
 
   return true;
 }
@@ -172,6 +179,7 @@ void CInstance_MJ_Online_Server::Close()
 
   // Temp
   delete timeOut;
+  delete timeFrameSkip;
 }
 
 
@@ -216,10 +224,12 @@ void CInstance_MJ_Online_Server::OnLoopMenu(flags& F)
     if(tcplistener->Accept(*tcpclient))
     {
       // Enviar la configuración al cliente
-      CNetMessage12 msg_settings;
+      //CNetMessage12 msg_settings;
+      CNetMessageN msg_settings(NET_MJ_SETTINGS_SIZE);
+
       CNetwork_Data_Settings network_data_settings;
       network_data_settings.makeBuffer();
-      msg_settings.Load12Bytes(network_data_settings.getBuffer());
+      msg_settings.LoadNBytes(network_data_settings.getBuffer());
 
       if(tcpclient->Send(msg_settings))
       {
@@ -282,6 +292,7 @@ int CInstance_MJ_Online_Server::OnExecute()
   }
   LoadObjects();
 
+  timeFrameSkip->empezar();
   pelota->empezar();
 
   while(i_running)
@@ -347,20 +358,24 @@ void CInstance_MJ_Online_Server::OnLoop(int& frame)
       if(tcpclient->Receive(*msgC))
       {
         // Recibir datos del client (estructura network_struct_client_t)
-        #ifdef DEBUG
-        cout << "Mensaje recibido" << endl;
-        #endif
-        datos_cliente->readBuffer(msgC->UnLoadByte());
+        char buffer[NET_MJ_CLIENTDATA_SIZE];
+        msgC->UnLoadNBytes(buffer);
+        datos_cliente->readBuffer(buffer);
       }
       else
       {
-        conectado = false;
+        #ifdef DEBUG
+        cout << "Error enviando mensaje" << endl;
+        #endif
+        //conectado = false;
       }
     }
   }
     // Gestionar datos (servidor y cliente)(setpost, etc...)
   PJ1->mover();
-  PJ2->mover(datos_cliente->evento);
+  //if(datos_cliente->ticks < (Uint32)timeFrameSkip->getTicks())
+    PJ2->mover(datos_cliente->evento);
+
   int partido = pelota->mover(*PJ1, *PJ2, datos_server->fs);
 
   if(partido == 1)
@@ -382,18 +397,21 @@ void CInstance_MJ_Online_Server::OnLoop(int& frame)
   datos_server->marcador1 = marcador->getM1();
   datos_server->marcador2 = marcador->getM2();
 
+  datos_server->ticks = timeFrameSkip->getTicks();
+
   //SdataToChar(&datos_server, (unsigned char*)buffer);
   datos_server->makeBuffer();
 
-  // Para evitar colapsos, mando los datos cada 2 frames
-  if(conectado && frame % 2 == 0)
+  // Para evitar colapsos, mando los datos 3 veces cada 4 frames
+  if(conectado && datos_cliente->ticks < (Uint32)timeFrameSkip->getTicks())
   {
-    msgS->Load12Bytes(datos_server->getBuffer());
+    msgS->LoadNBytes(datos_server->getBuffer());
     if(!tcpclient->Send(*msgS))
     {
       #ifdef DEBUG
       cout << "Error enviando datos." << endl;
       #endif
+      conectado = false;
     }
     datos_server->fs = 0x0;
   }

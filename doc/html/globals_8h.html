@@ -1,0 +1,1037 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Pong++: Referencia del Archivo src/globals.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pong++
+   &#160;<span id="projectnumber">Beta1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Clases</a> &#124;
+<a href="#define-members">'defines'</a> &#124;
+<a href="#typedef-members">'typedefs'</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo globals.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Declaración de variables globales y constantes.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &quot;<a class="el" href="sdl_8h_source.html">sdl.h</a>&quot;</code><br/>
+</div>
+<p><a href="globals_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_rect___float.html">Rect_Float</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura similar a SDL_Rect.  <a href="struct_rect___float.html#details">Más...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:a42b233cfb2af85081e10e38d3cda6883"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a42b233cfb2af85081e10e38d3cda6883">GLOBALS_H_</a></td></tr>
+<tr class="separator:a42b233cfb2af85081e10e38d3cda6883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac626e65a89ccd8469bd55eec597833e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#ac626e65a89ccd8469bd55eec597833e8">NET_MJ_PORT</a>&#160;&#160;&#160;8888</td></tr>
+<tr class="separator:ac626e65a89ccd8469bd55eec597833e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8c1970483989f795ef6a7ab33905d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a4b8c1970483989f795ef6a7ab33905d6">NET_MJ_SETTINGS_SIZE</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:a4b8c1970483989f795ef6a7ab33905d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1343ed9aa4ab92e8d5e42ed55f4bb187"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a1343ed9aa4ab92e8d5e42ed55f4bb187">NET_MJ_SERVERDATA_SIZE</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:a1343ed9aa4ab92e8d5e42ed55f4bb187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f610c595c7472387e5fc7b060c52cf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a0f610c595c7472387e5fc7b060c52cf8">NET_MJ_CLIENTDATA_SIZE</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a0f610c595c7472387e5fc7b060c52cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8226bd71f8bb870650f742c40d7b3674"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a8226bd71f8bb870650f742c40d7b3674">ERROR_CODE_GENERAL</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="separator:a8226bd71f8bb870650f742c40d7b3674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a73c1aec7f573d7a177c6640a82365a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a2a73c1aec7f573d7a177c6640a82365a">ERROR_STR_NET</a>&#160;&#160;&#160;&quot;Error iniciano módulo de red.&quot;</td></tr>
+<tr class="separator:a2a73c1aec7f573d7a177c6640a82365a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5997ecd108879f873fe7633cba2565"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a2f5997ecd108879f873fe7633cba2565">ERROR_STR_FLIP</a>&#160;&#160;&#160;&quot;Error volcando contenido por pantalla.&quot;</td></tr>
+<tr class="separator:a2f5997ecd108879f873fe7633cba2565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad691f6e664280c2c0e32eac8f3568c28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#ad691f6e664280c2c0e32eac8f3568c28">ERROR_STR_INIT</a>&#160;&#160;&#160;&quot;Error iniciando módulo: &quot;</td></tr>
+<tr class="separator:ad691f6e664280c2c0e32eac8f3568c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec7b9039bf5fc07537bb7b95df63e77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#afec7b9039bf5fc07537bb7b95df63e77">ERROR_STR_FILE</a>&#160;&#160;&#160;&quot;Error cargando archivo: &quot;</td></tr>
+<tr class="separator:afec7b9039bf5fc07537bb7b95df63e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb0546e982c8ad48454b6583a1871c4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#abb0546e982c8ad48454b6583a1871c4f">ERROR_STR_SURFACE</a>&#160;&#160;&#160;&quot;Error creando superficie: &quot;</td></tr>
+<tr class="separator:abb0546e982c8ad48454b6583a1871c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11928b9796b8606b8005991afdd5e83c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a11928b9796b8606b8005991afdd5e83c">N_INSTANCES</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:a11928b9796b8606b8005991afdd5e83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+'typedefs'</h2></td></tr>
+<tr class="memitem:ae47c588f3ab8c61121c1c7ab7edc47cd"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a></td></tr>
+<tr class="separator:ae47c588f3ab8c61121c1c7ab7edc47cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde6aaee8457bee49c2a92621fe22b79"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></td></tr>
+<tr class="separator:adde6aaee8457bee49c2a92621fe22b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf957e9fa8c95c188ffacb8197aa8725"><td class="memItemLeft" align="right" valign="top">typedef short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a></td></tr>
+<tr class="separator:adf957e9fa8c95c188ffacb8197aa8725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e00abb078d312d1d8c4fbcd6be343d8"><td class="memItemLeft" align="right" valign="top">typedef unsigned short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a></td></tr>
+<tr class="separator:a2e00abb078d312d1d8c4fbcd6be343d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ad9478d81a7aaf2593e8d9c3d06a14"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></td></tr>
+<tr class="separator:a91ad9478d81a7aaf2593e8d9c3d06a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f85814a8290f9797005d3b28e7e5fc"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a></td></tr>
+<tr class="separator:a65f85814a8290f9797005d3b28e7e5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ea73ca849ec6b2984f545915c4fc857"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a></td></tr>
+<tr class="separator:a5ea73ca849ec6b2984f545915c4fc857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a7f98c397795c604766c2561073615e53"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53">INSTANCES</a> { <br/>
+&#160;&#160;<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132">I_SALIDA</a> = -1, 
+<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53a8f6a1b55511f0873be1bd161c7758ddd">I_MENU_MAIN</a> = 0, 
+<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53a79eb0f41c297c91c21ea6016dd0c1591">I_MENU_1J</a>, 
+<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53ab9253f5d2ac60df9971d8f3e60b01873">I_MENU_MJ</a>, 
+<br/>
+&#160;&#160;<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab">I_MENU_OPCIONES</a>, 
+<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba">I_1J_INF</a>, 
+<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53a69b8c1219d43830f16da518e74834e3e">I_1J_HISTORIA</a>, 
+<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53afa7215e6cd720e9dd23bc20c0d5385ac">I_MJ_LOCAL</a>, 
+<br/>
+&#160;&#160;<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53a3c536c4744794ef3d07a455e19d723f4">I_MJ_CPU</a>, 
+<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53ac71f3ca279fb65e29378e667640fc2e9">I_MJ_ONLINE</a>, 
+<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53aa4515cefd0cf9d89d245a80d9d1f909c">I_MJ_ONLINE_CLIENT</a>, 
+<a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19">I_MJ_ONLINE_SERVER</a>
+<br/>
+ }</td></tr>
+<tr class="separator:a7f98c397795c604766c2561073615e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aed34d48608e64a2908d6f838a422c73f"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#aed34d48608e64a2908d6f838a422c73f">operator&lt;&lt;</a> (ostream &amp;os, <a class="el" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a> f)</td></tr>
+<tr class="separator:aed34d48608e64a2908d6f838a422c73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2847bd8f78cf4acff4b18d1c68f24c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#aec2847bd8f78cf4acff4b18d1c68f24c">initPantalla</a> ()</td></tr>
+<tr class="separator:aec2847bd8f78cf4acff4b18d1c68f24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85795fcc59c265164e0227b6520eb0b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a85795fcc59c265164e0227b6520eb0b5">aplicar_superficie</a> (int x, int y, SDL_Surface *entrada, SDL_Surface *destino, SDL_Rect *clip=NULL)</td></tr>
+<tr class="separator:a85795fcc59c265164e0227b6520eb0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e619f1748ce6551ab1c0ff6f9332187"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a7e619f1748ce6551ab1c0ff6f9332187">cargar_img</a> (std::string s, bool alphapng=false)</td></tr>
+<tr class="separator:a7e619f1748ce6551ab1c0ff6f9332187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a121233f7601442d0bcb2319801e59a22"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a121233f7601442d0bcb2319801e59a22">PANTALLA_ANCHO</a> = 800</td></tr>
+<tr class="separator:a121233f7601442d0bcb2319801e59a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc43830800eb5cd87799963608ec1988"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#adc43830800eb5cd87799963608ec1988">PANTALLA_ALTO</a> = 400</td></tr>
+<tr class="separator:adc43830800eb5cd87799963608ec1988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae8a80f356b6994c3d7324faa368226"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a8ae8a80f356b6994c3d7324faa368226">PANTALLA_BPP</a> = 32</td></tr>
+<tr class="separator:a8ae8a80f356b6994c3d7324faa368226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c80e7ac3f0df23eed03ba1de7dbbef7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a7c80e7ac3f0df23eed03ba1de7dbbef7">PANTALLA_MARGEN_SUPERIOR</a> = 15</td></tr>
+<tr class="separator:a7c80e7ac3f0df23eed03ba1de7dbbef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ade757e3558f98c7d6f99b2496554d6"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a6ade757e3558f98c7d6f99b2496554d6">PANTALLA_MARGEN_INFERIOR</a> = 15</td></tr>
+<tr class="separator:a6ade757e3558f98c7d6f99b2496554d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c0316a0cf4f52d2770edf4136466e18"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a8c0316a0cf4f52d2770edf4136466e18">PANTALLA_MARGEN_LATERAL</a> = 50</td></tr>
+<tr class="separator:a8c0316a0cf4f52d2770edf4136466e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a7a3cc36f721c6da798fefdd1db39a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a41a7a3cc36f721c6da798fefdd1db39a">TABLERO_LINEAS_GROSOR</a> = 5</td></tr>
+<tr class="separator:a41a7a3cc36f721c6da798fefdd1db39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79954f2c5c9fb0506d3e02d4f1867474"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a79954f2c5c9fb0506d3e02d4f1867474">PAD_ANCHO</a> = 20</td></tr>
+<tr class="separator:a79954f2c5c9fb0506d3e02d4f1867474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b7ff9e7bc76f2622e03f427b9e1742"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a27b7ff9e7bc76f2622e03f427b9e1742">PAD_ALTO</a> = 80</td></tr>
+<tr class="separator:a27b7ff9e7bc76f2622e03f427b9e1742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa842bd5767fbce498b50dd2eab17d555"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#aa842bd5767fbce498b50dd2eab17d555">PAD_MEDIO</a> = <a class="el" href="globals_8h.html#a27b7ff9e7bc76f2622e03f427b9e1742">PAD_ALTO</a>/2</td></tr>
+<tr class="separator:aa842bd5767fbce498b50dd2eab17d555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ae1a9192dda1abcf5253609ea2548c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#aa9ae1a9192dda1abcf5253609ea2548c">TEXTO_MARCADOR_ANCHO</a> = 160</td></tr>
+<tr class="separator:aa9ae1a9192dda1abcf5253609ea2548c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b57f01d3c576db5368dd0efc2f435a4"><td class="memItemLeft" align="right" valign="top">SDL_Event&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a></td></tr>
+<tr class="separator:a6b57f01d3c576db5368dd0efc2f435a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58be6bd8478a38995e6c3ce5161a9fbe"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a58be6bd8478a38995e6c3ce5161a9fbe">pantalla</a></td></tr>
+<tr class="separator:a58be6bd8478a38995e6c3ce5161a9fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc5f1b451127b480b7848098d75ee12"><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a9dc5f1b451127b480b7848098d75ee12">snd_ping</a></td></tr>
+<tr class="separator:a9dc5f1b451127b480b7848098d75ee12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07663d0d9a7e19ed85e62d73cfd804d"><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#ac07663d0d9a7e19ed85e62d73cfd804d">snd_pong</a></td></tr>
+<tr class="separator:ac07663d0d9a7e19ed85e62d73cfd804d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a1a9570706ece8090125625c2e107a"><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a49a1a9570706ece8090125625c2e107a">snd_pung</a></td></tr>
+<tr class="separator:a49a1a9570706ece8090125625c2e107a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d01e8a0e43939a19b20e70ebc68c073"><td class="memItemLeft" align="right" valign="top">Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a5d01e8a0e43939a19b20e70ebc68c073">color_blanco</a></td></tr>
+<tr class="separator:a5d01e8a0e43939a19b20e70ebc68c073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a491fcbc4f4294bbbfdfa41ca062c36e8"><td class="memItemLeft" align="right" valign="top">SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a491fcbc4f4294bbbfdfa41ca062c36e8">color_blanco_t</a></td></tr>
+<tr class="separator:a491fcbc4f4294bbbfdfa41ca062c36e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4abc73abc5bb8be9d8bdb55118857120"><td class="memItemLeft" align="right" valign="top">TTF_Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a4abc73abc5bb8be9d8bdb55118857120">ttf_consolas</a></td></tr>
+<tr class="separator:a4abc73abc5bb8be9d8bdb55118857120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe32ab812245ae1f4f1a019a6b034cd3"><td class="memItemLeft" align="right" valign="top">TTF_Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#afe32ab812245ae1f4f1a019a6b034cd3">ttf_consolasM</a></td></tr>
+<tr class="separator:afe32ab812245ae1f4f1a019a6b034cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c08c970d3c7db160e52ea60722d0de"><td class="memItemLeft" align="right" valign="top">TTF_Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#af0c08c970d3c7db160e52ea60722d0de">ttf_bitM</a></td></tr>
+<tr class="separator:af0c08c970d3c7db160e52ea60722d0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Declaración de variables globales y constantes. </p>
+
+<p>Definición en el archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a class="anchor" id="a8226bd71f8bb870650f742c40d7b3674"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_CODE_GENERAL&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00060">60</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instance__menu__1j_8cpp_source.html#l00075">CInstance_Menu_1J::OnExecute()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00076">CInstance_Menu_MJ::OnExecute()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00074">CInstance_Menu_Main::OnExecute()</a> y <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00076">CInstance_Menu_MJ_Online::OnExecute()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afec7b9039bf5fc07537bb7b95df63e77"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_STR_FILE&#160;&#160;&#160;&quot;Error cargando archivo: &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00065">65</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instance__menu__1j_8cpp_source.html#l00034">CInstance_Menu_1J::LoadFiles()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00035">CInstance_Menu_MJ::LoadFiles()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00033">CInstance_Menu_Main::LoadFiles()</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00042">CInstance_1J_INF::LoadFiles()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00075">CInstance_MJ_Local::LoadFiles()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00068">CInstance_MJ_CPU::LoadFiles()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00034">CInstance_Menu_MJ_Online::LoadFiles()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00113">CInstance_MJ_Online_Client::LoadFiles()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00105">CInstance_MJ_Online_Server::LoadFiles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f5997ecd108879f873fe7633cba2565"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_STR_FLIP&#160;&#160;&#160;&quot;Error volcando contenido por pantalla.&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00063">63</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instance__menu__1j_8cpp_source.html#l00146">CInstance_Menu_1J::OnRender()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00151">CInstance_Menu_MJ::OnRender()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00151">CInstance_Menu_Main::OnRender()</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00186">CInstance_1J_INF::OnRender()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00252">CInstance_MJ_Local::OnRender()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00240">CInstance_MJ_CPU::OnRender()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00145">CInstance_Menu_MJ_Online::OnRender()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00495">CInstance_MJ_Online_Client::OnRender()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00421">CInstance_MJ_Online_Server::OnRender()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00311">CInstance_MJ_Online_Client::OnRenderMenu()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00246">CInstance_MJ_Online_Server::OnRenderMenu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad691f6e664280c2c0e32eac8f3568c28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_STR_INIT&#160;&#160;&#160;&quot;Error iniciando módulo: &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00064">64</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instance__menu__1j_8cpp_source.html#l00075">CInstance_Menu_1J::OnExecute()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00076">CInstance_Menu_MJ::OnExecute()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00074">CInstance_Menu_Main::OnExecute()</a>, <a class="el" href="engine_8cpp_source.html#l00177">CEngine::OnExecute()</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00085">CInstance_1J_INF::OnExecute()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00124">CInstance_MJ_Local::OnExecute()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00120">CInstance_MJ_CPU::OnExecute()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00076">CInstance_Menu_MJ_Online::OnExecute()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00333">CInstance_MJ_Online_Client::OnExecute()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00263">CInstance_MJ_Online_Server::OnExecute()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2a73c1aec7f573d7a177c6640a82365a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_STR_NET&#160;&#160;&#160;&quot;Error iniciano módulo de red.&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00062">62</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instancia__client_8cpp_source.html#l00056">CInstance_MJ_Online_Client::Init()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00054">CInstance_MJ_Online_Server::Init()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb0546e982c8ad48454b6583a1871c4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_STR_SURFACE&#160;&#160;&#160;&quot;Error creando superficie: &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00066">66</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instance__menu__1j_8cpp_source.html#l00034">CInstance_Menu_1J::LoadFiles()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00035">CInstance_Menu_MJ::LoadFiles()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00033">CInstance_Menu_Main::LoadFiles()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00034">CInstance_Menu_MJ_Online::LoadFiles()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00113">CInstance_MJ_Online_Client::LoadFiles()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00105">CInstance_MJ_Online_Server::LoadFiles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a42b233cfb2af85081e10e38d3cda6883"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLOBALS_H_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00034">34</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11928b9796b8606b8005991afdd5e83c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N_INSTANCES&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00111">111</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f610c595c7472387e5fc7b060c52cf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NET_MJ_CLIENTDATA_SIZE&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00052">52</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instancia__client_8cpp_source.html#l00056">CInstance_MJ_Online_Client::Init()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00054">CInstance_MJ_Online_Server::Init()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00336">CInstance_MJ_Online_Server::OnLoop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac626e65a89ccd8469bd55eec597833e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NET_MJ_PORT&#160;&#160;&#160;8888</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00047">47</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instancia__server_8cpp_source.html#l00054">CInstance_MJ_Online_Server::Init()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00105">CInstance_MJ_Online_Server::LoadFiles()</a> y <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1343ed9aa4ab92e8d5e42ed55f4bb187"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NET_MJ_SERVERDATA_SIZE&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00051">51</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instancia__client_8cpp_source.html#l00056">CInstance_MJ_Online_Client::Init()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00054">CInstance_MJ_Online_Server::Init()</a> y <a class="el" href="instancia__client_8cpp_source.html#l00418">CInstance_MJ_Online_Client::OnLoop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b8c1970483989f795ef6a7ab33905d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NET_MJ_SETTINGS_SIZE&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00050">50</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00218">CInstance_MJ_Online_Server::OnLoopMenu()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los 'typedefs'</h2>
+<a class="anchor" id="a5ea73ca849ec6b2984f545915c4fc857"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00029">29</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf957e9fa8c95c188ffacb8197aa8725"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef short int <a class="el" href="globals_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00023">23</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae47c588f3ab8c61121c1c7ab7edc47cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="globals_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00020">20</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a65f85814a8290f9797005d3b28e7e5fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00027">27</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91ad9478d81a7aaf2593e8d9c3d06a14"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned int <a class="el" href="globals_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00026">26</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e00abb078d312d1d8c4fbcd6be343d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned short int <a class="el" href="globals_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00024">24</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adde6aaee8457bee49c2a92621fe22b79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="globals_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00022">22</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las enumeraciones</h2>
+<a class="anchor" id="a7f98c397795c604766c2561073615e53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="globals_8h.html#a7f98c397795c604766c2561073615e53">INSTANCES</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl><dt><b>Valores de enumeraciones: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132"></a>I_SALIDA</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53a8f6a1b55511f0873be1bd161c7758ddd"></a>I_MENU_MAIN</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53a79eb0f41c297c91c21ea6016dd0c1591"></a>I_MENU_1J</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53ab9253f5d2ac60df9971d8f3e60b01873"></a>I_MENU_MJ</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab"></a>I_MENU_OPCIONES</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba"></a>I_1J_INF</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53a69b8c1219d43830f16da518e74834e3e"></a>I_1J_HISTORIA</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53afa7215e6cd720e9dd23bc20c0d5385ac"></a>I_MJ_LOCAL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53a3c536c4744794ef3d07a455e19d723f4"></a>I_MJ_CPU</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53ac71f3ca279fb65e29378e667640fc2e9"></a>I_MJ_ONLINE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53aa4515cefd0cf9d89d245a80d9d1f909c"></a>I_MJ_ONLINE_CLIENT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19"></a>I_MJ_ONLINE_SERVER</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00103">103</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a85795fcc59c265164e0227b6520eb0b5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void aplicar_superficie </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Surface *&#160;</td>
+          <td class="paramname"><em>entrada</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Surface *&#160;</td>
+          <td class="paramname"><em>destino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>clip</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00064">64</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="frame_8cpp_source.html#l00081">CFrame::combinar()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00113">CInstance_MJ_Online_Client::LoadFiles()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00105">CInstance_MJ_Online_Server::LoadFiles()</a>, <a class="el" href="tablero_8cpp_source.html#l00073">CTablero::mostrar()</a>, <a class="el" href="warning_8cpp_source.html#l00031">CWarning::mostrar()</a>, <a class="el" href="consola_8h_source.html#l00078">CConsola::mostrar()</a>, <a class="el" href="frame_8cpp_source.html#l00094">CFrame::mostrar()</a>, <a class="el" href="marcador_8cpp_source.html#l00090">CMarcador::mostrar()</a>, <a class="el" href="boton_8cpp_source.html#l00034">CBoton::mostrar()</a>, <a class="el" href="particulas_8cpp_source.html#l00018">CParticula::mostrar()</a>, <a class="el" href="teclado_8cpp_source.html#l00115">CTeclado::mostrar()</a>, <a class="el" href="warning_8cpp_source.html#l00041">CWarning::mostrar_ch()</a>, <a class="el" href="warning_8cpp_source.html#l00046">CWarning::mostrar_cv()</a>, <a class="el" href="turbo_8cpp_source.html#l00126">CTurbo::OnRender()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00151">CInstance_Menu_MJ::OnRender()</a>, <a class="el" href="instance__menu__1j_8cpp_source.html#l00146">CInstance_Menu_1J::OnRender()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00151">CInstance_Menu_Main::OnRender()</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00186">CInstance_1J_INF::OnRender()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00145">CInstance_Menu_MJ_Online::OnRender()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00311">CInstance_MJ_Online_Client::OnRenderMenu()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00246">CInstance_MJ_Online_Server::OnRenderMenu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e619f1748ce6551ab1c0ff6f9332187"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface* cargar_img </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>alphapng</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00075">75</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="turbo_8cpp_source.html#l00009">CTurbo::Init()</a>, <a class="el" href="engine_8cpp_source.html#l00057">CEngine::Init()</a> y <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00042">CInstance_1J_INF::LoadFiles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec2847bd8f78cf4acff4b18d1c68f24c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool initPantalla </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00026">26</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="opciones_8cpp_source.html#l00015">opciones</a>, <a class="el" href="globals_8cpp_source.html#l00012">pantalla</a>, <a class="el" href="opciones_8h_source.html#l00040">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00039">COpciones::PANTALLA_ANCHO</a> y <a class="el" href="opciones_8h_source.html#l00041">COpciones::PANTALLA_BPP</a>.</p>
+
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00057">CEngine::Init()</a> y <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed34d48608e64a2908d6f838a422c73f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a>&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00053">53</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a class="anchor" id="a5d01e8a0e43939a19b20e70ebc68c073"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Uint32 color_blanco</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00024">24</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00014">CInstance_MJ_CPU::CInstance_MJ_CPU()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00017">CInstance_MJ_Local::CInstance_MJ_Local()</a>, <a class="el" href="engine_8cpp_source.html#l00057">CEngine::Init()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00043">CInstance_MJ_CPU::Init()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00056">CInstance_MJ_Online_Client::Init()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00054">CInstance_MJ_Online_Server::Init()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00155">CInstance_MJ_Online_Client::LoadObjects()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00143">CInstance_MJ_Online_Server::LoadObjects()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a491fcbc4f4294bbbfdfa41ca062c36e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Color color_blanco_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00018">18</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00049">CInstance_MJ_Local::Init()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b57f01d3c576db5368dd0efc2f435a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Event event</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00011">11</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="teclado_i_p_8cpp_source.html#l00022">CTecladoIP::eventuar()</a>, <a class="el" href="menu_8cpp_source.html#l00023">CMenu::eventuar()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00038">CPad_MJ_Online::eventuar()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00045">CPad_MJ_Local::eventuar()</a>, <a class="el" href="pad__1j__inf_8cpp_source.html#l00109">CPad_1J_INF::eventuar()</a>, <a class="el" href="teclado_8cpp_source.html#l00065">CTeclado::eventuar()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00139">CPad_MJ_Online_Client::eventuar()</a>, <a class="el" href="turbo_8cpp_source.html#l00054">CTurbo::OnEvent()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00109">CInstance_Menu_MJ::OnEvent()</a>, <a class="el" href="instance__menu__1j_8cpp_source.html#l00108">CInstance_Menu_1J::OnEvent()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00109">CInstance_Menu_Main::OnEvent()</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00120">CInstance_1J_INF::OnEvent()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00167">CInstance_MJ_Local::OnEvent()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00163">CInstance_MJ_CPU::OnEvent()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00110">CInstance_Menu_MJ_Online::OnEvent()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00396">CInstance_MJ_Online_Client::OnEvent()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00320">CInstance_MJ_Online_Server::OnEvent()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00222">CInstance_MJ_Online_Client::OnEventMenu()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00203">CInstance_MJ_Online_Server::OnEventMenu()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00076">CInstance_Menu_MJ::OnExecute()</a>, <a class="el" href="instance__menu__1j_8cpp_source.html#l00075">CInstance_Menu_1J::OnExecute()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00074">CInstance_Menu_Main::OnExecute()</a>, <a class="el" href="instances_8cpp_source.html#l00054">CInstance::OnExecute()</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00085">CInstance_1J_INF::OnExecute()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00124">CInstance_MJ_Local::OnExecute()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00120">CInstance_MJ_CPU::OnExecute()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00076">CInstance_Menu_MJ_Online::OnExecute()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00333">CInstance_MJ_Online_Client::OnExecute()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00263">CInstance_MJ_Online_Server::OnExecute()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a27b7ff9e7bc76f2622e03f427b9e1742"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PAD_ALTO = 80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00087">87</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="pad__1j__inf_8cpp_source.html#l00009">CPad_1J_INF::CPad_1J_INF()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a79954f2c5c9fb0506d3e02d4f1867474"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PAD_ANCHO = 20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00086">86</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="pad__1j__inf_8cpp_source.html#l00009">CPad_1J_INF::CPad_1J_INF()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa842bd5767fbce498b50dd2eab17d555"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PAD_MEDIO = <a class="el" href="globals_8h.html#a27b7ff9e7bc76f2622e03f427b9e1742">PAD_ALTO</a>/2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00088">88</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a58be6bd8478a38995e6c3ce5161a9fbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface* pantalla</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Superficie que guardará todo el contenido que se va a mostrar por pantalla en cada frame de la ejecución. </p>
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00012">12</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00028">CEngine::CEngine()</a>, <a class="el" href="engine_8cpp_source.html#l00057">CEngine::Init()</a>, <a class="el" href="globals_8cpp_source.html#l00026">initPantalla()</a>, <a class="el" href="instance__menu__1j_8cpp_source.html#l00034">CInstance_Menu_1J::LoadFiles()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00035">CInstance_Menu_MJ::LoadFiles()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00033">CInstance_Menu_Main::LoadFiles()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00034">CInstance_Menu_MJ_Online::LoadFiles()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00113">CInstance_MJ_Online_Client::LoadFiles()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00105">CInstance_MJ_Online_Server::LoadFiles()</a>, <a class="el" href="tablero_8cpp_source.html#l00073">CTablero::mostrar()</a>, <a class="el" href="warning_8cpp_source.html#l00031">CWarning::mostrar()</a>, <a class="el" href="consola_8h_source.html#l00078">CConsola::mostrar()</a>, <a class="el" href="frame_8cpp_source.html#l00094">CFrame::mostrar()</a>, <a class="el" href="marcador_8cpp_source.html#l00090">CMarcador::mostrar()</a>, <a class="el" href="boton_8cpp_source.html#l00034">CBoton::mostrar()</a>, <a class="el" href="particulas_8cpp_source.html#l00018">CParticula::mostrar()</a>, <a class="el" href="pad_8cpp_source.html#l00050">CPad::mostrar()</a>, <a class="el" href="teclado_8cpp_source.html#l00115">CTeclado::mostrar()</a>, <a class="el" href="pelota_8cpp_source.html#l00056">CPelota::mostrar()</a>, <a class="el" href="warning_8cpp_source.html#l00041">CWarning::mostrar_ch()</a>, <a class="el" href="warning_8cpp_source.html#l00046">CWarning::mostrar_cv()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00020">CPelota_MJ_CPU::mover()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00038">CPelota_MJ_Local::mover()</a>, <a class="el" href="turbo_8cpp_source.html#l00126">CTurbo::OnRender()</a>, <a class="el" href="instance__menu__1j_8cpp_source.html#l00146">CInstance_Menu_1J::OnRender()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00151">CInstance_Menu_MJ::OnRender()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00151">CInstance_Menu_Main::OnRender()</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00186">CInstance_1J_INF::OnRender()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00252">CInstance_MJ_Local::OnRender()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00240">CInstance_MJ_CPU::OnRender()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00145">CInstance_Menu_MJ_Online::OnRender()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00495">CInstance_MJ_Online_Client::OnRender()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00421">CInstance_MJ_Online_Server::OnRender()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00311">CInstance_MJ_Online_Client::OnRenderMenu()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00246">CInstance_MJ_Online_Server::OnRenderMenu()</a> y <a class="el" href="engine_8cpp_source.html#l00041">CEngine::~CEngine()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc43830800eb5cd87799963608ec1988"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PANTALLA_ALTO = 400</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00073">73</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="consola_8h_source.html#l00030">CConsola::CConsola()</a>, <a class="el" href="pad__1j__inf_8cpp_source.html#l00009">CPad_1J_INF::CPad_1J_INF()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00017">CPelota_1J_INF::CPelota_1J_INF()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00142">CPelota_1J_INF::empezar()</a>, <a class="el" href="turbo_8cpp_source.html#l00009">CTurbo::Init()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00043">CPelota_1J_INF::mover()</a>, <a class="el" href="pad__1j__inf_8cpp_source.html#l00048">CPad_1J_INF::mover()</a> y <a class="el" href="consola_8h_source.html#l00046">CConsola::mover()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a121233f7601442d0bcb2319801e59a22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PANTALLA_ANCHO = 800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00072">72</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="pelota__1j__inf_8cpp_source.html#l00017">CPelota_1J_INF::CPelota_1J_INF()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00142">CPelota_1J_INF::empezar()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00043">CPelota_1J_INF::mover()</a> y <a class="el" href="turbo_8cpp_source.html#l00134">CTurbo::OnLoop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ae8a80f356b6994c3d7324faa368226"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PANTALLA_BPP = 32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00074">74</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ade757e3558f98c7d6f99b2496554d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PANTALLA_MARGEN_INFERIOR = 15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00077">77</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="tablero_8cpp_source.html#l00022">CTablero::construir()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00018">CPelota_MJ_Local::empezar()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a>, <a class="el" href="pelota__mj_8cpp_source.html#l00004">CPelota_MJ::mover()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00020">CPelota_MJ_CPU::mover()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00064">CPad_MJ_Online::mover()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00043">CPelota_1J_INF::mover()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00064">CPad_MJ_Local::mover()</a>, <a class="el" href="pad__cpu_8cpp_source.html#l00030">CPad_MJ_CPU::mover()</a>, <a class="el" href="pad__1j__inf_8cpp_source.html#l00048">CPad_1J_INF::mover()</a>, <a class="el" href="consola_8h_source.html#l00046">CConsola::mover()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00093">CPad_MJ_Online_Zombi::mover()</a> y <a class="el" href="pelota__mj__local_8cpp_source.html#l00038">CPelota_MJ_Local::mover()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c0316a0cf4f52d2770edf4136466e18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PANTALLA_MARGEN_LATERAL = 50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00078">78</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="tablero_8cpp_source.html#l00022">CTablero::construir()</a>, <a class="el" href="pad__1j__inf_8cpp_source.html#l00009">CPad_1J_INF::CPad_1J_INF()</a>, <a class="el" href="pad__cpu_8cpp_source.html#l00003">CPad_MJ_CPU::CPad_MJ_CPU()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00006">CPad_MJ_Local::CPad_MJ_Local()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00004">CPad_MJ_Online::CPad_MJ_Online()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00118">CPad_MJ_Online_Client::CPad_MJ_Online_Client()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00171">CPad_MJ_Online_Client_Zombi::CPad_MJ_Online_Client_Zombi()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00073">CPad_MJ_Online_Zombi::CPad_MJ_Online_Zombi()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00043">CPelota_1J_INF::mover()</a> y <a class="el" href="pad__cpu_8cpp_source.html#l00030">CPad_MJ_CPU::mover()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c80e7ac3f0df23eed03ba1de7dbbef7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PANTALLA_MARGEN_SUPERIOR = 15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00076">76</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="tablero_8cpp_source.html#l00022">CTablero::construir()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00018">CPelota_MJ_Local::empezar()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a>, <a class="el" href="pelota__mj_8cpp_source.html#l00004">CPelota_MJ::mover()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00020">CPelota_MJ_CPU::mover()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00064">CPad_MJ_Online::mover()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00043">CPelota_1J_INF::mover()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00064">CPad_MJ_Local::mover()</a>, <a class="el" href="pad__cpu_8cpp_source.html#l00030">CPad_MJ_CPU::mover()</a>, <a class="el" href="pad__1j__inf_8cpp_source.html#l00048">CPad_1J_INF::mover()</a>, <a class="el" href="consola_8h_source.html#l00046">CConsola::mover()</a> y <a class="el" href="pelota__mj__local_8cpp_source.html#l00038">CPelota_MJ_Local::mover()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9dc5f1b451127b480b7848098d75ee12"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mix_Chunk* snd_ping</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00014">14</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00095">CEngine::LoadFiles()</a> y <a class="el" href="engine_8cpp_source.html#l00132">CEngine::UnLoadFiles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac07663d0d9a7e19ed85e62d73cfd804d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mix_Chunk* snd_pong</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00015">15</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00095">CEngine::LoadFiles()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a>, <a class="el" href="pelota__mj_8cpp_source.html#l00004">CPelota_MJ::mover()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00020">CPelota_MJ_CPU::mover()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00043">CPelota_1J_INF::mover()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00038">CPelota_MJ_Local::mover()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00418">CInstance_MJ_Online_Client::OnLoop()</a> y <a class="el" href="engine_8cpp_source.html#l00132">CEngine::UnLoadFiles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a49a1a9570706ece8090125625c2e107a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mix_Chunk* snd_pung</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00016">16</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00095">CEngine::LoadFiles()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a>, <a class="el" href="pelota__mj_8cpp_source.html#l00004">CPelota_MJ::mover()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00020">CPelota_MJ_CPU::mover()</a>, <a class="el" href="pelota__1j__inf_8cpp_source.html#l00043">CPelota_1J_INF::mover()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00038">CPelota_MJ_Local::mover()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00418">CInstance_MJ_Online_Client::OnLoop()</a> y <a class="el" href="engine_8cpp_source.html#l00132">CEngine::UnLoadFiles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a41a7a3cc36f721c6da798fefdd1db39a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TABLERO_LINEAS_GROSOR = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00080">80</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="tablero_8cpp_source.html#l00022">CTablero::construir()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00020">CPelota_MJ_CPU::mover()</a> y <a class="el" href="pelota__mj__local_8cpp_source.html#l00038">CPelota_MJ_Local::mover()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9ae1a9192dda1abcf5253609ea2548c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TEXTO_MARCADOR_ANCHO = 160</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8h_source.html#l00097">97</a> del archivo <a class="el" href="globals_8h_source.html">globals.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="marcador_8cpp_source.html#l00011">CMarcador::CMarcador()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00075">CInstance_MJ_Local::LoadFiles()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00068">CInstance_MJ_CPU::LoadFiles()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00113">CInstance_MJ_Online_Client::LoadFiles()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00105">CInstance_MJ_Online_Server::LoadFiles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0c08c970d3c7db160e52ea60722d0de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TTF_Font* ttf_bitM</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00022">22</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00049">CInstance_MJ_Local::Init()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00043">CInstance_MJ_CPU::Init()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00075">CInstance_MJ_Local::LoadFiles()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00068">CInstance_MJ_CPU::LoadFiles()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00113">CInstance_MJ_Online_Client::LoadFiles()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00105">CInstance_MJ_Online_Server::LoadFiles()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00155">CInstance_MJ_Online_Client::LoadObjects()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00143">CInstance_MJ_Online_Server::LoadObjects()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00117">CInstance_MJ_Local::UnLoadFiles()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00113">CInstance_MJ_CPU::UnLoadFiles()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00205">CInstance_MJ_Online_Client::UnLoadFiles()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00186">CInstance_MJ_Online_Server::UnLoadFiles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4abc73abc5bb8be9d8bdb55118857120"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TTF_Font* ttf_consolas</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00020">20</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="instance__menu__1j_8cpp_source.html#l00014">CInstance_Menu_1J::Init()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00014">CInstance_Menu_MJ::Init()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00012">CInstance_Menu_Main::Init()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00049">CInstance_MJ_Local::Init()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00043">CInstance_MJ_CPU::Init()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00014">CInstance_Menu_MJ_Online::Init()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00056">CInstance_MJ_Online_Client::Init()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00054">CInstance_MJ_Online_Server::Init()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00035">CInstance_Menu_MJ::LoadFiles()</a>, <a class="el" href="instance__menu__1j_8cpp_source.html#l00034">CInstance_Menu_1J::LoadFiles()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00033">CInstance_Menu_Main::LoadFiles()</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00042">CInstance_1J_INF::LoadFiles()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00075">CInstance_MJ_Local::LoadFiles()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00068">CInstance_MJ_CPU::LoadFiles()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00034">CInstance_Menu_MJ_Online::LoadFiles()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00113">CInstance_MJ_Online_Client::LoadFiles()</a>, <a class="el" href="instancia__server_8cpp_source.html#l00105">CInstance_MJ_Online_Server::LoadFiles()</a>, <a class="el" href="instance__menu__mj_8cpp_source.html#l00068">CInstance_Menu_MJ::UnLoadFiles()</a>, <a class="el" href="instance__menu__1j_8cpp_source.html#l00067">CInstance_Menu_1J::UnLoadFiles()</a>, <a class="el" href="instance__menu_8cpp_source.html#l00066">CInstance_Menu_Main::UnLoadFiles()</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00079">CInstance_1J_INF::UnLoadFiles()</a>, <a class="el" href="multijugador_2local_2instancia_8cpp_source.html#l00117">CInstance_MJ_Local::UnLoadFiles()</a>, <a class="el" href="multijugador_2local_2cpu_2instancia_8cpp_source.html#l00113">CInstance_MJ_CPU::UnLoadFiles()</a>, <a class="el" href="instance__menu__mj__online_8cpp_source.html#l00068">CInstance_Menu_MJ_Online::UnLoadFiles()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00205">CInstance_MJ_Online_Client::UnLoadFiles()</a> y <a class="el" href="instancia__server_8cpp_source.html#l00186">CInstance_MJ_Online_Server::UnLoadFiles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe32ab812245ae1f4f1a019a6b034cd3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TTF_Font* ttf_consolasM</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="globals_8cpp_source.html#l00021">21</a> del archivo <a class="el" href="globals_8cpp_source.html">globals.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Viernes, 19 de Abril de 2013 16:44:01 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

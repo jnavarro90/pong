@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['datos_5fcliente',['datos_cliente',['../class_c_instance___m_j___online___client.html#ad55c3779b9c6edb0cb0cb13e748af80d',1,'CInstance_MJ_Online_Client::datos_cliente()'],['../class_c_instance___m_j___online___server.html#a741e54e893040321bb3a01b63f5132ef',1,'CInstance_MJ_Online_Server::datos_cliente()']]],
+  ['datos_5fserver',['datos_server',['../class_c_instance___m_j___online___client.html#aabe049d0d296c27c2486eef668e9201a',1,'CInstance_MJ_Online_Client::datos_server()'],['../class_c_instance___m_j___online___server.html#a845a7eff2a8947ee291f6b8af1f421fc',1,'CInstance_MJ_Online_Server::datos_server()']]],
+  ['dectam',['decTam',['../class_c_instance__1_j___i_n_f.html#aba011743bb4866fd5a70aa601fcce088',1,'CInstance_1J_INF::decTam()'],['../class_c_pad__1_j___i_n_f.html#ac7cf29bdaec4365fde13af468b039d3e',1,'CPad_1J_INF::decTam()'],['../class_c_pelota__1_j___i_n_f.html#a6b63f97fc96419538f1cf8a77e2c47d8',1,'CPelota_1J_INF::decTam()']]],
+  ['defconf_5fpad_5falto',['defConf_PAD_ALTO',['../opciones_8h.html#a102b1d92ac21bcf79b2ff0fd29b95268',1,'opciones.h']]],
+  ['defconf_5fpad_5fancho',['defConf_PAD_ANCHO',['../opciones_8h.html#ab0c511dbadf33e567a6238d49a2f0ae7',1,'opciones.h']]],
+  ['defconf_5fpad_5fcolor',['defConf_PAD_COLOR',['../opciones_8h.html#a0881d2ed050b19fa48dfc1cab5c7589d',1,'opciones.h']]],
+  ['defconf_5fpad_5fvel',['defConf_PAD_VEL',['../opciones_8h.html#a2efb75185f88498f8e16be2a9154eece',1,'opciones.h']]],
+  ['defconf_5fpantalla_5falto',['defConf_PANTALLA_ALTO',['../opciones_8h.html#a8bde9bf0a9e6d5dad4957f4ef8fe4f38',1,'opciones.h']]],
+  ['defconf_5fpantalla_5fancho',['defConf_PANTALLA_ANCHO',['../opciones_8h.html#ab5b4fd0a631034b95ac19c82e4e25572',1,'opciones.h']]],
+  ['defconf_5fpantalla_5fbpp',['defConf_PANTALLA_BPP',['../opciones_8h.html#a39cb2fd60ca3f54ca8a21735a8c5efc8',1,'opciones.h']]],
+  ['defconf_5fpelota_5falto',['defConf_PELOTA_ALTO',['../opciones_8h.html#ad1522223b2710a055da246eb96c7bf4f',1,'opciones.h']]],
+  ['defconf_5fpelota_5fcolor',['defConf_PELOTA_COLOR',['../opciones_8h.html#a58f09251cd09328b7ff753c776fb570e',1,'opciones.h']]],
+  ['defconf_5fpelota_5fvel',['defConf_PELOTA_VEL',['../opciones_8h.html#aefbb8289a403ed73e37b9e1d5471d904',1,'opciones.h']]],
+  ['defconf_5fpj1_5fdown',['defConf_PJ1_DOWN',['../opciones_8h.html#a581fa25134cba936e8063a515f7e428d',1,'opciones.h']]],
+  ['defconf_5fpj1_5fup',['defConf_PJ1_UP',['../opciones_8h.html#a92d4f7135d1e94b4dec8f04709af08d0',1,'opciones.h']]],
+  ['defconf_5fpj2_5fdown',['defConf_PJ2_DOWN',['../opciones_8h.html#ae3012445b6aa756eb5f3e52441d45f74',1,'opciones.h']]],
+  ['defconf_5fpj2_5fup',['defConf_PJ2_UP',['../opciones_8h.html#a8ff579f3cab5cca3317b297a80b5ec02',1,'opciones.h']]],
+  ['der',['der',['../pad__mj__online_8h.html#af5bc57ef0ec2bb356f493207a534bbc2aec70b27c1b981a00258514467a8788a7',1,'pad_mj_online.h']]]
+];

@@ -1,12 +1,13 @@
 #include "instancia.h"
 
 #include "../../temporizador.h"
+#include "../../frame.h"
 
 #include "../../opciones/tablero.h"
 
 using namespace std;
 
-const int FRAMES_PER_SECOND = 60;
+const int FRAMES_PER_SECOND = 70;
 
 CInstance_MJ_Online_Client::CInstance_MJ_Online_Client()
 {
@@ -83,18 +84,18 @@ bool CInstance_MJ_Online_Client::Init()
   datos_server = new CNetwork_Data_Server;
   datos_cliente = new CNetwork_Data_Client;
 
-  msgC = new CNetMessage1;
-  msgS = new CNetMessage12;
+  msgC = new CNetMessageN(NET_MJ_CLIENTDATA_SIZE);
+  msgS = new CNetMessageN(NET_MJ_SERVERDATA_SIZE);
 
-  SDL_Rect cajas = {248, 250, 150, 25};
+  SDL_Rect cajas = {100, 200, 180, 25};
 
   botones = NULL;
   CBoton* botones = new CBoton[4];
-  botones[0] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Conectar"); cajas.x += 160;
+  botones[0] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Conectar"); cajas.y += 30;
   botones[1] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Atras");
   menu = new CMenu(botones, 2);
 
-  entradaTeclado = new CTecladoIP("media/ttf/consolab.ttf", 30, &color_blanco, 254, 185, 16);
+  entradaTeclado = new CTecladoIP("media/ttf/consolab.ttf", 30, &color_blanco, 95, 135, 16);
 
   // Warnings
   wrConectando = new CWarning(ttf_consolas, "Conectando...", &color_blanco);
@@ -103,23 +104,18 @@ bool CInstance_MJ_Online_Client::Init()
 
   // Temporizador
   timeOut = new CTemporizador;
+  timeFrameSkip = new CTemporizador;
+  frameSkip = false;
 
   return true;
 }
 
 bool CInstance_MJ_Online_Client::LoadFiles()
 {
-  /*fondo = cargar_img("media/img/fondo_mj.png", false);
-  if(fondo == NULL)
-  {
-    cerr << ERROR_STR_FILE << "media/img/fondo_mj_local.png" << endl;
-    return false;
-  }*/
-
-  fondo_menu = cargar_img("media/img/fondo_menu_client.png");
+  fondo_menu = SDL_CreateRGBSurface(SDL_SWSURFACE, opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP, 0x00, 0x00, 0x00, 0x00);
   if(fondo_menu == NULL)
   {
-    cerr << ERROR_STR_FILE << "media/img/fondo_menu_client.png" << endl;
+    cout << ERROR_STR_SURFACE << "MENU_MJ_ONLINE_CLIENT -> fondo" << endl;
     return false;
   }
 
@@ -137,6 +133,22 @@ bool CInstance_MJ_Online_Client::LoadFiles()
     return false;
   }
 
+  SDL_Rect caja = {80, 200, 8, 115};
+  SDL_FillRect(fondo_menu, &caja, SDL_MapRGB(pantalla->format, 0xFF, 0xFF, 0xFF) );
+  CFrame caja_IP(320, 60, 8, SDL_MapRGB(pantalla->format, 0xFF, 0xFF, 0xFF), SDL_MapRGB(pantalla->format, 0x00, 0x00, 0x00));
+  caja_IP.combinar(80, 120, fondo_menu);
+
+  SDL_Color texto_color = {255, 255, 255, 0};
+  SDL_Surface* texto_connect = TTF_RenderText_Blended(ttf_consolas, "Dirección IP", texto_color);
+  aplicar_superficie(80, 100, texto_connect, fondo_menu);
+  SDL_FreeSurface(texto_connect);
+
+  return true;
+}
+
+
+bool CInstance_MJ_Online_Client::LoadMenu()
+{
   return true;
 }
 
@@ -186,6 +198,7 @@ void CInstance_MJ_Online_Client::Close()
 
   // Temp
   delete timeOut;
+  delete timeFrameSkip;
 }
 
 
@@ -250,16 +263,16 @@ void CInstance_MJ_Online_Client::OnLoopMenu(flags& F)
       {
         if(tcpclient->Ok())
         {
-          CNetMessage12 msg_settings;
+          CNetMessageN msg_settings(NET_MJ_SETTINGS_SIZE);
           if(tcpclient->Receive(msg_settings) )
           {
           #ifdef DEBUG
             cout << "Conectado" << endl;
           #endif
             CNetwork_Data_Settings network_data_settings;
-            char buffer_settings[12];
+            char buffer_settings[NET_MJ_SETTINGS_SIZE];
 
-            msg_settings.UnLoad12Bytes(buffer_settings);
+            msg_settings.UnLoadNBytes(buffer_settings);
             network_data_settings.readBuffer((uchar*)buffer_settings);
 
             opciones->PANTALLA_ALTO = network_data_settings.PANTALLA_ALTO;
@@ -281,7 +294,6 @@ void CInstance_MJ_Online_Client::OnLoopMenu(flags& F)
     }
     else if(timeOut->getTicks()/1000.f >= iTimeOut  && !conectado)
     {
-      //timeOut->parar();
       F = 0x00;
       F |= eDesconectado;
       bTeclado = true;
@@ -290,7 +302,6 @@ void CInstance_MJ_Online_Client::OnLoopMenu(flags& F)
   }
   else if(bTeclado && i_running)
   {
-    //F = 0x00;
     timeOut->empezar();
   }
 }
@@ -351,6 +362,7 @@ int CInstance_MJ_Online_Client::OnExecute()
   }
 
   LoadObjects();
+  timeFrameSkip->empezar();
 
   while(i_running)
   {
@@ -364,13 +376,16 @@ int CInstance_MJ_Online_Client::OnExecute()
         salida = I_SALIDA;
       }
     }
-
     OnLoop(salida);
     OnRender();
 
     frame++;
-    if((fps.getTicks() < (1000 / FRAMES_PER_SECOND)))
+    if((fps.getTicks() < (1000 / FRAMES_PER_SECOND)) && !frameSkip)
       SDL_Delay((1000 / FRAMES_PER_SECOND ) - fps.getTicks());
+    if(frameSkip)
+    {
+      cout << "Frame saltado en " << frame << endl;
+    }
   }
   UnLoadObjects();
   Close();
@@ -380,6 +395,9 @@ int CInstance_MJ_Online_Client::OnExecute()
 
 void CInstance_MJ_Online_Client::OnEvent(int& salida)
 {
+  if(frameSkip)
+    return;
+
   PJ1->eventuar(datos_cliente->evento);
 
   if(event.type == SDL_KEYDOWN)
@@ -409,14 +427,18 @@ void CInstance_MJ_Online_Client::OnLoop(int& salida)
       }
     }
   }
-  else if(conectado)
+  //else if(conectado)
+  if(conectado)
   {
     timeOut->empezar();
-    // Enviar datos si el usuario ha realizado un movimiento
-    if(datos_cliente->evento)
+    // Enviar datos si el usuario ha realizado un movimiento y si no hay frameSkip
+
+    if(datos_cliente->evento && !frameSkip)
     {
+      datos_cliente->ticks = timeFrameSkip->getTicks();
+
       datos_cliente->makeBuffer();
-      msgC->LoadByte(datos_cliente->getBuffer());
+      msgC->LoadNBytes(datos_cliente->getBuffer());
 
       if(!tcpclient->Send(*msgC))
       {
@@ -430,7 +452,8 @@ void CInstance_MJ_Online_Client::OnLoop(int& salida)
       if(tcpclient->Receive(*msgS))
       {
         char buffer[NET_MJ_SERVERDATA_SIZE];
-        msgS->UnLoad12Bytes(buffer);
+        //msgS->UnLoad12Bytes(buffer);
+        msgS->UnLoadNBytes(buffer);
 
         datos_server->readBuffer((uchar*)buffer);
 
@@ -441,6 +464,11 @@ void CInstance_MJ_Online_Client::OnLoop(int& salida)
 
         marcador->setM1(datos_server->marcador1);
         marcador->setM2(datos_server->marcador2);
+
+        if(datos_server->ticks >= (Uint32)timeFrameSkip->getTicks())
+          frameSkip = true;
+        else
+          frameSkip = false;
 
         if(datos_server->fs & fsnd_pong)
         {

@@ -19,7 +19,7 @@ CTablero::~CTablero()
   SDL_FreeSurface(tablero);
 }
 
-void CTablero::construir(int16 ancho, int16 alto, int16 bpp)
+void CTablero::construir(int16 ancho, int16 alto, int16 bpp, bool menu)
 {
   if(tablero != NULL)
     SDL_FreeSurface(tablero);
@@ -49,12 +49,15 @@ void CTablero::construir(int16 ancho, int16 alto, int16 bpp)
   caja.h = alto - PANTALLA_MARGEN_SUPERIOR - PANTALLA_MARGEN_INFERIOR - TABLERO_LINEAS_GROSOR*2;
   SDL_FillRect(tablero, &caja, SDL_MapRGB(tablero->format, 0xFF, 0x00, 0x00));
 
-  // Borde derecha
+  // Borde derechas
   caja.x = ancho - PANTALLA_MARGEN_LATERAL;
   caja.y = PANTALLA_MARGEN_SUPERIOR + TABLERO_LINEAS_GROSOR;
   caja.w = TABLERO_LINEAS_GROSOR;
   caja.h = alto - PANTALLA_MARGEN_SUPERIOR - PANTALLA_MARGEN_INFERIOR - TABLERO_LINEAS_GROSOR*2;
   SDL_FillRect(tablero, &caja, SDL_MapRGB(tablero->format, 0xFF, 0x00, 0x00));*/
+
+  if(menu) // Si estamos dibujando un menu, ignoramos las lineas discontinuas del medio
+    return; // ¿O TAL VEZ NO?
 
     // Lineas discontinuas del medio
   caja.h = 20;

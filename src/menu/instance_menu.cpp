@@ -14,7 +14,7 @@ bool CInstance_Menu_Main::Init()
   if(!LoadFiles())
     return false;
 
-  SDL_Rect cajas = {100, 200, 150, 25};
+  SDL_Rect cajas = {100, 200, 180, 25};
 
   botones = new CBoton[4];
   botones[0] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Un Jugador"); cajas.y += 30;
@@ -33,8 +33,6 @@ bool CInstance_Menu_Main::Init()
 bool CInstance_Menu_Main::LoadFiles()
 {
   fondo = SDL_CreateRGBSurface(SDL_SWSURFACE, opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP, 0x00, 0x00, 0x00, 0x00);
-  /*fondo = cargar_img("media/img/fondo_menu.png", false);*/
-
   if(fondo == NULL)
   {
     cout << ERROR_STR_SURFACE << "MENU_MAIN -> fondo" << endl;
@@ -45,9 +43,13 @@ bool CInstance_Menu_Main::LoadFiles()
 
   if(ttf_consolas == NULL)
   {
-    cerr << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
+    cout << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
     return false;
   }
+
+  // Linea blanca para dar un estilo minimalista
+  SDL_Rect caja = {80, 200, 8, 115};
+  SDL_FillRect(fondo, &caja, SDL_MapRGB(pantalla->format, 0xFF, 0xFF, 0xFF) );
 
   return true;
 }
@@ -67,7 +69,7 @@ void CInstance_Menu_Main::UnLoadFiles()
   TTF_CloseFont(ttf_consolas);
 }
 
-
+#include "../frame.h"
 
 int CInstance_Menu_Main::OnExecute()
 {
@@ -79,6 +81,8 @@ int CInstance_Menu_Main::OnExecute()
 
   int frame = 0;
   CTemporizador fps;
+
+  //CFrame _frame(50, 50, 400, 400, 5, SDL_MapRGB(pantalla->format, 0xFF, 0xFF, 0xFF), SDL_MapRGB(pantalla->format, 0x00, 0x00, 0x00));
 
   int salida = I_SALIDA;
 

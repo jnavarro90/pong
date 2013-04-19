@@ -1,4 +1,10 @@
+/** @file
+ * @brief Definición de la clase CWarning
+ *
+ */
+
 #include "warning.h"
+#include "opciones/opciones.h"
 
 CWarning::CWarning(TTF_Font* fuente, const char* txt, SDL_Color* color)
 {
@@ -24,7 +30,7 @@ CWarning::~CWarning()
 
 void CWarning::mostrar()
 {
-  aplicar_superficie(PANTALLA_ANCHO/2 - srf_texto->w/2, PANTALLA_ALTO/2 - srf_texto->h/2, srf_texto, pantalla);
+  aplicar_superficie(opciones->PANTALLA_ANCHO/2 - srf_texto->w/2, opciones->PANTALLA_ALTO/2 - srf_texto->h/2, srf_texto, pantalla);
 }
 
 void CWarning::mostrar(int x, int y)
@@ -34,10 +40,10 @@ void CWarning::mostrar(int x, int y)
 
 void CWarning::mostrar_ch(int y)
 {
-  aplicar_superficie(PANTALLA_ANCHO/2 - srf_texto->w/2, y, srf_texto, pantalla);
+  aplicar_superficie(opciones->PANTALLA_ANCHO/2 - srf_texto->w/2, y, srf_texto, pantalla);
 }
 
 void CWarning::mostrar_cv(int x)
 {
-  aplicar_superficie(x, PANTALLA_ALTO/2 - srf_texto->h/2, srf_texto, pantalla);
+  aplicar_superficie(x, opciones->PANTALLA_ALTO/2 - srf_texto->h/2, srf_texto, pantalla);
 }

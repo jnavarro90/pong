@@ -8,11 +8,11 @@
 TUTORIALES:
 ---------------------------------------------------------------------------------------
   - Lazy Foo' Productions:	htpp://lazyfoo.net/SDL_tutorials/index.php
-  - Game Art Spain:			http://www.gameartspain.es/wiki/programacion/cursosdl_00_indice
+  - Game Art Spain:		http://www.gameartspain.es/wiki/programacion/cursosdl_00_indice
 
 LIBRERÍAS:
 ---------------------------------------------------------------------------------------
-  - SDL:				http://www.libsdl.org/
+  - SDL:			http://www.libsdl.org/
   - SDL_image:			http://www.libsdl.org/projects/SDL_image/
   - SDL_mixer:			http://www.libsdl.org/projects/SDL_mixer/
   - SDL_ttf:			http://www.libsdl.org/projects/SDL_ttf/

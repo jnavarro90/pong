@@ -14,6 +14,8 @@ void CTurbo::Init()
   cheatCount = 0;
   frame = 0;
 
+  running = false;
+
   caja.w = TURBO_ANCHO;
   caja.h = TURBO_ALTO;
   caja.x = -TURBO_ANCHO;

@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Define la clase CEngine
+ */
+
 #include <time.h>
 
 #include "engine.h"
@@ -14,7 +19,6 @@
 #include "multijugador/local/instancia.h"
 #include "multijugador/online/instancia.h"
 #include "multijugador/local/cpu/instancia.h"
-
 /**
  * @brief Constructor por defecto
  *
@@ -70,11 +74,13 @@ bool CEngine::Init()
   tablero_mp = new CTablero;
   tablero_mp->construir(opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP);
 
+  SDL_Surface* srf = cargar_img("media/img/icono.tga", true);
+  SDL_WM_SetIcon(srf, NULL);
 
   if(!initPantalla())
     return false;
 
-  SDL_WM_SetCaption( "Pong C++", "media/img/p++.ico" );
+  SDL_WM_SetCaption( "Pong++", "Pong++" );
   color_blanco = SDL_MapRGB(pantalla->format, 255, 255, 255);
 
   return true;
@@ -172,7 +178,7 @@ int CEngine::OnExecute()
 {
   if(!Init())
   {
-    cerr << ERROR_STR_INIT << " ENGINE" << endl;
+    cout << ERROR_STR_INIT << " ENGINE" << endl;
     return -1;
   }
 
@@ -182,7 +188,6 @@ int CEngine::OnExecute()
   instance[I_MENU_MAIN] = &i_menu;
   instance[I_MENU_1J] = &i_menu_1j;
   instance[I_MENU_MJ] = &i_menu_mj;
-
 
   CInstance_1J_INF i_1j_inf;
   instance[I_1J_INF] = &i_1j_inf;

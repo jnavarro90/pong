@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Pong++: Fichero Fuente src/multijugador/local/pad_mj_local.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pong++
+   &#160;<span id="projectnumber">Beta1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f5cc26e192ea4ca3f901bed5295e2dbb.html">multijugador</a></li><li class="navelem"><a class="el" href="dir_b6398e710cfe49eb9963ce1853b74405.html">local</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pad_mj_local.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pad__mj__local_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pad__mj__local_8h.html">pad_mj_local.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="code" href="pad__mj__local_8cpp.html#a71d49ca86793c39f7637898861b1b254">    3</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pad__mj__local_8cpp.html#a71d49ca86793c39f7637898861b1b254">PAD_OFFSETJ1_MJ_LOCAL</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="pad__mj__local_8cpp.html#aa78cc1636b3b7cc4b690e35ebbeb4323">    4</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pad__mj__local_8cpp.html#aa78cc1636b3b7cc4b690e35ebbeb4323">PAD_OFFSETJ2_MJ_LOCAL</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___local.html#ad99605a07252c4e193949e928336af6c">    6</a></span>&#160;<a class="code" href="class_c_pad___m_j___local.html#ad99605a07252c4e193949e928336af6c">CPad_MJ_Local::CPad_MJ_Local</a>(<span class="keywordtype">bool</span> pad, SDLKey U, SDLKey D): <a class="code" href="class_c_pad___m_j.html">CPad_MJ</a>()</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="comment">//bpad = p;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <a class="code" href="class_c_pad___m_j___local.html#a07bbde552efd388cec46375ce5595127">KUp</a> = U;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <a class="code" href="class_c_pad___m_j___local.html#a8f07c1b427ab0ccff680576339a8e83e">KDown</a> = D;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="pad__mj__local_8cpp.html#a71d49ca86793c39f7637898861b1b254">PAD_OFFSETJ1_MJ_LOCAL</a> = <a class="code" href="globals_8h.html#a8c0316a0cf4f52d2770edf4136466e18">PANTALLA_MARGEN_LATERAL</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="pad__mj__local_8cpp.html#aa78cc1636b3b7cc4b690e35ebbeb4323">PAD_OFFSETJ2_MJ_LOCAL</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a37b5e119019fc33db3efe9c5b59543b7">PANTALLA_ANCHO</a> - <a class="code" href="globals_8h.html#a8c0316a0cf4f52d2770edf4136466e18">PANTALLA_MARGEN_LATERAL</a> - <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a6a2c8b675e18580cd2444f0da65902b0">PAD_ANCHO</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">if</span>(SDL_GetKeyState(NULL)[<a class="code" href="class_c_pad___m_j___local.html#a07bbde552efd388cec46375ce5595127">KUp</a>])</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> -= <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a450806807c57d4577e89efe057f8c980">PAD_VEL</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">if</span>(SDL_GetKeyState(NULL)[<a class="code" href="class_c_pad___m_j___local.html#a8f07c1b427ab0ccff680576339a8e83e">KDown</a>])</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> += <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a450806807c57d4577e89efe057f8c980">PAD_VEL</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">if</span>(!pad) <span class="comment">// j1 (__)_)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;       <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a11b0d29582036200a6f34c8ec5b08763">x</a> = <a class="code" href="pad__mj__local_8cpp.html#a71d49ca86793c39f7637898861b1b254">PAD_OFFSETJ1_MJ_LOCAL</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">else</span> <span class="comment">// j2</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;       <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a11b0d29582036200a6f34c8ec5b08763">x</a> = <a class="code" href="pad__mj__local_8cpp.html#aa78cc1636b3b7cc4b690e35ebbeb4323">PAD_OFFSETJ2_MJ_LOCAL</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">w</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a6a2c8b675e18580cd2444f0da65902b0">PAD_ANCHO</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#aef315aac5ba09a7017ef6e0a5b12ee28">PANTALLA_ALTO</a>/2 - <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a2d69aeb21db70a6cca55391e15dd1df6">PAD_ALTO</a>/2;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#af68568403a9107508459d245ecf4c232">h</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a2d69aeb21db70a6cca55391e15dd1df6">PAD_ALTO</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___local.html#aaa6cbde922c312bc2d9a923b58acc9d0">   34</a></span>&#160;<a class="code" href="class_c_pad___m_j___local.html#aaa6cbde922c312bc2d9a923b58acc9d0">CPad_MJ_Local::~CPad_MJ_Local</a>()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a11b0d29582036200a6f34c8ec5b08763">x</a> = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">w</a> = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a> = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#af68568403a9107508459d245ecf4c232">h</a> = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="class_c_pad.html#aa8a3cf49803c9879ac19e7e48f07b0e9">momento</a> = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___local.html#a5e65ab7a02ee543c1b462dfcbc1f85f6">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_pad___m_j___local.html#a5e65ab7a02ee543c1b462dfcbc1f85f6">CPad_MJ_Local::eventuar</a>()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">// Ajustar y pensar hacerlo con if-else if, y asociar al pad unas teclas predefinidas.</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.type == SDL_KEYDOWN)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.sym == <a class="code" href="class_c_pad___m_j___local.html#a07bbde552efd388cec46375ce5595127">KUp</a>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> -= <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a450806807c57d4577e89efe057f8c980">PAD_VEL</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.sym == <a class="code" href="class_c_pad___m_j___local.html#a8f07c1b427ab0ccff680576339a8e83e">KDown</a>)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> += <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a450806807c57d4577e89efe057f8c980">PAD_VEL</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.type == SDL_KEYUP)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;       <span class="keywordflow">if</span>(<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.sym == <a class="code" href="class_c_pad___m_j___local.html#a07bbde552efd388cec46375ce5595127">KUp</a>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;         <a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> += <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a450806807c57d4577e89efe057f8c980">PAD_VEL</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;       <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.sym == <a class="code" href="class_c_pad___m_j___local.html#a8f07c1b427ab0ccff680576339a8e83e">KDown</a>)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;         <a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> -= <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a450806807c57d4577e89efe057f8c980">PAD_VEL</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___local.html#ac83d81ff9d264783f3234a7dbfe52f4b">   64</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_pad___m_j___local.html#ac83d81ff9d264783f3234a7dbfe52f4b">CPad_MJ_Local::mover</a>()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> &lt; 0)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_c_pad.html#aa8a3cf49803c9879ac19e7e48f07b0e9">momento</a> = 1;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> &gt; 0)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;       <a class="code" href="class_c_pad.html#aa8a3cf49803c9879ac19e7e48f07b0e9">momento</a> = -1;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a> == 0)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;       <a class="code" href="class_c_pad.html#aa8a3cf49803c9879ac19e7e48f07b0e9">momento</a> = 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a> += <a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a> &lt; <a class="code" href="globals_8h.html#a7c80e7ac3f0df23eed03ba1de7dbbef7">PANTALLA_MARGEN_SUPERIOR</a> || <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a> + <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#af68568403a9107508459d245ecf4c232">h</a> &gt; <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#aef315aac5ba09a7017ef6e0a5b12ee28">PANTALLA_ALTO</a> - <a class="code" href="globals_8h.html#a6ade757e3558f98c7d6f99b2496554d6">PANTALLA_MARGEN_INFERIOR</a>)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a> -= <a class="code" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="class_c_pad.html#aa8a3cf49803c9879ac19e7e48f07b0e9">momento</a> = 0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Viernes, 19 de Abril de 2013 16:44:01 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

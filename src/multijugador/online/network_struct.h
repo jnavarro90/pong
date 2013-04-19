@@ -36,17 +36,19 @@ extern void charToCdata(uchar& c, network_data_client_t* t);
 class CNetwork_Data_Client
 {
   private:
-    char buffer;
+    char buffer[NET_MJ_CLIENTDATA_SIZE];
   public:
     int8 evento; // 1 byte
-    // Total: 1 byte
+    int8 unused; // 1 byte
+    Uint32 ticks; // 4 bytes
+    // Total: 6 bytes
   public:
     CNetwork_Data_Client();
 
     void makeBuffer();
-    char getBuffer();
+    char* getBuffer();
 
-    void readBuffer(char b);
+    void readBuffer(char* b);
 };
 
 class CNetwork_Data_Server
@@ -60,7 +62,9 @@ class CNetwork_Data_Server
     flags fs; // 1 byte
     uint8 marcador1, marcador2; // 1 + 1 bytes
     uint8 sinUso; // 1 byte
-    // Total: 12 bytes
+    // ticks usado  para tratar retardos y saltar frames
+    Uint32 ticks; // 4 bytes
+    // Total: 12 + 4 bytes
   public:
     CNetwork_Data_Server();
 

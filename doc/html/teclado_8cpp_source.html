@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Pong++: Fichero Fuente src/teclado.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pong++
+   &#160;<span id="projectnumber">Beta1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">teclado.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="teclado_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="teclado_8h.html" title="Declaración de la clase CTeclado.">teclado.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_c_teclado.html#a66d9a97f9ec3d73aa73c31c740f1db2d">   19</a></span>&#160;<a class="code" href="class_c_teclado.html#a81a44e231e6fa46df466bcb8d540d346">CTeclado::CTeclado</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fuente, <a class="code" href="globals_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> tam, SDL_Color* color, <span class="keywordtype">int</span> ax, <span class="keywordtype">int</span> ay, <a class="code" href="globals_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> l)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="class_c_teclado.html#a91ffbdab56e38b8d0a3b476c06fa394b">ttf_fuente</a> = TTF_OpenFont(fuente, tam);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="class_c_teclado.html#a62283a06c5744cffecec258424bf9fdb">img_texto</a> = NULL;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="class_c_teclado.html#a790eeaa08537e236ce7641b4bc7aa0b3">length</a> = l;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="class_c_teclado.html#af3ac312768343293683978593a9b1b08">color_texto</a>.r = color-&gt;r;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="class_c_teclado.html#af3ac312768343293683978593a9b1b08">color_texto</a>.b = color-&gt;b;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="class_c_teclado.html#af3ac312768343293683978593a9b1b08">color_texto</a>.g = color-&gt;g;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="class_c_teclado.html#a4105ea43ec4ae64380b0a7eac9dfac7d">x</a> = ax;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="class_c_teclado.html#a8d3453c0f48e8f8943003a6ec2a112ad">y</a> = ay;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  SDL_EnableUNICODE( SDL_ENABLE );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="class_c_teclado.html#a7b9602889dc0082ecf3481500aa19dea">   44</a></span>&#160;<a class="code" href="class_c_teclado.html#a7b9602889dc0082ecf3481500aa19dea" title="Destructor.">CTeclado::~CTeclado</a>()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  TTF_CloseFont(<a class="code" href="class_c_teclado.html#a91ffbdab56e38b8d0a3b476c06fa394b">ttf_fuente</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  SDL_FreeSurface(<a class="code" href="class_c_teclado.html#a62283a06c5744cffecec258424bf9fdb">img_texto</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="class_c_teclado.html#af3ac312768343293683978593a9b1b08">color_texto</a>.r = <a class="code" href="class_c_teclado.html#af3ac312768343293683978593a9b1b08">color_texto</a>.b = <a class="code" href="class_c_teclado.html#af3ac312768343293683978593a9b1b08">color_texto</a>.g = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="class_c_teclado.html#a8d3453c0f48e8f8943003a6ec2a112ad">y</a> = <a class="code" href="class_c_teclado.html#a4105ea43ec4ae64380b0a7eac9dfac7d">x</a> = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="class_c_teclado.html#a790eeaa08537e236ce7641b4bc7aa0b3">length</a> = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  SDL_EnableUNICODE( SDL_DISABLE ); <span class="comment">//  ¿ mala idea ?</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="class_c_teclado.html#aefbf360b050469be389ff87a8d8dea41">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_teclado.html#aefbf360b050469be389ff87a8d8dea41" title="Función para gestionar eventos.">CTeclado::eventuar</a>()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.type == SDL_KEYDOWN)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">string</span> temp = <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a>.length() &lt;= <a class="code" href="class_c_teclado.html#a790eeaa08537e236ce7641b4bc7aa0b3">length</a>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="comment">// Si es un  simbolo ( &#39; &#39;, &#39;.&#39;, &#39;_&#39;, &#39;-&#39;, &#39;/&#39;)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode == (Uint16)<span class="charliteral">&#39; &#39;</span> || <span class="keyword">event</span>.key.keysym.unicode == (Uint16)<span class="charliteral">&#39;.&#39;</span> || <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode == (Uint16)<span class="charliteral">&#39;_&#39;</span> || <span class="keyword">event</span>.key.keysym.unicode == (Uint16)<span class="charliteral">&#39;-&#39;</span> || <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode == (Uint16)<span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a> += (char)<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="comment">// Si es un numero</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>( ( <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode &gt;= (Uint16)<span class="charliteral">&#39;0&#39;</span> ) &amp;&amp; ( <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode &lt;= (Uint16)<span class="charliteral">&#39;9&#39;</span> ) )</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a> += (char)<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="comment">// Si es una mayuscula</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>( ( <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode &gt;= (Uint16)<span class="charliteral">&#39;A&#39;</span> ) &amp;&amp; ( <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode &lt;= (Uint16)<span class="charliteral">&#39;Z&#39;</span> ) )</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a> += (char)<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="comment">// Si es una letra minuscula</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>( ( <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode &gt;= (Uint16)<span class="charliteral">&#39;a&#39;</span> ) &amp;&amp; ( <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode &lt;= (Uint16)<span class="charliteral">&#39;z&#39;</span> ) )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a> += (char)<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.unicode;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// Si queremos borrar y la cadena no es vacia</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span>((<a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>.key.keysym.sym == SDLK_BACKSPACE) &amp;&amp; (<a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a>.length() != 0 ))</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="comment">// Borrar el ultimo caracter</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a>.erase( <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a>.length() - 1 );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a> != temp)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      SDL_FreeSurface(<a class="code" href="class_c_teclado.html#a62283a06c5744cffecec258424bf9fdb">img_texto</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <a class="code" href="class_c_teclado.html#a62283a06c5744cffecec258424bf9fdb">img_texto</a> = TTF_RenderText_Blended(<a class="code" href="class_c_teclado.html#a91ffbdab56e38b8d0a3b476c06fa394b">ttf_fuente</a>, <a class="code" href="class_c_teclado.html#a2d442cdb34dc811e930258e2cc879dc9">str</a>.c_str(), <a class="code" href="class_c_teclado.html#af3ac312768343293683978593a9b1b08">color_texto</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="class_c_teclado.html#aaf2cdd8e82d8750293cd4e4c2bce7b92">  115</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_teclado.html#aaf2cdd8e82d8750293cd4e4c2bce7b92" title="Función para mostrar por pantalla.">CTeclado::mostrar</a>()</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_c_teclado.html#a62283a06c5744cffecec258424bf9fdb">img_texto</a> != NULL)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="globals_8cpp.html#ae60125b1d93b5c42be907712c0dd68a7">aplicar_superficie</a>(<a class="code" href="class_c_teclado.html#a4105ea43ec4ae64380b0a7eac9dfac7d">x</a>, <a class="code" href="class_c_teclado.html#a8d3453c0f48e8f8943003a6ec2a112ad">y</a>, <a class="code" href="class_c_teclado.html#a62283a06c5744cffecec258424bf9fdb">img_texto</a>, <a class="code" href="globals_8cpp.html#a58be6bd8478a38995e6c3ce5161a9fbe">pantalla</a>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Viernes, 19 de Abril de 2013 16:44:01 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

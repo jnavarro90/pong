@@ -18,7 +18,7 @@ class CTablero
     CTablero();
     ~CTablero();
 
-    void construir(int16 ancho, int16 alto, int16 bpp);
+    void construir(int16 ancho, int16 alto, int16 bpp, bool menu = false);
     void mostrar();
 };
 

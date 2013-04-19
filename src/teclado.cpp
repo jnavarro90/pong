@@ -1,5 +1,21 @@
+/** @file
+ * @brief Definición de la clase CTeclado
+ * */
+
 #include "teclado.h"
 
+
+/**
+ * @brief Constructor principal
+ *
+ * @param fuente Ruta del fichero *.ttf a cargar
+ * @param color Color del texto a generar
+ * @param tam Tamaño con el que se cargará la fuente
+ * @param ax,ay Offset sobre #x, #y
+ * @param l Longitud máxima de la cadena a ingresar.
+ *
+ * Asigna los valores pasados como parámetros y llama a la función SDL_EnableUNICODE()
+ */
 CTeclado::CTeclado(const char* fuente, uint tam, SDL_Color* color, int ax, int ay, uint l)
 {
   ttf_fuente = TTF_OpenFont(fuente, tam);
@@ -19,6 +35,12 @@ CTeclado::CTeclado(const char* fuente, uint tam, SDL_Color* color, int ax, int a
   SDL_EnableUNICODE( SDL_ENABLE );
 }
 
+/**
+ * @brief Destructor
+ *
+ * Asigna los valores a 0 y libera superficies y archivos cargados.
+ */
+
 CTeclado::~CTeclado()
 {
   TTF_CloseFont(ttf_fuente);
@@ -30,10 +52,16 @@ CTeclado::~CTeclado()
   y = x = 0;
   length = 0;
 
-  //  ¿ mala idea ?
-  SDL_EnableUNICODE( SDL_DISABLE );
+  SDL_EnableUNICODE( SDL_DISABLE ); //  ¿ mala idea ?
 }
 
+/**
+ * @brief Función para gestionar eventos
+ *
+ * Se añaden los caractéres tecleados a la cadena #str. Si el tamaño de #str ha superado el valor de #length, no se añadirá
+ * ningún carácter. En caso de pulsar la tecla SDLK_BACKSPACE y hay algo escrito en #str, se borrará el último carácter introducido.
+ * Se generará el texto como imagen en la superficie #img_texto en caso de que hayan habido cambios.
+ */
 void CTeclado::eventuar()
 {
   if(event.type == SDL_KEYDOWN)
@@ -72,11 +100,17 @@ void CTeclado::eventuar()
     if(str != temp)
     {
       SDL_FreeSurface(img_texto);
-
-      img_texto = TTF_RenderText_Solid(ttf_fuente, str.c_str(), color_texto);
+      img_texto = TTF_RenderText_Blended(ttf_fuente, str.c_str(), color_texto);
     }
   }
 }
+
+/**
+ * @brief Función para mostrar por pantalla
+ *
+ * Si #img_texto no tiene un valor nulo (se ha generado al menos una imagen a partir del texto), se superpondrá a la
+ * superficie #pantalla en la posición relatia #x,#y. En caso contrario, no se hará nada.
+ */
 
 void CTeclado::mostrar()
 {

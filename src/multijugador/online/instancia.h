@@ -44,8 +44,9 @@ class CInstance_MJ_Online_Client: public CInstance
     CNetwork_Data_Server* datos_server;
     CNetwork_Data_Client* datos_cliente;
 
-    CNetMessage1* msgC;
-    CNetMessage12* msgS;
+    CNetMessageN* msgC;
+    CNetMessageN* msgS;
+    //CNetMessage12* msgS;
 
     // Menu
     CBoton* botones;
@@ -66,16 +67,20 @@ class CInstance_MJ_Online_Client: public CInstance
 
     // Temporizadores
     CTemporizador* timeOut;
+    CTemporizador* timeFrameSkip;
+    bool frameSkip;
   public:
     CInstance_MJ_Online_Client();
     ~CInstance_MJ_Online_Client();
 
     bool Init();
       bool LoadFiles();
+      bool LoadMenu();
     void LoadObjects();
 
     void Close();
       void UnLoadFiles();
+      void UnLoadMenu();
     void UnLoadObjects();
 
     int OnExecute();
@@ -108,8 +113,9 @@ class CInstance_MJ_Online_Server: public CInstance
     CNetwork_Data_Server* datos_server;
     CNetwork_Data_Client* datos_cliente;
 
-    CNetMessage1* msgC;
-    CNetMessage12* msgS;
+    CNetMessageN* msgC;
+    //CNetMessage12* msgS;
+    CNetMessageN* msgS;
 
     // Menu
     CBoton* botones;
@@ -127,6 +133,7 @@ class CInstance_MJ_Online_Server: public CInstance
 
     // Temporizadores
     CTemporizador* timeOut;
+    CTemporizador* timeFrameSkip;
   public:
     CInstance_MJ_Online_Server();
     ~CInstance_MJ_Online_Server();

@@ -16,7 +16,7 @@ bool CInstance_Menu_1J::Init()
   if(!LoadFiles())
     return false;
 
-  SDL_Rect cajas = {100, 200, 150, 25};
+  SDL_Rect cajas = {100, 200, 180, 25};
 
   botones = new CBoton[3];
   botones[0] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Modo Historia");cajas.y += 30;
@@ -33,9 +33,8 @@ bool CInstance_Menu_1J::Init()
 
 bool CInstance_Menu_1J::LoadFiles()
 {
-  //fondo = cargar_img("media/img/fondo_menu.png", false);
-  fondo = SDL_CreateRGBSurface(SDL_SWSURFACE, opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP, 0x00, 0x00, 0x00, 0x00);
 
+  fondo = SDL_CreateRGBSurface(SDL_SWSURFACE, opciones->PANTALLA_ANCHO, opciones->PANTALLA_ALTO, opciones->PANTALLA_BPP, 0x00, 0x00, 0x00, 0x00);
   if(fondo == NULL)
   {
     cout << ERROR_STR_SURFACE << "MENU_1J -> fondo" << endl;
@@ -49,6 +48,10 @@ bool CInstance_Menu_1J::LoadFiles()
     cout << ERROR_STR_FILE << "media/ttf/consolab.ttf" << endl;
     return false;
   }
+
+  // Linea blanca para dar un estilo minimalista
+  SDL_Rect caja = {80, 200, 8, 115};
+  SDL_FillRect(fondo, &caja, SDL_MapRGB(pantalla->format, 0xFF, 0xFF, 0xFF) );
 
   return true;
 }
