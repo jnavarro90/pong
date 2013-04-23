@@ -58,14 +58,29 @@ bool CEngine::Init()
 {
   srand (time(NULL));
 
+  cout << "Iniciando modulo SDL...\t\t";
   if(SDL_Init(SDL_INIT_EVERYTHING) == -1)
+  {
+    cout << "[ERROR]" << endl;
     return false;
+  }
+  cout << "[OK]" << endl;
 
+  cout << "Iniciando modulo SDL_ttf...\t";
   if(TTF_Init() == -1)
+  {
+    cout << "[ERROR]" << endl;
     return false;
+  }
+  cout << "[OK]" << endl;
 
+  cout << "Iniciando modulo SDL_mixer...\t";
   if(Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 1024 ) == -1)
+  {
+    cout << "[ERROR]" << endl;
     return false;
+  }
+  cout << "[OK]" << endl;
 
   if(!LoadFiles())
     return false;
@@ -95,11 +110,25 @@ bool CEngine::Init()
 bool CEngine::LoadFiles()
 {
   snd_pong = Mix_LoadWAV("media/snd/pong.wav");
-  snd_ping = Mix_LoadWAV("media/snd/ping.wav");
-  snd_pung = Mix_LoadWAV("media/snd/pung.wav");
-
-  if(snd_pong == NULL || snd_ping == NULL || snd_pung == NULL)
+  if(snd_pong == NULL)
+  {
+    cout << ERROR_STR_FILE << "media/snd/pong.wav" << endl;
     return false;
+  }
+
+  snd_ping = Mix_LoadWAV("media/snd/ping.wav");
+  if(snd_ping == NULL)
+  {
+    cout << ERROR_STR_FILE << "media/snd/ping.wav" << endl;
+    return false;
+  }
+
+  snd_pung = Mix_LoadWAV("media/snd/pung.wav");
+  if(snd_pung == NULL)
+  {
+    cout << ERROR_STR_FILE << "media/snd/pung.wav" << endl;
+    return false;
+  }
 
   return true;
 }

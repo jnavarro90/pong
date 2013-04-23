@@ -47,7 +47,7 @@ int main( int argc, char* args[] )
  *
  * @return Devuelve el valor que valor que devuelva la función CEngine::OnExecute().
  */
-int main()
+int main(int argc, char* argv[])
 {
   return CEngine().OnExecute();
 }
