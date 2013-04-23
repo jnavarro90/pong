@@ -1,9 +1,9 @@
 var searchData=
 [
   ['getbuffer',['getBuffer',['../class_c_network___data___client.html#a2b2d9702af5a3a124c435ccc7db30cdf',1,'CNetwork_Data_Client::getBuffer()'],['../class_c_network___data___server.html#a321ece98cbbae7b66f5c485b0c1be5b2',1,'CNetwork_Data_Server::getBuffer()'],['../class_c_network___data___settings.html#a240fab79764af5f87457628a726402d4',1,'CNetwork_Data_Settings::getBuffer()']]],
-  ['getcaja',['getCaja',['../class_c_entidad.html#a9e914326fd618f42531119f171508358',1,'CEntidad::getCaja()'],['../class_c_consola.html#a88cff6eb3d2aecde3e246bc0dc6b5b85',1,'CConsola::getCaja()']]],
+  ['getcaja',['getCaja',['../class_c_entidad.html#a9e914326fd618f42531119f171508358',1,'CEntidad']]],
   ['gethost',['GetHost',['../class_c_ip_address.html#ae09aee6e5cf7b1121ba99335c09e65b0',1,'CIpAddress']]],
-  ['getipaddress',['getIpAddress',['../class_c_client_socket.html#a48dcf244c1be2168738a70b9a887263a',1,'CClientSocket::getIpAddress()'],['../class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba',1,'CIpAddress::GetIpAddress()']]],
+  ['getipaddress',['GetIpAddress',['../class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba',1,'CIpAddress::GetIpAddress()'],['../class_c_client_socket.html#a48dcf244c1be2168738a70b9a887263a',1,'CClientSocket::getIpAddress()']]],
   ['getlock',['getLock',['../class_c_pelota___m_j___local.html#acb299dbe17e5994e4215187c00872e0e',1,'CPelota_MJ_Local']]],
   ['getm1',['getM1',['../class_c_marcador.html#a6b12db2401b4f50d0541f90c705e481e',1,'CMarcador']]],
   ['getm2',['getM2',['../class_c_marcador.html#a296e10a8c243c9961fbd4c0259a51e64',1,'CMarcador']]],

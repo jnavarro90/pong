@@ -7,6 +7,7 @@ var searchData=
   ['defconf_5fpantalla_5falto',['defConf_PANTALLA_ALTO',['../opciones_8h.html#a8bde9bf0a9e6d5dad4957f4ef8fe4f38',1,'opciones.h']]],
   ['defconf_5fpantalla_5fancho',['defConf_PANTALLA_ANCHO',['../opciones_8h.html#ab5b4fd0a631034b95ac19c82e4e25572',1,'opciones.h']]],
   ['defconf_5fpantalla_5fbpp',['defConf_PANTALLA_BPP',['../opciones_8h.html#a39cb2fd60ca3f54ca8a21735a8c5efc8',1,'opciones.h']]],
+  ['defconf_5fpantalla_5fcompleta',['defConf_PANTALLA_COMPLETA',['../opciones_8h.html#a8d1dc42511deee2e9f4e0446a39195b1',1,'opciones.h']]],
   ['defconf_5fpelota_5falto',['defConf_PELOTA_ALTO',['../opciones_8h.html#ad1522223b2710a055da246eb96c7bf4f',1,'opciones.h']]],
   ['defconf_5fpelota_5fcolor',['defConf_PELOTA_COLOR',['../opciones_8h.html#a58f09251cd09328b7ff753c776fb570e',1,'opciones.h']]],
   ['defconf_5fpelota_5fvel',['defConf_PELOTA_VEL',['../opciones_8h.html#aefbb8289a403ed73e37b9e1d5471d904',1,'opciones.h']]],

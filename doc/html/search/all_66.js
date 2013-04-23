@@ -2,6 +2,7 @@ var searchData=
 [
   ['factor1',['FACTOR1',['../pelota__1j__inf_8cpp.html#a1f2aabb1fcd6768732d07f78c01174ad',1,'pelota_1j_inf.cpp']]],
   ['factor2',['FACTOR2',['../pelota__1j__inf_8cpp.html#a931c0f102656f64ee2fd6b1b812ae6e5',1,'pelota_1j_inf.cpp']]],
+  ['fallos_20y_20soluciones',['Fallos y soluciones',['../_fallos.html',1,'']]],
   ['fin',['fin',['../class_c_instance__1_j___i_n_f.html#a0e6c24719cc68ae6b3b2dad61aad6dce',1,'CInstance_1J_INF']]],
   ['finish',['finish',['../class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28',1,'CNetMessage']]],
   ['flags',['flags',['../globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857',1,'globals.h']]],

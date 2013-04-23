@@ -7,7 +7,7 @@
 #include "instance.h"
 
 /**
- * @brief Prototipo de función de iniciación.
+ * @brief Función de iniciación.
  *
  * @return Si todo se ha iniciado correctamente, devuelve true. En caso contrario, devuelve false
  *
@@ -21,7 +21,7 @@ bool CInstance::Init()
 }
 
 /**
- * @brief Prototipo de función de carga de archivos.
+ * @brief Función de carga de archivos.
  *
  * @return Si todo se ha cargado correctamente, devuelve true. En caso contrario, devuelve false
  *
@@ -39,14 +39,14 @@ bool CInstance::LoadFiles()
  *
  * Ejecuta el bucle principal de la estancia que se estructura de la forma siguiente:
  * \code
- * Init()
- * while(ejecutando)
+ * Init()            // Iniciar
+ * while(ejecutando) // Bucle principal
  * {
- *   OnEvent()
- *   OnLoop()
- *   OnRender()
+ *   OnEvent()       // Gestionar eventos
+ *   OnLoop()        // Gestionar datos
+ *   OnRender()      // Mostrar por pantalla
  * }
- * Close()
+ * Close()           // Cerrar
  * return estancia_siguiente;
  * \endcode
  *

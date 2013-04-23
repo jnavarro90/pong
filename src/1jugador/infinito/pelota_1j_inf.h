@@ -7,6 +7,8 @@
 void setVel_1j_inf(float& yVel, float& xVel, int pos_actual, int momento);
 int getPos_1j_inf(SDL_Rect pelota, SDL_Rect pad);
 
+enum return_1j_inf {perder = 0, juego, rebote, rebote_pad};
+
 class CPelota_1J_INF: public CPelota
 {
   private:

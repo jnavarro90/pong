@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CInstance_1J_INF
+ *
+ */
+
 #include "instancia.h"
 
 #include "../../temporizador.h"

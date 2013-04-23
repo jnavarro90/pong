@@ -25,5 +25,6 @@ var searchData=
   ['pelota_5fmj_5flocal_2ecpp',['pelota_mj_local.cpp',['../pelota__mj__local_8cpp.html',1,'']]],
   ['pelota_5fmj_5flocal_2eh',['pelota_mj_local.h',['../pelota__mj__local_8h.html',1,'']]],
   ['pelota_5fmj_5fonline_2ecpp',['pelota_mj_online.cpp',['../pelota__mj__online_8cpp.html',1,'']]],
-  ['pelota_5fmj_5fonline_2eh',['pelota_mj_online.h',['../pelota__mj__online_8h.html',1,'']]]
+  ['pelota_5fmj_5fonline_2eh',['pelota_mj_online.h',['../pelota__mj__online_8h.html',1,'']]],
+  ['por_5fhacer_2edox',['por_hacer.dox',['../por__hacer_8dox.html',1,'']]]
 ];

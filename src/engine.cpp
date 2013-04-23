@@ -49,7 +49,7 @@ CEngine::~CEngine()
  * @brief Inicializador del motor
  *
  * Inicia las librerias de SDL, tanto TTF como Mixer. Carga archivos de uso global y genera
- * las superficies de pantalla (SDL_Surface* pantalla), además de sus atributos.
+ * las superficies de pantalla (SDL_Surface* #pantalla), además de sus atributos.
  *
  * @return Devuelve false si ha fallado algo. Devuelve true si todo ha sido cargado correctamente.
  */
@@ -81,7 +81,7 @@ bool CEngine::Init()
     return false;
 
   SDL_WM_SetCaption( "Pong++", "Pong++" );
-  color_blanco = SDL_MapRGB(pantalla->format, 255, 255, 255);
+  //color_blanco = SDL_MapRGB(pantalla->format, 255, 255, 255);
 
   return true;
 }
@@ -167,6 +167,10 @@ void CEngine::UnLoadFiles()
  * @endcode
  *
  * Ademas, las declaraciones del contenido del array de punteros instance se hacen en esta propia función.
+ *
+ * Se puede ver como funcionan las estancias definidas como CInstance en la siguiente imagen:
+ *
+ * @image html engine_1.png
  *
  * @return En caso de fallo, devuelve I_SALIDA (-1). En caso de finalizar correctamente, devuelve la
  * última estancia llamada por las funciones de CInstance::OnExecute() correspondiente.

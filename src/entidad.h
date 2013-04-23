@@ -12,7 +12,17 @@
  * @brief Clase principal de objeto del juego.
  *
  * Esta clase abstracta se usará para derivar otras clases con caracterísitcas comunes (alto, ancho, pos. x, pos. y ).
- * Se emplea en las clases CPad y CPelota
+ * Se emplea en las clases CPad y CPelota. Para entender el sistema de coordenadas, se debe tener en cuenta que la
+ * representación de los ejes en SDL es la siguiente:
+ *
+ * <pre>
+ *   ________ X
+ *  |
+ *  |
+ *  |
+ *  |
+ *  Y
+ * </pre>
  */
 
 class CEntidad

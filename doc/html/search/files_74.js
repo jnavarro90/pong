@@ -9,5 +9,6 @@ var searchData=
   ['temporizador_2ecpp',['temporizador.cpp',['../temporizador_8cpp.html',1,'']]],
   ['temporizador_2eh',['temporizador.h',['../temporizador_8h.html',1,'']]],
   ['turbo_2ecpp',['turbo.cpp',['../turbo_8cpp.html',1,'']]],
-  ['turbo_2eh',['turbo.h',['../turbo_8h.html',1,'']]]
+  ['turbo_2eh',['turbo.h',['../turbo_8h.html',1,'']]],
+  ['tutoriales_2edox',['tutoriales.dox',['../tutoriales_8dox.html',1,'']]]
 ];

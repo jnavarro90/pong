@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Definición de CInstance_Menu_Main
+ */
+
 #include "instance_menu.h"
 
 CInstance_Menu_Main::CInstance_Menu_Main()

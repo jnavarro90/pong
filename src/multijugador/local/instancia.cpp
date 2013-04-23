@@ -59,7 +59,7 @@ bool CInstance_MJ_Local::Init()
   PJ2 = new CPad_MJ_Local(true, SDLK_UP, SDLK_DOWN);
 
   pelota = new CPelota_MJ_Local;
-  marcador = new CMarcador(ttf_bitM, &color_blanco_t);
+  marcador = new CMarcador(ttf_bitM, &color_blanco);
 
   if(rand()%2 == 0)
     gamepoint_pj = gamepoint_pj1;
@@ -254,10 +254,10 @@ void CInstance_MJ_Local::OnRender()
   //aplicar_superficie(0, 0, fondo, pantalla);
   tablero_mp->mostrar();
 
+  marcador->mostrar();
   PJ1->mostrar();
   PJ2->mostrar();
   pelota->mostrar();
-  marcador->mostrar();
 
   if(gameset)
   {

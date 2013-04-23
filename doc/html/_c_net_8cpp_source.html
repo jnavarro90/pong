@@ -2,34 +2,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Pong++: Fichero Fuente src/network/CNet.cpp</title>
+<title>Fichero Fuente src/network/CNet.cpp Beta1.0</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
-</script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<body onload='searchBox.OnSelectItem(0);'>
 <div id="titlearea">
-<table cellspacing="0" cellpadding="0">
+<table cellspacing="0" cellpadding="5" width="100%">
  <tbody>
- <tr style="height: 56px;">
+ <tr style="height: 60px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pong++
-   &#160;<span id="projectnumber">Beta1.0</span>
+   &nbsp;<span id="projectnumber">Beta1.0</span>
    </div>
   </td>
+  <td style="padding-right: 0.5em; float: right">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHJwYJKoZIhvcNAQcEoIIHGDCCBxQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAAtV/eVfsPFI+K9nDmfJowgP5dpJ0CCN758JPbq3B35mXqPnm5c+NxmdkfBdhdxidS5gccO39w+UQpXVMfrzjl3TMe1TOWoqKRQqyTnTskXDQw+oEVuyOAjoflCyA9hJRZScVAeGJGpaFvL9w43G7SQshl0Hqtd46CaUkd9vZE3TELMAkGBSsOAwIaBQAwgaQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIn81iGYkTRpCAgYAjz3JMM+weIVJ9aQry0SNnK3pp4k/UWYmALebChgvBy2lKXS3yu/i0QyVkhgKW4Rl1Mu8bKVPWEjijcqiqqBxyMm4Z/nvO+bHZYxTAzLYQRiIZ8UGEew8CiJS0Y3cd8o3gowp0iJ24Obi/unPiRFe+5c40+gwTAu8mHnqi1oH87KCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTEzMDQyMDEyMzg1MFowIwYJKoZIhvcNAQkEMRYEFLlXroKKfT+FimlgdR0+rNMJHYO4MA0GCSqGSIb3DQEBAQUABIGAEzWqoq9xadZvXBBIobQWQbZXSqNKPDe8cUvYeiIxdHGhuG+s/bViB6+JqmE7L3u4+R2SPbVb3cnFaqAn+cXiOy7fjEf3CQtHJs23aWnjrQNd0H7ns5wS2ToBQ9n4Fs8XqkKkayyujaS8FJh86xcEvPKWihdN416RuTLFzx43los=-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+<img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+</form>
+  <td>
  </tr>
  </tbody>
 </table>
 </div>
-<!-- end header part -->
 <!-- Generado por Doxygen 1.8.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
@@ -37,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="annotated.html"><span>Clases</span></a></li>
       <li class="current"><a href="files.html"><span>Archivos</span></a></li>
       <li>
@@ -68,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,382 +89,346 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="title">CNet.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_c_net_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_net_8h.html">CNet.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//******** NET **********</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="class_c_net.html#a0f9a1f2d8cb552d472a347f1a8c70a0d">    7</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_net.html#a0f9a1f2d8cb552d472a347f1a8c70a0d">CNet::Init</a>()</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordflow">if</span> (SDLNet_Init() &lt; 0)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_Init: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  }</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_c_net.html#a11ec2d4b9ced3d64c5d53b4f1f9c85e7">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net.html#a11ec2d4b9ced3d64c5d53b4f1f9c85e7">CNet::Quit</a>()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  SDLNet_Quit();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//***** NETMESSAGE ******</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="class_c_net_message.html#adf220b620d650d5e160d38e52d2ae894">   27</a></span>&#160;<a class="code" href="class_c_net_message.html#adf220b620d650d5e160d38e52d2ae894">CNetMessage::CNetMessage</a>()</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_c_net_message.html#a5f9fac855233563d6c204e89e57278ac">reset</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a5f9fac855233563d6c204e89e57278ac">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message.html#a5f9fac855233563d6c204e89e57278ac">CNetMessage::reset</a>()</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i =0; i &lt; 256; i++)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_c_net_message.html#a140589dc4ecf11796cd255d0f827bbaf">buffer</a> [i] = 0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> = <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80ceab8f9d93194bdbd8287ac3771dcbea128">EMPTY</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28">CNetMessage::finish</a>() {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea9d2f787ff6128c70346364660c04f0d4">READING</a>)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> = <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea1502caa9a54faf0c7694e08437d91073">FULL</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573">   44</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573">CNetMessage::NumToLoad</a>() {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80ceab8f9d93194bdbd8287ac3771dcbea128">EMPTY</a>)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> 255;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd">   51</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd">CNetMessage::NumToUnLoad</a>() {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea1502caa9a54faf0c7694e08437d91073">FULL</a>)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> strlen(<a class="code" href="class_c_net_message.html#a140589dc4ecf11796cd255d0f827bbaf">buffer</a>) + 1;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a4e3ee7425b8c1422f023b2eee58a55dc">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message.html#a4e3ee7425b8c1422f023b2eee58a55dc">CNetMessage::LoadBytes</a>(<a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a>&amp; inputbuffer, <span class="keywordtype">int</span> n) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_c_net_message.html#a140589dc4ecf11796cd255d0f827bbaf">buffer</a>[i] = inputbuffer[i];</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> = <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea9d2f787ff6128c70346364660c04f0d4">READING</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/*void CNetMessage::UnLoadBytes(charbuf&amp; destbuffer) {</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    for (int i=0; i &lt; this-&gt;NumToUnLoad(); i++)</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">        destbuffer[i] = buffer[i];</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    reset();</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">}*/</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a9a683f75a416be6ea9b8757768b90a2b">   70</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message.html#a9a683f75a416be6ea9b8757768b90a2b">CNetMessage::UnLoadBytes</a>(<a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a>&amp; destbuffer) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;<a class="code" href="class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd">NumToUnLoad</a>(); i++)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        destbuffer[i] = <a class="code" href="class_c_net_message.html#a140589dc4ecf11796cd255d0f827bbaf">buffer</a>[i];</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_c_net_message.html#a5f9fac855233563d6c204e89e57278ac">reset</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="class_c_net_message1.html#ad24cf1f07e7de91aaade7f2f2b0754c9">   76</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message1.html#ad24cf1f07e7de91aaade7f2f2b0754c9">CNetMessage1::NumToLoad</a>()</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80ceab8f9d93194bdbd8287ac3771dcbea128">EMPTY</a>)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;   <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="class_c_net_message1.html#ae56dc33818f5fcf55e1afed9372a46e6">   84</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message1.html#ae56dc33818f5fcf55e1afed9372a46e6">CNetMessage1::NumToUnLoad</a>()</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea1502caa9a54faf0c7694e08437d91073">FULL</a>)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;   <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="class_c_net_message1.html#a746fc8108ae2b3893a4542c68f0936bf">   92</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message1.html#a746fc8108ae2b3893a4542c68f0936bf">CNetMessage1::LoadByte</a>(<span class="keywordtype">char</span> ID)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> c;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  c[0] = ID;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="class_c_net_message.html#a4e3ee7425b8c1422f023b2eee58a55dc">LoadBytes</a>(c, 1);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28">finish</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="class_c_net_message1.html#a01975478f04013e25fe001115086df86">  100</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="class_c_net_message1.html#a01975478f04013e25fe001115086df86">CNetMessage1::UnLoadByte</a>()</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;   <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> c;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;   <a class="code" href="class_c_net_message.html#a9a683f75a416be6ea9b8757768b90a2b">UnLoadBytes</a>(c);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   <span class="keywordflow">return</span> c[0];</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="class_c_net_message_n.html#ac0294d2b8308f66a5092f40ca7c87517">  107</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message_n.html#ac0294d2b8308f66a5092f40ca7c87517">CNetMessageN::NumToLoad</a>()</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80ceab8f9d93194bdbd8287ac3771dcbea128">EMPTY</a>)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="class_c_net_message_n.html#a4f305485cdcde26495965b8c4b9de78a">buffer_size</a>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="class_c_net_message_n.html#ad8b3c36c3a105aeebe81ae69ea9960d2">  115</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message_n.html#ad8b3c36c3a105aeebe81ae69ea9960d2">CNetMessageN::NumToUnLoad</a>()</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea1502caa9a54faf0c7694e08437d91073">FULL</a>)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="class_c_net_message_n.html#a4f305485cdcde26495965b8c4b9de78a">buffer_size</a>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="code" href="class_c_net_message_n.html#a94af2d31e9382d9c6b984961fbfa4300">  123</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message_n.html#a94af2d31e9382d9c6b984961fbfa4300">CNetMessageN::LoadNBytes</a>(<span class="keywordtype">char</span>* entrada)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> c;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">for</span>(<a class="code" href="globals_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; <a class="code" href="class_c_net_message_n.html#a4f305485cdcde26495965b8c4b9de78a">buffer_size</a>; i++)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    c[i] = entrada[i];</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <a class="code" href="class_c_net_message.html#a4e3ee7425b8c1422f023b2eee58a55dc">LoadBytes</a>(c, buffer_size);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <a class="code" href="class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28">finish</a>();</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="code" href="class_c_net_message_n.html#a6e5a924965ef1335b1207d8782b774c9">  134</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message_n.html#a6e5a924965ef1335b1207d8782b774c9">CNetMessageN::UnLoadNBytes</a>(<span class="keywordtype">char</span>* salida)</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> c;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <a class="code" href="class_c_net_message.html#a9a683f75a416be6ea9b8757768b90a2b">UnLoadBytes</a>(c);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordflow">for</span>(<a class="code" href="globals_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; <a class="code" href="class_c_net_message_n.html#a4f305485cdcde26495965b8c4b9de78a">buffer_size</a>; i++)</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;       salida[i] = c[i];</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">//****** IPADRESS *******</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#a4e97b25c5afd8f61c05c91140a86df75">  149</a></span>&#160;<a class="code" href="class_c_ip_address.html#ac089cb8ee6f00818c58da75f2a27fa49">CIpAddress::CIpAddress</a> (Uint16 port) {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">if</span> (SDLNet_ResolveHost(&amp;<a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>, NULL, port) &lt; 0){</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_ResolveHost: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.host = 0;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port = 0;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#abbd5d069a093bd730e9693bcce667f3c">  157</a></span>&#160;<a class="code" href="class_c_ip_address.html#ac089cb8ee6f00818c58da75f2a27fa49">CIpAddress::CIpAddress</a> (std::string host, Uint16 port) {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (SDLNet_ResolveHost(&amp;<a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>, host.c_str(), port) &lt; 0) {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_ResolveHost: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.host = 0;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port = 0;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#ac089cb8ee6f00818c58da75f2a27fa49">  165</a></span>&#160;<a class="code" href="class_c_ip_address.html#ac089cb8ee6f00818c58da75f2a27fa49">CIpAddress::CIpAddress</a>() {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.host = 0;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port = 0;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#aecb8f11e01915a73595de9139e7b1aeb">  170</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_ip_address.html#aecb8f11e01915a73595de9139e7b1aeb">CIpAddress::Ok</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> !(<a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port == 0);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#a861a6322cedc1c232fd4ce8788b54291">  174</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_ip_address.html#a861a6322cedc1c232fd4ce8788b54291">CIpAddress::SetIp</a> (IPaddress sdl_ip) { <span class="comment">//sets a CTcpSocket object from a existing SDL socket</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a> = sdl_ip;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba">  178</a></span>&#160;IPaddress <a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba">CIpAddress::GetIpAddress</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#ae09aee6e5cf7b1121ba99335c09e65b0">  182</a></span>&#160;Uint32 <a class="code" href="class_c_ip_address.html#ae09aee6e5cf7b1121ba99335c09e65b0">CIpAddress::GetHost</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.host;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#a3ae4d3aa106e78d1dad4679e7bc35069">  186</a></span>&#160;Uint16 <a class="code" href="class_c_ip_address.html#a3ae4d3aa106e78d1dad4679e7bc35069">CIpAddress::GetPort</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">//****** TCPSOCKET ******</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44">  194</a></span>&#160;<a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44">CTcpSocket::CTcpSocket</a>() {</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = NULL;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keyword">set</span> = SDLNet_AllocSocketSet(1);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#a0fdb99b02c88a5618f8979c41b34fb08">  199</a></span>&#160;<a class="code" href="class_c_tcp_socket.html#a0fdb99b02c88a5618f8979c41b34fb08">CTcpSocket::~CTcpSocket</a>() {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">if</span> (!(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL)) {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;          SDLNet_TCP_DelSocket(<span class="keyword">set</span>,<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        SDLNet_FreeSocketSet(<span class="keyword">set</span>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        SDLNet_TCP_Close (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#a0734117fc481e0f09ed4c172bd60cc86">  207</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_tcp_socket.html#a0734117fc481e0f09ed4c172bd60cc86">CTcpSocket::SetSocket</a> (TCPsocket the_sdl_socket) {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">if</span> (!(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL)) {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;          SDLNet_TCP_DelSocket(<span class="keyword">set</span>,<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;          SDLNet_TCP_Close (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = the_sdl_socket;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">if</span>(SDLNet_TCP_AddSocket(<span class="keyword">set</span>,<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>)==-1) {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_AddSocket: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = NULL;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#ae1f4bdd24e304eba4832f0b3c3dddca6">  219</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_tcp_socket.html#ae1f4bdd24e304eba4832f0b3c3dddca6">CTcpSocket::Ok</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> !(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#abd077a52f54168e27f097f0e06e36f25">  223</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_tcp_socket.html#abd077a52f54168e27f097f0e06e36f25">CTcpSocket::Ready</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">bool</span> rd = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">int</span> numready = SDLNet_CheckSockets(<span class="keyword">set</span>, 0);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">if</span> (numready == -1)</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_CheckSockets: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std:: endl;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">if</span> (numready)</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                rd = SDLNet_SocketReady (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keywordflow">return</span> rd;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#a3a5d5d805a6327ea46b8367b8d388571">  234</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_tcp_socket.html#a3a5d5d805a6327ea46b8367b8d388571">CTcpSocket::OnReady</a>() {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">//***** HOSTSOCKET ******</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno"><a class="code" href="class_c_host_socket.html#a00cc801d94ac2e44b04c56218cd0f86a">  242</a></span>&#160;<a class="code" href="class_c_host_socket.html#a00cc801d94ac2e44b04c56218cd0f86a">CHostSocket::CHostSocket</a>(<a class="code" href="class_c_ip_address.html">CIpAddress</a>&amp; the_ip_address) {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44">CTcpSocket</a>();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    IPaddress iph = the_ip_address.<a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba">GetIpAddress</a>();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">if</span> (!(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = SDLNet_TCP_Open(&amp;iph))) {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            SDLNet_FreeSocketSet(<span class="keyword">set</span>);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_Open: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno"><a class="code" href="class_c_host_socket.html#afb51f2cea459c3cf09a13ba4a12fba2d">  251</a></span>&#160;<a class="code" href="class_c_host_socket.html#a00cc801d94ac2e44b04c56218cd0f86a">CHostSocket::CHostSocket</a> (Uint16 port) {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="class_c_ip_address.html">CIpAddress</a> iplistener (port);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">if</span> (!iplistener.<a class="code" href="class_c_ip_address.html#aecb8f11e01915a73595de9139e7b1aeb">Ok</a>()) {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = NULL;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44">CTcpSocket</a>();</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        IPaddress iph = iplistener.<a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba">GetIpAddress</a>();</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">if</span> (!(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = SDLNet_TCP_Open(&amp;iph))) {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            SDLNet_FreeSocketSet(<span class="keyword">set</span>);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_Open: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        }</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="code" href="class_c_host_socket.html#a8d4142eee27b8003121215b1428d801f">  267</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_host_socket.html#a8d4142eee27b8003121215b1428d801f">CHostSocket::Accept</a> (<a class="code" href="class_c_client_socket.html">CClientSocket</a>&amp; the_client_socket) {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    TCPsocket cs;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">if</span> ((cs = SDLNet_TCP_Accept(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>))) {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        the_client_socket.<a class="code" href="class_c_client_socket.html#a871915038d3f9198616b50e4b8c1004e">SetSocket</a>(cs);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno"><a class="code" href="class_c_host_socket.html#a22a5b209aaebf41a1d30e9ca0f11e0af">  277</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_host_socket.html#a22a5b209aaebf41a1d30e9ca0f11e0af">CHostSocket::OnReady</a>() {}</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment">//***** CLIENTSOCKET ****</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">//***********************</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a45648796359fcb9e67ac9ba9d8ab6879">  283</a></span>&#160;<a class="code" href="class_c_client_socket.html#a45648796359fcb9e67ac9ba9d8ab6879">CClientSocket::CClientSocket</a>() {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44">CTcpSocket</a>();</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#ab930d1b15fb747c842dcdf26c9636e82">  287</a></span>&#160;<a class="code" href="class_c_client_socket.html#a45648796359fcb9e67ac9ba9d8ab6879">CClientSocket::CClientSocket</a> (std::string host, Uint16 port) {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="class_c_ip_address.html">CIpAddress</a> remoteip (host.c_str(), port);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">if</span> (!remoteip.Ok()) {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = NULL;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44">CTcpSocket</a>();</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <a class="code" href="class_c_client_socket.html#a2df1646c47679c9baa0a82105fa4b7d8">Connect</a>(remoteip);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<a href="_c_net_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_net_8h.html" title="Declaración de todas las clases para la interfaz de red.">CNet.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//******** NET **********</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="class_c_net.html#a0f9a1f2d8cb552d472a347f1a8c70a0d">   17</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_net.html#a0f9a1f2d8cb552d472a347f1a8c70a0d" title="Inicia el servicio de red de SDL_net.">CNet::Init</a>()</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">if</span> (SDLNet_Init() &lt; 0)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_Init: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="class_c_net.html#a11ec2d4b9ced3d64c5d53b4f1f9c85e7">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net.html#a11ec2d4b9ced3d64c5d53b4f1f9c85e7" title="Desinicializa el servicio de red de SDL_net.">CNet::Quit</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  SDLNet_Quit();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//***** NETMESSAGE ******</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="class_c_net_message.html#adf220b620d650d5e160d38e52d2ae894">   45</a></span>&#160;<a class="code" href="class_c_net_message.html#adf220b620d650d5e160d38e52d2ae894" title="Constructor por defecto.">CNetMessage::CNetMessage</a>()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_c_net_message.html#a5f9fac855233563d6c204e89e57278ac" title="Función de reseteo.">reset</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a5f9fac855233563d6c204e89e57278ac">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message.html#a5f9fac855233563d6c204e89e57278ac" title="Función de reseteo.">CNetMessage::reset</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i =0; i &lt; 256; i++)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_c_net_message.html#a140589dc4ecf11796cd255d0f827bbaf">buffer</a> [i] = 0;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> = <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80ceab8f9d93194bdbd8287ac3771dcbea128">EMPTY</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28" title="Finaliza la lectura del mensaje.">CNetMessage::finish</a>() {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea9d2f787ff6128c70346364660c04f0d4">READING</a>)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> = <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea1502caa9a54faf0c7694e08437d91073">FULL</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573">   80</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573" title="Indicador de cuantos caracteres hay que cargar.">CNetMessage::NumToLoad</a>() {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80ceab8f9d93194bdbd8287ac3771dcbea128">EMPTY</a>)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> 255;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd">   96</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd" title="Indicador de cuantos caracteres hay que descargar.">CNetMessage::NumToUnLoad</a>() {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea1502caa9a54faf0c7694e08437d91073">FULL</a>)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> strlen(<a class="code" href="class_c_net_message.html#a140589dc4ecf11796cd255d0f827bbaf">buffer</a>) + 1;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a4e3ee7425b8c1422f023b2eee58a55dc">  112</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message.html#a4e3ee7425b8c1422f023b2eee58a55dc" title="Cargador del buffer.">CNetMessage::LoadBytes</a>(<a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a>&amp; inputbuffer, <span class="keywordtype">int</span> n) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="class_c_net_message.html#a140589dc4ecf11796cd255d0f827bbaf">buffer</a>[i] = inputbuffer[i];</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> = <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea9d2f787ff6128c70346364660c04f0d4">READING</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="class_c_net_message.html#a9a683f75a416be6ea9b8757768b90a2b">  126</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message.html#a9a683f75a416be6ea9b8757768b90a2b" title="Descargador del buffer.">CNetMessage::UnLoadBytes</a>(<a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a>&amp; destbuffer) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;<a class="code" href="class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd" title="Indicador de cuantos caracteres hay que descargar.">NumToUnLoad</a>(); i++)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        destbuffer[i] = <a class="code" href="class_c_net_message.html#a140589dc4ecf11796cd255d0f827bbaf">buffer</a>[i];</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="class_c_net_message.html#a5f9fac855233563d6c204e89e57278ac" title="Función de reseteo.">reset</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="code" href="class_c_net_message_n.html#ac0294d2b8308f66a5092f40ca7c87517">  140</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message_n.html#ac0294d2b8308f66a5092f40ca7c87517" title="Indicador de cuantos caracteres hay que cargar.">CNetMessageN::NumToLoad</a>()</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80ceab8f9d93194bdbd8287ac3771dcbea128">EMPTY</a>)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="class_c_net_message_n.html#a4f305485cdcde26495965b8c4b9de78a">buffer_size</a>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="code" href="class_c_net_message_n.html#ad8b3c36c3a105aeebe81ae69ea9960d2">  156</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_net_message_n.html#ad8b3c36c3a105aeebe81ae69ea9960d2" title="Indicador de cuantos caracteres hay que descargar.">CNetMessageN::NumToUnLoad</a>()</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_net_message.html#ac2ab1f2d4cf15f4024f2ca06c960fd09">state</a> == <a class="code" href="class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80cea1502caa9a54faf0c7694e08437d91073">FULL</a>)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="class_c_net_message_n.html#a4f305485cdcde26495965b8c4b9de78a">buffer_size</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="code" href="class_c_net_message_n.html#a94af2d31e9382d9c6b984961fbfa4300">  172</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message_n.html#a94af2d31e9382d9c6b984961fbfa4300" title="Cargador del buffer.">CNetMessageN::LoadNBytes</a>(<span class="keywordtype">char</span>* entrada)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> c;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordflow">for</span>(<a class="code" href="globals_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; <a class="code" href="class_c_net_message_n.html#a4f305485cdcde26495965b8c4b9de78a">buffer_size</a>; i++)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    c[i] = entrada[i];</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <a class="code" href="class_c_net_message.html#a4e3ee7425b8c1422f023b2eee58a55dc" title="Cargador del buffer.">LoadBytes</a>(c, buffer_size);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <a class="code" href="class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28" title="Finaliza la lectura del mensaje.">finish</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="code" href="class_c_net_message_n.html#a6e5a924965ef1335b1207d8782b774c9">  192</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_net_message_n.html#a6e5a924965ef1335b1207d8782b774c9" title="Descargador del buffer.">CNetMessageN::UnLoadNBytes</a>(<span class="keywordtype">char</span>* salida) <span class="comment">// Retocar esta función</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> c;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <a class="code" href="class_c_net_message.html#a9a683f75a416be6ea9b8757768b90a2b" title="Descargador del buffer.">UnLoadBytes</a>(c);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordflow">for</span>(<a class="code" href="globals_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; <a class="code" href="class_c_net_message_n.html#a4f305485cdcde26495965b8c4b9de78a">buffer_size</a>; i++)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;       salida[i] = c[i];</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">//****** IPADRESS *******</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#a4e97b25c5afd8f61c05c91140a86df75">  214</a></span>&#160;<a class="code" href="class_c_ip_address.html#ac089cb8ee6f00818c58da75f2a27fa49" title="Constructor por defecto.">CIpAddress::CIpAddress</a> (Uint16 port) {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">if</span> (SDLNet_ResolveHost(&amp;<a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>, NULL, port) &lt; 0){</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_ResolveHost: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.host = 0;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port = 0;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#abbd5d069a093bd730e9693bcce667f3c">  231</a></span>&#160;<a class="code" href="class_c_ip_address.html#ac089cb8ee6f00818c58da75f2a27fa49" title="Constructor por defecto.">CIpAddress::CIpAddress</a> (std::string host, Uint16 port) {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">if</span> (SDLNet_ResolveHost(&amp;<a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>, host.c_str(), port) &lt; 0) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_ResolveHost: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.host = 0;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port = 0;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#ac089cb8ee6f00818c58da75f2a27fa49">  244</a></span>&#160;<a class="code" href="class_c_ip_address.html#ac089cb8ee6f00818c58da75f2a27fa49" title="Constructor por defecto.">CIpAddress::CIpAddress</a>() {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.host = 0;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port = 0;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#aecb8f11e01915a73595de9139e7b1aeb">  256</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_ip_address.html#aecb8f11e01915a73595de9139e7b1aeb" title="Verificador.">CIpAddress::Ok</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">return</span> !(<a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port == 0);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#a861a6322cedc1c232fd4ce8788b54291">  267</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_ip_address.html#a861a6322cedc1c232fd4ce8788b54291" title="Asignador de dirección IP.">CIpAddress::SetIp</a> (IPaddress sdl_ip) { <span class="comment">//sets a CTcpSocket object from a existing SDL socket</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a> = sdl_ip;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba">  276</a></span>&#160;IPaddress <a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba" title="Obtener la estructura m_Ip del objeto.">CIpAddress::GetIpAddress</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;}</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#ae09aee6e5cf7b1121ba99335c09e65b0">  285</a></span>&#160;Uint32 <a class="code" href="class_c_ip_address.html#ae09aee6e5cf7b1121ba99335c09e65b0" title="Obtener el valor almacenado por m_Ip.host.">CIpAddress::GetHost</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.host;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="code" href="class_c_ip_address.html#a3ae4d3aa106e78d1dad4679e7bc35069">  294</a></span>&#160;Uint16 <a class="code" href="class_c_ip_address.html#a3ae4d3aa106e78d1dad4679e7bc35069" title="Obtener el valor almacenado por m_Ip.port.">CIpAddress::GetPort</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_ip_address.html#a198f038a080fd6996b68f77d5693edf1">m_Ip</a>.port;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#aa871c4cfe9ddaba3a0d07932e21644ec">  298</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_client_socket.html#a2df1646c47679c9baa0a82105fa4b7d8">CClientSocket::Connect</a> (<a class="code" href="class_c_host_socket.html">CHostSocket</a>&amp; the_listener_socket) {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">//****** TCPSOCKET ******</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">//***********************</span></div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
-<div class="line"><a name="l00302"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a2df1646c47679c9baa0a82105fa4b7d8">  302</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_client_socket.html#a2df1646c47679c9baa0a82105fa4b7d8">CClientSocket::Connect</a> (<a class="code" href="class_c_ip_address.html">CIpAddress</a>&amp; remoteip) {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    TCPsocket cs;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    IPaddress ip = remoteip.<a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba">GetIpAddress</a>();</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">if</span> ((cs = SDLNet_TCP_Open(&amp;ip)))</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <a class="code" href="class_c_client_socket.html#a871915038d3f9198616b50e4b8c1004e">SetSocket</a>(cs);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_Open: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a871915038d3f9198616b50e4b8c1004e">  316</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_client_socket.html#a871915038d3f9198616b50e4b8c1004e">CClientSocket::SetSocket</a> (TCPsocket the_sdl_socket) {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <a class="code" href="class_c_tcp_socket.html#a0734117fc481e0f09ed4c172bd60cc86">CTcpSocket::SetSocket</a> (the_sdl_socket);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    IPaddress* ips;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">if</span> ((ips = SDLNet_TCP_GetPeerAddress(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>))) {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="comment">/* Print the address, converting it onto the host format */</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <a class="code" href="class_c_client_socket.html#a6876dcaa07cd0df4e84a3e795e9d54ab">m_RemoteIp</a>.<a class="code" href="class_c_ip_address.html#a861a6322cedc1c232fd4ce8788b54291">SetIp</a>(*ips);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        Uint32 hbo = <a class="code" href="class_c_client_socket.html#a6876dcaa07cd0df4e84a3e795e9d54ab">m_RemoteIp</a>.<a class="code" href="class_c_ip_address.html#ae09aee6e5cf7b1121ba99335c09e65b0">GetHost</a>();</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        Uint16 pbo = <a class="code" href="class_c_client_socket.html#a6876dcaa07cd0df4e84a3e795e9d54ab">m_RemoteIp</a>.<a class="code" href="class_c_ip_address.html#a3ae4d3aa106e78d1dad4679e7bc35069">GetPort</a>();</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Client connected: &quot;</span> &lt;&lt; SDLNet_Read32(&amp;hbo) &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            &lt;&lt; SDLNet_Read16 (&amp;pbo) &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_GetPeerAddress: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;}</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00331"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a48dcf244c1be2168738a70b9a887263a">  331</a></span>&#160;<a class="code" href="class_c_ip_address.html">CIpAddress</a> <a class="code" href="class_c_client_socket.html#a48dcf244c1be2168738a70b9a887263a">CClientSocket::getIpAddress</a> ()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_client_socket.html#a6876dcaa07cd0df4e84a3e795e9d54ab">m_RemoteIp</a>;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
-<div class="line"><a name="l00335"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#ae52f8a2a70ba924207cd168181c5e1da">  335</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_client_socket.html#ae52f8a2a70ba924207cd168181c5e1da">CClientSocket::Receive</a>(<a class="code" href="class_c_net_message.html">CNetMessage</a>&amp; rData) {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">//Firstly, check if there is a socket</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL)</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> buf;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">//Check if the instance can receive bytes, if it can, load the number of bytes specified by NumToLoad() virtual function</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">while</span> (rData.<a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573">NumToLoad</a>() &gt; 0) {</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">if</span> (SDLNet_TCP_Recv(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>, buf, rData.<a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573">NumToLoad</a>()) &gt; 0) {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            rData.<a class="code" href="class_c_net_message.html#a4e3ee7425b8c1422f023b2eee58a55dc">LoadBytes</a> (buf, rData.<a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573">NumToLoad</a>());</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        }</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        }</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    rData.<a class="code" href="class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28">finish</a>();</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a974e67f4d7f1662f078b45ddbfe5496a">  354</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_client_socket.html#a974e67f4d7f1662f078b45ddbfe5496a">CClientSocket::Send</a> (<a class="code" href="class_c_net_message.html">CNetMessage</a>&amp; sData) {</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">//check if there is a socket</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL)</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> buf;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">int</span> len;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment">//Check if the instance can send bytes, if it can, unload the number of bytes specified by NumToLoad() virtual function</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordflow">while</span> ((len = sData.<a class="code" href="class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd">NumToUnLoad</a>()) &gt; 0) {</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        sData.<a class="code" href="class_c_net_message.html#a9a683f75a416be6ea9b8757768b90a2b">UnLoadBytes</a> (buf);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">if</span> (SDLNet_TCP_Send(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>, (<span class="keywordtype">void</span> *)buf, len) &lt; len) {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_Send: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    }</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;}</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a0d6c51c4d7efa4ad313a6afb54b8d6fe">  372</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_client_socket.html#a0d6c51c4d7efa4ad313a6afb54b8d6fe">CClientSocket::OnReady</a>() {}</div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44">  307</a></span>&#160;<a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44" title="Constructor por defecto.">CTcpSocket::CTcpSocket</a>() {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = NULL;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keyword">set</span> = SDLNet_AllocSocketSet(1);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#a0fdb99b02c88a5618f8979c41b34fb08">  318</a></span>&#160;<a class="code" href="class_c_tcp_socket.html#a0fdb99b02c88a5618f8979c41b34fb08" title="Destructor.">CTcpSocket::~CTcpSocket</a>() {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">if</span> (!(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL)) {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;          SDLNet_TCP_DelSocket(<span class="keyword">set</span>,<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        SDLNet_FreeSocketSet(<span class="keyword">set</span>);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        SDLNet_TCP_Close (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#a0734117fc481e0f09ed4c172bd60cc86">  334</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_tcp_socket.html#a0734117fc481e0f09ed4c172bd60cc86" title="Asignador de la estructura m_Socket.">CTcpSocket::SetSocket</a> (TCPsocket the_sdl_socket) {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">if</span> (!(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL)) {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;          SDLNet_TCP_DelSocket(<span class="keyword">set</span>,<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;          SDLNet_TCP_Close (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = the_sdl_socket;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">if</span>(SDLNet_TCP_AddSocket(<span class="keyword">set</span>,<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>)==-1) {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_AddSocket: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = NULL;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#ae1f4bdd24e304eba4832f0b3c3dddca6">  351</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_tcp_socket.html#ae1f4bdd24e304eba4832f0b3c3dddca6" title="Verificador.">CTcpSocket::Ok</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">return</span> !(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;}</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#abd077a52f54168e27f097f0e06e36f25">  362</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_tcp_socket.html#abd077a52f54168e27f097f0e06e36f25" title="Comprobador &quot;Ready&quot;.">CTcpSocket::Ready</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">bool</span> rd = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">int</span> numready = SDLNet_CheckSockets(<span class="keyword">set</span>, 0);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">if</span> (numready == -1)</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_CheckSockets: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std:: endl;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <span class="keywordflow">if</span> (numready)</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                rd = SDLNet_SocketReady (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <span class="keywordflow">return</span> rd;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00378"></a><span class="lineno"><a class="code" href="class_c_tcp_socket.html#a3a5d5d805a6327ea46b8367b8d388571">  378</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_tcp_socket.html#a3a5d5d805a6327ea46b8367b8d388571" title="Función a realizar cuando el socket esté listo.">CTcpSocket::OnReady</a>() {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">//***** HOSTSOCKET ******</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="code" href="class_c_host_socket.html#a00cc801d94ac2e44b04c56218cd0f86a">  394</a></span>&#160;<a class="code" href="class_c_host_socket.html#a00cc801d94ac2e44b04c56218cd0f86a" title="Constructor principal.">CHostSocket::CHostSocket</a>(<a class="code" href="class_c_ip_address.html" title="Clase para encapsular una variable de tipo m_Ip.">CIpAddress</a>&amp; the_ip_address)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;{</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  <a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44" title="Constructor por defecto.">CTcpSocket</a>();</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  IPaddress iph = the_ip_address.<a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba" title="Obtener la estructura m_Ip del objeto.">GetIpAddress</a>();</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <span class="keywordflow">if</span>(!(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = SDLNet_TCP_Open(&amp;iph)))</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  {</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    SDLNet_FreeSocketSet(<span class="keyword">set</span>);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_Open: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;}</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
+<div class="line"><a name="l00414"></a><span class="lineno"><a class="code" href="class_c_host_socket.html#afb51f2cea459c3cf09a13ba4a12fba2d">  414</a></span>&#160;<a class="code" href="class_c_host_socket.html#a00cc801d94ac2e44b04c56218cd0f86a" title="Constructor principal.">CHostSocket::CHostSocket</a> (Uint16 port) {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <a class="code" href="class_c_ip_address.html" title="Clase para encapsular una variable de tipo m_Ip.">CIpAddress</a> iplistener (port);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">if</span> (!iplistener.<a class="code" href="class_c_ip_address.html#aecb8f11e01915a73595de9139e7b1aeb" title="Verificador.">Ok</a>()) {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = NULL;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44" title="Constructor por defecto.">CTcpSocket</a>();</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        IPaddress iph = iplistener.<a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba" title="Obtener la estructura m_Ip del objeto.">GetIpAddress</a>();</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <span class="keywordflow">if</span> (!(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = SDLNet_TCP_Open(&amp;iph))) {</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            SDLNet_FreeSocketSet(<span class="keyword">set</span>);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_Open: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;}</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
+<div class="line"><a name="l00438"></a><span class="lineno"><a class="code" href="class_c_host_socket.html#a8d4142eee27b8003121215b1428d801f">  438</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_host_socket.html#a8d4142eee27b8003121215b1428d801f" title="Acepta conexiones entrantes.">CHostSocket::Accept</a> (<a class="code" href="class_c_client_socket.html" title="Clase que representa el socket cliente (local) de la conexión.">CClientSocket</a>&amp; the_client_socket) {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    TCPsocket cs;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">if</span> ((cs = SDLNet_TCP_Accept(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>))) {</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        the_client_socket.<a class="code" href="class_c_client_socket.html#a871915038d3f9198616b50e4b8c1004e" title="Inicia un socket.">SetSocket</a>(cs);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    }</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;}</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00453"></a><span class="lineno"><a class="code" href="class_c_host_socket.html#a22a5b209aaebf41a1d30e9ca0f11e0af">  453</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_host_socket.html#a22a5b209aaebf41a1d30e9ca0f11e0af" title="Función a realizar cuando el socket esté listo.">CHostSocket::OnReady</a>() {}</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="comment">//***** CLIENTSOCKET ****</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="comment">//***********************</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
+<div class="line"><a name="l00464"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a45648796359fcb9e67ac9ba9d8ab6879">  464</a></span>&#160;<a class="code" href="class_c_client_socket.html#a45648796359fcb9e67ac9ba9d8ab6879" title="Constructor por defecto.">CClientSocket::CClientSocket</a>() {</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44" title="Constructor por defecto.">CTcpSocket</a>();</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;}</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;</div>
+<div class="line"><a name="l00477"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#ab930d1b15fb747c842dcdf26c9636e82">  477</a></span>&#160;<a class="code" href="class_c_client_socket.html#a45648796359fcb9e67ac9ba9d8ab6879" title="Constructor por defecto.">CClientSocket::CClientSocket</a> (std::string host, Uint16 port) {</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <a class="code" href="class_c_ip_address.html" title="Clase para encapsular una variable de tipo m_Ip.">CIpAddress</a> remoteip (host.c_str(), port);</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keywordflow">if</span> (!remoteip.Ok()) {</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> = NULL;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    }</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        <a class="code" href="class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44" title="Constructor por defecto.">CTcpSocket</a>();</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <a class="code" href="class_c_client_socket.html#a2df1646c47679c9baa0a82105fa4b7d8" title="Intento de conexión.">Connect</a>(remoteip);</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    }</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;}</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;</div>
+<div class="line"><a name="l00497"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#aa871c4cfe9ddaba3a0d07932e21644ec">  497</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_client_socket.html#a2df1646c47679c9baa0a82105fa4b7d8" title="Intento de conexión.">CClientSocket::Connect</a> (<a class="code" href="class_c_host_socket.html" title="Clase que representa el socket remoto de la conexión.">CHostSocket</a>&amp; the_listener_socket) {</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;}</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
+<div class="line"><a name="l00512"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a2df1646c47679c9baa0a82105fa4b7d8">  512</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_client_socket.html#a2df1646c47679c9baa0a82105fa4b7d8" title="Intento de conexión.">CClientSocket::Connect</a> (<a class="code" href="class_c_ip_address.html" title="Clase para encapsular una variable de tipo m_Ip.">CIpAddress</a>&amp; remoteip) {</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    TCPsocket cs;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    IPaddress ip = remoteip.<a class="code" href="class_c_ip_address.html#a89ebf0c553f1e35dd8ca63b100eb56ba" title="Obtener la estructura m_Ip del objeto.">GetIpAddress</a>();</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordflow">if</span> ((cs = SDLNet_TCP_Open(&amp;ip)))</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    {</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        <a class="code" href="class_c_client_socket.html#a871915038d3f9198616b50e4b8c1004e" title="Inicia un socket.">SetSocket</a>(cs);</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    }</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_Open: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    }</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;}</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
+<div class="line"><a name="l00533"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a871915038d3f9198616b50e4b8c1004e">  533</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_client_socket.html#a871915038d3f9198616b50e4b8c1004e" title="Inicia un socket.">CClientSocket::SetSocket</a> (TCPsocket the_sdl_socket) {</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <a class="code" href="class_c_tcp_socket.html#a0734117fc481e0f09ed4c172bd60cc86" title="Asignador de la estructura m_Socket.">CTcpSocket::SetSocket</a> (the_sdl_socket);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    IPaddress* ips;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <span class="keywordflow">if</span> ((ips = SDLNet_TCP_GetPeerAddress(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>))) {</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="comment">/* Print the address, converting it onto the host format */</span></div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <a class="code" href="class_c_client_socket.html#a6876dcaa07cd0df4e84a3e795e9d54ab">m_RemoteIp</a>.<a class="code" href="class_c_ip_address.html#a861a6322cedc1c232fd4ce8788b54291" title="Asignador de dirección IP.">SetIp</a>(*ips);</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        Uint32 hbo = <a class="code" href="class_c_client_socket.html#a6876dcaa07cd0df4e84a3e795e9d54ab">m_RemoteIp</a>.<a class="code" href="class_c_ip_address.html#ae09aee6e5cf7b1121ba99335c09e65b0" title="Obtener el valor almacenado por m_Ip.host.">GetHost</a>();</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        Uint16 pbo = <a class="code" href="class_c_client_socket.html#a6876dcaa07cd0df4e84a3e795e9d54ab">m_RemoteIp</a>.<a class="code" href="class_c_ip_address.html#a3ae4d3aa106e78d1dad4679e7bc35069" title="Obtener el valor almacenado por m_Ip.port.">GetPort</a>();</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Client connected: &quot;</span> &lt;&lt; SDLNet_Read32(&amp;hbo) &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;            &lt;&lt; SDLNet_Read16 (&amp;pbo) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    }</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_GetPeerAddress: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;}</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
+<div class="line"><a name="l00553"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a48dcf244c1be2168738a70b9a887263a">  553</a></span>&#160;<a class="code" href="class_c_ip_address.html" title="Clase para encapsular una variable de tipo m_Ip.">CIpAddress</a> <a class="code" href="class_c_client_socket.html#a48dcf244c1be2168738a70b9a887263a" title="Obtener la dirección IP del host remoto.">CClientSocket::getIpAddress</a> ()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_c_client_socket.html#a6876dcaa07cd0df4e84a3e795e9d54ab">m_RemoteIp</a>;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;}</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;</div>
+<div class="line"><a name="l00566"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#ae52f8a2a70ba924207cd168181c5e1da">  566</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_client_socket.html#ae52f8a2a70ba924207cd168181c5e1da" title="Recibir un paquete encapsulado en un objeto del tipo CNetMessage.">CClientSocket::Receive</a>(<a class="code" href="class_c_net_message.html" title="Clase base de mensaje de red.">CNetMessage</a>&amp; rData) {</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="comment">//Firstly, check if there is a socket</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL)</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> buf;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="comment">//Check if the instance can receive bytes, if it can, load the number of bytes specified by NumToLoad() virtual function</span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keywordflow">while</span> (rData.<a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573" title="Indicador de cuantos caracteres hay que cargar.">NumToLoad</a>() &gt; 0) {</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        <span class="keywordflow">if</span> (SDLNet_TCP_Recv(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>, buf, rData.<a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573" title="Indicador de cuantos caracteres hay que cargar.">NumToLoad</a>()) &gt; 0) {</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            rData.<a class="code" href="class_c_net_message.html#a4e3ee7425b8c1422f023b2eee58a55dc" title="Cargador del buffer.">LoadBytes</a> (buf, rData.<a class="code" href="class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573" title="Indicador de cuantos caracteres hay que cargar.">NumToLoad</a>());</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        }</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        }</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    }</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    rData.<a class="code" href="class_c_net_message.html#a46e89282b6b87d8548eed4c38ac1ce28" title="Finaliza la lectura del mensaje.">finish</a>();</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;}</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;</div>
+<div class="line"><a name="l00592"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a974e67f4d7f1662f078b45ddbfe5496a">  592</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_c_client_socket.html#a974e67f4d7f1662f078b45ddbfe5496a" title="Enviar un paquete encapsulado en un objeto del tipo CNetMessage.">CClientSocket::Send</a> (<a class="code" href="class_c_net_message.html" title="Clase base de mensaje de red.">CNetMessage</a>&amp; sData) {</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;<span class="comment">//check if there is a socket</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a> == NULL)</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    <a class="code" href="_c_net_8h.html#a5ad5cc46aebdcda07f8694c714f9f5db">charbuf</a> buf;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    <span class="keywordtype">int</span> len;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="comment">//Check if the instance can send bytes, if it can, unload the number of bytes specified by NumToLoad() virtual function</span></div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    <span class="keywordflow">while</span> ((len = sData.<a class="code" href="class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd" title="Indicador de cuantos caracteres hay que descargar.">NumToUnLoad</a>()) &gt; 0) {</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;        sData.<a class="code" href="class_c_net_message.html#a9a683f75a416be6ea9b8757768b90a2b" title="Descargador del buffer.">UnLoadBytes</a> (buf);</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;        <span class="keywordflow">if</span> (SDLNet_TCP_Send(<a class="code" href="class_c_tcp_socket.html#a38220b87ea9cee5aa640b4e6db5e268e">m_Socket</a>, (<span class="keywordtype">void</span> *)buf, len) &lt; len) {</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;SDLNet_TCP_Send: &quot;</span> &lt;&lt; SDLNet_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        }</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    }</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;}</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;</div>
+<div class="line"><a name="l00615"></a><span class="lineno"><a class="code" href="class_c_client_socket.html#a0d6c51c4d7efa4ad313a6afb54b8d6fe">  615</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_client_socket.html#a0d6c51c4d7efa4ad313a6afb54b8d6fe" title="Función a realizar cuando el socket esté listo.">CClientSocket::OnReady</a>() {}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 19 de Abril de 2013 16:44:01 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Martes, 23 de Abril de 2013 20:26:59 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

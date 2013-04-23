@@ -2,7 +2,6 @@ var searchData=
 [
   ['cboton',['CBoton',['../class_c_boton.html',1,'']]],
   ['cclientsocket',['CClientSocket',['../class_c_client_socket.html',1,'']]],
-  ['cconsola',['CConsola',['../class_c_consola.html',1,'']]],
   ['cengine',['CEngine',['../class_c_engine.html',1,'']]],
   ['centidad',['CEntidad',['../class_c_entidad.html',1,'']]],
   ['cframe',['CFrame',['../class_c_frame.html',1,'']]],
@@ -24,7 +23,6 @@ var searchData=
   ['cmenu',['CMenu',['../class_c_menu.html',1,'']]],
   ['cnet',['CNet',['../class_c_net.html',1,'']]],
   ['cnetmessage',['CNetMessage',['../class_c_net_message.html',1,'']]],
-  ['cnetmessage1',['CNetMessage1',['../class_c_net_message1.html',1,'']]],
   ['cnetmessagen',['CNetMessageN',['../class_c_net_message_n.html',1,'']]],
   ['cnetwork_5fdata_5fclient',['CNetwork_Data_Client',['../class_c_network___data___client.html',1,'']]],
   ['cnetwork_5fdata_5fserver',['CNetwork_Data_Server',['../class_c_network___data___server.html',1,'']]],

@@ -1,11 +1,21 @@
+/**
+ * @file
+ * @brief Definición de CPad_1J_INF
+ *
+ */
+
 #include "pad_1j_inf.h"
-#include "vars.h"
 #include "../../globals.h"
 
 float PAD_1J_INF_VELOCIDAD = PAD_VELOCIDAD;
 int PAD_1J_INF_ALTO = PAD_ALTO;
 int PAD_1J_INF_MEDIO = PAD_ALTO/2;
 
+/**
+ * @brief Constructor por defecto
+ *
+ * Asigna valores por defecto. Si alguna tecla está pulsada, se añade velocidad al pad para desacelerarlo cuando se suelte.
+ */
 CPad_1J_INF::CPad_1J_INF()
 {
   KUp = SDLK_w;
@@ -33,6 +43,11 @@ CPad_1J_INF::CPad_1J_INF()
   momento = 0;
 }
 
+/**
+ * @brief Destructor
+ *
+ * Asigna valores nulos a los miembros de la clase.
+ */
 CPad_1J_INF::~CPad_1J_INF()
 {
   caja.w = 0;
@@ -45,6 +60,12 @@ CPad_1J_INF::~CPad_1J_INF()
   momento = 0;
 }
 
+/**
+ * @brief Mover el pad
+ *
+ * Si el pad tiene velocidad, se aplicará a la variable caja.y (Rect_Float::y). Además, dependiendo de la velocidad
+ * se añadirá un sentido al momento cinético.
+ */
 void CPad_1J_INF::mover()
 {
   if(yVel < 0)
@@ -67,21 +88,13 @@ void CPad_1J_INF::mover()
   }
 }
 
+/**
+ * @brief Incrementar velocidad
+ *
+ * Se aumenta el valor de la velocidad. Si el pad está en movimiento, se tendrá en cuenta para evitar desfases.
+ */
 void CPad_1J_INF::incVel(float n)
 {
-  /*if(yVel > PAD_1J_INF_MIN_VEL)
-  {
-    PAD_1J_INF_VELOCIDAD -= n;
-    // Por si el pad se esta moviendo, decrementamos su velocidad actual
-    if(yVel < 0)
-    {
-      yVel += n;
-    }
-    if(yVel > 0)
-    {
-      yVel += n;
-    }
-  }*/
   PAD_1J_INF_VELOCIDAD += n;
   // Por si el pad se esta moviendo, decrementamos su velocidad actual
   if(yVel < 0)
@@ -94,6 +107,11 @@ void CPad_1J_INF::incVel(float n)
   }
 }
 
+/**
+ * @brief Decrementar tamaño
+ *
+ * Se decrementa el tamaño (altura) del pad hasta, como mínimo, el valor #PAD_1J_INF_MIN_ALTO.
+ */
 void CPad_1J_INF::decTam(int n)
 {
   if(/*n < 0 || */caja.h > PAD_1J_INF_MIN_ALTO)
@@ -106,6 +124,22 @@ void CPad_1J_INF::decTam(int n)
   }
 }
 
+/**
+ * @brief Gestionar eventos
+ *
+ * Si se pulsa la tecla para subir el pad, se restará a yVel el valor #PAD_1J_INF_VELOCIDAD. Si se suelta, se sumará dicho valor.
+ * En caso de pulsar la tecla para bajar, se sumará si se aprieta la tecla y se restará si se suelta.
+ * Para entender las direcciones, vea el siguiente diagrama de representación de ejes en SDL:
+ *
+ * <pre>
+ *   ________ X
+ *  |
+ *  |
+ *  |
+ *  |
+ *  Y
+ * </pre>
+ */
 void CPad_1J_INF::eventuar()
 {
   if(event.type == SDL_KEYDOWN)
@@ -117,9 +151,9 @@ void CPad_1J_INF::eventuar()
   }
   else if(event.type == SDL_KEYUP)
   {
-	if(event.key.keysym.sym == KUp)
-	  yVel += PAD_1J_INF_VELOCIDAD;
-	else if(event.key.keysym.sym == KDown)
-	  yVel -= PAD_1J_INF_VELOCIDAD;
+	   if(event.key.keysym.sym == KUp)
+	     yVel += PAD_1J_INF_VELOCIDAD;
+	   else if(event.key.keysym.sym == KDown)
+	     yVel -= PAD_1J_INF_VELOCIDAD;
   }
 }

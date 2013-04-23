@@ -1,0 +1,11 @@
+/*!
+  \page Librerías Librerías
+  \brief Lista de librerías y dependencias.
+  - SDL:				http://www.libsdl.org/
+  - SDL_image:			http://www.libsdl.org/projects/SDL_image/
+  - SDL_mixer:			http://www.libsdl.org/projects/SDL_mixer/
+  - SDL_ttf:			http://www.libsdl.org/projects/SDL_ttf/
+  - SDL_net:			http://www.libsdl.org/projects/SDL_net/
+
+Nota: las librerías para linkear vienen separadas en 2 carpetas: x86 y x64. Usar las del x86 y colocarlas en la carpeta /lib del compilador, no en /lib/x86
+*/

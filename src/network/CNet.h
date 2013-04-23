@@ -1,3 +1,16 @@
+/**
+ * @file
+ * @brief Declaración de todas las clases para la interfaz de red.
+ *
+ * Todas estas clases son un extraco de http://www.sdltutorials.com/sdl-net-part-1-user-tutorial Un ejemplo de comunicación entre cliente y servidor por medio de las clases declaradas en este archivo puede ser
+ * la siguiente:
+ *
+ * @image html net_1.png
+ *
+ * Para mayor información sobre las estructuras que encapsulan las clases declaradas en esta cabecera, visite
+ * http://www.libsdl.org/projects/SDL_net/docs/
+ */
+
 #ifndef CNET_H_
 #define CNET_H_
 
@@ -11,12 +24,18 @@
 
 #include "../globals.h"
 
-typedef char charbuf [256];
+typedef char charbuf [256]; /**< Definición de tipo charbuff como char[256] */
 
 //***********************
 //******* CNET **********
 //***********************
 
+/**
+ * @brief Clase base de red
+ *
+ * Se encarga de inicializar y desinicializar las librerías de SDL_net para su uso en el programa.
+ * Vea el archivo CNet.h para mayor información de todas las clases de red.
+ */
 class CNet{
   public:
     static bool Init(); //Initialize SDL_net
@@ -27,14 +46,19 @@ class CNet{
 //***** CNETMESSAGE *****
 //***********************
 
+/**
+ * @brief Clase base de mensaje de red
+ *
+ * Se utiliza como contenedor para mandar datos en red. Por defecto, sirve para cargar y descargar cadenas de caracteres.
+ * Vea el archivo CNet.h para mayor información de todas las clases de red.
+ */
 class CNetMessage
 {
   protected:
-    charbuf buffer; //message stored in buffer, limited to 256 bytes
-    //message states
-    enum bufstates { EMPTY, READING, WRITING, FULL };
-    bufstates state; //the message state
-    void reset(); // reset message: fulfill it with zeroes and change its state to EMPTY
+    charbuf buffer; /**< Mensaje almacenado en un buffer de tipo charbuf, limitado a 256 caracteres. */
+    enum bufstates { EMPTY, READING, WRITING, FULL }; /**< Distintos estados del mensaje. */
+    bufstates state; /**< El estado del mensaje.*/
+    void reset();
   public:
     CNetMessage(); //constructor
     //Virtual member function that indicates how many bytes may have to be loaded into the instance. By default, it works with strings that have a maximum
@@ -50,30 +74,28 @@ class CNetMessage
     void finish(); //set the state object to full. No more data to be loaded
 };
 
-class CNetMessage1 : public CNetMessage
-{
-  private:
-//Virtual function that indicates how many bytes may have to be loaded onto the object. Overrides the parent class function member to work with only a byte
-    virtual int NumToLoad();
-//Virtual function that indicates how many bytes may have to be downloaded from the object. Overrides the parent class function member to work with only a byte
-    virtual int NumToUnLoad();
-  public:
-//Function simpler than LoadBytes(), inherited from the parent class, as it only works with one byte
-    void LoadByte(char);
-//Function simpler than UnLoadBytes(), inherited from the parent class, as it only works with one byte
-    char UnLoadByte();
-};
-
+/**
+ * @brief Clase para mensajes de red de N bytes
+ *
+ * Se utiliza como contenedor para mandar datos en red. Sirve para mandar paquetes codificados en un conjunto de caracteres
+ * que simbolizan una secuencia de bytes. La cantidad de bytes no debe sobrepasar los 256 bytes.
+ * Vea el archivo CNet.h para mayor información de todas las clases de red.
+ */
 class CNetMessageN : public CNetMessage
 {
   private:
-    uint buffer_size;
+    uint buffer_size; /**< Numero de bytes a cargar y descargar. No sirven funciones convencionales como strlen()*/
 //Virtual function that indicates how many bytes may have to be loaded onto the object. Overrides the parent class function member to work with only a byte
     virtual int NumToLoad();
 //Virtual function that indicates how many bytes may have to be downloaded from the object. Overrides the parent class function member to work with only a byte
     virtual int NumToUnLoad();
   public:
-    CNetMessageN(uint n): CNetMessage(), buffer_size(n) {};
+    /**
+     * @brief Constructor principal
+     *
+     * @param n Numero de bytes a guardar en #buffer_size.
+     */
+    CNetMessageN(uint n): CNetMessage(), buffer_size(n) {reset();};
 //Function simpler than LoadBytes(), inherited from the parent class, as it only works with one byte
     void LoadNBytes(char* in);
 //Function simpler than UnLoadBytes(), inherited from the parent class, as it only works with one byte
@@ -84,10 +106,15 @@ class CNetMessageN : public CNetMessage
 //***** CIPADRESS *******
 //***********************
 
+/**
+ * @brief Clase para encapsular una variable de tipo m_Ip
+ *
+ * Vea el archivo CNet.h para mayor información de todas las clases de red.
+ */
 class CIpAddress
 {
   private:
-    IPaddress m_Ip; //the IPaddress structure
+    IPaddress m_Ip; /**< Estructura Ipaddress que contiene una dirección IPv4 y un puerto, ambos para el destino */
   public:
     CIpAddress(); //constructor
     CIpAddress (Uint16 port); //create and associate a port to the instance
@@ -99,10 +126,16 @@ class CIpAddress
     Uint16 GetPort() const; //return the port
 };
 
+/**
+ * @brief Clase para encapsular la estructura TCPsocket
+ *
+ * Cada objeto de esta clase representa un socket o buzón en nuestro programa. La gestión de los mismos vienen
+ * dadas por el sistema operativo y por las librerías de SDL_net.
+ */
 class CTcpSocket {
   protected:
-    TCPsocket m_Socket; //the TCP socket structure
-    SDLNet_SocketSet set; //a set of sockets. Used here only to check existing packets
+    TCPsocket m_Socket; /**< La estructura TCPsocket de un socket TCP. */
+    SDLNet_SocketSet set; /**< Un conjunto de sockets. Usado para comprobar la existencia de paquetes.*/
   public:
     CTcpSocket();
     virtual ~CTcpSocket();
@@ -117,7 +150,11 @@ class CTcpSocket {
 //***********************
 
 class CClientSocket;
-
+/**
+ * @brief Clase que representa el socket remoto de la conexión
+ *
+ * Se usará para aceptar paquetes y conexiones entrantes al programa.
+ */
 class CHostSocket : public CTcpSocket {
   public:
     CHostSocket (CIpAddress& the_ip_address); //create and open a new socket, with an existing CIpAddress object
@@ -131,9 +168,14 @@ class CHostSocket : public CTcpSocket {
 //**** CLIENTSOCKET *****
 //***********************
 
+/**
+ * @brief Clase que representa el socket cliente (local) de la conexión
+ *
+ * Se usará para enviar y recibir paquetes y conexiones del programa.
+ */
 class CClientSocket : public CTcpSocket {
   private:
-    CIpAddress m_RemoteIp; //the CIpAddress object corresponding to the remote host
+    CIpAddress m_RemoteIp; /**< Objeto CIpAddress correspondiente al host remoto */
   public:
     CClientSocket(); //constructor
     CClientSocket (std::string host, Uint16 port); //Create the object and connect to a host, in a given port

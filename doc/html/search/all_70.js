@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['p_c3_a1gina_20principal_20del_20proyecto',['Página principal del proyecto',['../index.html',1,'']]],
   ['pad_2ecpp',['pad.cpp',['../pad_8cpp.html',1,'']]],
   ['pad_2eh',['pad.h',['../pad_8h.html',1,'']]],
   ['pad1_5fy',['pad1_y',['../class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059',1,'CNetwork_Data_Server']]],
@@ -31,6 +32,7 @@ var searchData=
   ['pantalla_5falto',['PANTALLA_ALTO',['../class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8',1,'CNetwork_Data_Settings::PANTALLA_ALTO()'],['../class_c_opciones.html#aef315aac5ba09a7017ef6e0a5b12ee28',1,'COpciones::PANTALLA_ALTO()'],['../globals_8h.html#adc43830800eb5cd87799963608ec1988',1,'PANTALLA_ALTO():&#160;globals.h']]],
   ['pantalla_5fancho',['PANTALLA_ANCHO',['../class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7',1,'CNetwork_Data_Settings::PANTALLA_ANCHO()'],['../class_c_opciones.html#a37b5e119019fc33db3efe9c5b59543b7',1,'COpciones::PANTALLA_ANCHO()'],['../globals_8h.html#a121233f7601442d0bcb2319801e59a22',1,'PANTALLA_ANCHO():&#160;globals.h']]],
   ['pantalla_5fbpp',['PANTALLA_BPP',['../class_c_opciones.html#a55d9cef5fe08e5f53d39895ae656d80b',1,'COpciones::PANTALLA_BPP()'],['../globals_8h.html#a8ae8a80f356b6994c3d7324faa368226',1,'PANTALLA_BPP():&#160;globals.h']]],
+  ['pantalla_5fcompleta',['PANTALLA_COMPLETA',['../class_c_opciones.html#ae98fa023410f2e7b5d43c03ce1c669a6',1,'COpciones']]],
   ['pantalla_5fmargen_5finferior',['PANTALLA_MARGEN_INFERIOR',['../globals_8h.html#a6ade757e3558f98c7d6f99b2496554d6',1,'globals.h']]],
   ['pantalla_5fmargen_5flateral',['PANTALLA_MARGEN_LATERAL',['../globals_8h.html#a8c0316a0cf4f52d2770edf4136466e18',1,'globals.h']]],
   ['pantalla_5fmargen_5fsuperior',['PANTALLA_MARGEN_SUPERIOR',['../globals_8h.html#a7c80e7ac3f0df23eed03ba1de7dbbef7',1,'globals.h']]],
@@ -61,17 +63,17 @@ var searchData=
   ['pelota_5fmj_5flocal_2eh',['pelota_mj_local.h',['../pelota__mj__local_8h.html',1,'']]],
   ['pelota_5fmj_5fonline_2ecpp',['pelota_mj_online.cpp',['../pelota__mj__online_8cpp.html',1,'']]],
   ['pelota_5fmj_5fonline_2eh',['pelota_mj_online.h',['../pelota__mj__online_8h.html',1,'']]],
-  ['pelota_5ftrack',['pelota_track',['../class_c_consola.html#ada3a0b97bb12ff8ccef8ffa0738ef82d',1,'CConsola']]],
   ['pelota_5fvel',['PELOTA_VEL',['../class_c_opciones.html#a7beac8e2b834bd2c08231de9355ad51b',1,'COpciones']]],
   ['pelota_5fvel_5fmin',['PELOTA_VEL_MIN',['../pelota_8cpp.html#a95ccd08f8550582ca5cefa54a6c755ea',1,'PELOTA_VEL_MIN():&#160;pelota.cpp'],['../pelota_8h.html#a95ccd08f8550582ca5cefa54a6c755ea',1,'PELOTA_VEL_MIN():&#160;pelota.cpp']]],
   ['pelota_5fx',['pelota_x',['../class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207',1,'CNetwork_Data_Server']]],
   ['pelota_5fy',['pelota_y',['../class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc',1,'CNetwork_Data_Server']]],
   ['pendiente',['pendiente',['../pad__cpu_8cpp.html#a25a3959799ee96477d0c8826e1e95784',1,'pendiente(float x, float y, float Vx, float Vy):&#160;pad_cpu.cpp'],['../pad__cpu_8h.html#a25a3959799ee96477d0c8826e1e95784',1,'pendiente(float x, float y, float Vx, float Vy):&#160;pad_cpu.cpp']]],
-  ['perder',['perder',['../1jugador_2infinito_2instancia_8h.html#a6692230f04de10519220c2fdc70ff967af8eef34bee5a10d08ecb5b0dba894c89',1,'perder():&#160;instancia.h'],['../vars_8h.html#a25fdddc354b4367273f785c73d3c680caf8eef34bee5a10d08ecb5b0dba894c89',1,'perder():&#160;vars.h']]],
+  ['perder',['perder',['../pelota__1j__inf_8h.html#a25fdddc354b4367273f785c73d3c680caf8eef34bee5a10d08ecb5b0dba894c89',1,'pelota_1j_inf.h']]],
   ['pj1',['PJ1',['../class_c_instance__1_j___i_n_f.html#a4dbe65f1be1f61e198d44ba68c4b7281',1,'CInstance_1J_INF::PJ1()'],['../class_c_instance___m_j___c_p_u.html#a645693fc04626320d0bf3085a1779059',1,'CInstance_MJ_CPU::PJ1()'],['../class_c_instance___m_j___local.html#a38ecd9a978b03fc5b86a7f6f8a8a3db0',1,'CInstance_MJ_Local::PJ1()'],['../class_c_instance___m_j___online___client.html#a9321b6a9b5331fc30da240a5c261ef8a',1,'CInstance_MJ_Online_Client::PJ1()'],['../class_c_instance___m_j___online___server.html#aec00114a533f5be0cbb4fc9e96ea3233',1,'CInstance_MJ_Online_Server::PJ1()']]],
   ['pj1_5fdown',['PJ1_DOWN',['../class_c_opciones.html#a3e137df1cb4b468c28109ae18c87f878',1,'COpciones']]],
   ['pj1_5fup',['PJ1_UP',['../class_c_opciones.html#a45fb50bc608b7c27082b0c167ab1e850',1,'COpciones']]],
   ['pj2',['PJ2',['../class_c_instance___m_j___c_p_u.html#a20894f644951a169a9b82d6264dc0ab2',1,'CInstance_MJ_CPU::PJ2()'],['../class_c_instance___m_j___local.html#a83f91fca0a1ee5266b2b3ceb1f2c07e9',1,'CInstance_MJ_Local::PJ2()'],['../class_c_instance___m_j___online___client.html#aee301e1b5fad1a9d0c40a728161eee18',1,'CInstance_MJ_Online_Client::PJ2()'],['../class_c_instance___m_j___online___server.html#a79750dd79721856913ee2858c8a71a7e',1,'CInstance_MJ_Online_Server::PJ2()']]],
   ['pj2_5fdown',['PJ2_DOWN',['../class_c_opciones.html#aedf91726f750dced116ccc9128eb5524',1,'COpciones']]],
-  ['pj2_5fup',['PJ2_UP',['../class_c_opciones.html#a4626d93cf796c26f13a7ea09e4737f14',1,'COpciones']]]
+  ['pj2_5fup',['PJ2_UP',['../class_c_opciones.html#a4626d93cf796c26f13a7ea09e4737f14',1,'COpciones']]],
+  ['por_5fhacer_2edox',['por_hacer.dox',['../por__hacer_8dox.html',1,'']]]
 ];

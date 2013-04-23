@@ -9,7 +9,6 @@ var searchData=
   ['cargarfichero',['cargarFichero',['../class_c_opciones.html#aca2268f75ead82c97044899d5b495a1b',1,'COpciones']]],
   ['cboton',['CBoton',['../class_c_boton.html#a10f9ee8ef5ad40e9f683d5b69fe2fa97',1,'CBoton::CBoton()'],['../class_c_boton.html#aa783fe3c48c953fc1726235e111d6f3c',1,'CBoton::CBoton(TTF_Font *f, SDL_Color *c1, SDL_Color *c2, SDL_Rect *cuadro, const char *texto, enum align_t align=align_izquierda)']]],
   ['cclientsocket',['CClientSocket',['../class_c_client_socket.html#a45648796359fcb9e67ac9ba9d8ab6879',1,'CClientSocket::CClientSocket()'],['../class_c_client_socket.html#ab930d1b15fb747c842dcdf26c9636e82',1,'CClientSocket::CClientSocket(std::string host, Uint16 port)']]],
-  ['cconsola',['CConsola',['../class_c_consola.html#af77221c39d294650d408dc0e17bd3e21',1,'CConsola']]],
   ['cengine',['CEngine',['../class_c_engine.html#ab3d84e8a1c8d4eb84b9f069090024990',1,'CEngine']]],
   ['cframe',['CFrame',['../class_c_frame.html#acf46b3be9eade883e8a0ed3cda41542a',1,'CFrame']]],
   ['chostsocket',['CHostSocket',['../class_c_host_socket.html#a00cc801d94ac2e44b04c56218cd0f86a',1,'CHostSocket::CHostSocket(CIpAddress &amp;the_ip_address)'],['../class_c_host_socket.html#afb51f2cea459c3cf09a13ba4a12fba2d',1,'CHostSocket::CHostSocket(Uint16 port)']]],

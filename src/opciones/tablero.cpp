@@ -1,24 +1,48 @@
-/*
- * tablero.cpp
- *
- *  Created on: 05/04/2013
- *      Author: Dani
+/**
+ * @file
+ * @brief Definición de la clase CTablero.
  */
 
 #include "tablero.h"
 
 CTablero* tablero_mp = NULL;
 
+/**
+ * @brief Constructir por defecto
+ *
+ * Asigna un valor nulo a la variable #tablero
+ */
 CTablero::CTablero()
 {
   tablero = NULL;
 }
 
+/**
+ * @brief Destructor por defecto
+ *
+ * Libera de memoria el contenido guardado en #tablero
+ */
 CTablero::~CTablero()
 {
   SDL_FreeSurface(tablero);
 }
 
+/**
+ * @brief Constructir de la imagen de fondo guardada en #pantalla
+ *
+ * @param ancho Ancho de la superficie. Por lo general, se usará el valor COpciones::PANTALLA_ANCHO
+ * @param alto Alto de la superficie. Por lo general, se usará el valor COpciones::PANTALLA_ALTO
+ * @param bpp Número bits por pixeles.
+ * @param menu Dar un estilo distinto al menu. No usado actualmente.
+ *
+ * Crea una superficie de color negro y sobre ella dibuja una serie de lineas y formas para crear un tablero.
+ * Depende enormente de las variables almacenadas en COpiones (más concretamente, COpciones::PANTALLA_ALTO,
+ * COpciones::PANTALLA_ANCHO y COpciones::PANTALLA_BPP).
+ *
+ * En la siguiente imagen se puede apreciar como se debe construir la imagen del tablero:
+ *
+ * @image html tablero_1.png
+ */
 void CTablero::construir(int16 ancho, int16 alto, int16 bpp, bool menu)
 {
   if(tablero != NULL)
@@ -70,6 +94,11 @@ void CTablero::construir(int16 ancho, int16 alto, int16 bpp, bool menu)
   }
 }
 
+/**
+ * @brief Muestra el tablero por pantalla
+ *
+ * Combina la superficie #tablero en la superficie #pantalla
+ */
 void CTablero::mostrar()
 {
   aplicar_superficie(0, 0, tablero, pantalla);

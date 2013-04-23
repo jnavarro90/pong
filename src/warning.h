@@ -9,13 +9,19 @@
 
 using namespace std;
 
+/**
+ * @brief Clase para mostrar avisos (texto) por pantalla
+ *
+ * Esta clase se utiliza para mostrar en la superficie #pantalla un texto deseado almacenado en la variable #str. Se dibujará con
+ * el color guardado en #color1 y con la fuente apuntada por #ttf_fuente.
+ */
 class CWarning
 {
   private:
-    SDL_Surface* srf_texto;
-    TTF_Font* ttf_fuente;
-    SDL_Color color1;
-    string str;
+    SDL_Surface* srf_texto;/**< Superficie para guardar el texto generado */
+    TTF_Font* ttf_fuente;/**< Tipo de fuente a utilizar previamente cargada */
+    SDL_Color color1; /**< Color con el que se dibujará el texto */
+    string str; /** Cadena de caracteres que almacenará el texto */
   public:
     CWarning(TTF_Font* fuente, const char* txt, SDL_Color* color);
     ~CWarning();

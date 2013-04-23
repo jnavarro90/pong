@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Clase de estancia para el menú multijugador y multijugador online
+ *
+ * Para más información sobre el funcionamiento de las estancias, vea las clases
+ * CInstance_Menu_Main, CInstance, CEngine, CMenu y CBoton.
+ * El diseño de este menú, con un diseño minimalista, es el siguiente:
+ *
+ * @image html menu_1.png
+ */
+
 #ifndef INSTANCE_MENU_MJ_H_
 #define INSTANCE_MENU_MJ_H_
 
@@ -6,6 +17,13 @@
 #include "../menu.h"
 #include "../../temporizador.h"
 
+/**
+ * @brief Clase que representa una estancia del menú multijugador
+ *
+ * Para más información sobre el funcionamiento de las estancias, vea las clases
+ * CInstance_Menu_Main, CInstance, CEngine, CMenu y CBoton.
+ * Un ejemplo del menú, con un diseño minimalista, es el siguiente:
+ */
 class CInstance_Menu_MJ: public CInstance
 {
   private:
@@ -33,6 +51,13 @@ class CInstance_Menu_MJ: public CInstance
     void OnRender();
 };
 
+/**
+ * @brief Clase que representa una estancia del menú multijugador online
+ *
+ * Para más información sobre el funcionamiento de las estancias, vea las clases
+ * CInstance_Menu_Main, CInstance, CEngine, CMenu y CBoton.
+ * Un ejemplo del menú, con un diseño minimalista, es el siguiente:
+ */
 class CInstance_Menu_MJ_Online: public CInstance
 {
   private:
@@ -59,8 +84,5 @@ class CInstance_Menu_MJ_Online: public CInstance
     void OnEvent(int& caso);
     void OnRender();
 };
-
-
-
 
 #endif /* INSTANCE_MENU_MJ_H_ */

@@ -64,7 +64,7 @@ void CPad_MJ_Online::eventuar()
 void CPad_MJ_Online::mover()
 {
   caja.y += yVel;
-  if(caja.y < PANTALLA_MARGEN_SUPERIOR || caja.y + caja.h > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR)
+  if(caja.y < PANTALLA_MARGEN_SUPERIOR + TABLERO_LINEAS_GROSOR || caja.y + caja.h > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR - TABLERO_LINEAS_GROSOR)
   {
 	caja.y -= yVel;
   }

@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Definición de la clas CInstance_Menu_MJ
+ */
+
 #include "instance_menu_mj.h"
 
 const int FRAMES_PER_SECOND = 60;

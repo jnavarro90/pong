@@ -9,6 +9,6 @@ var searchData=
   ['network',['network',['../class_c_instance___m_j___online___client.html#a2cb37354c0119091de315810de03f688',1,'CInstance_MJ_Online_Client::network()'],['../class_c_instance___m_j___online___server.html#ac24f4fc7b91e565cfc8f87e0bafdff8f',1,'CInstance_MJ_Online_Server::network()']]],
   ['network_5fstruct_2ecpp',['network_struct.cpp',['../network__struct_8cpp.html',1,'']]],
   ['network_5fstruct_2eh',['network_struct.h',['../network__struct_8h.html',1,'']]],
-  ['numtoload',['NumToLoad',['../class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573',1,'CNetMessage::NumToLoad()'],['../class_c_net_message1.html#ad24cf1f07e7de91aaade7f2f2b0754c9',1,'CNetMessage1::NumToLoad()'],['../class_c_net_message_n.html#ac0294d2b8308f66a5092f40ca7c87517',1,'CNetMessageN::NumToLoad()']]],
-  ['numtounload',['NumToUnLoad',['../class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd',1,'CNetMessage::NumToUnLoad()'],['../class_c_net_message1.html#ae56dc33818f5fcf55e1afed9372a46e6',1,'CNetMessage1::NumToUnLoad()'],['../class_c_net_message_n.html#ad8b3c36c3a105aeebe81ae69ea9960d2',1,'CNetMessageN::NumToUnLoad()']]]
+  ['numtoload',['NumToLoad',['../class_c_net_message.html#a17f3bed9c650fb4aaf6d84fb4c9f4573',1,'CNetMessage::NumToLoad()'],['../class_c_net_message_n.html#ac0294d2b8308f66a5092f40ca7c87517',1,'CNetMessageN::NumToLoad()']]],
+  ['numtounload',['NumToUnLoad',['../class_c_net_message.html#a9cb56e15069e0a096224ad45037f18fd',1,'CNetMessage::NumToUnLoad()'],['../class_c_net_message_n.html#ad8b3c36c3a105aeebe81ae69ea9960d2',1,'CNetMessageN::NumToUnLoad()']]]
 ];

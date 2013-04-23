@@ -1,6 +1,5 @@
 #include "pelota_1j_inf.h"
 #include "pad_1j_inf.h"
-#include "vars.h"
 #include "../../globals.h"
 
 const float FACTOR1 = (2/3.0);

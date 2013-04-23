@@ -2,7 +2,6 @@ var searchData=
 [
   ['i_5frunning',['i_running',['../class_c_instance.html#a01a1e763413795a690c11a5c7e192b50',1,'CInstance::i_running()'],['../class_c_instance___menu___main.html#a946f5560bde0901b566a99c044f5a276',1,'CInstance_Menu_Main::i_running()'],['../class_c_instance___menu__1_j.html#af8e24d56229302e62c5a78a7678c1510',1,'CInstance_Menu_1J::i_running()'],['../class_c_instance___menu___m_j.html#a347cc892ceddc213165644be40bbbacb',1,'CInstance_Menu_MJ::i_running()'],['../class_c_instance___menu___m_j___online.html#a76f899a1a56f16ea82361b19f8647362',1,'CInstance_Menu_MJ_Online::i_running()'],['../class_c_instance___menu___opciones.html#a7fc816355488c7dc0970aeee96406a34',1,'CInstance_Menu_Opciones::i_running()']]],
   ['img',['img',['../class_c_turbo.html#add6657b5b91ddd61e2e1a19ea4408b5b',1,'CTurbo']]],
-  ['img_5f1j_5finf_5ffondo',['img_1j_inf_fondo',['../vars_8cpp.html#a83c88c14daf86f8af06e7024d3c491c9',1,'img_1j_inf_fondo():&#160;vars.cpp'],['../vars_8h.html#a83c88c14daf86f8af06e7024d3c491c9',1,'img_1j_inf_fondo():&#160;vars.cpp']]],
   ['img_5ftexto',['img_texto',['../class_c_teclado.html#a62283a06c5744cffecec258424bf9fdb',1,'CTeclado']]],
   ['incvel',['incVel',['../class_c_instance__1_j___i_n_f.html#a0d3f0e87091bd0557b86cb1f6d08bcbd',1,'CInstance_1J_INF']]],
   ['instance',['instance',['../class_c_engine.html#a8b4e980ab08bd88406326a620f247b35',1,'CEngine']]],

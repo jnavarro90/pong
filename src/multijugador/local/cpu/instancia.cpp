@@ -17,8 +17,8 @@ CInstance_MJ_CPU::CInstance_MJ_CPU()
   PJ2 = NULL;
   pelota = NULL;
   marcador = NULL;
-  wrGameset = NULL;
-  wrGamepoint = NULL;
+  //wrGameset = NULL;
+  //wrGamepoint = NULL;
 
   fondo = NULL;
   i_running = true;
@@ -34,8 +34,8 @@ CInstance_MJ_CPU::~CInstance_MJ_CPU()
   PJ2 = NULL;
   pelota = NULL;
   marcador = NULL;
-  wrGameset = NULL;
-  wrGamepoint = NULL;
+  //wrGameset = NULL;
+  //wrGamepoint = NULL;
 
   fondo = NULL;
 }
@@ -105,8 +105,8 @@ void CInstance_MJ_CPU::Close()
   delete pelota;
   delete marcador;
 
-  delete wrGameset;
-  delete wrGamepoint;
+  //delete wrGameset;
+  //delete wrGamepoint;
 }
 
 
@@ -242,10 +242,10 @@ void CInstance_MJ_CPU::OnRender()
   //aplicar_superficie(0, 0, fondo, pantalla);
   tablero_mp->mostrar();
 
+  marcador->mostrar();
   PJ1->mostrar();
   PJ2->mostrar();
   pelota->mostrar();
-  marcador->mostrar();
 
   if(gameset)
   {

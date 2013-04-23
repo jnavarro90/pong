@@ -6,5 +6,6 @@ var searchData=
   ['bteclado',['bTeclado',['../class_c_instance___m_j___online___client.html#a112531def9da56286ce38e06c55c7044',1,'CInstance_MJ_Online_Client']]],
   ['buffer',['buffer',['../class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e',1,'CNetwork_Data_Client::buffer()'],['../class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8',1,'CNetwork_Data_Server::buffer()'],['../class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11',1,'CNetwork_Data_Settings::buffer()'],['../class_c_net_message.html#a140589dc4ecf11796cd255d0f827bbaf',1,'CNetMessage::buffer()']]],
   ['buffer_5fsize',['buffer_size',['../class_c_net_message_n.html#a4f305485cdcde26495965b8c4b9de78a',1,'CNetMessageN']]],
-  ['bufstates',['bufstates',['../class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80ce',1,'CNetMessage']]]
+  ['bufstates',['bufstates',['../class_c_net_message.html#ad2fc7ec566d637b7e32bc4f2d6bd80ce',1,'CNetMessage']]],
+  ['bugs_2edox',['bugs.dox',['../bugs_8dox.html',1,'']]]
 ];

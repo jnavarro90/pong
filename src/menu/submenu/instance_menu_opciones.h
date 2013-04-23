@@ -1,8 +1,11 @@
-/*
- * instance_menu_opciones.h
+/**
+ * @file
+ * @brief Declaración de CInstance_Menu_Opciones. No implementado
  *
- *  Created on: 11/04/2013
- *      Author: Dani
+ * Para más información sobre el funcionamiento de las estancias, vea las clases CInstance, CEngine, CMenu y CBoton.
+ * Un ejemplo del menú, con un diseño minimalista, es el siguiente:
+ *
+ * @image html menu_1.png
  */
 
 #ifndef INSTANCE_MENU_OPCIONES_H_
@@ -10,6 +13,14 @@
 
 #include "../../instance.h"
 
+
+/**
+ * @brief Clase que representa una estancia del menú  de opciones
+ *
+ * Para más información sobre el funcionamiento de las estancias, vea las clases
+ * CInstance_Menu_Main, CInstance, CEngine, CMenu y CBoton.
+ * Un ejemplo del menú, con un diseño minimalista, es el siguiente:
+ */
 class CInstance_Menu_Opciones: public CInstance
 {
   private:

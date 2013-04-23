@@ -1,0 +1,24 @@
+/*!
+  \page Pendiente Cosas por hacer
+  \brief Cosas pendientes por hacer
+  
+  Leyenda:
+    - X -> Hecho.
+    - / -> A medio hacer.
+  
+ - X Ajustar velocidades de PADs al iniciar las partidas (por si había alguna tecla pulsada).
+ - Añadir modo pantalla completa en escritorio (con fondo transparente)(próxima version SDL).
+ - X Ajustar velocidades de PADs y de la pelota (muy rápidos y muy lenta, respectivamente).
+ - X Tamaño de pantalla variable (para hacer un tablero más o menos grande).
+ - X Generar fondo en función del tamaño (más complejo que una imagen estática, mucho más flexible).
+ - Automatizar el modo de juego mj_online.
+ - X Añadir un fondo de menu más bonito (tal vez el mismo que tablero_mp para darle un toque más distinguido ?).
+   - X Añadir una nueva clase, CFrame para dibujar de forma sencilla marcos en la pantalla, con un grosor y un tamaño determinado.
+ - X Arreglar fallo de la IA en el que no se mueve al perder.
+ - Generalizar las estancias mj_client y mj_server para que sus menus de conexión sean estancias distintas.
+   - Los datos recavados en las estancias de conexión se pasan como parámetro a las estancias de juego (server y client) y se realizan comprobaciones.
+   - Añadir las funciones "LoadMenu", "LoadGameObjects", "UnLoadMenu", "UnLoadGameObjects" en dichas estancias
+ - Acabar el menú de opciones.
+ - Hacer que la velocidad se exprese en píxeles por segundo (y no por frame). Ver tutoriales de lazy foo's "Frame dependant movement"
+
+*/

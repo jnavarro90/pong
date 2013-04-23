@@ -494,13 +494,12 @@ void CInstance_MJ_Online_Client::OnLoop(int& salida)
 
 void CInstance_MJ_Online_Client::OnRender()
 {
-  //aplicar_superficie(0, 0, fondo, pantalla);
   tablero_mp->mostrar();
 
+  marcador->mostrar();
   PJ1->mostrar();
   PJ2->mostrar();
   pelota->mostrar();
-  marcador->mostrar();
 
   if(!conectado)
   {
