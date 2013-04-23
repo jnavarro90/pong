@@ -1,3 +1,7 @@
+/** @file
+ * @brief Incluye todos los ficheros de cabecera de SDL
+ * */
+
 #ifndef SDL_H_
 #define SDL_H_
 

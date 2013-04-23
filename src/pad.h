@@ -1,36 +1,39 @@
+/**
+ * @file
+ * @brief Declaración de CPad
+ *
+ */
+
 #ifndef PAD_H
 #define PAD_H
 
 #include "globals.h"
+#include "entidad.h"
 
-//const int PAD_VELOCIDAD = PAD_ALTO / 40;
+#include "opciones/opciones.h"
+
 // Hacer que la velocidad sea un valor de tipo float (junto con las coordenadas X e Y).
 const int PAD_VELOCIDAD = 2;
 
-class CPad
+/**
+ * @brief Clase general para definir los diversos pads
+ *
+ * Funciona como clase abstracta para definir las diversas clases pertenecientes a varias estancias
+ *
+ */
+class CPad: public CEntidad
 {
-  //private:
   protected:
-    SDL_Rect caja;
-    int yVel;
-    //bool pad; // lateral derecho o izquierdo
-    int momento; // 0 = no, 1 = arriba, -1 = abajo
-    // SDL_Key UP, DOWN;
+    int momento; /**< Momento cinético: 0 = no, 1 = arriba, -1 = abajo */
+    Uint32 color; /**< Color del pad, ubicado en COpciones::PAD_COLOR */
   public:
     CPad();
-    ~CPad();
-
-    //CPad& getPad(){return *this;};
-
-    SDL_Rect& getCaja(){return caja;};
+    virtual ~CPad();
 
     int getMomento(){return momento;};
 
-    int getVel(){return yVel;};
-
-    //void eventuar();
-    //void mover();
-    //void mostrar();
+    virtual void mostrar();
+    virtual void setCalcular(bool b = true){};
 };
 
 #endif /* PAD_H */

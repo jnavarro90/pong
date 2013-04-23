@@ -1,23 +1,21 @@
 #include "pad_cpu.h"
-#include "../vars.h"
 
-CPad_CPU::CPad_CPU()
+CPad_MJ_CPU::CPad_MJ_CPU():CPad_MJ()
 {
-  wait = false;
   calcular = true;
 
-  caja.x = PAD_OFFSETJ2;
-  caja.y = PANTALLA_ALTO/2 - PAD_ALTO/2;
-  caja.w = PAD_ANCHO;
-  caja.h = PAD_ALTO;
+  //caja.x = PAD_OFFSETJ2;
+  caja.x = opciones->PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL - opciones->PAD_ANCHO;
+  caja.y = opciones->PANTALLA_ALTO/2 - opciones->PAD_ALTO/2;
+  caja.w = opciones->PAD_ANCHO;
+  caja.h = opciones->PAD_ALTO;
 
-  yVel = PAD_VELOCIDAD;
-  momento = 0;
+  yVel = opciones->PAD_VEL;
+  //momento = 0;
 }
 
-CPad_CPU::~CPad_CPU()
+CPad_MJ_CPU::~CPad_MJ_CPU()
 {
-  wait = false;
   calcular = false;
 
   caja.x = 0;
@@ -29,12 +27,7 @@ CPad_CPU::~CPad_CPU()
   momento = 0;
 }
 
-void CPad_CPU::mostrar()
-{
-  aplicar_superficie(caja.x, caja.y, img_Pad, pantalla);
-}
-
-void CPad_CPU::mover(CPelota_CPU P)
+void CPad_MJ_CPU::mover(CPelota_MJ_CPU& P)
 {
   // Primero, hallamos dónde impactará la pelota.
   static int y;
@@ -42,47 +35,44 @@ void CPad_CPU::mover(CPelota_CPU P)
 
   if(P.getxVel() > 0)
   {
-	if(calcular)
-	{
+	   if(calcular)
+	   {
       m = pendiente(P.getX(), P.getY(), P.getX()+P.getxVel(), P.getY()+P.getyVel());
-      y = calcPos(m, PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL - PELOTA_ANCHO, P.getX(), P.getY());
-  	  //cout << "X:" << PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL - PELOTA_ANCHO << " M: " << m << " Pos y; " << y << endl;
+      y = calcPos(m, opciones->PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL - opciones->PELOTA_ANCHO, P.getX(), P.getY());
 
-  	  cout << PANTALLA_ANCHO - PANTALLA_MARGEN_INFERIOR << endl;
-  	  while(y < PANTALLA_MARGEN_SUPERIOR || y > PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR)
-	  {
-	    if(y < PANTALLA_MARGEN_SUPERIOR)
+   	  while(y < PANTALLA_MARGEN_SUPERIOR + TABLERO_LINEAS_GROSOR || y > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_INFERIOR - TABLERO_LINEAS_GROSOR )
+	     {
+	       if(y < PANTALLA_MARGEN_SUPERIOR )
         {
-	      y = -y  + PANTALLA_MARGEN_SUPERIOR*2;
-	    }
-	    else
-	    {
-	      y = PANTALLA_ALTO - (y - PANTALLA_ALTO) - (PANTALLA_MARGEN_INFERIOR*2);
-	    }
-	  }
-	}
-	if(y % 2 != 0) // Dado que los pads se mueven a una cierta velocidad, para evitar "vibraciones", hacemos que la posición sea múltiplo de la velocidad del pad
-      y += 1;
+	         y = -y  + PANTALLA_MARGEN_SUPERIOR*2;
+	       }
+	       else
+	       {
+	         y = opciones->PANTALLA_ALTO - (y - opciones->PANTALLA_ALTO) - (PANTALLA_MARGEN_INFERIOR*2);
+	       }
+	     }
+	   }
+	   //if(y % 2 != 0) // Dado que los pads se mueven a una cierta velocidad, para evitar "vibraciones", hacemos que la posición sea múltiplo de la velocidad del pad
+      //y += 1;
 
-	calcular = false;
+	   calcular = false;
 
-	if(caja.y + caja.h/2 < y)
-	{
-	  caja.y += yVel;
-	  if(caja.y + caja.h > PANTALLA_ALTO - PANTALLA_MARGEN_SUPERIOR)
-	  {
-	    caja.y -= yVel;
-	  }
+	   if(caja.y + caja.h/2 < y - 2) // evitar vibraciones
+	   {
+	     caja.y += yVel;
+	     if(caja.y + caja.h > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_SUPERIOR - TABLERO_LINEAS_GROSOR)
+	     {
+	       caja.y -= yVel;
+	     }
     }
-    else if(caja.y + caja.h/2 > y)
+    else if(caja.y + caja.h/2 > y + 2)
     {
       caja.y -= yVel;
-      if(caja.y < PANTALLA_MARGEN_INFERIOR)
-	  {
-	    caja.y += yVel;
+      if(caja.y < PANTALLA_MARGEN_INFERIOR + TABLERO_LINEAS_GROSOR)
+	     {
+	       caja.y += yVel;
       }
     }
-	cout << "Caja: " << caja.y + caja.h/2 << endl;
   }
   else if(P.getxVel() < 0)
   {

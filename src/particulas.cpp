@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CParticula
+ *
+ */
+
 #include "particulas.h"
 
 CParticula::CParticula(int X, int Y)

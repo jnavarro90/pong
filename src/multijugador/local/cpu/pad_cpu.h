@@ -1,4 +1,4 @@
-#include "../../../pad.h"
+#include "../../pad_mj.h"
 #include "pelota_cpu.h"
 
 #ifndef PAD_CPU_H_
@@ -8,17 +8,18 @@ float pendiente(float x, float y, float Vx, float Vy);
 //int calcPos(int m, int b, int x);
 int calcPos(float m, float x, float x0, float y0);
 
-class CPad_CPU : public CPad
+class CPad_MJ_CPU : public CPad_MJ
 {
   private:
-	bool wait;
     bool calcular;
   public:
-	CPad_CPU();
-    ~CPad_CPU();
+	   CPad_MJ_CPU();
+    ~CPad_MJ_CPU();
 
-    void mover(CPelota_CPU pelota);
-    void mostrar();
+    void setCalcular(bool b = true) {calcular = b;}
+
+    void mover(CPelota_MJ_CPU& pelota);
+    //void mostrar();
 };
 
 #endif
