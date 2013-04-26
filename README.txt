@@ -58,9 +58,11 @@ INSTALACIÓN:
 1. Bajar del repositorio todo el proyecto (se puede bajar como un ZIP desde gitHub, o por medio de un cliente git).
 2. Descargar todas las librerías y dependencias especificadas en el apartado superior y colocarlas en el correspondiente lugar del compilador (/{DIR_COMPILADOR}/lib y /{DIR_COMPILADOR}/include por lo general).
 3. Ubicarnos en el directorio raíz del proyecto, donde se encuentra el fichero makefile.
-4. Compilar el proyecto con la herramienta make (> make all).
-5. Copiar la carpeta "media" y las librerías dinámicas compiladas necesarias en el directorio "bin".
-6. Si el ejecutable no arranca, debe de faltar algún archivo. Pruebe a ejecutar desde una línea de comandos y ver que fichero falta (aviso por medio de la salida estándar cout).
+4. Crear una carpeta llamada "bin" con los permisos correspondiente, dónde estará nuestro fichero de salida Pong++
+5. Compilar el proyecto con la herramienta make (> make all).
+   En caso de no usar MinGW como compilador, cambiar las librerías necesarias en el fichero makefile (-lmingw32).
+6. Copiar la carpeta "media" y las librerías dinámicas compiladas necesarias en el directorio "bin".
+7. Si el ejecutable no arranca, debe de faltar algún archivo. Pruebe a ejecutar desde una línea de comandos y ver que fichero falta (aviso por medio de la salida estándar cout).
 
 PLATAFORMAS:
 ---------------------------------------------------------------------------------------  

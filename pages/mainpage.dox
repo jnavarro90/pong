@@ -27,6 +27,7 @@ Las opciones con una "x" se han llegado a implementar satisfactoriamente. Además
 3. Ubicarnos en el directorio raíz del proyecto, donde se encuentra el fichero makefile.
 4. Crear una carpeta llamada "bin" con los permisos correspondiente, dónde estará nuestro fichero de salida Pong++
 5. Compilar el proyecto con la herramienta make (> make all).
+   En caso de no usar MinGW como compilador, cambiar las librerías necesarias en el fichero makefile (-lmingw32).
 6. Copiar la carpeta "media" y las librerías dinámicas compiladas necesarias en el directorio "bin".
 7. Si el ejecutable no se inicia correctamente, debe de faltar algún archivo. Pruebe a mirar el fichero stdout.txt para buscar errores.
  */
