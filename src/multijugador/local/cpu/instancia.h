@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Declaración de CInstance_MJ_CPU
+ *
+ */
+
 #ifndef INSTANCIA_MJ_CPU_H_
 #define INSTANCIA_MJ_CPU_H_
 
@@ -15,6 +21,15 @@
 #include "../../../opciones/opciones.h"
 #include "../../../opciones/tablero.h"
 
+/**
+ * @brief Clase de estancia para representar el modo de juego multijugador-cpu.
+ *
+ * Básicamente, encapsula algunos objetos (1 pad del jugador, 1 pad manejado por la máquina, 1 pelota y 1 marcador)
+ * para trabajar con ellos de una forma más sencilla. El modo consiste en un sistema de pong multijugador básico.
+ * Por el momento el jugador 1 juega con las teclas W y S.
+ * Para más información sobre el funcionamiento de las estancias, vea las definiciones de los métodos de
+ * esta clase y las clases CInstance, CEngine, CMenu y CBoton.
+ */
 class CInstance_MJ_CPU: public CInstance
 {
   protected:

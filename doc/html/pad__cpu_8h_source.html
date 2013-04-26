@@ -89,35 +89,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="title">pad_cpu.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="pad__cpu_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../../pad_mj.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pelota__cpu_8h.html">pelota_cpu.h</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef PAD_CPU_H_</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PAD_CPU_H_</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">float</span> <a class="code" href="pad__cpu_8cpp.html#a25a3959799ee96477d0c8826e1e95784">pendiente</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> Vx, <span class="keywordtype">float</span> Vy);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//int calcPos(int m, int b, int x);</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">int</span> <a class="code" href="pad__cpu_8cpp.html#a4225a3eb850fa930aeaa3cf197d5e24b">calcPos</a>(<span class="keywordtype">float</span> m, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> x0, <span class="keywordtype">float</span> y0);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___c_p_u.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_pad___m_j___c_p_u.html">CPad_MJ_CPU</a> : <span class="keyword">public</span> <a class="code" href="class_c_pad___m_j.html">CPad_MJ</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___c_p_u.html#a61da11a46ab1ff7654f9a199e163a8db">   14</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_c_pad___m_j___c_p_u.html#a61da11a46ab1ff7654f9a199e163a8db">calcular</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;       <a class="code" href="class_c_pad___m_j___c_p_u.html#a1d79ad0672a86f860f87b417dd33663a">CPad_MJ_CPU</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_c_pad___m_j___c_p_u.html#a7ffc6f4ed02875df62eeb28568febfe9">~CPad_MJ_CPU</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___c_p_u.html#a8e4b2bac75ea44a4b53283277b3a8646">   19</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_pad___m_j___c_p_u.html#a8e4b2bac75ea44a4b53283277b3a8646">setCalcular</a>(<span class="keywordtype">bool</span> b = <span class="keyword">true</span>) {<a class="code" href="class_c_pad___m_j___c_p_u.html#a61da11a46ab1ff7654f9a199e163a8db">calcular</a> = b;}</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_pad___m_j___c_p_u.html#abd3774d7e68f6295b9f428b5a8d1a935">mover</a>(<a class="code" href="class_c_pelota___m_j___c_p_u.html">CPelota_MJ_CPU</a>&amp; pelota);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">//void mostrar();</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<a href="pad__cpu_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../../pad_mj.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pelota__cpu_8h.html" title="Declaración de CPelota_MJ_CPU.">pelota_cpu.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef PAD_CPU_H_</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PAD_CPU_H_</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">float</span> <a class="code" href="pad__cpu_8cpp.html#a25a3959799ee96477d0c8826e1e95784" title="Calcular la pendiente de una recta entre 2 puntos.">pendiente</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> Vx, <span class="keywordtype">float</span> Vy);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">int</span> <a class="code" href="pad__cpu_8cpp.html#a4225a3eb850fa930aeaa3cf197d5e24b" title="Dada una recta, obtener el valor en el eje Y.">calcPos</a>(<span class="keywordtype">float</span> m, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> x0, <span class="keywordtype">float</span> y0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___c_p_u.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_pad___m_j___c_p_u.html" title="Clase general para definir el pad de multijugador-cpu.">CPad_MJ_CPU</a> : <span class="keyword">public</span> <a class="code" href="class_c_pad___m_j.html" title="Clase abstracta para clases CPad a nivel de multijugador.">CPad_MJ</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___c_p_u.html#a61da11a46ab1ff7654f9a199e163a8db">   48</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_c_pad___m_j___c_p_u.html#a61da11a46ab1ff7654f9a199e163a8db">calcular</a>; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;       <a class="code" href="class_c_pad___m_j___c_p_u.html#a1d79ad0672a86f860f87b417dd33663a">CPad_MJ_CPU</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_c_pad___m_j___c_p_u.html#a7ffc6f4ed02875df62eeb28568febfe9">~CPad_MJ_CPU</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="class_c_pad___m_j___c_p_u.html#a8e4b2bac75ea44a4b53283277b3a8646">   58</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_pad___m_j___c_p_u.html#a8e4b2bac75ea44a4b53283277b3a8646" title="Avisar al pad de que debe calcular la posición futura de la pelota.">setCalcular</a>(<span class="keywordtype">bool</span> b = <span class="keyword">true</span>) {<a class="code" href="class_c_pad___m_j___c_p_u.html#a61da11a46ab1ff7654f9a199e163a8db">calcular</a> = b;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_pad___m_j___c_p_u.html#abd3774d7e68f6295b9f428b5a8d1a935" title="Gestionar datos.">mover</a>(<a class="code" href="class_c_pelota___m_j___c_p_u.html" title="Clase general para definir la pelota de multijugador-cpu.">CPelota_MJ_CPU</a>&amp; pelota);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//void mostrar();</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:26:59 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:12 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

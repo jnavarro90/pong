@@ -211,11 +211,11 @@ Atributos protegidos</h2></td></tr>
 <p>Cierra/Descarga el motor del juego. </p>
 <p>Desactiva y descarga todo lo realizado en la función <a class="el" href="class_c_engine.html#a4f366e309e29b6cc420f29658cfc3f58" title="Inicializador del motor.">Init()</a> </p>
 
-<p>Definición en la línea <a class="el" href="engine_8cpp_source.html#l00113">113</a> del archivo <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="engine_8cpp_source.html#l00142">142</a> del archivo <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="tablero_8cpp_source.html#l00008">tablero_mp</a> y <a class="el" href="engine_8cpp_source.html#l00132">UnLoadFiles()</a>.</p>
+<p>Hace referencia a <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="tablero_8cpp_source.html#l00008">tablero_mp</a> y <a class="el" href="engine_8cpp_source.html#l00161">UnLoadFiles()</a>.</p>
 
-<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00181">OnExecute()</a>.</p>
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00210">OnExecute()</a>.</p>
 
 </div>
 </div>
@@ -246,9 +246,9 @@ Atributos protegidos</h2></td></tr>
 
 <p>Definición en la línea <a class="el" href="engine_8cpp_source.html#l00057">57</a> del archivo <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00075">cargar_img()</a>, <a class="el" href="tablero_8cpp_source.html#l00046">CTablero::construir()</a>, <a class="el" href="globals_8cpp_source.html#l00026">initPantalla()</a>, <a class="el" href="engine_8cpp_source.html#l00095">LoadFiles()</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00047">COpciones::PANTALLA_BPP</a> y <a class="el" href="tablero_8cpp_source.html#l00008">tablero_mp</a>.</p>
+<p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00075">cargar_img()</a>, <a class="el" href="tablero_8cpp_source.html#l00046">CTablero::construir()</a>, <a class="el" href="globals_8cpp_source.html#l00026">initPantalla()</a>, <a class="el" href="engine_8cpp_source.html#l00110">LoadFiles()</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00047">COpciones::PANTALLA_BPP</a> y <a class="el" href="tablero_8cpp_source.html#l00008">tablero_mp</a>.</p>
 
-<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00181">OnExecute()</a>.</p>
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00210">OnExecute()</a>.</p>
 
 </div>
 </div>
@@ -276,9 +276,9 @@ Atributos protegidos</h2></td></tr>
 <p>Carga archivos de uso global (principalmente, sonidos). </p>
 <dl class="section return"><dt>Devuelve</dt><dd>Devuelve false si ha fallado algo. Devuelve true si todo ha sido cargado correctamente. </dd></dl>
 
-<p>Definición en la línea <a class="el" href="engine_8cpp_source.html#l00095">95</a> del archivo <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="engine_8cpp_source.html#l00110">110</a> del archivo <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00014">snd_ping</a>, <a class="el" href="globals_8cpp_source.html#l00015">snd_pong</a> y <a class="el" href="globals_8cpp_source.html#l00016">snd_pung</a>.</p>
+<p>Hace referencia a <a class="el" href="globals_8h_source.html#l00062">ERROR_STR_FILE</a>, <a class="el" href="globals_8cpp_source.html#l00014">snd_ping</a>, <a class="el" href="globals_8cpp_source.html#l00015">snd_pong</a> y <a class="el" href="globals_8cpp_source.html#l00016">snd_pung</a>.</p>
 
 <p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00057">Init()</a>.</p>
 
@@ -335,9 +335,9 @@ Atributos protegidos</h2></td></tr>
 </div>
 <dl class="section return"><dt>Devuelve</dt><dd>En caso de fallo, devuelve I_SALIDA (-1). En caso de finalizar correctamente, devuelve la última estancia llamada por las funciones de <a class="el" href="class_c_instance.html#a6950f7c41d34b6071552cd763f6e1a0e" title="Prototipo de función de ejecución.">CInstance::OnExecute()</a> correspondiente. </dd></dl>
 
-<p>Definición en la línea <a class="el" href="engine_8cpp_source.html#l00181">181</a> del archivo <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="engine_8cpp_source.html#l00210">210</a> del archivo <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="engine_8cpp_source.html#l00113">Close()</a>, <a class="el" href="globals_8h_source.html#l00064">ERROR_STR_INIT</a>, <a class="el" href="globals_8h_source.html#l00107">I_1J_INF</a>, <a class="el" href="globals_8h_source.html#l00106">I_MENU_1J</a>, <a class="el" href="globals_8h_source.html#l00105">I_MENU_MAIN</a>, <a class="el" href="globals_8h_source.html#l00106">I_MENU_MJ</a>, <a class="el" href="globals_8h_source.html#l00108">I_MJ_CPU</a>, <a class="el" href="globals_8h_source.html#l00108">I_MJ_LOCAL</a>, <a class="el" href="globals_8h_source.html#l00108">I_MJ_ONLINE</a>, <a class="el" href="globals_8h_source.html#l00108">I_MJ_ONLINE_CLIENT</a>, <a class="el" href="globals_8h_source.html#l00108">I_MJ_ONLINE_SERVER</a>, <a class="el" href="globals_8h_source.html#l00105">I_SALIDA</a>, <a class="el" href="engine_8cpp_source.html#l00057">Init()</a>, <a class="el" href="engine_8h_source.html#l00022">instance</a>, <a class="el" href="instance_8cpp_source.html#l00054">CInstance::OnExecute()</a> y <a class="el" href="engine_8h_source.html#l00023">running</a>.</p>
+<p>Hace referencia a <a class="el" href="engine_8cpp_source.html#l00142">Close()</a>, <a class="el" href="globals_8h_source.html#l00061">ERROR_STR_INIT</a>, <a class="el" href="globals_8h_source.html#l00104">I_1J_INF</a>, <a class="el" href="globals_8h_source.html#l00103">I_MENU_1J</a>, <a class="el" href="globals_8h_source.html#l00102">I_MENU_MAIN</a>, <a class="el" href="globals_8h_source.html#l00103">I_MENU_MJ</a>, <a class="el" href="globals_8h_source.html#l00105">I_MJ_CPU</a>, <a class="el" href="globals_8h_source.html#l00105">I_MJ_LOCAL</a>, <a class="el" href="globals_8h_source.html#l00105">I_MJ_ONLINE</a>, <a class="el" href="globals_8h_source.html#l00105">I_MJ_ONLINE_CLIENT</a>, <a class="el" href="globals_8h_source.html#l00105">I_MJ_ONLINE_SERVER</a>, <a class="el" href="globals_8h_source.html#l00102">I_SALIDA</a>, <a class="el" href="engine_8cpp_source.html#l00057">Init()</a>, <a class="el" href="engine_8h_source.html#l00022">instance</a>, <a class="el" href="instance_8cpp_source.html#l00054">CInstance::OnExecute()</a> y <a class="el" href="engine_8h_source.html#l00023">running</a>.</p>
 
 <p>Referenciado por <a class="el" href="main_8cpp_source.html#l00050">main()</a>.</p>
 
@@ -367,11 +367,11 @@ Atributos protegidos</h2></td></tr>
 <p>Descarga los ficheros. </p>
 <p>Descarga todo lo cargado desde la función <a class="el" href="class_c_engine.html#ae1e8566bb0a57195f55c8048f55ffcc0" title="Carga archivos de uso global (principalmente, sonidos).">LoadFiles()</a> </p>
 
-<p>Definición en la línea <a class="el" href="engine_8cpp_source.html#l00132">132</a> del archivo <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="engine_8cpp_source.html#l00161">161</a> del archivo <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
 
 <p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00014">snd_ping</a>, <a class="el" href="globals_8cpp_source.html#l00015">snd_pong</a> y <a class="el" href="globals_8cpp_source.html#l00016">snd_pung</a>.</p>
 
-<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00113">Close()</a>.</p>
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00142">Close()</a>.</p>
 
 </div>
 </div>
@@ -397,7 +397,7 @@ Atributos protegidos</h2></td></tr>
 
 <p>Definición en la línea <a class="el" href="engine_8h_source.html#l00022">22</a> del archivo <a class="el" href="engine_8h_source.html">engine.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00181">OnExecute()</a>.</p>
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00210">OnExecute()</a>.</p>
 
 </div>
 </div>
@@ -422,7 +422,7 @@ Atributos protegidos</h2></td></tr>
 
 <p>Definición en la línea <a class="el" href="engine_8h_source.html#l00023">23</a> del archivo <a class="el" href="engine_8h_source.html">engine.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00028">CEngine()</a>, <a class="el" href="engine_8cpp_source.html#l00181">OnExecute()</a> y <a class="el" href="engine_8cpp_source.html#l00041">~CEngine()</a>.</p>
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00028">CEngine()</a>, <a class="el" href="engine_8cpp_source.html#l00210">OnExecute()</a> y <a class="el" href="engine_8cpp_source.html#l00041">~CEngine()</a>.</p>
 
 </div>
 </div>
@@ -433,7 +433,7 @@ Atributos protegidos</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:27:00 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

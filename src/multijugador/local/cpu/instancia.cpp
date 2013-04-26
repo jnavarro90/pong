@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CInstance_MJ_CPU
+ *
+ */
+
 #include "instancia.h"
 
 #include "../../../temporizador.h"
@@ -17,8 +23,8 @@ CInstance_MJ_CPU::CInstance_MJ_CPU()
   PJ2 = NULL;
   pelota = NULL;
   marcador = NULL;
-  //wrGameset = NULL;
-  //wrGamepoint = NULL;
+  wrGameset = NULL;
+  wrGamepoint = NULL;
 
   fondo = NULL;
   i_running = true;
@@ -34,8 +40,8 @@ CInstance_MJ_CPU::~CInstance_MJ_CPU()
   PJ2 = NULL;
   pelota = NULL;
   marcador = NULL;
-  //wrGameset = NULL;
-  //wrGamepoint = NULL;
+  wrGameset = NULL;
+  wrGamepoint = NULL;
 
   fondo = NULL;
 }
@@ -54,7 +60,7 @@ bool CInstance_MJ_CPU::Init()
   pelota = new CPelota_MJ_CPU();
   marcador = new CMarcador(ttf_bitM, &color_blanco);
 
-  if(rand()%2 == 0)
+  if(rand()%2 == 0) // ¿quién empieza? random
     gamepoint_pj = gamepoint_pj1;
   else
     gamepoint_pj = gamepoint_pj2;
@@ -67,14 +73,6 @@ bool CInstance_MJ_CPU::Init()
 
 bool CInstance_MJ_CPU::LoadFiles()
 {
-  /*fondo = cargar_img("media/img/fondo_mj_local.png", false);
-
-  if(fondo == NULL)
-  {
-    cout << ERROR_STR_FILE << "media/img/fondo_mj_local.png" << endl;
-    return false;
-  }*/
-
   ttf_bitM = TTF_OpenFont("media/ttf/bit.ttf", TEXTO_MARCADOR_ANCHO);
   ttf_consolas = TTF_OpenFont("media/ttf/consolab.ttf", 36);
 
@@ -105,8 +103,8 @@ void CInstance_MJ_CPU::Close()
   delete pelota;
   delete marcador;
 
-  //delete wrGameset;
-  //delete wrGamepoint;
+  delete wrGameset;
+  delete wrGamepoint;
 }
 
 

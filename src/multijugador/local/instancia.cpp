@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CInstance_MJ_Local
+ *
+ */
+
 #include "instancia.h"
 
 #include "../../temporizador.h"
@@ -9,7 +15,6 @@ using namespace std;
 
 const int FRAMES_PER_SECOND = 60;
 
-// Juego hasta que uno llegue a GAMESET_COUNT. Posiblemente modificable por el usuario
 int GAMESET_COUNT_CPU = 5;
 const int iTimeGameset_CPU = 5;
 const int iTimeGamepoint_CPU = 3;

@@ -37,21 +37,18 @@ typedef unsigned char flags;
 // ------------- TYPE ---------------
 // ----------------------------------
 
-//ostream& operator<<(ostream& os, byte b);
 ostream& operator<<(ostream& os, flags f);
 
 // _____________DEFINES______________
 // -------------- NET ---------------
 // ----------------------------------
 
-#define NET_MJ_PORT 8888
-//#define _NET_BYTES_ 12
+#define NET_MJ_PORT 8888 /**< @brief Puerto a utilizar en la conexión del modo multijugador-online */
 
-#define NET_MJ_SETTINGS_SIZE 12
-#define NET_MJ_SERVERDATA_SIZE 16
-#define NET_MJ_CLIENTDATA_SIZE 6
+#define NET_MJ_SETTINGS_SIZE 12 /**< @brief Suma de los miembros de CNetwork_Data_Settings*/
+#define NET_MJ_SERVERDATA_SIZE 16 /**< @brief Suma de los miembros de CNetwork_Data_Server*/
+#define NET_MJ_CLIENTDATA_SIZE 6 /**< @brief Suma de los miembros de CNetwork_Data_Client*/
 
-//#define NETWORK_SERVER_DATA_SIZE 12
 
 // _____________DEFINES______________
 // ------------ ERRORES -------------

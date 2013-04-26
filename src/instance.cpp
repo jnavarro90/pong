@@ -66,6 +66,8 @@ int CInstance::OnExecute()
     }
     OnLoop();
     OnRender();
+
+    OnDebug();
   }
 
   Close();

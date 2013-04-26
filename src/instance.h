@@ -14,7 +14,7 @@
  * @brief Clase base (abstracta) para derivar y declarar las diversas estancias del juego.
  *
  * Su unico propósito es dar un formato equivalente para todas las estancias, aunque no todas las funciones
- * sea iguales.
+ * sea iguales. Vea la clase CEngine para ver el funcionamiento de las estancias en el juego.
  */
 
 class CInstance
@@ -44,6 +44,10 @@ class CInstance
     virtual void OnEvent(){};
     /** @brief Mostrar por #pantalla. */
     virtual void OnRender(){};
+
+
+    /** @brief Cosas a realizar si se está debugeando. Debería usarse con la definición de la macro DEBUG */
+    virtual void OnDebug(){};
 };
 
 

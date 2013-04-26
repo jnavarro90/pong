@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CNetwork_Data_Client, CNetwork_Data_Server y CNetwork_Data_Settings
+ *
+ */
+
 #include "network_struct.h"
 #include "../../opciones/opciones.h"
 
@@ -8,6 +14,11 @@ CNetwork_Data_Client::CNetwork_Data_Client()
   evento = 0;
 }
 
+/**
+ * @brief Cargar los miembros en el buffer #buffer
+ *
+ * Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación.
+ */
 void CNetwork_Data_Client::makeBuffer()
 {
   buffer[0] = evento;
@@ -19,11 +30,24 @@ void CNetwork_Data_Client::makeBuffer()
   buffer[5] = ticks;
 }
 
+/**
+ * @brief Obtener el puntero a #buffer
+ *
+ * @return Devuelve el valor almacenado por #buffer
+ */
 char* CNetwork_Data_Client::getBuffer()
 {
   return buffer;
 }
 
+/**
+ * @brief Cargar datos miembros a partir de un buffer recibido.
+ *
+ * @param b Buffer de entrada.
+ *
+ * Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación.
+ *
+ */
 void CNetwork_Data_Client::readBuffer(char* b)
 {
   evento = b[0];
@@ -43,6 +67,11 @@ CNetwork_Data_Server::CNetwork_Data_Server()
   sinUso = 0;
 }
 
+/**
+ * @brief Cargar los miembros en el buffer #buffer
+ *
+ * Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación.
+ */
 void CNetwork_Data_Server::makeBuffer()
 {
   // Pelota
@@ -75,11 +104,24 @@ void CNetwork_Data_Server::makeBuffer()
   buffer[15] = ticks;
 }
 
+/**
+ * @brief Obtener el puntero a #buffer
+ *
+ * @return Devuelve el valor almacenado por #buffer
+ */
 char* CNetwork_Data_Server::getBuffer()
 {
   return buffer;
 }
 
+/**
+ * @brief Cargar datos miembros a partir de un buffer recibido.
+ *
+ * @param c Buffer de entrada.
+ *
+ * Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación.
+ *
+ */
 void CNetwork_Data_Server::readBuffer(uchar* c)
 {
   // Pelota
@@ -122,6 +164,11 @@ CNetwork_Data_Settings::CNetwork_Data_Settings()
   unused = 0;
 }
 
+/**
+ * @brief Cargar los miembros en el buffer #buffer
+ *
+ * Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación.
+ */
 void CNetwork_Data_Settings::makeBuffer()
 {
   // PANTALLA
@@ -147,11 +194,24 @@ void CNetwork_Data_Settings::makeBuffer()
   buffer[11] = unused;
 }
 
+/**
+ * @brief Obtener el puntero a #buffer
+ *
+ * @return Devuelve el valor almacenado por #buffer
+ */
 char* CNetwork_Data_Settings::getBuffer()
 {
   return buffer;
 }
 
+/**
+ * @brief Cargar datos miembros a partir de un buffer recibido.
+ *
+ * @param c Buffer de entrada.
+ *
+ * Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación.
+ *
+ */
 void CNetwork_Data_Settings::readBuffer(uchar* c)
 {
   // PANTALLA

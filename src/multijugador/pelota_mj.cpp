@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CPelota_MJ
+ *
+ */
+
 #include "pelota_mj.h"
 #include "../globals.h"
 

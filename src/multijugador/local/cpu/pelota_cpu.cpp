@@ -1,17 +1,27 @@
-/*
- * pelota_cpu.cpp
+/**
+ * @file
+ * @brief Definición de CPelota_MJ_CPU
  *
- *  Created on: 25/03/2013
- *      Author: Dani
  */
+
 
 #include "pelota_cpu.h"
 
+/**
+ * @brief Obtener velocidad del eje X
+ *
+ * @return Devuelve el valor almacenado por #xVel
+ */
 float CPelota_MJ_CPU::getxVel()
 {
   return (stop)? 0 : xVel;
 }
 
+/**
+ * @brief Obtener velocidad del eje Y
+ *
+ * @return Devuelve el valor almacenado por #yVel
+ */
 float CPelota_MJ_CPU::getyVel()
 {
   return (lock)? 0: yVel;

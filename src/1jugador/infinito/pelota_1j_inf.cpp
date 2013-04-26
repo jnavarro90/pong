@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CPelota_1J_INF
+ *
+ */
+
 #include "pelota_1j_inf.h"
 #include "pad_1j_inf.h"
 #include "../../globals.h"
@@ -13,6 +19,9 @@ float PELOTA_1J_INF_VELOCIDAD_SUP = 0.15;
 
 const int PELOTA_1J_INF_TAM_MIN = 6; //px
 
+/**
+ * @brief Constructor por defecto
+ */
 CPelota_1J_INF::CPelota_1J_INF()
 {
   caja.x = PANTALLA_ANCHO/2 - PELOTA_ANCHO/2;
@@ -24,6 +33,9 @@ CPelota_1J_INF::CPelota_1J_INF()
   yVel = 0;
 }
 
+/**
+ *  @brief Destructor
+ */
 CPelota_1J_INF::~CPelota_1J_INF()
 {
   stop = false;
@@ -38,7 +50,14 @@ CPelota_1J_INF::~CPelota_1J_INF()
   yVel = 0;
 }
 
-/* Editar:  ¿? */
+/**
+ * @brief Calcular la nueva posición de la pelota
+ *
+ * @return Devuelve un valor del tipo return_1j_inf para saber el estado del juego.
+ *
+ * @param A pad del jugador para saber si debe rebotar contra este o no.
+ * @param setVel Variable para saber si se debe incrementar o no la velocidad de la pelota (aumento de la dificultad).
+ */
 int CPelota_1J_INF::mover(CPad_1J_INF& A, bool setVel)
 {
   if(stop)
@@ -116,7 +135,13 @@ int CPelota_1J_INF::mover(CPad_1J_INF& A, bool setVel)
   return salida;
 }
 
-// Suponemos que siempre aumenta su velocidad (hasta el infinito!)
+/**
+ * @brief Aumentar la velocidad de la pelota
+ *
+ * Suponemos que siempre aumenta su velocidad (hasta el infinito!)
+ *
+ * @param n Cantidad de velocidad a incrementar. Se puede incrementar y decrementar a antojo.
+ */
 void CPelota_1J_INF::incVel(float n)
 {
   PELOTA_1J_INF_VELOCIDAD += n;
@@ -127,6 +152,11 @@ void CPelota_1J_INF::incVel(float n)
   // Si la pelota se mueve, recalcular la velocidad, ¿no?
 }
 
+/**
+ * @brief Decrementar tamaño de la pelota hasta, como minimo, #PELOTA_1J_INF_TAM_MIN
+ *
+ * @param n Nº de pixeles a decrementar en total de ancho y alto. Se aplicará a ambos ejes por igual (alto-n, ancho-n).
+ */
 void CPelota_1J_INF::decTam(float n)
 {
   if(caja.w > PELOTA_1J_INF_TAM_MIN)
@@ -138,6 +168,12 @@ void CPelota_1J_INF::decTam(float n)
   }
 }
 
+/**
+ * @brief Iniciar la pelota
+ *
+ * Coloca la pelota en el centro de la pantalla, la desbloquea y pone su velocidad inicial a la mitad para que sea
+ * más sencillo empezar. Posteriormente, se usará la velocidad normal recalculada por setVel_1j_inf().
+ */
 void CPelota_1J_INF::empezar()
 {
   lock = stop = false;

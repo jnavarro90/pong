@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!--header-->
 <div class="contents">
 
+<p>Clase abstracta para clases <a class="el" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a> a nivel de multijugador.  
+ <a href="class_c_pad___m_j.html#details">Más...</a></p>
+
 <p><code>#include &lt;<a class="el" href="pad__mj_8h_source.html">pad_mj.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de herencias de CPad_MJ</div>
@@ -101,8 +104,8 @@ Diagrama de herencias de CPad_MJ</div>
   <map id="CPad_MJ_map" name="CPad_MJ_map">
 <area href="class_c_pad.html" title="Clase general para definir los diversos pads." alt="CPad" shape="rect" coords="507,56,700,80"/>
 <area href="class_c_entidad.html" title="Clase principal de objeto del juego." alt="CEntidad" shape="rect" coords="507,0,700,24"/>
-<area href="class_c_pad___m_j___c_p_u.html" alt="CPad_MJ_CPU" shape="rect" coords="0,168,193,192"/>
-<area href="class_c_pad___m_j___local.html" alt="CPad_MJ_Local" shape="rect" coords="203,168,396,192"/>
+<area href="class_c_pad___m_j___c_p_u.html" title="Clase general para definir el pad de multijugador-cpu." alt="CPad_MJ_CPU" shape="rect" coords="0,168,193,192"/>
+<area href="class_c_pad___m_j___local.html" title="Clase general para definir el pad de multijugador-local." alt="CPad_MJ_Local" shape="rect" coords="203,168,396,192"/>
 <area href="class_c_pad___m_j___online.html" alt="CPad_MJ_Online" shape="rect" coords="406,168,599,192"/>
 <area href="class_c_pad___m_j___online___client.html" alt="CPad_MJ_Online_Client" shape="rect" coords="609,168,802,192"/>
 <area href="class_c_pad___m_j___online___client___zombi.html" alt="CPad_MJ_Online_Client_Zombi" shape="rect" coords="812,168,1005,192"/>
@@ -113,10 +116,13 @@ Diagrama de herencias de CPad_MJ</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
 <tr class="memitem:adb8150177d1b0026df54ce867e240d3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pad___m_j.html#adb8150177d1b0026df54ce867e240d3c">CPad_MJ</a> ()</td></tr>
+<tr class="memdesc:adb8150177d1b0026df54ce867e240d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#adb8150177d1b0026df54ce867e240d3c"></a><br/></td></tr>
 <tr class="separator:adb8150177d1b0026df54ce867e240d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae4cf9fa81f47630be9adcd86d3672fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pad___m_j.html#aae4cf9fa81f47630be9adcd86d3672fa">~CPad_MJ</a> ()</td></tr>
+<tr class="memdesc:aae4cf9fa81f47630be9adcd86d3672fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#aae4cf9fa81f47630be9adcd86d3672fa"></a><br/></td></tr>
 <tr class="separator:aae4cf9fa81f47630be9adcd86d3672fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9c9b0ff3df7d475486cda9bd5d3d69a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pad___m_j.html#af9c9b0ff3df7d475486cda9bd5d3d69a">getVel</a> ()</td></tr>
+<tr class="memdesc:af9c9b0ff3df7d475486cda9bd5d3d69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener velocidad vertical.  <a href="#af9c9b0ff3df7d475486cda9bd5d3d69a"></a><br/></td></tr>
 <tr class="separator:af9c9b0ff3df7d475486cda9bd5d3d69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_pad"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_pad')"><img src="closed.png" alt="-"/>&#160;Métodos públicos heredados desde <a class="el" href="class_c_pad.html">CPad</a></td></tr>
 <tr class="memitem:ad59ba2057e7f54fbbfa4bca7fa5a6932 inherit pub_methods_class_c_pad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pad.html#ad59ba2057e7f54fbbfa4bca7fa5a6932">CPad</a> ()</td></tr>
@@ -151,8 +157,10 @@ Atributos protegidos</h2></td></tr>
 <tr class="separator:a1ae8b574683ebc7938c04c85eed309de inherit pro_attribs_class_c_entidad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p>Definición en la línea <a class="el" href="pad__mj_8h_source.html#l00009">9</a> del archivo <a class="el" href="pad__mj_8h_source.html">pad_mj.h</a>.</p>
+<div class="textblock"><p>Clase abstracta para clases <a class="el" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a> a nivel de multijugador. </p>
+<p>Se usará simplemente como clase base para generar clases de multijugador que comparten la velocidad vertical. </p>
+
+<p>Definición en la línea <a class="el" href="pad__mj_8h_source.html#l00020">20</a> del archivo <a class="el" href="pad__mj_8h_source.html">pad_mj.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a class="anchor" id="adb8150177d1b0026df54ce867e240d3c"></a>
 <div class="memitem">
@@ -167,9 +175,11 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pad__mj_8cpp_source.html#l00004">4</a> del archivo <a class="el" href="pad__mj_8cpp_source.html">pad_mj.cpp</a>.</p>
+<p>Constructor por defecto. </p>
 
-<p>Hace referencia a <a class="el" href="pad__mj_8h_source.html#l00012">yVel</a>.</p>
+<p>Definición en la línea <a class="el" href="pad__mj_8cpp_source.html#l00010">10</a> del archivo <a class="el" href="pad__mj_8cpp_source.html">pad_mj.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="pad__mj_8h_source.html#l00023">yVel</a>.</p>
 
 </div>
 </div>
@@ -186,7 +196,9 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pad__mj_8cpp_source.html#l00010">10</a> del archivo <a class="el" href="pad__mj_8cpp_source.html">pad_mj.cpp</a>.</p>
+<p>Destructor. </p>
+
+<p>Definición en la línea <a class="el" href="pad__mj_8cpp_source.html#l00015">15</a> del archivo <a class="el" href="pad__mj_8cpp_source.html">pad_mj.cpp</a>.</p>
 
 </div>
 </div>
@@ -212,9 +224,12 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pad__mj_8h_source.html#l00017">17</a> del archivo <a class="el" href="pad__mj_8h_source.html">pad_mj.h</a>.</p>
+<p>Obtener velocidad vertical. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve el valor almacenado por <a class="el" href="class_c_pad___m_j.html#aac80ae92d02be56715680d42fbf30bd4">yVel</a>. </dd></dl>
 
-<p>Hace referencia a <a class="el" href="pad__mj_8h_source.html#l00012">yVel</a>.</p>
+<p>Definición en la línea <a class="el" href="pad__mj_8h_source.html#l00035">35</a> del archivo <a class="el" href="pad__mj_8h_source.html">pad_mj.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="pad__mj_8h_source.html#l00023">yVel</a>.</p>
 
 </div>
 </div>
@@ -236,10 +251,11 @@ Atributos protegidos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Velocidad vertical </p>
 
-<p>Definición en la línea <a class="el" href="pad__mj_8h_source.html#l00012">12</a> del archivo <a class="el" href="pad__mj_8h_source.html">pad_mj.h</a>.</p>
+<p>Definición en la línea <a class="el" href="pad__mj_8h_source.html#l00023">23</a> del archivo <a class="el" href="pad__mj_8h_source.html">pad_mj.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="pad__mj_8cpp_source.html#l00004">CPad_MJ()</a>, <a class="el" href="pad__cpu_8cpp_source.html#l00003">CPad_MJ_CPU::CPad_MJ_CPU()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00006">CPad_MJ_Local::CPad_MJ_Local()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00004">CPad_MJ_Online::CPad_MJ_Online()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00118">CPad_MJ_Online_Client::CPad_MJ_Online_Client()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00038">CPad_MJ_Online::eventuar()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00045">CPad_MJ_Local::eventuar()</a>, <a class="el" href="pad__mj_8h_source.html#l00017">getVel()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00064">CPad_MJ_Online::mover()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00064">CPad_MJ_Local::mover()</a>, <a class="el" href="pad__cpu_8cpp_source.html#l00030">CPad_MJ_CPU::mover()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00093">CPad_MJ_Online_Zombi::mover()</a>, <a class="el" href="pad__cpu_8cpp_source.html#l00017">CPad_MJ_CPU::~CPad_MJ_CPU()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00034">CPad_MJ_Local::~CPad_MJ_Local()</a> y <a class="el" href="pad__mj__online_8cpp_source.html#l00031">CPad_MJ_Online::~CPad_MJ_Online()</a>.</p>
+<p>Referenciado por <a class="el" href="pad__mj_8cpp_source.html#l00010">CPad_MJ()</a>, <a class="el" href="pad__cpu_8cpp_source.html#l00009">CPad_MJ_CPU::CPad_MJ_CPU()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00012">CPad_MJ_Local::CPad_MJ_Local()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00004">CPad_MJ_Online::CPad_MJ_Online()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00118">CPad_MJ_Online_Client::CPad_MJ_Online_Client()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00038">CPad_MJ_Online::eventuar()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00051">CPad_MJ_Local::eventuar()</a>, <a class="el" href="pad__mj_8h_source.html#l00035">getVel()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00064">CPad_MJ_Online::mover()</a>, <a class="el" href="pad__mj__online_8cpp_source.html#l00093">CPad_MJ_Online_Zombi::mover()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00070">CPad_MJ_Local::mover()</a>, <a class="el" href="pad__cpu_8cpp_source.html#l00047">CPad_MJ_CPU::mover()</a>, <a class="el" href="pad__cpu_8cpp_source.html#l00023">CPad_MJ_CPU::~CPad_MJ_CPU()</a>, <a class="el" href="pad__mj__local_8cpp_source.html#l00040">CPad_MJ_Local::~CPad_MJ_Local()</a> y <a class="el" href="pad__mj__online_8cpp_source.html#l00031">CPad_MJ_Online::~CPad_MJ_Online()</a>.</p>
 
 </div>
 </div>
@@ -250,7 +266,7 @@ Atributos protegidos</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:27:00 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

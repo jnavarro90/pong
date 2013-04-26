@@ -89,183 +89,184 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="title">network_struct.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="network__struct_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="network__struct_8h.html">network_struct.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../../opciones/opciones.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Cliente</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#aa867a655f8eb138b86ec41c7bbb16d44">    6</a></span>&#160;<a class="code" href="class_c_network___data___client.html#aa867a655f8eb138b86ec41c7bbb16d44">CNetwork_Data_Client::CNetwork_Data_Client</a>()</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <a class="code" href="class_c_network___data___client.html#ae5f689104cff8a272e64ad51bb57730c">evento</a> = 0;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#a715b1b97ecc951d51b5746e7879e0926">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___client.html#a715b1b97ecc951d51b5746e7879e0926">CNetwork_Data_Client::makeBuffer</a>()</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[0] = <a class="code" href="class_c_network___data___client.html#ae5f689104cff8a272e64ad51bb57730c">evento</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[1] = <a class="code" href="class_c_network___data___client.html#afd26353c1950520098155c126c4c586e">unused</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[2] = <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a> &gt;&gt; 24;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[3] = <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a> &gt;&gt; 16;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[4] = <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a> &gt;&gt; 8;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[5] = <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#a2b2d9702af5a3a124c435ccc7db30cdf">   22</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="class_c_network___data___client.html#a2b2d9702af5a3a124c435ccc7db30cdf">CNetwork_Data_Client::getBuffer</a>()</div>
+<a href="network__struct_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="network__struct_8h.html" title="Declaración de CNetwork_Data_Client, CNetwork_Data_Server y CNetwork_Data_Settings.">network_struct.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../opciones/opciones.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Cliente</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#aa867a655f8eb138b86ec41c7bbb16d44">   12</a></span>&#160;<a class="code" href="class_c_network___data___client.html#aa867a655f8eb138b86ec41c7bbb16d44" title="Constructor por defecto.">CNetwork_Data_Client::CNetwork_Data_Client</a>()</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="class_c_network___data___client.html#ae5f689104cff8a272e64ad51bb57730c">evento</a> = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#a715b1b97ecc951d51b5746e7879e0926">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___client.html#a715b1b97ecc951d51b5746e7879e0926" title="Cargar los miembros en el buffer buffer.">CNetwork_Data_Client::makeBuffer</a>()</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[0] = <a class="code" href="class_c_network___data___client.html#ae5f689104cff8a272e64ad51bb57730c">evento</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[1] = <a class="code" href="class_c_network___data___client.html#afd26353c1950520098155c126c4c586e">unused</a>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#a2f9874e212a12b78a3ff32c9957deff1">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___client.html#a2f9874e212a12b78a3ff32c9957deff1">CNetwork_Data_Client::readBuffer</a>(<span class="keywordtype">char</span>* b)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="class_c_network___data___client.html#ae5f689104cff8a272e64ad51bb57730c">evento</a> = b[0];</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="class_c_network___data___client.html#afd26353c1950520098155c126c4c586e">unused</a> = b[1];</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a> = (<a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[2] &lt;&lt; 24 ) | (<a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[3] &lt;&lt; 16 ) | (<a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[4] &lt;&lt; 8 ) | <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[5];</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// Servidor</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a9b746858763b46d4e4019ead32c7870a">   37</a></span>&#160;<a class="code" href="class_c_network___data___server.html#a9b746858763b46d4e4019ead32c7870a">CNetwork_Data_Server::CNetwork_Data_Server</a>()</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207">pelota_x</a> = <a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">pelota_y</a> = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">pad1_y</a> = <a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">pad2_y</a> = 0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="class_c_network___data___server.html#a253ae84bf12b4d7375c4dd2efe3ee21b">fs</a> = 0;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="class_c_network___data___server.html#ab20333970632a4a49eea992e6eee8e59">marcador1</a> = <a class="code" href="class_c_network___data___server.html#a4d285628a834727bbe3ae404ad0395d4">marcador2</a> = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="class_c_network___data___server.html#a305fbf7e13ac9e82f6cb6612cf32a4f9">sinUso</a> = 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a9a9dd678ca736ac0610d234fd58b29d1">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___server.html#a9a9dd678ca736ac0610d234fd58b29d1">CNetwork_Data_Server::makeBuffer</a>()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">// Pelota</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[0] = (<a class="code" href="class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207">pelota_x</a> &gt;&gt; 8);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[1] = <a class="code" href="class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207">pelota_x</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[2] = (<a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">pelota_y</a> &gt;&gt; 8);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[3] = <a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">pelota_y</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">// Pad1</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[4] = <a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">pad1_y</a> &gt;&gt; 8;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[5] = <a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">pad1_y</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">// Pad2</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[6] = <a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">pad2_y</a> &gt;&gt; 8;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[7] = <a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">pad2_y</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// Flags</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[8] = <a class="code" href="class_c_network___data___server.html#a253ae84bf12b4d7375c4dd2efe3ee21b">fs</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// Marcador</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[9] = <a class="code" href="class_c_network___data___server.html#ab20333970632a4a49eea992e6eee8e59">marcador1</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[10] = <a class="code" href="class_c_network___data___server.html#a4d285628a834727bbe3ae404ad0395d4">marcador2</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">// Sin usar</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[11] = <a class="code" href="class_c_network___data___server.html#a305fbf7e13ac9e82f6cb6612cf32a4f9">sinUso</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[12] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 24;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[13] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 16;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[14] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 8;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[15] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a321ece98cbbae7b66f5c485b0c1be5b2">   78</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="class_c_network___data___server.html#a321ece98cbbae7b66f5c485b0c1be5b2">CNetwork_Data_Server::getBuffer</a>()</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[2] = <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a> &gt;&gt; 24;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[3] = <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a> &gt;&gt; 16;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[4] = <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[5] = <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#a2b2d9702af5a3a124c435ccc7db30cdf">   38</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="class_c_network___data___client.html#a2b2d9702af5a3a124c435ccc7db30cdf" title="Obtener el puntero a buffer.">CNetwork_Data_Client::getBuffer</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="class_c_network___data___client.html#a2f9874e212a12b78a3ff32c9957deff1">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___client.html#a2f9874e212a12b78a3ff32c9957deff1" title="Cargar datos miembros a partir de un buffer recibido.">CNetwork_Data_Client::readBuffer</a>(<span class="keywordtype">char</span>* b)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="class_c_network___data___client.html#ae5f689104cff8a272e64ad51bb57730c">evento</a> = b[0];</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="class_c_network___data___client.html#afd26353c1950520098155c126c4c586e">unused</a> = b[1];</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="class_c_network___data___client.html#a027fe6e4da086929b869ed81a0a84621">ticks</a> = (<a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[2] &lt;&lt; 24 ) | (<a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[3] &lt;&lt; 16 ) | (<a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[4] &lt;&lt; 8 ) | <a class="code" href="class_c_network___data___client.html#acb6777924c34caa809d417bd7e44b23e">buffer</a>[5];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// Servidor</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a9b746858763b46d4e4019ead32c7870a">   61</a></span>&#160;<a class="code" href="class_c_network___data___server.html#a9b746858763b46d4e4019ead32c7870a" title="Constructor por defecto.">CNetwork_Data_Server::CNetwork_Data_Server</a>()</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207">pelota_x</a> = <a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">pelota_y</a> = 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">pad1_y</a> = <a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">pad2_y</a> = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="class_c_network___data___server.html#a253ae84bf12b4d7375c4dd2efe3ee21b">fs</a> = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="class_c_network___data___server.html#ab20333970632a4a49eea992e6eee8e59">marcador1</a> = <a class="code" href="class_c_network___data___server.html#a4d285628a834727bbe3ae404ad0395d4">marcador2</a> = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="class_c_network___data___server.html#a305fbf7e13ac9e82f6cb6612cf32a4f9">sinUso</a> = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a9a9dd678ca736ac0610d234fd58b29d1">   75</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___server.html#a9a9dd678ca736ac0610d234fd58b29d1" title="Cargar los miembros en el buffer buffer.">CNetwork_Data_Server::makeBuffer</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// Pelota</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[0] = (<a class="code" href="class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207">pelota_x</a> &gt;&gt; 8);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[1] = <a class="code" href="class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207">pelota_x</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[2] = (<a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">pelota_y</a> &gt;&gt; 8);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[3] = <a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">pelota_y</a>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a7aa22d097831e9c65ba179947415c65c">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___server.html#a7aa22d097831e9c65ba179947415c65c">CNetwork_Data_Server::readBuffer</a>(<a class="code" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* c)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">// Pelota</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207">pelota_x</a> = (c[0] &lt;&lt; 8) | c[1];</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">pelota_y</a> = (c[2] &lt;&lt; 8) | c[3];</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// Pad1</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">pad1_y</a> = (c[4] &lt;&lt; 8) | c[5];</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="comment">// Pad2</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">pad2_y</a> = (c[6] &lt;&lt; 8) | c[7];</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// Flags</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="class_c_network___data___server.html#a253ae84bf12b4d7375c4dd2efe3ee21b">fs</a> = c[8];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// Pad1</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[4] = <a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">pad1_y</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[5] = <a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">pad1_y</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="comment">// Pad2</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[6] = <a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">pad2_y</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[7] = <a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">pad2_y</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">// Flags</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[8] = <a class="code" href="class_c_network___data___server.html#a253ae84bf12b4d7375c4dd2efe3ee21b">fs</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="comment">// Marcador</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[9] = <a class="code" href="class_c_network___data___server.html#ab20333970632a4a49eea992e6eee8e59">marcador1</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[10] = <a class="code" href="class_c_network___data___server.html#a4d285628a834727bbe3ae404ad0395d4">marcador2</a>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="comment">// Marcador;</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="class_c_network___data___server.html#ab20333970632a4a49eea992e6eee8e59">marcador1</a> = c[9];</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="class_c_network___data___server.html#a4d285628a834727bbe3ae404ad0395d4">marcador2</a> = c[10];</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// Sin usar</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="class_c_network___data___server.html#a305fbf7e13ac9e82f6cb6612cf32a4f9">sinUso</a> = c[11];</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// Ticks</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> = (<a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[12] &lt;&lt; 24 ) | (<a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[13] &lt;&lt; 16 ) | (<a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[14] &lt;&lt; 8 ) | <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[15];</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[12] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 24;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[13] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 16;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[14] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 8;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[15] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">// SETTINGS</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#a130a940b362cdc6a3b71cbfb1ff528f7">  115</a></span>&#160;<a class="code" href="class_c_network___data___settings.html#a130a940b362cdc6a3b71cbfb1ff528f7">CNetwork_Data_Settings::CNetwork_Data_Settings</a>()</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">PANTALLA_ANCHO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a37b5e119019fc33db3efe9c5b59543b7">PANTALLA_ANCHO</a>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">PANTALLA_ALTO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#aef315aac5ba09a7017ef6e0a5b12ee28">PANTALLA_ALTO</a>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">PAD_ANCHO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a6a2c8b675e18580cd2444f0da65902b0">PAD_ANCHO</a>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">PAD_ALTO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a2d69aeb21db70a6cca55391e15dd1df6">PAD_ALTO</a>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">PELOTA_ALTO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#ab1ec0ec939fa2f40a6038b70c87292da">PELOTA_ALTO</a>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">unused</a> = 0;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#aecddfedd66150b32bb065d7f51702e49">  125</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___settings.html#aecddfedd66150b32bb065d7f51702e49">CNetwork_Data_Settings::makeBuffer</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="comment">// Sin usar</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[11] = <a class="code" href="class_c_network___data___server.html#a305fbf7e13ac9e82f6cb6612cf32a4f9">sinUso</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[12] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 24;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[13] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 16;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[14] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[15] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a321ece98cbbae7b66f5c485b0c1be5b2">  112</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="class_c_network___data___server.html#a321ece98cbbae7b66f5c485b0c1be5b2" title="Obtener el puntero a buffer.">CNetwork_Data_Server::getBuffer</a>()</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="class_c_network___data___server.html#a7aa22d097831e9c65ba179947415c65c">  125</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___server.html#a7aa22d097831e9c65ba179947415c65c" title="Cargar datos miembros a partir de un buffer recibido.">CNetwork_Data_Server::readBuffer</a>(<a class="code" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* c)</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="comment">// PANTALLA</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[0] = (<a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">PANTALLA_ANCHO</a> &gt;&gt; 8);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[1] = <a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">PANTALLA_ANCHO</a>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[2] = (<a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">PANTALLA_ALTO</a> &gt;&gt; 8);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[3] = <a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">PANTALLA_ALTO</a>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="comment">// PAD_ALTO</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[4] = <a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">PAD_ALTO</a> &gt;&gt; 8;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[5] = <a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">PAD_ALTO</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="comment">// Pelota</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="class_c_network___data___server.html#a8ab3758e28934535dd17d1cdcd7f8207">pelota_x</a> = (c[0] &lt;&lt; 8) | c[1];</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="class_c_network___data___server.html#a470db99de0bfec6bf5958b769b00acfc">pelota_y</a> = (c[2] &lt;&lt; 8) | c[3];</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="comment">// Pad1</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <a class="code" href="class_c_network___data___server.html#a8544213c7d464642f606d5b5c16cb059">pad1_y</a> = (c[4] &lt;&lt; 8) | c[5];</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="comment">// Pad2</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <a class="code" href="class_c_network___data___server.html#a4d1d61703b7aff411e361e8e59e27ee3">pad2_y</a> = (c[6] &lt;&lt; 8) | c[7];</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="comment">// PAD_ANCHO</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[6] = <a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">PAD_ANCHO</a> &gt;&gt; 8;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[7] = <a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">PAD_ANCHO</a>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="comment">// PELOTA_ALTO</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[8] = <a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">PELOTA_ALTO</a> &gt;&gt; 8;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[9] = <a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">PELOTA_ALTO</a>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="comment">// unused</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[10] = <a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">unused</a> &gt;&gt; 8;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[11] = <a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">unused</a>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#a240fab79764af5f87457628a726402d4">  150</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="class_c_network___data___settings.html#a240fab79764af5f87457628a726402d4">CNetwork_Data_Settings::getBuffer</a>()</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="comment">// Flags</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <a class="code" href="class_c_network___data___server.html#a253ae84bf12b4d7375c4dd2efe3ee21b">fs</a> = c[8];</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="comment">// Marcador;</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <a class="code" href="class_c_network___data___server.html#ab20333970632a4a49eea992e6eee8e59">marcador1</a> = c[9];</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <a class="code" href="class_c_network___data___server.html#a4d285628a834727bbe3ae404ad0395d4">marcador2</a> = c[10];</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="comment">// Sin usar</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <a class="code" href="class_c_network___data___server.html#a305fbf7e13ac9e82f6cb6612cf32a4f9">sinUso</a> = c[11];</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="comment">// Ticks</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> = (<a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[12] &lt;&lt; 24 ) | (<a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[13] &lt;&lt; 16 ) | (<a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[14] &lt;&lt; 8 ) | <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[15];</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[12] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 24;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[13] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 16;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[14] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <a class="code" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>[15] = <a class="code" href="class_c_network___data___server.html#aeb40d0229ea26f7307dd821b761b4a36">ticks</a>;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#a7e775da62fe849a60f7567d807e61a09">  155</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___settings.html#a7e775da62fe849a60f7567d807e61a09">CNetwork_Data_Settings::readBuffer</a>(<a class="code" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* c)</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="comment">// PANTALLA</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">PANTALLA_ANCHO</a> = (c[0] &lt;&lt; 8) | c[1];</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">PANTALLA_ALTO</a> = (c[2] &lt;&lt; 8) | c[3];</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="comment">// PAD_ALTO</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">PAD_ALTO</a> = (c[4] &lt;&lt; 8) | c[5];</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="comment">// PAD_ANCHO</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">PAD_ANCHO</a> = (c[6] &lt;&lt; 8) | c[7];</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">// SETTINGS</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#a130a940b362cdc6a3b71cbfb1ff528f7">  157</a></span>&#160;<a class="code" href="class_c_network___data___settings.html#a130a940b362cdc6a3b71cbfb1ff528f7" title="Constructor por defecto.">CNetwork_Data_Settings::CNetwork_Data_Settings</a>()</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">PANTALLA_ANCHO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a37b5e119019fc33db3efe9c5b59543b7">PANTALLA_ANCHO</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">PANTALLA_ALTO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#aef315aac5ba09a7017ef6e0a5b12ee28">PANTALLA_ALTO</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">PAD_ANCHO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a6a2c8b675e18580cd2444f0da65902b0">PAD_ANCHO</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">PAD_ALTO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a2d69aeb21db70a6cca55391e15dd1df6">PAD_ALTO</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">PELOTA_ALTO</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#ab1ec0ec939fa2f40a6038b70c87292da">PELOTA_ALTO</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">unused</a> = 0;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="comment">// PELOTA_ALTO</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">PELOTA_ALTO</a> = (c[8] &lt;&lt; 8) | c[9];</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="comment">// unused</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">unused</a> = (<a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[10] &lt;&lt; 8) | c[11];</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#aecddfedd66150b32bb065d7f51702e49">  172</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___settings.html#aecddfedd66150b32bb065d7f51702e49" title="Cargar los miembros en el buffer buffer.">CNetwork_Data_Settings::makeBuffer</a>()</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="comment">// PANTALLA</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[0] = (<a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">PANTALLA_ANCHO</a> &gt;&gt; 8);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[1] = <a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">PANTALLA_ANCHO</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[2] = (<a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">PANTALLA_ALTO</a> &gt;&gt; 8);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[3] = <a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">PANTALLA_ALTO</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="comment">// PAD_ALTO</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[4] = <a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">PAD_ALTO</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[5] = <a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">PAD_ALTO</a>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="comment">// PAD_ANCHO</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[6] = <a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">PAD_ANCHO</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[7] = <a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">PAD_ANCHO</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="comment">// PELOTA_ALTO</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[8] = <a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">PELOTA_ALTO</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[9] = <a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">PELOTA_ALTO</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="comment">// unused</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[10] = <a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">unused</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[11] = <a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">unused</a>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#a240fab79764af5f87457628a726402d4">  202</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="class_c_network___data___settings.html#a240fab79764af5f87457628a726402d4" title="Obtener el puntero a buffer.">CNetwork_Data_Settings::getBuffer</a>()</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="code" href="class_c_network___data___settings.html#a7e775da62fe849a60f7567d807e61a09">  215</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_network___data___settings.html#a7e775da62fe849a60f7567d807e61a09" title="Cargar datos miembros a partir de un buffer recibido.">CNetwork_Data_Settings::readBuffer</a>(<a class="code" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* c)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="comment">// PANTALLA</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a47b05052d4a3369fb1f3a63e2db24fa7">PANTALLA_ANCHO</a> = (c[0] &lt;&lt; 8) | c[1];</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a9da0f962816f328eb1aec17d3f022fc8">PANTALLA_ALTO</a> = (c[2] &lt;&lt; 8) | c[3];</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="comment">// PAD_ALTO</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <a class="code" href="class_c_network___data___settings.html#ac89f461421dbeeee1034ed356624a623">PAD_ALTO</a> = (c[4] &lt;&lt; 8) | c[5];</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="comment">// PAD_ANCHO</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <a class="code" href="class_c_network___data___settings.html#a4683e27b4d2cdbed8b8c2921a37c9137">PAD_ANCHO</a> = (c[6] &lt;&lt; 8) | c[7];</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="comment">// PELOTA_ALTO</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <a class="code" href="class_c_network___data___settings.html#af485e2bf4820484f5d15395c245113cf">PELOTA_ALTO</a> = (c[8] &lt;&lt; 8) | c[9];</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="comment">// unused</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <a class="code" href="class_c_network___data___settings.html#ac29649ad21b40186a61e5fe50f4db1d7">unused</a> = (<a class="code" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>[10] &lt;&lt; 8) | c[11];</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:26:59 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:12 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!--header-->
 <div class="contents">
 
+<p>Clase abstracta para clases <a class="el" href="class_c_pelota.html" title="Clase abstracta para definir la pelota de cualquier modo de juego.">CPelota</a> a nivel de multijugador.  
+ <a href="class_c_pelota___m_j.html#details">Más...</a></p>
+
 <p><code>#include &lt;<a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de herencias de CPelota_MJ</div>
@@ -101,19 +104,22 @@ Diagrama de herencias de CPelota_MJ</div>
   <map id="CPelota_MJ_map" name="CPelota_MJ_map">
 <area href="class_c_pelota.html" title="Clase abstracta para definir la pelota de cualquier modo de juego." alt="CPelota" shape="rect" coords="67,56,192,80"/>
 <area href="class_c_entidad.html" title="Clase principal de objeto del juego." alt="CEntidad" shape="rect" coords="67,0,192,24"/>
-<area href="class_c_pelota___m_j___local.html" alt="CPelota_MJ_Local" shape="rect" coords="0,168,125,192"/>
+<area href="class_c_pelota___m_j___local.html" title="Clase general para definir la pelota de multijugador-local." alt="CPelota_MJ_Local" shape="rect" coords="0,168,125,192"/>
 <area href="class_c_pelota___m_j___online.html" alt="CPelota_MJ_Online" shape="rect" coords="135,168,260,192"/>
-<area href="class_c_pelota___m_j___c_p_u.html" alt="CPelota_MJ_CPU" shape="rect" coords="0,224,125,248"/>
+<area href="class_c_pelota___m_j___c_p_u.html" title="Clase general para definir la pelota de multijugador-cpu." alt="CPelota_MJ_CPU" shape="rect" coords="0,224,125,248"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
 <tr class="memitem:a1f49f8f07b625badc7dfb45ab35db29f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pelota___m_j.html#a1f49f8f07b625badc7dfb45ab35db29f">CPelota_MJ</a> ()</td></tr>
+<tr class="memdesc:a1f49f8f07b625badc7dfb45ab35db29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#a1f49f8f07b625badc7dfb45ab35db29f"></a><br/></td></tr>
 <tr class="separator:a1f49f8f07b625badc7dfb45ab35db29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04cd4cc52edc42ac9b45e6896817af72"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pelota___m_j.html#a04cd4cc52edc42ac9b45e6896817af72">~CPelota_MJ</a> ()</td></tr>
+<tr class="memdesc:a04cd4cc52edc42ac9b45e6896817af72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a04cd4cc52edc42ac9b45e6896817af72"></a><br/></td></tr>
 <tr class="separator:a04cd4cc52edc42ac9b45e6896817af72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade8732119ed3801503177ff9e6921817"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pelota___m_j.html#ade8732119ed3801503177ff9e6921817">mover</a> (<a class="el" href="class_c_pad.html">CPad</a> PJ1, <a class="el" href="class_c_pad.html">CPad</a> PJ2)</td></tr>
+<tr class="memdesc:ade8732119ed3801503177ff9e6921817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mover la pelota.  <a href="#ade8732119ed3801503177ff9e6921817"></a><br/></td></tr>
 <tr class="separator:ade8732119ed3801503177ff9e6921817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_pelota"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_pelota')"><img src="closed.png" alt="-"/>&#160;Métodos públicos heredados desde <a class="el" href="class_c_pelota.html">CPelota</a></td></tr>
 <tr class="memitem:a0b774dea23a729038f497869e428f46f inherit pub_methods_class_c_pelota"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pelota.html#a0b774dea23a729038f497869e428f46f">CPelota</a> ()</td></tr>
@@ -147,8 +153,10 @@ Atributos protegidos</h2></td></tr>
 <tr class="separator:a1ae8b574683ebc7938c04c85eed309de inherit pro_attribs_class_c_entidad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00006">6</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
+<div class="textblock"><p>Clase abstracta para clases <a class="el" href="class_c_pelota.html" title="Clase abstracta para definir la pelota de cualquier modo de juego.">CPelota</a> a nivel de multijugador. </p>
+<p>Se usará simplemente como clase base para generar clases de multijugador que comparten la velocidad vertical y horizontal, además de otros miembros. </p>
+
+<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00018">18</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a class="anchor" id="a1f49f8f07b625badc7dfb45ab35db29f"></a>
 <div class="memitem">
@@ -171,7 +179,9 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00012">12</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
+<p>Constructor por defecto. </p>
+
+<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00027">27</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
 
 </div>
 </div>
@@ -196,7 +206,9 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00013">13</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
+<p>Destructor. </p>
+
+<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00029">29</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
 
 </div>
 </div>
@@ -233,9 +245,20 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pelota__mj_8cpp_source.html#l00004">4</a> del archivo <a class="el" href="pelota__mj_8cpp_source.html">pelota_mj.cpp</a>.</p>
+<p>Mover la pelota. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PJ1</td><td><a class="el" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a> del jugador 1 </td></tr>
+    <tr><td class="paramname">PJ2</td><td><a class="el" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a> del jugador 2</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un identificador para saber que realizar.</dd></dl>
+<p>Se debe comprobar si el objeto rebota contra las paredes superiores o contra los pads. Además, en función del ángulo de rebote se deben recalcular las velocidades de la pelota por medio de la función getVel(). Vea la definición del método para entender su funcionamiento. </p>
 
-<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a>, <a class="el" href="entidad_8h_source.html#l00040">CEntidad::getCaja()</a>, <a class="el" href="pad_8h_source.html#l00033">CPad::getMomento()</a>, <a class="el" href="pelota_8cpp_source.html#l00149">getPos()</a>, <a class="el" href="globals_8h_source.html#l00157">Rect_Float::h</a>, <a class="el" href="pelota__mj_8h_source.html#l00009">lock</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="pelota_8h_source.html#l00021">OUT_RANGE</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="globals_8h_source.html#l00077">PANTALLA_MARGEN_INFERIOR</a>, <a class="el" href="globals_8h_source.html#l00076">PANTALLA_MARGEN_SUPERIOR</a>, <a class="el" href="opciones_8h_source.html#l00062">COpciones::PELOTA_ANCHO</a>, <a class="el" href="pelota_8cpp_source.html#l00090">setVel()</a>, <a class="el" href="globals_8cpp_source.html#l00015">snd_pong</a>, <a class="el" href="globals_8cpp_source.html#l00016">snd_pung</a>, <a class="el" href="pelota__mj_8h_source.html#l00009">stop</a>, <a class="el" href="globals_8h_source.html#l00157">Rect_Float::w</a>, <a class="el" href="globals_8h_source.html#l00156">Rect_Float::x</a>, <a class="el" href="pelota__mj_8h_source.html#l00010">xVel</a>, <a class="el" href="globals_8h_source.html#l00156">Rect_Float::y</a> y <a class="el" href="pelota__mj_8h_source.html#l00010">yVel</a>.</p>
+<p>Definición en la línea <a class="el" href="pelota__mj_8cpp_source.html#l00010">10</a> del archivo <a class="el" href="pelota__mj_8cpp_source.html">pelota_mj.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a>, <a class="el" href="entidad_8h_source.html#l00040">CEntidad::getCaja()</a>, <a class="el" href="pad_8h_source.html#l00033">CPad::getMomento()</a>, <a class="el" href="pelota_8cpp_source.html#l00149">getPos()</a>, <a class="el" href="globals_8h_source.html#l00154">Rect_Float::h</a>, <a class="el" href="pelota__mj_8h_source.html#l00022">lock</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="pelota_8h_source.html#l00021">OUT_RANGE</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="globals_8h_source.html#l00074">PANTALLA_MARGEN_INFERIOR</a>, <a class="el" href="globals_8h_source.html#l00073">PANTALLA_MARGEN_SUPERIOR</a>, <a class="el" href="opciones_8h_source.html#l00062">COpciones::PELOTA_ANCHO</a>, <a class="el" href="pelota_8cpp_source.html#l00090">setVel()</a>, <a class="el" href="globals_8cpp_source.html#l00015">snd_pong</a>, <a class="el" href="globals_8cpp_source.html#l00016">snd_pung</a>, <a class="el" href="pelota__mj_8h_source.html#l00021">stop</a>, <a class="el" href="globals_8h_source.html#l00154">Rect_Float::w</a>, <a class="el" href="globals_8h_source.html#l00153">Rect_Float::x</a>, <a class="el" href="pelota__mj_8h_source.html#l00023">xVel</a>, <a class="el" href="globals_8h_source.html#l00153">Rect_Float::y</a> y <a class="el" href="pelota__mj_8h_source.html#l00024">yVel</a>.</p>
 
 </div>
 </div>
@@ -257,10 +280,11 @@ Atributos protegidos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>¿La pelota está bloqueada? </p>
 
-<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00009">9</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
+<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00022">22</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00018">CPelota_MJ_Local::empezar()</a>, <a class="el" href="pelota__mj__local_8h_source.html#l00038">CPelota_MJ_Local::getLock()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00015">CPelota_MJ_CPU::getyVel()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a>, <a class="el" href="pelota__mj_8cpp_source.html#l00004">mover()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00020">CPelota_MJ_CPU::mover()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00038">CPelota_MJ_Local::mover()</a> y <a class="el" href="pelota__mj__local_8cpp_source.html#l00011">CPelota_MJ_Local::~CPelota_MJ_Local()</a>.</p>
+<p>Referenciado por <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00024">CPelota_MJ_Local::empezar()</a>, <a class="el" href="pelota__mj__local_8h_source.html#l00039">CPelota_MJ_Local::getLock()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00025">CPelota_MJ_CPU::getyVel()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00030">CPelota_MJ_CPU::mover()</a>, <a class="el" href="pelota__mj_8cpp_source.html#l00010">mover()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00044">CPelota_MJ_Local::mover()</a> y <a class="el" href="pelota__mj__local_8cpp_source.html#l00017">CPelota_MJ_Local::~CPelota_MJ_Local()</a>.</p>
 
 </div>
 </div>
@@ -281,10 +305,11 @@ Atributos protegidos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>¿La pelota está parada? </p>
 
-<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00009">9</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
+<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00021">21</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00018">CPelota_MJ_Local::empezar()</a>, <a class="el" href="pelota__mj__local_8h_source.html#l00039">CPelota_MJ_Local::getStop()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00010">CPelota_MJ_CPU::getxVel()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a>, <a class="el" href="pelota__mj_8cpp_source.html#l00004">mover()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00020">CPelota_MJ_CPU::mover()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00038">CPelota_MJ_Local::mover()</a> y <a class="el" href="pelota__mj__local_8cpp_source.html#l00011">CPelota_MJ_Local::~CPelota_MJ_Local()</a>.</p>
+<p>Referenciado por <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00024">CPelota_MJ_Local::empezar()</a>, <a class="el" href="pelota__mj__local_8h_source.html#l00040">CPelota_MJ_Local::getStop()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00015">CPelota_MJ_CPU::getxVel()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a>, <a class="el" href="pelota__cpu_8cpp_source.html#l00030">CPelota_MJ_CPU::mover()</a>, <a class="el" href="pelota__mj_8cpp_source.html#l00010">mover()</a>, <a class="el" href="pelota__mj__local_8cpp_source.html#l00044">CPelota_MJ_Local::mover()</a> y <a class="el" href="pelota__mj__local_8cpp_source.html#l00017">CPelota_MJ_Local::~CPelota_MJ_Local()</a>.</p>
 
 </div>
 </div>
@@ -305,10 +330,11 @@ Atributos protegidos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Velocidad horizontal </p>
 
-<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00010">10</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
+<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00023">23</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a> y <a class="el" href="pelota__mj_8cpp_source.html#l00004">mover()</a>.</p>
+<p>Referenciado por <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a> y <a class="el" href="pelota__mj_8cpp_source.html#l00010">mover()</a>.</p>
 
 </div>
 </div>
@@ -329,10 +355,11 @@ Atributos protegidos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Velocidad vertical </p>
 
-<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00010">10</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
+<p>Definición en la línea <a class="el" href="pelota__mj_8h_source.html#l00024">24</a> del archivo <a class="el" href="pelota__mj_8h_source.html">pelota_mj.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a> y <a class="el" href="pelota__mj_8cpp_source.html#l00004">mover()</a>.</p>
+<p>Referenciado por <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">CPelota_MJ_Online::empezar()</a>, <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">CPelota_MJ_Online::mover()</a> y <a class="el" href="pelota__mj_8cpp_source.html#l00010">mover()</a>.</p>
 
 </div>
 </div>
@@ -343,7 +370,7 @@ Atributos protegidos</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:27:00 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

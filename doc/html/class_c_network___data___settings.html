@@ -93,17 +93,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!--header-->
 <div class="contents">
 
+<p>Estructura de datos a mandar desde el servidor al cliente al principio, que contendrá las opciones del juego.  
+ <a href="class_c_network___data___settings.html#details">Más...</a></p>
+
 <p><code>#include &lt;<a class="el" href="network__struct_8h_source.html">network_struct.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
 <tr class="memitem:a130a940b362cdc6a3b71cbfb1ff528f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_network___data___settings.html#a130a940b362cdc6a3b71cbfb1ff528f7">CNetwork_Data_Settings</a> ()</td></tr>
+<tr class="memdesc:a130a940b362cdc6a3b71cbfb1ff528f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#a130a940b362cdc6a3b71cbfb1ff528f7"></a><br/></td></tr>
 <tr class="separator:a130a940b362cdc6a3b71cbfb1ff528f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecddfedd66150b32bb065d7f51702e49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_network___data___settings.html#aecddfedd66150b32bb065d7f51702e49">makeBuffer</a> ()</td></tr>
+<tr class="memdesc:aecddfedd66150b32bb065d7f51702e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cargar los miembros en el buffer <a class="el" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>.  <a href="#aecddfedd66150b32bb065d7f51702e49"></a><br/></td></tr>
 <tr class="separator:aecddfedd66150b32bb065d7f51702e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a240fab79764af5f87457628a726402d4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_network___data___settings.html#a240fab79764af5f87457628a726402d4">getBuffer</a> ()</td></tr>
+<tr class="memdesc:a240fab79764af5f87457628a726402d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener el puntero a <a class="el" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>.  <a href="#a240fab79764af5f87457628a726402d4"></a><br/></td></tr>
 <tr class="separator:a240fab79764af5f87457628a726402d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e775da62fe849a60f7567d807e61a09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_network___data___settings.html#a7e775da62fe849a60f7567d807e61a09">readBuffer</a> (<a class="el" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *b)</td></tr>
+<tr class="memdesc:a7e775da62fe849a60f7567d807e61a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cargar datos miembros a partir de un buffer recibido.  <a href="#a7e775da62fe849a60f7567d807e61a09"></a><br/></td></tr>
 <tr class="separator:a7e775da62fe849a60f7567d807e61a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -127,8 +134,10 @@ Atributos privados</h2></td></tr>
 <tr class="separator:aa72917fb53b5a9fdbce53a38f1c15f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00077">77</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<div class="textblock"><p>Estructura de datos a mandar desde el servidor al cliente al principio, que contendrá las opciones del juego. </p>
+<p>Al principio de la conexión, el servidor deberá mandar la configuración de la partida, que contendrá datos como tamaño de los pads, de la pelota, de la pantalla o el número de puntos para acabar la partida (no implementado). </p>
+
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00090">90</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a class="anchor" id="a130a940b362cdc6a3b71cbfb1ff528f7"></a>
 <div class="memitem">
@@ -143,9 +152,11 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00115">115</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+<p>Constructor por defecto. </p>
 
-<p>Hace referencia a <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="opciones_8h_source.html#l00056">COpciones::PAD_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00085">PAD_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00057">COpciones::PAD_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00086">PAD_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00083">PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00082">PANTALLA_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00061">COpciones::PELOTA_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00088">PELOTA_ALTO</a> y <a class="el" href="network__struct_8h_source.html#l00089">unused</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00157">157</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="opciones_8h_source.html#l00056">COpciones::PAD_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00098">PAD_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00057">COpciones::PAD_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00099">PAD_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00096">PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00095">PANTALLA_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00061">COpciones::PELOTA_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00101">PELOTA_ALTO</a> y <a class="el" href="network__struct_8h_source.html#l00102">unused</a>.</p>
 
 </div>
 </div>
@@ -163,9 +174,12 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00150">150</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+<p>Obtener el puntero a <a class="el" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve el valor almacenado por <a class="el" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a> </dd></dl>
 
-<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00080">buffer</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00202">202</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00093">buffer</a>.</p>
 
 <p>Referenciado por <a class="el" href="instancia__server_8cpp_source.html#l00218">CInstance_MJ_Online_Server::OnLoopMenu()</a>.</p>
 
@@ -184,9 +198,12 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00125">125</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+<p>Cargar los miembros en el buffer <a class="el" href="class_c_network___data___settings.html#aa72917fb53b5a9fdbce53a38f1c15f11">buffer</a>. </p>
+<p>Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación. </p>
 
-<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00080">buffer</a>, <a class="el" href="network__struct_8h_source.html#l00085">PAD_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00086">PAD_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00083">PANTALLA_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00082">PANTALLA_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00088">PELOTA_ALTO</a> y <a class="el" href="network__struct_8h_source.html#l00089">unused</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00172">172</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00093">buffer</a>, <a class="el" href="network__struct_8h_source.html#l00098">PAD_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00099">PAD_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00096">PANTALLA_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00095">PANTALLA_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00101">PELOTA_ALTO</a> y <a class="el" href="network__struct_8h_source.html#l00102">unused</a>.</p>
 
 <p>Referenciado por <a class="el" href="instancia__server_8cpp_source.html#l00218">CInstance_MJ_Online_Server::OnLoopMenu()</a>.</p>
 
@@ -200,15 +217,24 @@ Atributos privados</h2></td></tr>
           <td class="memname">void CNetwork_Data_Settings::readBuffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00155">155</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+<p>Cargar datos miembros a partir de un buffer recibido. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Buffer de entrada.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación. </p>
 
-<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00080">buffer</a>, <a class="el" href="network__struct_8h_source.html#l00085">PAD_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00086">PAD_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00083">PANTALLA_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00082">PANTALLA_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00088">PELOTA_ALTO</a> y <a class="el" href="network__struct_8h_source.html#l00089">unused</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00215">215</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00093">buffer</a>, <a class="el" href="network__struct_8h_source.html#l00098">PAD_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00099">PAD_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00096">PANTALLA_ALTO</a>, <a class="el" href="network__struct_8h_source.html#l00095">PANTALLA_ANCHO</a>, <a class="el" href="network__struct_8h_source.html#l00101">PELOTA_ALTO</a> y <a class="el" href="network__struct_8h_source.html#l00102">unused</a>.</p>
 
 <p>Referenciado por <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a>.</p>
 
@@ -232,10 +258,11 @@ Atributos privados</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Buffer de caracteres (bytes) de tamaño <a class="el" href="globals_8h.html#a4b8c1970483989f795ef6a7ab33905d6" title="Suma de los miembros de CNetwork_Data_Settings.">NET_MJ_SETTINGS_SIZE</a> para enviar al cliente </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00080">80</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00093">93</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00150">getBuffer()</a>, <a class="el" href="network__struct_8cpp_source.html#l00125">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00155">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00202">getBuffer()</a>, <a class="el" href="network__struct_8cpp_source.html#l00172">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00215">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -248,10 +275,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Alto del pad extraído de <a class="el" href="class_c_opciones.html#a2d69aeb21db70a6cca55391e15dd1df6">COpciones::PAD_ALTO</a> del servidor </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00085">85</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00098">98</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00115">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00125">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00155">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00157">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00172">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00215">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -264,10 +292,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Ancho del pad extraído de <a class="el" href="class_c_opciones.html#a6a2c8b675e18580cd2444f0da65902b0">COpciones::PAD_ANCHO</a> del servidor </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00086">86</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00099">99</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00115">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00125">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00155">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00157">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00172">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00215">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -280,10 +309,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Alto de la pantalla extraído de <a class="el" href="class_c_opciones.html#aef315aac5ba09a7017ef6e0a5b12ee28">COpciones::PANTALLA_ALTO</a> del servidor </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00083">83</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00096">96</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00115">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00125">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00155">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00157">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00172">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00215">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -296,10 +326,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Ancho de la pantalla extraído de <a class="el" href="class_c_opciones.html#a37b5e119019fc33db3efe9c5b59543b7">COpciones::PANTALLA_ANCHO</a> del servidor </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00082">82</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00095">95</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00115">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00125">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00155">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00157">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00172">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00215">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -312,10 +343,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Alto de la pelota extraído de <a class="el" href="class_c_opciones.html#ab1ec0ec939fa2f40a6038b70c87292da">COpciones::PELOTA_ALTO</a> del servidor, equivalente a <a class="el" href="class_c_opciones.html#a47102f4c6f1058195e8990733be5284f">COpciones::PELOTA_ANCHO</a> </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00088">88</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00101">101</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00115">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00125">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00155">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00157">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00172">makeBuffer()</a>, <a class="el" href="instancia__client_8cpp_source.html#l00247">CInstance_MJ_Online_Client::OnLoopMenu()</a> y <a class="el" href="network__struct_8cpp_source.html#l00215">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -328,10 +360,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Sin usar, para conseguir un número par de bytes </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00089">89</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00102">102</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00115">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00125">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00155">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00157">CNetwork_Data_Settings()</a>, <a class="el" href="network__struct_8cpp_source.html#l00172">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00215">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -342,7 +375,7 @@ Atributos privados</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:27:00 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

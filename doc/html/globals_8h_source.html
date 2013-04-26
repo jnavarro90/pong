@@ -124,118 +124,112 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// ------------- TYPE ---------------</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// ----------------------------------</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//ostream&amp; operator&lt;&lt;(ostream&amp; os, byte b);</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;ostream&amp; <a class="code" href="globals_8cpp.html#aed34d48608e64a2908d6f838a422c73f">operator&lt;&lt;</a>(ostream&amp; os, <a class="code" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a> f);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// _____________DEFINES______________</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// -------------- NET ---------------</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// ----------------------------------</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="globals_8h.html#ac626e65a89ccd8469bd55eec597833e8">   47</a></span>&#160;<span class="preprocessor">#define NET_MJ_PORT 8888</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span><span class="comment">//#define _NET_BYTES_ 12</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="globals_8h.html#a4b8c1970483989f795ef6a7ab33905d6">   50</a></span>&#160;<span class="preprocessor">#define NET_MJ_SETTINGS_SIZE 12</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="globals_8h.html#a1343ed9aa4ab92e8d5e42ed55f4bb187">   51</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NET_MJ_SERVERDATA_SIZE 16</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="globals_8h.html#a0f610c595c7472387e5fc7b060c52cf8">   52</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NET_MJ_CLIENTDATA_SIZE 6</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//#define NETWORK_SERVER_DATA_SIZE 12</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// _____________DEFINES______________</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// ------------ ERRORES -------------</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// ----------------------------------</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="globals_8h.html#a8226bd71f8bb870650f742c40d7b3674">   60</a></span>&#160;<span class="preprocessor">#define ERROR_CODE_GENERAL -1</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="globals_8h.html#a2a73c1aec7f573d7a177c6640a82365a">   62</a></span>&#160;<span class="preprocessor">#define ERROR_STR_NET  &quot;Error iniciano módulo de red.&quot;</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="globals_8h.html#a2f5997ecd108879f873fe7633cba2565">   63</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ERROR_STR_FLIP &quot;Error volcando contenido por pantalla.&quot;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="globals_8h.html#ad691f6e664280c2c0e32eac8f3568c28">   64</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ERROR_STR_INIT &quot;Error iniciando módulo: &quot;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="globals_8h.html#afec7b9039bf5fc07537bb7b95df63e77">   65</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ERROR_STR_FILE &quot;Error cargando archivo: &quot;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="globals_8h.html#abb0546e982c8ad48454b6583a1871c4f">   66</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ERROR_STR_SURFACE &quot;Error creando superficie: &quot;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">// ___________CONSTANTES_____________</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">// ----------- PANTALLA -------------</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">// ----------------------------------</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="globals_8h.html#a121233f7601442d0bcb2319801e59a22">   72</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a121233f7601442d0bcb2319801e59a22">PANTALLA_ANCHO</a> = 800;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="globals_8h.html#adc43830800eb5cd87799963608ec1988">   73</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#adc43830800eb5cd87799963608ec1988">PANTALLA_ALTO</a> = 400;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="globals_8h.html#a8ae8a80f356b6994c3d7324faa368226">   74</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a8ae8a80f356b6994c3d7324faa368226">PANTALLA_BPP</a> = 32;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="globals_8h.html#a7c80e7ac3f0df23eed03ba1de7dbbef7">   76</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a7c80e7ac3f0df23eed03ba1de7dbbef7">PANTALLA_MARGEN_SUPERIOR</a> = 15;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="globals_8h.html#a6ade757e3558f98c7d6f99b2496554d6">   77</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a6ade757e3558f98c7d6f99b2496554d6">PANTALLA_MARGEN_INFERIOR</a> = 15;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="globals_8h.html#a8c0316a0cf4f52d2770edf4136466e18">   78</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a8c0316a0cf4f52d2770edf4136466e18">PANTALLA_MARGEN_LATERAL</a> = 50;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="globals_8h.html#a41a7a3cc36f721c6da798fefdd1db39a">   80</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a41a7a3cc36f721c6da798fefdd1db39a">TABLERO_LINEAS_GROSOR</a> = 5;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">// ___________CONSTANTES_____________</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">// ------------- PAD ----------------</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">// ----------------------------------</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="globals_8h.html#a79954f2c5c9fb0506d3e02d4f1867474">   86</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a79954f2c5c9fb0506d3e02d4f1867474">PAD_ANCHO</a> = 20;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="globals_8h.html#a27b7ff9e7bc76f2622e03f427b9e1742">   87</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a27b7ff9e7bc76f2622e03f427b9e1742">PAD_ALTO</a> = 80;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="globals_8h.html#aa842bd5767fbce498b50dd2eab17d555">   88</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#aa842bd5767fbce498b50dd2eab17d555">PAD_MEDIO</a> = <a class="code" href="globals_8h.html#a27b7ff9e7bc76f2622e03f427b9e1742">PAD_ALTO</a>/2;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;ostream&amp; <a class="code" href="globals_8cpp.html#aed34d48608e64a2908d6f838a422c73f">operator&lt;&lt;</a>(ostream&amp; os, <a class="code" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a> f);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// _____________DEFINES______________</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// -------------- NET ---------------</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// ----------------------------------</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="globals_8h.html#ac626e65a89ccd8469bd55eec597833e8">   46</a></span>&#160;<span class="preprocessor">#define NET_MJ_PORT 8888 </span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="globals_8h.html#a4b8c1970483989f795ef6a7ab33905d6">   48</a></span>&#160;<span class="preprocessor">#define NET_MJ_SETTINGS_SIZE 12 </span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="globals_8h.html#a1343ed9aa4ab92e8d5e42ed55f4bb187">   49</a></span>&#160;<span class="preprocessor">#define NET_MJ_SERVERDATA_SIZE 16 </span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="globals_8h.html#a0f610c595c7472387e5fc7b060c52cf8">   50</a></span>&#160;<span class="preprocessor">#define NET_MJ_CLIENTDATA_SIZE 6 </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">// _____________DEFINES______________</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span><span class="comment">// ------------ ERRORES -------------</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// ----------------------------------</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="globals_8h.html#a8226bd71f8bb870650f742c40d7b3674">   57</a></span>&#160;<span class="preprocessor">#define ERROR_CODE_GENERAL -1</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="globals_8h.html#a2a73c1aec7f573d7a177c6640a82365a">   59</a></span>&#160;<span class="preprocessor">#define ERROR_STR_NET  &quot;Error iniciano módulo de red.&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="globals_8h.html#a2f5997ecd108879f873fe7633cba2565">   60</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ERROR_STR_FLIP &quot;Error volcando contenido por pantalla.&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="globals_8h.html#ad691f6e664280c2c0e32eac8f3568c28">   61</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ERROR_STR_INIT &quot;Error iniciando módulo: &quot;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="globals_8h.html#afec7b9039bf5fc07537bb7b95df63e77">   62</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ERROR_STR_FILE &quot;Error cargando archivo: &quot;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="globals_8h.html#abb0546e982c8ad48454b6583a1871c4f">   63</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ERROR_STR_SURFACE &quot;Error creando superficie: &quot;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">// ___________CONSTANTES_____________</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// ----------- PANTALLA -------------</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// ----------------------------------</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="globals_8h.html#a121233f7601442d0bcb2319801e59a22">   69</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a121233f7601442d0bcb2319801e59a22">PANTALLA_ANCHO</a> = 800;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="globals_8h.html#adc43830800eb5cd87799963608ec1988">   70</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#adc43830800eb5cd87799963608ec1988">PANTALLA_ALTO</a> = 400;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="globals_8h.html#a8ae8a80f356b6994c3d7324faa368226">   71</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a8ae8a80f356b6994c3d7324faa368226">PANTALLA_BPP</a> = 32;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="globals_8h.html#a7c80e7ac3f0df23eed03ba1de7dbbef7">   73</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a7c80e7ac3f0df23eed03ba1de7dbbef7">PANTALLA_MARGEN_SUPERIOR</a> = 15;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="globals_8h.html#a6ade757e3558f98c7d6f99b2496554d6">   74</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a6ade757e3558f98c7d6f99b2496554d6">PANTALLA_MARGEN_INFERIOR</a> = 15;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="globals_8h.html#a8c0316a0cf4f52d2770edf4136466e18">   75</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a8c0316a0cf4f52d2770edf4136466e18">PANTALLA_MARGEN_LATERAL</a> = 50;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="globals_8h.html#a41a7a3cc36f721c6da798fefdd1db39a">   77</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a41a7a3cc36f721c6da798fefdd1db39a">TABLERO_LINEAS_GROSOR</a> = 5;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// ___________CONSTANTES_____________</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// ------------- PAD ----------------</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">// ----------------------------------</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="globals_8h.html#a79954f2c5c9fb0506d3e02d4f1867474">   83</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a79954f2c5c9fb0506d3e02d4f1867474">PAD_ANCHO</a> = 20;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="globals_8h.html#a27b7ff9e7bc76f2622e03f427b9e1742">   84</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#a27b7ff9e7bc76f2622e03f427b9e1742">PAD_ALTO</a> = 80;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="globals_8h.html#aa842bd5767fbce498b50dd2eab17d555">   85</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#aa842bd5767fbce498b50dd2eab17d555">PAD_MEDIO</a> = <a class="code" href="globals_8h.html#a27b7ff9e7bc76f2622e03f427b9e1742">PAD_ALTO</a>/2;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//const int PAD_OFFSETJ1 = PANTALLA_MARGEN_LATERAL;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//const int PAD_OFFSETJ2 = PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL - PAD_ANCHO;</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">//const int PAD_OFFSETJ1 = PANTALLA_MARGEN_LATERAL;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">//const int PAD_OFFSETJ2 = PANTALLA_ANCHO - PANTALLA_MARGEN_LATERAL - PAD_ANCHO;</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">// ___________CONSTANTES_____________</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">// ----------- MARCADOR -------------</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">// ----------------------------------</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="globals_8h.html#aa9ae1a9192dda1abcf5253609ea2548c">   97</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#aa9ae1a9192dda1abcf5253609ea2548c">TEXTO_MARCADOR_ANCHO</a> = 160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">// _____________ENUMS________________</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">// ------------ VARIOS --------------</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// ----------------------------------</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53">  103</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53">INSTANCES</a></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132">  105</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132">I_SALIDA</a> = -1, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a8f6a1b55511f0873be1bd161c7758ddd">I_MENU_MAIN</a> = 0,</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab">  106</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a79eb0f41c297c91c21ea6016dd0c1591">I_MENU_1J</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53ab9253f5d2ac60df9971d8f3e60b01873">I_MENU_MJ</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab">I_MENU_OPCIONES</a>,</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba">  107</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba">I_1J_INF</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a69b8c1219d43830f16da518e74834e3e">I_1J_HISTORIA</a>,</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19">  108</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53afa7215e6cd720e9dd23bc20c0d5385ac">I_MJ_LOCAL</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a3c536c4744794ef3d07a455e19d723f4">I_MJ_CPU</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53ac71f3ca279fb65e29378e667640fc2e9">I_MJ_ONLINE</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aa4515cefd0cf9d89d245a80d9d1f909c">I_MJ_ONLINE_CLIENT</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19">I_MJ_ONLINE_SERVER</a></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="globals_8h.html#a11928b9796b8606b8005991afdd5e83c">  111</a></span>&#160;<span class="preprocessor">#define N_INSTANCES 12</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">//enum instance_list { error = -1, salir = 0, menu_main, menu_1j, menu_mj, menu_mj_online, modo_1j_inf, modo_mj_local, modo_mj_cpu, modo_mj_online_c, modo_mj_online_s, opciones_};</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">// ___________ESTRUCTURAS____________</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">// ------------ VARIOS --------------</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">// ----------------------------------</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">extern</span> SDL_Event <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">extern</span> SDL_Surface* <a class="code" href="globals_8cpp.html#a58be6bd8478a38995e6c3ce5161a9fbe">pantalla</a>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="globals_8cpp.html#aec2847bd8f78cf4acff4b18d1c68f24c">initPantalla</a>(); </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">//extern void closePantalla(); // inutil</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#a9dc5f1b451127b480b7848098d75ee12">snd_ping</a>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#ac07663d0d9a7e19ed85e62d73cfd804d">snd_pong</a>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#a49a1a9570706ece8090125625c2e107a">snd_pung</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">// ___________CONSTANTES_____________</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">// ----------- MARCADOR -------------</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">// ----------------------------------</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="globals_8h.html#aa9ae1a9192dda1abcf5253609ea2548c">   94</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#aa9ae1a9192dda1abcf5253609ea2548c">TEXTO_MARCADOR_ANCHO</a> = 160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">// _____________ENUMS________________</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">// ------------ VARIOS --------------</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">// ----------------------------------</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53">  100</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53">INSTANCES</a></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132">  102</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132">I_SALIDA</a> = -1, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a8f6a1b55511f0873be1bd161c7758ddd">I_MENU_MAIN</a> = 0,</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab">  103</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a79eb0f41c297c91c21ea6016dd0c1591">I_MENU_1J</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53ab9253f5d2ac60df9971d8f3e60b01873">I_MENU_MJ</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab">I_MENU_OPCIONES</a>,</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba">  104</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba">I_1J_INF</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a69b8c1219d43830f16da518e74834e3e">I_1J_HISTORIA</a>,</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19">  105</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53afa7215e6cd720e9dd23bc20c0d5385ac">I_MJ_LOCAL</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a3c536c4744794ef3d07a455e19d723f4">I_MJ_CPU</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53ac71f3ca279fb65e29378e667640fc2e9">I_MJ_ONLINE</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aa4515cefd0cf9d89d245a80d9d1f909c">I_MJ_ONLINE_CLIENT</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19">I_MJ_ONLINE_SERVER</a></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="globals_8h.html#a11928b9796b8606b8005991afdd5e83c">  108</a></span>&#160;<span class="preprocessor">#define N_INSTANCES 12</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">//enum instance_list { error = -1, salir = 0, menu_main, menu_1j, menu_mj, menu_mj_online, modo_1j_inf, modo_mj_local, modo_mj_cpu, modo_mj_online_c, modo_mj_online_s, opciones_};</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">// ___________ESTRUCTURAS____________</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">// ------------ VARIOS --------------</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">// ----------------------------------</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">extern</span> SDL_Event <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">extern</span> SDL_Surface* <a class="code" href="globals_8cpp.html#a58be6bd8478a38995e6c3ce5161a9fbe">pantalla</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="globals_8cpp.html#aec2847bd8f78cf4acff4b18d1c68f24c">initPantalla</a>(); </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">//extern void closePantalla(); // inutil</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#a9dc5f1b451127b480b7848098d75ee12">snd_ping</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#ac07663d0d9a7e19ed85e62d73cfd804d">snd_pong</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#a49a1a9570706ece8090125625c2e107a">snd_pung</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">//extern Uint32 color_blanco;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">//extern SDL_Color color_blanco_t;</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">//extern Uint32 color_blanco;</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">//extern SDL_Color color_blanco_t;</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#a4abc73abc5bb8be9d8bdb55118857120">ttf_consolas</a>;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#afe32ab812245ae1f4f1a019a6b034cd3">ttf_consolasM</a>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#af0c08c970d3c7db160e52ea60722d0de">ttf_bitM</a>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="struct_rect___float.html">  154</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_rect___float.html" title="Estructura similar a SDL_Rect.">Rect_Float</a></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">  156</a></span>&#160;  <span class="keywordtype">float</span> x, <a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">  157</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">w</a>, h;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;};</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">// Clases</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#a4abc73abc5bb8be9d8bdb55118857120">ttf_consolas</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#afe32ab812245ae1f4f1a019a6b034cd3">ttf_consolasM</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#af0c08c970d3c7db160e52ea60722d0de">ttf_bitM</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="code" href="struct_rect___float.html">  151</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_rect___float.html" title="Estructura similar a SDL_Rect.">Rect_Float</a></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">  153</a></span>&#160;  <span class="keywordtype">float</span> x, <a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">  154</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">w</a>, h;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;};</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">// Clases</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">// Funciones</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="globals_8cpp.html#ae60125b1d93b5c42be907712c0dd68a7">aplicar_superficie</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, SDL_Surface* entrada, SDL_Surface* destino, SDL_Rect* clip = NULL);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">// Funciones</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="globals_8cpp.html#ae60125b1d93b5c42be907712c0dd68a7">aplicar_superficie</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, SDL_Surface* entrada, SDL_Surface* destino, SDL_Rect* clip = NULL);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">extern</span> SDL_Surface* <a class="code" href="globals_8cpp.html#a148bd9ec6c2cb1090220d189401e5cbe">cargar_img</a>(std::string s, <span class="keywordtype">bool</span> alphapng = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GLOBALS_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">extern</span> SDL_Surface* <a class="code" href="globals_8cpp.html#a148bd9ec6c2cb1090220d189401e5cbe">cargar_img</a>(std::string s, <span class="keywordtype">bool</span> alphapng = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GLOBALS_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:26:59 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:12 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

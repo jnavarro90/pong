@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CPad_MJ_Local
+ *
+ */
+
 #include "pad_mj_local.h"
 
 int PAD_OFFSETJ1_MJ_LOCAL;

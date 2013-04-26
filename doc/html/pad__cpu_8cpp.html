@@ -91,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="title">Referencia del Archivo pad_cpu.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Definición de <a class="el" href="class_c_pad___m_j___c_p_u.html" title="Clase general para definir el pad de multijugador-cpu.">CPad_MJ_CPU</a>.  
+<a href="#details">Más...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="pad__cpu_8h_source.html">pad_cpu.h</a>&quot;</code><br/>
 </div>
 <p><a href="pad__cpu_8cpp_source.html">Ir al código fuente de este archivo.</a></p>
@@ -98,11 +101,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funciones</h2></td></tr>
 <tr class="memitem:a25a3959799ee96477d0c8826e1e95784"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pad__cpu_8cpp.html#a25a3959799ee96477d0c8826e1e95784">pendiente</a> (float x, float y, float Vx, float Vy)</td></tr>
+<tr class="memdesc:a25a3959799ee96477d0c8826e1e95784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcular la pendiente de una recta entre 2 puntos.  <a href="#a25a3959799ee96477d0c8826e1e95784"></a><br/></td></tr>
 <tr class="separator:a25a3959799ee96477d0c8826e1e95784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4225a3eb850fa930aeaa3cf197d5e24b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pad__cpu_8cpp.html#a4225a3eb850fa930aeaa3cf197d5e24b">calcPos</a> (float m, float x, float x0, float y0)</td></tr>
+<tr class="memdesc:a4225a3eb850fa930aeaa3cf197d5e24b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dada una recta, obtener el valor en el eje Y.  <a href="#a4225a3eb850fa930aeaa3cf197d5e24b"></a><br/></td></tr>
 <tr class="separator:a4225a3eb850fa930aeaa3cf197d5e24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentación de las funciones</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Definición de <a class="el" href="class_c_pad___m_j___c_p_u.html" title="Clase general para definir el pad de multijugador-cpu.">CPad_MJ_CPU</a>. </p>
+
+<p>Definición en el archivo <a class="el" href="pad__cpu_8cpp_source.html">pad_cpu.cpp</a>.</p>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
 <a class="anchor" id="a4225a3eb850fa930aeaa3cf197d5e24b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -139,9 +148,21 @@ Funciones</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pad__cpu_8cpp_source.html#l00088">88</a> del archivo <a class="el" href="pad__cpu_8cpp_source.html">pad_cpu.cpp</a>.</p>
+<p>Dada una recta, obtener el valor en el eje Y. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve el valor del eje y para un determinado x</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Pendiente de la recta </td></tr>
+    <tr><td class="paramname">x0,y0</td><td>Valores de la función de la recta </td></tr>
+    <tr><td class="paramname">x</td><td>Variabe a modificar</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>La función computará y devolverá y = m*(x - x0) + y0 </p>
 
-<p>Referenciado por <a class="el" href="pad__cpu_8cpp_source.html#l00030">CPad_MJ_CPU::mover()</a>.</p>
+<p>Definición en la línea <a class="el" href="pad__cpu_8cpp_source.html#l00102">102</a> del archivo <a class="el" href="pad__cpu_8cpp_source.html">pad_cpu.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="pad__cpu_8cpp_source.html#l00047">CPad_MJ_CPU::mover()</a>.</p>
 
 </div>
 </div>
@@ -181,16 +202,27 @@ Funciones</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pad__cpu_8cpp_source.html#l00083">83</a> del archivo <a class="el" href="pad__cpu_8cpp_source.html">pad_cpu.cpp</a>.</p>
+<p>Calcular la pendiente de una recta entre 2 puntos. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Devolver el valor de la pendiente (m)</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y</td><td>Coordenadas del primer punto de la recta </td></tr>
+    <tr><td class="paramname">Vx,Vy</td><td>Coordenadas del segundo punto de la recta</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>La función hace un cálculo sencillo para saber la pendiente de la recta dada por los 2 puntos pasados como parámetros. </p>
 
-<p>Referenciado por <a class="el" href="pad__cpu_8cpp_source.html#l00030">CPad_MJ_CPU::mover()</a>.</p>
+<p>Definición en la línea <a class="el" href="pad__cpu_8cpp_source.html#l00097">97</a> del archivo <a class="el" href="pad__cpu_8cpp_source.html">pad_cpu.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="pad__cpu_8cpp_source.html#l00047">CPad_MJ_CPU::mover()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:26:59 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

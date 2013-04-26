@@ -1,3 +1,10 @@
+/**
+ * @file
+ * @brief Declaración de CPelota_MJ_Local
+ *
+ */
+
+
 #include "../../pelota.h"
 #include "../pelota_mj.h"
 
@@ -10,25 +17,19 @@
 
 enum gamepoint_pj_t {gamepoint_pj1 = 0, gamepoint_pj2};
 
-/*const int OUT_RANGE = 9999; // No va a tocar el pad
 
-//const int PELOTA_ANCHO = 20;
-const int PELOTA_VEL_MIN = 3;
-
-const float VELOCIDAD_MAX = 4.5;
-const float VELOCIDAD = 5;
-const float VELOCIDAD_INC_MAX = 2.0;
-
-const int MOMENTO_INC = 10;*/
-
-//void setVel(float& yVel, float& xVel, int pos_actual, int momento);
-//int getPos(SDL_Rect pelota, SDL_Rect pad);
-
-// Más que una pelota, un cuadrado
+/**
+ * @brief Clase general para definir la pelota de multijugador-local.
+ *
+ * El funcionamiento de esta clase es muy simple. Puede ver los métodos de la clase en sí y de la clase base
+ * CPelota_MJ y CPelota para entender el correcto funcionamiento de esta.
+ *
+ */
 class CPelota_MJ_Local : public CPelota_MJ
 {
   protected:
-    float xVel, yVel;
+    float xVel; /**< Velocidad horizontal de la pelota en píxeles por frame */
+    float yVel; /**< Velocidad vertical de la pelota en píxeles por frame */
   public:
     CPelota_MJ_Local();
     ~CPelota_MJ_Local();

@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Declaración de CInstance_MJ_Local
+ *
+ */
+
 #ifndef INSTANCIA_MJ_LOCAL_H_
 #define INSTANCIA_MJ_LOCAL_H_
 
@@ -10,6 +16,15 @@
 #include "../../temporizador.h"
 #include "../../warning.h"
 
+/**
+ * @brief Clase de estancia para representar el modo de juego multijugador-local.
+ *
+ * Básicamente, encapsula algunos objetos (2 pads, 1 pelota y 1 marcador) para trabajar con ellos de una forma
+ * más sencilla. El modo consiste en un sistema de pong multijugador básico. Por el momento el jugador 1 juega con las
+ * teclas W y S, mientras que el jugador 2 usa las teclas ARRIBA y ABAJO.
+ * Para más información sobre el funcionamiento de las estancias, vea las definiciones de los métodos de
+ * esta clase y las clases CInstance, CEngine, CMenu y CBoton.
+ */
 class CInstance_MJ_Local: public CInstance
 {
   protected:

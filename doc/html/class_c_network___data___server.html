@@ -93,17 +93,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!--header-->
 <div class="contents">
 
+<p>Estructura de datos a mandar desde el servidor al cliente.  
+ <a href="class_c_network___data___server.html#details">Más...</a></p>
+
 <p><code>#include &lt;<a class="el" href="network__struct_8h_source.html">network_struct.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
 <tr class="memitem:a9b746858763b46d4e4019ead32c7870a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_network___data___server.html#a9b746858763b46d4e4019ead32c7870a">CNetwork_Data_Server</a> ()</td></tr>
+<tr class="memdesc:a9b746858763b46d4e4019ead32c7870a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#a9b746858763b46d4e4019ead32c7870a"></a><br/></td></tr>
 <tr class="separator:a9b746858763b46d4e4019ead32c7870a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a9dd678ca736ac0610d234fd58b29d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_network___data___server.html#a9a9dd678ca736ac0610d234fd58b29d1">makeBuffer</a> ()</td></tr>
+<tr class="memdesc:a9a9dd678ca736ac0610d234fd58b29d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cargar los miembros en el buffer <a class="el" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>.  <a href="#a9a9dd678ca736ac0610d234fd58b29d1"></a><br/></td></tr>
 <tr class="separator:a9a9dd678ca736ac0610d234fd58b29d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a321ece98cbbae7b66f5c485b0c1be5b2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_network___data___server.html#a321ece98cbbae7b66f5c485b0c1be5b2">getBuffer</a> ()</td></tr>
+<tr class="memdesc:a321ece98cbbae7b66f5c485b0c1be5b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener el puntero a <a class="el" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>.  <a href="#a321ece98cbbae7b66f5c485b0c1be5b2"></a><br/></td></tr>
 <tr class="separator:a321ece98cbbae7b66f5c485b0c1be5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aa22d097831e9c65ba179947415c65c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_network___data___server.html#a7aa22d097831e9c65ba179947415c65c">readBuffer</a> (<a class="el" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *b)</td></tr>
+<tr class="memdesc:a7aa22d097831e9c65ba179947415c65c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cargar datos miembros a partir de un buffer recibido.  <a href="#a7aa22d097831e9c65ba179947415c65c"></a><br/></td></tr>
 <tr class="separator:a7aa22d097831e9c65ba179947415c65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -133,8 +140,10 @@ Atributos privados</h2></td></tr>
 <tr class="separator:a1bc1503c895fff488c3e2586271a87f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00054">54</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<div class="textblock"><p>Estructura de datos a mandar desde el servidor al cliente. </p>
+<p>Todos los datos serán procesados en el ordenador. El servidor recibirá llos eventos del cliente, hará los cálculos necesarios (movimientos de los pads y la pelota) y mandará los datos procesados al cliente para que se muestren. </p>
+
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00058">58</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a class="anchor" id="a9b746858763b46d4e4019ead32c7870a"></a>
 <div class="memitem">
@@ -149,9 +158,11 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00037">37</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+<p>Constructor por defecto. </p>
 
-<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00062">fs</a>, <a class="el" href="network__struct_8h_source.html#l00063">marcador1</a>, <a class="el" href="network__struct_8h_source.html#l00063">marcador2</a>, <a class="el" href="network__struct_8h_source.html#l00060">pad1_y</a>, <a class="el" href="network__struct_8h_source.html#l00061">pad2_y</a>, <a class="el" href="network__struct_8h_source.html#l00059">pelota_x</a>, <a class="el" href="network__struct_8h_source.html#l00059">pelota_y</a> y <a class="el" href="network__struct_8h_source.html#l00064">sinUso</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00061">61</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00067">fs</a>, <a class="el" href="network__struct_8h_source.html#l00068">marcador1</a>, <a class="el" href="network__struct_8h_source.html#l00069">marcador2</a>, <a class="el" href="network__struct_8h_source.html#l00065">pad1_y</a>, <a class="el" href="network__struct_8h_source.html#l00066">pad2_y</a>, <a class="el" href="network__struct_8h_source.html#l00063">pelota_x</a>, <a class="el" href="network__struct_8h_source.html#l00064">pelota_y</a> y <a class="el" href="network__struct_8h_source.html#l00070">sinUso</a>.</p>
 
 </div>
 </div>
@@ -169,9 +180,12 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00078">78</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+<p>Obtener el puntero a <a class="el" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve el valor almacenado por <a class="el" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a> </dd></dl>
 
-<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00057">buffer</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00112">112</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00061">buffer</a>.</p>
 
 </div>
 </div>
@@ -188,9 +202,12 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00046">46</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+<p>Cargar los miembros en el buffer <a class="el" href="class_c_network___data___server.html#a1bc1503c895fff488c3e2586271a87f8">buffer</a>. </p>
+<p>Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación. </p>
 
-<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00057">buffer</a>, <a class="el" href="network__struct_8h_source.html#l00062">fs</a>, <a class="el" href="network__struct_8h_source.html#l00063">marcador1</a>, <a class="el" href="network__struct_8h_source.html#l00063">marcador2</a>, <a class="el" href="network__struct_8h_source.html#l00060">pad1_y</a>, <a class="el" href="network__struct_8h_source.html#l00061">pad2_y</a>, <a class="el" href="network__struct_8h_source.html#l00059">pelota_x</a>, <a class="el" href="network__struct_8h_source.html#l00059">pelota_y</a>, <a class="el" href="network__struct_8h_source.html#l00064">sinUso</a> y <a class="el" href="network__struct_8h_source.html#l00066">ticks</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00075">75</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00061">buffer</a>, <a class="el" href="network__struct_8h_source.html#l00067">fs</a>, <a class="el" href="network__struct_8h_source.html#l00068">marcador1</a>, <a class="el" href="network__struct_8h_source.html#l00069">marcador2</a>, <a class="el" href="network__struct_8h_source.html#l00065">pad1_y</a>, <a class="el" href="network__struct_8h_source.html#l00066">pad2_y</a>, <a class="el" href="network__struct_8h_source.html#l00063">pelota_x</a>, <a class="el" href="network__struct_8h_source.html#l00064">pelota_y</a>, <a class="el" href="network__struct_8h_source.html#l00070">sinUso</a> y <a class="el" href="network__struct_8h_source.html#l00072">ticks</a>.</p>
 
 </div>
 </div>
@@ -202,15 +219,24 @@ Atributos privados</h2></td></tr>
           <td class="memname">void CNetwork_Data_Server::readBuffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="globals_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00083">83</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+<p>Cargar datos miembros a partir de un buffer recibido. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Buffer de entrada.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Hace unas conversiones sencillas (desplazamiento de bits) para hacer la transformación. </p>
 
-<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00057">buffer</a>, <a class="el" href="network__struct_8h_source.html#l00062">fs</a>, <a class="el" href="network__struct_8h_source.html#l00063">marcador1</a>, <a class="el" href="network__struct_8h_source.html#l00063">marcador2</a>, <a class="el" href="network__struct_8h_source.html#l00060">pad1_y</a>, <a class="el" href="network__struct_8h_source.html#l00061">pad2_y</a>, <a class="el" href="network__struct_8h_source.html#l00059">pelota_x</a>, <a class="el" href="network__struct_8h_source.html#l00059">pelota_y</a>, <a class="el" href="network__struct_8h_source.html#l00064">sinUso</a> y <a class="el" href="network__struct_8h_source.html#l00066">ticks</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8cpp_source.html#l00125">125</a> del archivo <a class="el" href="network__struct_8cpp_source.html">network_struct.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="network__struct_8h_source.html#l00061">buffer</a>, <a class="el" href="network__struct_8h_source.html#l00067">fs</a>, <a class="el" href="network__struct_8h_source.html#l00068">marcador1</a>, <a class="el" href="network__struct_8h_source.html#l00069">marcador2</a>, <a class="el" href="network__struct_8h_source.html#l00065">pad1_y</a>, <a class="el" href="network__struct_8h_source.html#l00066">pad2_y</a>, <a class="el" href="network__struct_8h_source.html#l00063">pelota_x</a>, <a class="el" href="network__struct_8h_source.html#l00064">pelota_y</a>, <a class="el" href="network__struct_8h_source.html#l00070">sinUso</a> y <a class="el" href="network__struct_8h_source.html#l00072">ticks</a>.</p>
 
 </div>
 </div>
@@ -232,10 +258,11 @@ Atributos privados</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Buffer de caracteres (bytes) de tamaño <a class="el" href="globals_8h.html#a1343ed9aa4ab92e8d5e42ed55f4bb187" title="Suma de los miembros de CNetwork_Data_Server.">NET_MJ_SERVERDATA_SIZE</a> para enviar al cliente </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00057">57</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00061">61</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00078">getBuffer()</a>, <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00112">getBuffer()</a>, <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -248,10 +275,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Flags de sonido para que el cliente sepa cuando emitirlos </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00062">62</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00067">67</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00037">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00061">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -264,10 +292,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Puntuación del jugador 1(servidor) </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00063">63</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00068">68</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00037">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00061">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -280,10 +309,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Puntuación del jugador 2(cliente) </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00063">63</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00069">69</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00037">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00061">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -296,10 +326,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Posición vertical del pad del jugador 1(servidor) </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00060">60</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00065">65</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00037">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00061">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -312,10 +343,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Posición vertical del pad del jugador 2(cliente) </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00061">61</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00066">66</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00037">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00061">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -328,10 +360,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Posición horizontal de la pelota </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00059">59</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00063">63</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00037">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00061">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -344,10 +377,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Posición vertical de la pelota </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00059">59</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00064">64</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00037">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00061">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -360,10 +394,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Sin usar, para conseguir un número par de bytes </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00064">64</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00070">70</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00037">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00061">CNetwork_Data_Server()</a>, <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -376,10 +411,11 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Número de ticks del temporizador del servidor. El cliente lo utilizará para saber si debe recibir o enviar datos al servidor </p>
 
-<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00066">66</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
+<p>Definición en la línea <a class="el" href="network__struct_8h_source.html#l00072">72</a> del archivo <a class="el" href="network__struct_8h_source.html">network_struct.h</a>.</p>
 
-<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00046">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00083">readBuffer()</a>.</p>
+<p>Referenciado por <a class="el" href="network__struct_8cpp_source.html#l00075">makeBuffer()</a> y <a class="el" href="network__struct_8cpp_source.html#l00125">readBuffer()</a>.</p>
 
 </div>
 </div>
@@ -390,7 +426,7 @@ Atributos privados</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:27:00 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

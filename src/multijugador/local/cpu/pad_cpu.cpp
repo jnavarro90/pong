@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CPad_MJ_CPU
+ *
+ */
+
 #include "pad_cpu.h"
 
 CPad_MJ_CPU::CPad_MJ_CPU():CPad_MJ()
@@ -27,11 +33,22 @@ CPad_MJ_CPU::~CPad_MJ_CPU()
   momento = 0;
 }
 
+/**
+ * @brief Gestionar datos
+ *
+ * @param P Objeto del tipo CPelota_MJ_CPU para obtener las coordenadas del mismo.
+ *
+ * El pad debe coger la posición y la velocidad de la pelota para, tras una serie de cálculos,
+ * saber dónde impactará la pelota en el rango de alcance del pad de la cpu (por lo general,
+ * en el lado derecho). En la siguiente imagen se puede apreciar como se hace el cálculo:
+ *
+ * @image html cpu_1.png
+ */
 void CPad_MJ_CPU::mover(CPelota_MJ_CPU& P)
 {
-  // Primero, hallamos dónde impactará la pelota.
-  static int y;
-  float m;
+
+  static int y; // Primero, hallamos dónde impactará la pelota.
+  float m; // con ayuda de la "pendiente" que lleva la pelota en su traza de movimiento.
 
   if(P.getxVel() > 0)
   {
@@ -52,12 +69,9 @@ void CPad_MJ_CPU::mover(CPelota_MJ_CPU& P)
 	       }
 	     }
 	   }
-	   //if(y % 2 != 0) // Dado que los pads se mueven a una cierta velocidad, para evitar "vibraciones", hacemos que la posición sea múltiplo de la velocidad del pad
-      //y += 1;
-
 	   calcular = false;
 
-	   if(caja.y + caja.h/2 < y - 2) // evitar vibraciones
+	   if(caja.y + caja.h/2 < y - 2) // evitar vibraciones con un pequeño offset en el centro (-2)
 	   {
 	     caja.y += yVel;
 	     if(caja.y + caja.h > opciones->PANTALLA_ALTO - PANTALLA_MARGEN_SUPERIOR - TABLERO_LINEAS_GROSOR)
@@ -65,7 +79,7 @@ void CPad_MJ_CPU::mover(CPelota_MJ_CPU& P)
 	       caja.y -= yVel;
 	     }
     }
-    else if(caja.y + caja.h/2 > y + 2)
+    else if(caja.y + caja.h/2 > y + 2) // evitar vibraciones con un pequeño offset en el centro (+2)
     {
       caja.y -= yVel;
       if(caja.y < PANTALLA_MARGEN_INFERIOR + TABLERO_LINEAS_GROSOR)

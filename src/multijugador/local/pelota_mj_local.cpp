@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CPelota_MJ_Local
+ *
+ */
+
 #include "pelota_mj_local.h"
 
 CPelota_MJ_Local::CPelota_MJ_Local(): CPelota_MJ()

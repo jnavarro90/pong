@@ -108,8 +108,8 @@ Diagrama de herencias de CInstance</div>
 <area href="class_c_instance___menu___m_j.html" title="Clase que representa una estancia del menú multijugador." alt="CInstance_Menu_MJ" shape="rect" coords="193,224,376,248"/>
 <area href="class_c_instance___menu___m_j___online.html" title="Clase que representa una estancia del menú multijugador online." alt="CInstance_Menu_MJ_Online" shape="rect" coords="193,280,376,304"/>
 <area href="class_c_instance___menu___opciones.html" title="Clase que representa una estancia del menú de opciones." alt="CInstance_Menu_Opciones" shape="rect" coords="193,336,376,360"/>
-<area href="class_c_instance___m_j___c_p_u.html" alt="CInstance_MJ_CPU" shape="rect" coords="193,392,376,416"/>
-<area href="class_c_instance___m_j___local.html" alt="CInstance_MJ_Local" shape="rect" coords="193,448,376,472"/>
+<area href="class_c_instance___m_j___c_p_u.html" title="Clase de estancia para representar el modo de juego multijugador-cpu." alt="CInstance_MJ_CPU" shape="rect" coords="193,392,376,416"/>
+<area href="class_c_instance___m_j___local.html" title="Clase de estancia para representar el modo de juego multijugador-local." alt="CInstance_MJ_Local" shape="rect" coords="193,448,376,472"/>
 <area href="class_c_instance___m_j___online___client.html" alt="CInstance_MJ_Online_Client" shape="rect" coords="193,504,376,528"/>
 <area href="class_c_instance___m_j___online___server.html" alt="CInstance_MJ_Online_Server" shape="rect" coords="193,560,376,584"/>
 </map>
@@ -147,6 +147,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:a970597a9d40bb7b82cb578697d7e32ca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_instance.html#a970597a9d40bb7b82cb578697d7e32ca">OnRender</a> ()</td></tr>
 <tr class="memdesc:a970597a9d40bb7b82cb578697d7e32ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mostrar por <a class="el" href="globals_8h.html#a58be6bd8478a38995e6c3ce5161a9fbe">pantalla</a>.  <a href="#a970597a9d40bb7b82cb578697d7e32ca"></a><br/></td></tr>
 <tr class="separator:a970597a9d40bb7b82cb578697d7e32ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b44abe7dc4da248a77fe3127ff4d6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_instance.html#af8b44abe7dc4da248a77fe3127ff4d6b">OnDebug</a> ()</td></tr>
+<tr class="memdesc:af8b44abe7dc4da248a77fe3127ff4d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cosas a realizar si se está debugeando. Debería usarse con la definición de la macro DEBUG.  <a href="#af8b44abe7dc4da248a77fe3127ff4d6b"></a><br/></td></tr>
+<tr class="separator:af8b44abe7dc4da248a77fe3127ff4d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Atributos protegidos</h2></td></tr>
@@ -157,7 +160,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Clase base (abstracta) para derivar y declarar las diversas estancias del juego. </p>
-<p>Su unico propósito es dar un formato equivalente para todas las estancias, aunque no todas las funciones sea iguales. </p>
+<p>Su unico propósito es dar un formato equivalente para todas las estancias, aunque no todas las funciones sea iguales. Vea la clase <a class="el" href="class_c_engine.html" title="Clase principal del juego.">CEngine</a> para ver el funcionamiento de las estancias en el juego. </p>
 
 <p>Definición en la línea <a class="el" href="instance_8h_source.html#l00020">20</a> del archivo <a class="el" href="instance_8h_source.html">instance.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
@@ -239,7 +242,7 @@ Atributos protegidos</h2></td></tr>
 
 <p>Des-inicializador. </p>
 
-<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#ab13665e5835e11afa219c0ba1501d753">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#a29910c19fe4602123bf954e2bff21f4f">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#ae097a45e173055af3d8fdb51b87083ab">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a0ebb5b6a4b6fca7d951f10bfc1b6784e">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#a4f090a0ecbd953d5f5d9796f79645e13">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___menu___main.html#a41ceec75bfa5e9f16dd7178c717d2f93">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#aeb7fb1b31559cb6125082fdcddafd186">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#a55ac30ad2406acb9e6ee8cacd28f0777">CInstance_Menu_MJ</a>, <a class="el" href="class_c_instance___m_j___local.html#a3e4a0aae4a7559e144b8b24bc394c9e1">CInstance_MJ_Local</a> y <a class="el" href="class_c_instance___menu___opciones.html#ae9d5c107330cd0fecdf31d2ec8ecc057">CInstance_Menu_Opciones</a>.</p>
+<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#ab13665e5835e11afa219c0ba1501d753">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#a29910c19fe4602123bf954e2bff21f4f">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#ae097a45e173055af3d8fdb51b87083ab">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#a4f090a0ecbd953d5f5d9796f79645e13">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___m_j___local.html#a3e4a0aae4a7559e144b8b24bc394c9e1">CInstance_MJ_Local</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a0ebb5b6a4b6fca7d951f10bfc1b6784e">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___menu___main.html#a41ceec75bfa5e9f16dd7178c717d2f93">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#aeb7fb1b31559cb6125082fdcddafd186">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#a55ac30ad2406acb9e6ee8cacd28f0777">CInstance_Menu_MJ</a> y <a class="el" href="class_c_instance___menu___opciones.html#ae9d5c107330cd0fecdf31d2ec8ecc057">CInstance_Menu_Opciones</a>.</p>
 
 <p>Definición en la línea <a class="el" href="instance_8h_source.html#l00035">35</a> del archivo <a class="el" href="instance_8h_source.html">instance.h</a>.</p>
 
@@ -272,7 +275,7 @@ Atributos protegidos</h2></td></tr>
 <dl class="section return"><dt>Devuelve</dt><dd>Si todo se ha iniciado correctamente, devuelve true. En caso contrario, devuelve false</dd></dl>
 <p>Inicializa todo lo necesario para que la estancia funcione correctamente. Debe ser desinicializado poseriormente en <a class="el" href="class_c_instance.html#a0ee6f0f361c9f1db193ec03421f673b7" title="Des-inicializador.">Close()</a> </p>
 
-<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a9fee824dae659610683d3c6dd8a6df4c">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#ad70ffc0982244d4f8fce7dd55760b4ab">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a05210950b8b20656a11d98a8aa78b37e">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a20d8154d22782907a5533f351e3949f4">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#ab47faadcc1bee8f6b85c371932da85ce">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___menu___main.html#a60c1ddff079f0b99fe775aff53491347">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#a94c29a3a656fb44507c1f81bd4bdc043">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#af7ce0f61f9b984b4211fa46116c7dbf3">CInstance_Menu_MJ</a>, <a class="el" href="class_c_instance___m_j___local.html#a1c24a20a612af41748cf7c7203a824bd">CInstance_MJ_Local</a> y <a class="el" href="class_c_instance___menu___opciones.html#ad6cfd0c91fe9106d228a138e3c72888a">CInstance_Menu_Opciones</a>.</p>
+<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a9fee824dae659610683d3c6dd8a6df4c">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#ad70ffc0982244d4f8fce7dd55760b4ab">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a05210950b8b20656a11d98a8aa78b37e">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#ab47faadcc1bee8f6b85c371932da85ce">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___m_j___local.html#a1c24a20a612af41748cf7c7203a824bd">CInstance_MJ_Local</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a20d8154d22782907a5533f351e3949f4">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___menu___main.html#a60c1ddff079f0b99fe775aff53491347">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#a94c29a3a656fb44507c1f81bd4bdc043">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#af7ce0f61f9b984b4211fa46116c7dbf3">CInstance_Menu_MJ</a> y <a class="el" href="class_c_instance___menu___opciones.html#ad6cfd0c91fe9106d228a138e3c72888a">CInstance_Menu_Opciones</a>.</p>
 
 <p>Definición en la línea <a class="el" href="instance_8cpp_source.html#l00016">16</a> del archivo <a class="el" href="instance_8cpp_source.html">instance.cpp</a>.</p>
 
@@ -307,11 +310,40 @@ Atributos protegidos</h2></td></tr>
 <dl class="section return"><dt>Devuelve</dt><dd>Si todo se ha cargado correctamente, devuelve true. En caso contrario, devuelve false</dd></dl>
 <p>Carga todos los archivos necesarios. Llamado desde <a class="el" href="class_c_instance.html#aeccfa1ca16f2824d9991128785b931e3" title="Función de iniciación.">Init()</a> </p>
 
-<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a1fa997276ef42607832309f46c686dff">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#adf402d7ead84f0f592145dd73ee47ece">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a9852e4023184a999433138d8d70d44ac">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a8015356a993b4c1ea8983c06b40eda9d">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#a3af0d3ea6acfd727a1cdfbdb6d70dc5b">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___menu___main.html#a06e4e88a7cb4c0155b150f21cb6efca2">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#aa19f02bbea1926044b20ae8dff0d7723">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#a7c202881ca4acf477f95e11de0c9f4a8">CInstance_Menu_MJ</a>, <a class="el" href="class_c_instance___m_j___local.html#a00f02b47da8349b6fe68d8031e494a8e">CInstance_MJ_Local</a> y <a class="el" href="class_c_instance___menu___opciones.html#a4661e820eb37e7fb3c37ca662aee7672">CInstance_Menu_Opciones</a>.</p>
+<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a1fa997276ef42607832309f46c686dff">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#adf402d7ead84f0f592145dd73ee47ece">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a9852e4023184a999433138d8d70d44ac">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#a3af0d3ea6acfd727a1cdfbdb6d70dc5b">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___m_j___local.html#a00f02b47da8349b6fe68d8031e494a8e">CInstance_MJ_Local</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a8015356a993b4c1ea8983c06b40eda9d">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___menu___main.html#a06e4e88a7cb4c0155b150f21cb6efca2">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#aa19f02bbea1926044b20ae8dff0d7723">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#a7c202881ca4acf477f95e11de0c9f4a8">CInstance_Menu_MJ</a> y <a class="el" href="class_c_instance___menu___opciones.html#a4661e820eb37e7fb3c37ca662aee7672">CInstance_Menu_Opciones</a>.</p>
 
 <p>Definición en la línea <a class="el" href="instance_8cpp_source.html#l00030">30</a> del archivo <a class="el" href="instance_8cpp_source.html">instance.cpp</a>.</p>
 
 <p>Referenciado por <a class="el" href="instance_8cpp_source.html#l00016">Init()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af8b44abe7dc4da248a77fe3127ff4d6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CInstance::OnDebug </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cosas a realizar si se está debugeando. Debería usarse con la definición de la macro DEBUG. </p>
+
+<p>Definición en la línea <a class="el" href="instance_8h_source.html#l00050">50</a> del archivo <a class="el" href="instance_8h_source.html">instance.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="instance_8cpp_source.html#l00054">OnExecute()</a>.</p>
 
 </div>
 </div>
@@ -380,13 +412,13 @@ Atributos protegidos</h2></td></tr>
 <div class="line"><a class="code" href="class_c_instance.html#a0ee6f0f361c9f1db193ec03421f673b7" title="Des-inicializador.">Close</a>()           <span class="comment">// Cerrar</span></div>
 <div class="line">return estancia_siguiente;</div>
 </div><!-- fragment --> 
-<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a0ba78a93b9ed8bef3a1e73947457b3b4">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#ae61bf7f404f59e0fbc94311f5c05fbb3">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a52cdc10d009b14d6d64d00ecd23ac441">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a0f1d26950d2fa0f39efffc96419eff6c">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#aa32670493456eeada580c7c4eb9bf0b8">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___menu___main.html#a2a5077c1290d29f47228d57e0cd58c38">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#a9225296ea4dbbe739f4caf573410661b">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#aaf1d496f41cefbbbd984d8a54898bd71">CInstance_Menu_MJ</a>, <a class="el" href="class_c_instance___m_j___local.html#a982cc3802182ce041908e52935071733">CInstance_MJ_Local</a> y <a class="el" href="class_c_instance___menu___opciones.html#a51b17ca8a995d3c630e62f3aa97f1e87">CInstance_Menu_Opciones</a>.</p>
+<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a0ba78a93b9ed8bef3a1e73947457b3b4">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#ae61bf7f404f59e0fbc94311f5c05fbb3">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a52cdc10d009b14d6d64d00ecd23ac441">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#aa32670493456eeada580c7c4eb9bf0b8">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___m_j___local.html#a982cc3802182ce041908e52935071733">CInstance_MJ_Local</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a0f1d26950d2fa0f39efffc96419eff6c">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___menu___main.html#a2a5077c1290d29f47228d57e0cd58c38">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#a9225296ea4dbbe739f4caf573410661b">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#aaf1d496f41cefbbbd984d8a54898bd71">CInstance_Menu_MJ</a> y <a class="el" href="class_c_instance___menu___opciones.html#a51b17ca8a995d3c630e62f3aa97f1e87">CInstance_Menu_Opciones</a>.</p>
 
 <p>Definición en la línea <a class="el" href="instance_8cpp_source.html#l00054">54</a> del archivo <a class="el" href="instance_8cpp_source.html">instance.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="instance_8h_source.html#l00035">Close()</a>, <a class="el" href="globals_8cpp_source.html#l00011">event</a>, <a class="el" href="instance_8h_source.html#l00024">i_running</a>, <a class="el" href="globals_8h_source.html#l00105">I_SALIDA</a>, <a class="el" href="instance_8cpp_source.html#l00016">Init()</a>, <a class="el" href="instance_8h_source.html#l00044">OnEvent()</a>, <a class="el" href="instance_8h_source.html#l00042">OnLoop()</a> y <a class="el" href="instance_8h_source.html#l00046">OnRender()</a>.</p>
+<p>Hace referencia a <a class="el" href="instance_8h_source.html#l00035">Close()</a>, <a class="el" href="globals_8cpp_source.html#l00011">event</a>, <a class="el" href="instance_8h_source.html#l00024">i_running</a>, <a class="el" href="globals_8h_source.html#l00102">I_SALIDA</a>, <a class="el" href="instance_8cpp_source.html#l00016">Init()</a>, <a class="el" href="instance_8h_source.html#l00050">OnDebug()</a>, <a class="el" href="instance_8h_source.html#l00044">OnEvent()</a>, <a class="el" href="instance_8h_source.html#l00042">OnLoop()</a> y <a class="el" href="instance_8h_source.html#l00046">OnRender()</a>.</p>
 
-<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00181">CEngine::OnExecute()</a>.</p>
+<p>Referenciado por <a class="el" href="engine_8cpp_source.html#l00210">CEngine::OnExecute()</a>.</p>
 
 </div>
 </div>
@@ -444,7 +476,7 @@ Atributos protegidos</h2></td></tr>
 
 <p>Mostrar por <a class="el" href="globals_8h.html#a58be6bd8478a38995e6c3ce5161a9fbe">pantalla</a>. </p>
 
-<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a2cc66e618af4a122ea100f92f2d7fad0">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#a16cbe361501fd8a3de9668f6bb354360">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a6ef7b1a9fef2510a2833b904672cfa23">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#aacf0d4375a417701a2d1d0f9a64e8dae">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#add9537fa90d7c94f9b68664756cb6dec">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___menu___main.html#a4f18d4f36e9f07f95d4b2a3787da80e0">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#afc0f12732666e3a1b677cc7c323531a4">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#a2242e3c67fef88c64d1f5a7748deac02">CInstance_Menu_MJ</a>, <a class="el" href="class_c_instance___m_j___local.html#a8527c7f7a198454bcf9f5b10c0e9a20d">CInstance_MJ_Local</a> y <a class="el" href="class_c_instance___menu___opciones.html#abaebf1d1b6b24ed74d1bb9043677abcf">CInstance_Menu_Opciones</a>.</p>
+<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a2cc66e618af4a122ea100f92f2d7fad0">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#a16cbe361501fd8a3de9668f6bb354360">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a6ef7b1a9fef2510a2833b904672cfa23">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#add9537fa90d7c94f9b68664756cb6dec">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___m_j___local.html#a8527c7f7a198454bcf9f5b10c0e9a20d">CInstance_MJ_Local</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#aacf0d4375a417701a2d1d0f9a64e8dae">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___menu___main.html#a4f18d4f36e9f07f95d4b2a3787da80e0">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#afc0f12732666e3a1b677cc7c323531a4">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#a2242e3c67fef88c64d1f5a7748deac02">CInstance_Menu_MJ</a> y <a class="el" href="class_c_instance___menu___opciones.html#abaebf1d1b6b24ed74d1bb9043677abcf">CInstance_Menu_Opciones</a>.</p>
 
 <p>Definición en la línea <a class="el" href="instance_8h_source.html#l00046">46</a> del archivo <a class="el" href="instance_8h_source.html">instance.h</a>.</p>
 
@@ -475,7 +507,7 @@ Atributos protegidos</h2></td></tr>
 
 <p>Des-cargador de archivos. </p>
 
-<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a45f0b2e8e9348a6001185a449be7f92b">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#a70b9b9843fa13840e14cb52253ce50e2">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a90e8c10d1b6c9f264cbab55987cfbf58">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a01588450dd32728aeffe421bf2bcf539">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#a744fe14fe77bcc7414b9817761563816">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___menu___main.html#adb95bfaddfe74214c5d912e8ea4cb605">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#ad4bbdf007191c120661059e7d501343f">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#a0fddbfa5d5b48518a85e72003c19b7f1">CInstance_Menu_MJ</a>, <a class="el" href="class_c_instance___m_j___local.html#aa82782248f49d9419de29f32dd3798c1">CInstance_MJ_Local</a> y <a class="el" href="class_c_instance___menu___opciones.html#af11e480d3c11b2a5f1150990a8b0761d">CInstance_Menu_Opciones</a>.</p>
+<p>Reimplementado en <a class="el" href="class_c_instance___m_j___online___server.html#a45f0b2e8e9348a6001185a449be7f92b">CInstance_MJ_Online_Server</a>, <a class="el" href="class_c_instance___m_j___online___client.html#a70b9b9843fa13840e14cb52253ce50e2">CInstance_MJ_Online_Client</a>, <a class="el" href="class_c_instance___menu___m_j___online.html#a90e8c10d1b6c9f264cbab55987cfbf58">CInstance_Menu_MJ_Online</a>, <a class="el" href="class_c_instance___m_j___c_p_u.html#a744fe14fe77bcc7414b9817761563816">CInstance_MJ_CPU</a>, <a class="el" href="class_c_instance___m_j___local.html#aa82782248f49d9419de29f32dd3798c1">CInstance_MJ_Local</a>, <a class="el" href="class_c_instance__1_j___i_n_f.html#a01588450dd32728aeffe421bf2bcf539">CInstance_1J_INF</a>, <a class="el" href="class_c_instance___menu___main.html#adb95bfaddfe74214c5d912e8ea4cb605">CInstance_Menu_Main</a>, <a class="el" href="class_c_instance___menu__1_j.html#ad4bbdf007191c120661059e7d501343f">CInstance_Menu_1J</a>, <a class="el" href="class_c_instance___menu___m_j.html#a0fddbfa5d5b48518a85e72003c19b7f1">CInstance_Menu_MJ</a> y <a class="el" href="class_c_instance___menu___opciones.html#af11e480d3c11b2a5f1150990a8b0761d">CInstance_Menu_Opciones</a>.</p>
 
 <p>Definición en la línea <a class="el" href="instance_8h_source.html#l00037">37</a> del archivo <a class="el" href="instance_8h_source.html">instance.h</a>.</p>
 
@@ -539,7 +571,7 @@ Atributos protegidos</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:27:00 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

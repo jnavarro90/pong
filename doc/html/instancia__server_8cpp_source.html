@@ -167,14 +167,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">  marcador = new CMarcador(ttf_bitM, &amp;color_blanco);*/</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  tcpclient = <span class="keyword">new</span> <a class="code" href="class_c_client_socket.html" title="Clase que representa el socket cliente (local) de la conexión.">CClientSocket</a>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  tcplistener = <span class="keyword">new</span> <a class="code" href="class_c_host_socket.html" title="Clase que representa el socket remoto de la conexión.">CHostSocket</a>(<a class="code" href="globals_8h.html#ac626e65a89ccd8469bd55eec597833e8">NET_MJ_PORT</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  tcplistener = <span class="keyword">new</span> <a class="code" href="class_c_host_socket.html" title="Clase que representa el socket remoto de la conexión.">CHostSocket</a>(<a class="code" href="globals_8h.html#ac626e65a89ccd8469bd55eec597833e8" title="Puerto a utilizar en la conexión del modo multijugador-online.">NET_MJ_PORT</a>);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  datos_server = <span class="keyword">new</span> <a class="code" href="class_c_network___data___server.html">CNetwork_Data_Server</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  datos_cliente = <span class="keyword">new</span> <a class="code" href="class_c_network___data___client.html">CNetwork_Data_Client</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  datos_server = <span class="keyword">new</span> <a class="code" href="class_c_network___data___server.html" title="Estructura de datos a mandar desde el servidor al cliente.">CNetwork_Data_Server</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  datos_cliente = <span class="keyword">new</span> <a class="code" href="class_c_network___data___client.html" title="Estructura de datos a mandar desde el cliente al servidor.">CNetwork_Data_Client</a>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  msgC = <span class="keyword">new</span> <a class="code" href="class_c_net_message_n.html" title="Clase para mensajes de red de N bytes.">CNetMessageN</a>(<a class="code" href="globals_8h.html#a0f610c595c7472387e5fc7b060c52cf8">NET_MJ_CLIENTDATA_SIZE</a>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  msgC = <span class="keyword">new</span> <a class="code" href="class_c_net_message_n.html" title="Clase para mensajes de red de N bytes.">CNetMessageN</a>(<a class="code" href="globals_8h.html#a0f610c595c7472387e5fc7b060c52cf8" title="Suma de los miembros de CNetwork_Data_Client.">NET_MJ_CLIENTDATA_SIZE</a>);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">//msgS = new CNetMessage12;</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  msgS = <span class="keyword">new</span> <a class="code" href="class_c_net_message_n.html" title="Clase para mensajes de red de N bytes.">CNetMessageN</a>(<a class="code" href="globals_8h.html#a1343ed9aa4ab92e8d5e42ed55f4bb187">NET_MJ_SERVERDATA_SIZE</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  msgS = <span class="keyword">new</span> <a class="code" href="class_c_net_message_n.html" title="Clase para mensajes de red de N bytes.">CNetMessageN</a>(<a class="code" href="globals_8h.html#a1343ed9aa4ab92e8d5e42ed55f4bb187" title="Suma de los miembros de CNetwork_Data_Server.">NET_MJ_SERVERDATA_SIZE</a>);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  SDL_Rect caja = {100, 200, 180, 25};</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
@@ -222,7 +222,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="comment">// Escribir texto</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  stringstream ss;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  ss &lt;&lt; <span class="stringliteral">&quot;Esperando conexión del cliente en el puerto &quot;</span> &lt;&lt; <a class="code" href="globals_8h.html#ac626e65a89ccd8469bd55eec597833e8">NET_MJ_PORT</a> &lt;&lt; <span class="stringliteral">&quot;...&quot;</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  ss &lt;&lt; <span class="stringliteral">&quot;Esperando conexión del cliente en el puerto &quot;</span> &lt;&lt; <a class="code" href="globals_8h.html#ac626e65a89ccd8469bd55eec597833e8" title="Puerto a utilizar en la conexión del modo multijugador-online.">NET_MJ_PORT</a> &lt;&lt; <span class="stringliteral">&quot;...&quot;</span>;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  SDL_Color texto_color = {255, 255, 255, 0};</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  SDL_Surface* texto_connect = TTF_RenderText_Blended(<a class="code" href="globals_8cpp.html#a4abc73abc5bb8be9d8bdb55118857120">ttf_consolas</a>, ss.str().c_str(), texto_color);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <a class="code" href="globals_8cpp.html#ae60125b1d93b5c42be907712c0dd68a7">aplicar_superficie</a>(80, 180, texto_connect, fondo_menu);</div>
@@ -236,7 +236,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  PJ1 = <span class="keyword">new</span> <a class="code" href="class_c_pad___m_j___online.html">CPad_MJ_Online</a> (<a class="code" href="pad__mj__online_8h.html#af5bc57ef0ec2bb356f493207a534bbc2a076b4a12af10603ab565d1ac5669a947">izq</a>, SDLK_w, SDLK_s);</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  PJ2 = <span class="keyword">new</span> <a class="code" href="class_c_pad___m_j___online___zombi.html">CPad_MJ_Online_Zombi</a>(<a class="code" href="pad__mj__online_8h.html#af5bc57ef0ec2bb356f493207a534bbc2aec70b27c1b981a00258514467a8788a7">der</a>);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  pelota = <span class="keyword">new</span> <a class="code" href="class_c_pelota___m_j___online.html">CPelota_MJ_Online</a>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  marcador = <span class="keyword">new</span> <a class="code" href="class_c_marcador.html">CMarcador</a>(<a class="code" href="globals_8cpp.html#af0c08c970d3c7db160e52ea60722d0de">ttf_bitM</a>, &amp;color_blanco);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  marcador = <span class="keyword">new</span> <a class="code" href="class_c_marcador.html" title="Clase para representar un marcador.">CMarcador</a>(<a class="code" href="globals_8cpp.html#af0c08c970d3c7db160e52ea60722d0de">ttf_bitM</a>, &amp;color_blanco);</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno"><a class="code" href="class_c_instance___m_j___online___server.html#ab13665e5835e11afa219c0ba1501d753">  151</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_instance___m_j___online___server.html#ab13665e5835e11afa219c0ba1501d753" title="Des-inicializador.">CInstance_MJ_Online_Server::Close</a>()</div>
@@ -316,11 +316,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="comment">// Enviar la configuración al cliente</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="comment">//CNetMessage12 msg_settings;</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <a class="code" href="class_c_net_message_n.html" title="Clase para mensajes de red de N bytes.">CNetMessageN</a> msg_settings(<a class="code" href="globals_8h.html#a4b8c1970483989f795ef6a7ab33905d6">NET_MJ_SETTINGS_SIZE</a>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <a class="code" href="class_c_net_message_n.html" title="Clase para mensajes de red de N bytes.">CNetMessageN</a> msg_settings(<a class="code" href="globals_8h.html#a4b8c1970483989f795ef6a7ab33905d6" title="Suma de los miembros de CNetwork_Data_Settings.">NET_MJ_SETTINGS_SIZE</a>);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <a class="code" href="class_c_network___data___settings.html">CNetwork_Data_Settings</a> network_data_settings;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      network_data_settings.<a class="code" href="class_c_network___data___settings.html#aecddfedd66150b32bb065d7f51702e49">makeBuffer</a>();</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      msg_settings.<a class="code" href="class_c_net_message_n.html#a94af2d31e9382d9c6b984961fbfa4300" title="Cargador del buffer.">LoadNBytes</a>(network_data_settings.<a class="code" href="class_c_network___data___settings.html#a240fab79764af5f87457628a726402d4">getBuffer</a>());</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <a class="code" href="class_c_network___data___settings.html" title="Estructura de datos a mandar desde el servidor al cliente al principio, que contendrá las opciones de...">CNetwork_Data_Settings</a> network_data_settings;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      network_data_settings.<a class="code" href="class_c_network___data___settings.html#aecddfedd66150b32bb065d7f51702e49" title="Cargar los miembros en el buffer buffer.">makeBuffer</a>();</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      msg_settings.<a class="code" href="class_c_net_message_n.html#a94af2d31e9382d9c6b984961fbfa4300" title="Cargador del buffer.">LoadNBytes</a>(network_data_settings.<a class="code" href="class_c_network___data___settings.html#a240fab79764af5f87457628a726402d4" title="Obtener el puntero a buffer.">getBuffer</a>());</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordflow">if</span>(tcpclient-&gt;Send(msg_settings))</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      {</div>
@@ -449,7 +449,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      <span class="keywordflow">if</span>(tcpclient-&gt;Receive(*msgC))</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      {</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="comment">// Recibir datos del client (estructura network_struct_client_t)</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordtype">char</span> buffer[<a class="code" href="globals_8h.html#a0f610c595c7472387e5fc7b060c52cf8">NET_MJ_CLIENTDATA_SIZE</a>];</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordtype">char</span> buffer[<a class="code" href="globals_8h.html#a0f610c595c7472387e5fc7b060c52cf8" title="Suma de los miembros de CNetwork_Data_Client.">NET_MJ_CLIENTDATA_SIZE</a>];</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        msgC-&gt;UnLoadNBytes(buffer);</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        datos_cliente-&gt;readBuffer(buffer);</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      }</div>
@@ -533,7 +533,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 23 de Abril de 2013 20:26:59 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 26 de Abril de 2013 22:43:12 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
