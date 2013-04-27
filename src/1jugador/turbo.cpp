@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief Definición de CTurbo
+ * @brief Definicion de CTurbo
  */
 
 #include "turbo.h"

@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Definición de CInstance_Menu_1J
+ *
+ * Para más información sobre el funcionamiento de las estancias, vea las clases CInstance_Menu_Main, CInstance, CEngine, CMenu y CBoton.
+ * Un ejemplo del menú, con un diseño minimalista, es el siguiente:
+ *
+ * @image html menu_1.png
+ */
+
+
 #include "instance_menu_1j.h"
 
 const int FRAMES_PER_SECOND = 60;

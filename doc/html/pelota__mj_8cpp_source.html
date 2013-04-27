@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="class_c_pelota___m_j.html#ade8732119ed3801503177ff9e6921817">   10</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_pelota___m_j.html#ade8732119ed3801503177ff9e6921817" title="Mover la pelota.">CPelota_MJ::mover</a>(<a class="code" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a> A, <a class="code" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a> B)</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_c_pelota___m_j.html#a663029e5e41ce06e8aab2e77ab73ce6d">stop</a>)</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2eaece5949385cea0f4d115df3d2085aab6">partido_jugando</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">// pq no se mueve?</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a11b0d29582036200a6f34c8ec5b08763">x</a> += <a class="code" href="class_c_pelota___m_j.html#a7927c72129b6bb5d3ed08c45ed6e9134">xVel</a>;</div>
@@ -105,21 +105,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a11b0d29582036200a6f34c8ec5b08763">x</a> = 0;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_c_pelota___m_j.html#a663029e5e41ce06e8aab2e77ab73ce6d">stop</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Mix_PlayChannel( -1, <a class="code" href="globals_8cpp.html#a49a1a9570706ece8090125625c2e107a">snd_pung</a>, 0 );</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2ea400aa763c17e37dc4c34e45cc1ffd092">partido_ganaJ2</a>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a11b0d29582036200a6f34c8ec5b08763">x</a> + <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">w</a> &gt;= <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a37b5e119019fc33db3efe9c5b59543b7">PANTALLA_ANCHO</a>) <span class="comment">// Gana el pad izq (j1)</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#a11b0d29582036200a6f34c8ec5b08763">x</a> = <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a37b5e119019fc33db3efe9c5b59543b7">PANTALLA_ANCHO</a> - <a class="code" href="opciones_8cpp.html#a7f722e3e294cefe6493b795a9df98467">opciones</a>-&gt;<a class="code" href="class_c_opciones.html#a47102f4c6f1058195e8990733be5284f">PELOTA_ANCHO</a>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_c_pelota___m_j.html#a663029e5e41ce06e8aab2e77ab73ce6d">stop</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Mix_PlayChannel( -1, <a class="code" href="globals_8cpp.html#a49a1a9570706ece8090125625c2e107a">snd_pung</a>, 0 );</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2ea277824558c9d287c7e71504784733456">partido_ganaJ1</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// Si la pelota está bloqueada, ignora a los rebotes con los pads. La partida sigue en curso hasta que toque un borde.</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// También ignora el movimiento vertical.</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_c_pelota___m_j.html#a1c80c7b0815c85c06b77a856f0cbf85b">lock</a>)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_c_pelota___m_j.html#a165892581a754e8a7eadd0e6156ed03c">yVel</a> = 0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2eaece5949385cea0f4d115df3d2085aab6">partido_jugando</a>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.<a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a> += <a class="code" href="class_c_pelota___m_j.html#a165892581a754e8a7eadd0e6156ed03c">yVel</a>;</div>
@@ -171,14 +171,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      Mix_PlayChannel( -1, <a class="code" href="globals_8cpp.html#ac07663d0d9a7e19ed85e62d73cfd804d">snd_pong</a>, 0 );</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2eaece5949385cea0f4d115df3d2085aab6">partido_jugando</a>;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 26 de Abril de 2013 22:43:12 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Sábado, 27 de Abril de 2013 18:29:32 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

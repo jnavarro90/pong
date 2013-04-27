@@ -89,37 +89,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="title">pelota_mj_online.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="pelota__mj__online_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PELOTA_MJ_ONLINE_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PELOTA_MJ_ONLINE_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../pelota_mj.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pad__mj__online_8h.html">pad_mj_online.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../../opciones/opciones.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="class_c_pelota___m_j___online.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_pelota___m_j___online.html">CPelota_MJ_Online</a>: <span class="keyword">public</span> <a class="code" href="class_c_pelota___m_j.html" title="Clase abstracta para clases CPelota a nivel de multijugador.">CPelota_MJ</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_c_pelota___m_j___online.html#a56024ff802b22e558d140b0b2519ed2f">CPelota_MJ_Online</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_c_pelota___m_j___online.html#a8bde79ba84d05b3eea2219015178f6cb">empezar</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;       <span class="keywordtype">int</span> <a class="code" href="class_c_pelota___m_j___online.html#a820d6d010b35960cfa12261ec2af72c5">mover</a>(<a class="code" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a>&amp; PJ1, <a class="code" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a>&amp; PJ2, <a class="code" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a>&amp; f);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_c_pelota___m_j___online___client.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_pelota___m_j___online___client.html">CPelota_MJ_Online_Client</a>: <span class="keyword">public</span> <a class="code" href="class_c_pelota.html" title="Clase abstracta para definir la pelota de cualquier modo de juego.">CPelota</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="class_c_pelota___m_j___online___client.html#ac2d5a052a684927d58ec3c2be70b6ea6">   21</a></span>&#160;    <a class="code" href="class_c_pelota___m_j___online___client.html#ac2d5a052a684927d58ec3c2be70b6ea6">CPelota_MJ_Online_Client</a>(): <a class="code" href="class_c_pelota.html" title="Clase abstracta para definir la pelota de cualquier modo de juego.">CPelota</a>(){};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_pelota___m_j___online___client.html#a5f60dfcee1a70d7b302f545d31f375e9">setXY</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PELOTA_MJ_ONLINE_H_ */</span><span class="preprocessor"></span></div>
+<a href="pelota__mj__online_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef PELOTA_MJ_ONLINE_H_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PELOTA_MJ_ONLINE_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pad__mj__online_8h.html" title="Declaración de CPad_MJ_Online, CPad_MJ_Online_Zombi, CPad_MJ_Online_Client y CPad_MJ_Online_Client_Zo...">pad_mj_online.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="network__struct_8h.html" title="Declaración de CNetwork_Data_Client, CNetwork_Data_Server y CNetwork_Data_Settings.">network_struct.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../pelota_mj.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../../opciones/opciones.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="class_c_pelota___m_j___online.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_pelota___m_j___online.html" title="Clase para representar la pelota del modo de juego multijugador-online desde el servidor.">CPelota_MJ_Online</a>: <span class="keyword">public</span> <a class="code" href="class_c_pelota___m_j.html" title="Clase abstracta para clases CPelota a nivel de multijugador.">CPelota_MJ</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_c_pelota___m_j___online.html#a56024ff802b22e558d140b0b2519ed2f" title="Constructor principal.">CPelota_MJ_Online</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_c_pelota___m_j___online.html#a8bde79ba84d05b3eea2219015178f6cb" title="Iniciar la pelota.">empezar</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;       <span class="keywordtype">int</span> <a class="code" href="class_c_pelota___m_j___online.html#a820d6d010b35960cfa12261ec2af72c5" title="Función de movimiento de la pelota.">mover</a>(<a class="code" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a>&amp; PJ1, <a class="code" href="class_c_pad.html" title="Clase general para definir los diversos pads.">CPad</a>&amp; PJ2, <a class="code" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a>&amp; f);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="class_c_pelota___m_j___online___client.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_pelota___m_j___online___client.html" title="Clase para representar la pelota del modo de juego multijugador-online desde el cliente.">CPelota_MJ_Online_Client</a>: <span class="keyword">public</span> <a class="code" href="class_c_pelota.html" title="Clase abstracta para definir la pelota de cualquier modo de juego.">CPelota</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="class_c_pelota___m_j___online___client.html#ac2d5a052a684927d58ec3c2be70b6ea6">   44</a></span>&#160;    <a class="code" href="class_c_pelota___m_j___online___client.html#ac2d5a052a684927d58ec3c2be70b6ea6" title="Constructor vacío.">CPelota_MJ_Online_Client</a>(): <a class="code" href="class_c_pelota.html" title="Clase abstracta para definir la pelota de cualquier modo de juego.">CPelota</a>(){};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_pelota___m_j___online___client.html#a5f60dfcee1a70d7b302f545d31f375e9" title="Cambiar la posición de la pelota.">setXY</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PELOTA_MJ_ONLINE_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 26 de Abril de 2013 22:43:12 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Sábado, 27 de Abril de 2013 18:29:32 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

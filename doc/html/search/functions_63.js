@@ -43,10 +43,10 @@ var searchData=
   ['cpad_5fmj',['CPad_MJ',['../class_c_pad___m_j.html#adb8150177d1b0026df54ce867e240d3c',1,'CPad_MJ']]],
   ['cpad_5fmj_5fcpu',['CPad_MJ_CPU',['../class_c_pad___m_j___c_p_u.html#a1d79ad0672a86f860f87b417dd33663a',1,'CPad_MJ_CPU']]],
   ['cpad_5fmj_5flocal',['CPad_MJ_Local',['../class_c_pad___m_j___local.html#ad99605a07252c4e193949e928336af6c',1,'CPad_MJ_Local']]],
-  ['cpad_5fmj_5fonline',['CPad_MJ_Online',['../class_c_pad___m_j___online.html#a27d654b24f5cd39a8cd719962201c484',1,'CPad_MJ_Online']]],
-  ['cpad_5fmj_5fonline_5fclient',['CPad_MJ_Online_Client',['../class_c_pad___m_j___online___client.html#a1bdd80d41a77e49926a0b6fab73ff501',1,'CPad_MJ_Online_Client']]],
-  ['cpad_5fmj_5fonline_5fclient_5fzombi',['CPad_MJ_Online_Client_Zombi',['../class_c_pad___m_j___online___client___zombi.html#ac1fed9e92959540ce36ffe19753cde34',1,'CPad_MJ_Online_Client_Zombi']]],
-  ['cpad_5fmj_5fonline_5fzombi',['CPad_MJ_Online_Zombi',['../class_c_pad___m_j___online___zombi.html#adddcffc331fa697812af1d1ad74630d6',1,'CPad_MJ_Online_Zombi']]],
+  ['cpad_5fmj_5fonline',['CPad_MJ_Online',['../class_c_pad___m_j___online.html#a850c2a6f2c7ec4abd50bc5299b2bbaa2',1,'CPad_MJ_Online']]],
+  ['cpad_5fmj_5fonline_5fclient',['CPad_MJ_Online_Client',['../class_c_pad___m_j___online___client.html#af7a683c3644cde48b06e631e8f0877f7',1,'CPad_MJ_Online_Client']]],
+  ['cpad_5fmj_5fonline_5fclient_5fzombi',['CPad_MJ_Online_Client_Zombi',['../class_c_pad___m_j___online___client___zombi.html#a1767006642b2804ecd91b9659cc4c873',1,'CPad_MJ_Online_Client_Zombi']]],
+  ['cpad_5fmj_5fonline_5fzombi',['CPad_MJ_Online_Zombi',['../class_c_pad___m_j___online___zombi.html#a51293d50b417bd4940bc5bd9d19d476d',1,'CPad_MJ_Online_Zombi']]],
   ['cparticula',['CParticula',['../class_c_particula.html#a88620766bb8f2d0a763946d95340b374',1,'CParticula']]],
   ['cpelota',['CPelota',['../class_c_pelota.html#a0b774dea23a729038f497869e428f46f',1,'CPelota']]],
   ['cpelota_5f1j_5finf',['CPelota_1J_INF',['../class_c_pelota__1_j___i_n_f.html#aa5c8038cfd9af475da9e71e9b4bd22b3',1,'CPelota_1J_INF']]],
@@ -59,7 +59,7 @@ var searchData=
   ['ctablero',['CTablero',['../class_c_tablero.html#a3f74405e327b45c8187bdf2cc4eee98d',1,'CTablero']]],
   ['ctcpsocket',['CTcpSocket',['../class_c_tcp_socket.html#a39652856b50f6b09dc0114e1919b9b44',1,'CTcpSocket']]],
   ['cteclado',['CTeclado',['../class_c_teclado.html#a81a44e231e6fa46df466bcb8d540d346',1,'CTeclado::CTeclado()'],['../class_c_teclado.html#a66d9a97f9ec3d73aa73c31c740f1db2d',1,'CTeclado::CTeclado(const char *fuente, uint tam, SDL_Color *color, int ax, int ay, uint l=16)']]],
-  ['ctecladoip',['CTecladoIP',['../class_c_teclado_i_p.html#a0875e9e8d76a777c8553444e88d80b40',1,'CTecladoIP']]],
+  ['ctecladoip',['CTecladoIP',['../class_c_teclado_i_p.html#a2c2d1262afc1e9fb442a9d8a12c7dbc1',1,'CTecladoIP']]],
   ['ctemporizador',['CTemporizador',['../class_c_temporizador.html#a61f9fa5fb1e49e13de464d7623a35c8b',1,'CTemporizador']]],
   ['cwarning',['CWarning',['../class_c_warning.html#aee66b57a33231fb0e44ed5f6fe3223e6',1,'CWarning']]]
 ];

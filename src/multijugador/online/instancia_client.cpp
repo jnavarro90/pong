@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CInstance_MJ_Online_Client
+ *
+ */
+
 #include "instancia.h"
 
 #include "../../temporizador.h"
@@ -95,7 +101,7 @@ bool CInstance_MJ_Online_Client::Init()
   botones[1] = CBoton(ttf_consolas, &color_negro, &color_blanco, &cajas, "Atras");
   menu = new CMenu(botones, 2);
 
-  entradaTeclado = new CTecladoIP("media/ttf/consolab.ttf", 30, &color_blanco, 95, 135, 16);
+  entradaTeclado = new CTecladoIP("media/ttf/consolab.ttf", 30, &color_blanco, 95, 135);
 
   // Warnings
   wrConectando = new CWarning(ttf_consolas, "Conectando...", &color_blanco);

@@ -15,6 +15,9 @@
 #ifndef PELOTA_MJ_LOCAL_H_
 #define PELOTA_MJ_LOCAL_H_
 
+/**
+ * @brief Identificador de quién fue el último en marcar un punto.
+ */
 enum gamepoint_pj_t {gamepoint_pj1 = 0, gamepoint_pj2};
 
 

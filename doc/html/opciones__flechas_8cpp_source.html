@@ -89,50 +89,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="title">opciones_flechas.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="opciones__flechas_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * opciones_flechas.cpp</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: 11/04/2013</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: Dani</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<a href="opciones__flechas_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="opciones__flechas_8h.html" title="Sin implementar.">opciones_flechas.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="opciones__flechas_8h.html">opciones_flechas.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*class COpciones_Flechas</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">{</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">  private:</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    SDL_Surface* fondo;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    SDL_Surface* texto;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    int val_min;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    int val_max;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    int&amp; val_actual;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">  public:</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    COpciones_Flechas(int val_min, int val_max, int&amp; val_actual);</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    ~COpciones_Flechas();</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    void eventuar();</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    void mostrar();</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">};*/</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="class_c_opciones___flechas.html#a98b9dc787f8ba2eb6a4f6b4d36f212fb">   28</a></span>&#160;<a class="code" href="class_c_opciones___flechas.html#a98b9dc787f8ba2eb6a4f6b4d36f212fb">COpciones_Flechas::COpciones_Flechas</a>(TTF_Font* f, <span class="keywordtype">int</span> v_min, <span class="keywordtype">int</span> v_max, <span class="keywordtype">int</span>&amp; v_actual):</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   fuente(f), val_min(v_min), val_max(v_max), val_actual(v_actual)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="class_c_opciones___flechas.html#ae967b44ced15396fc1f3f2448aff890b">fondo</a> = NULL;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="class_c_opciones___flechas.html#a57c0d2da383d5f35274bb88c06a17cd7">texto</a> = NULL;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="class_c_opciones___flechas.html#a93f4f956fd9adebf8b7311b84a23465a">   35</a></span>&#160;<a class="code" href="class_c_opciones___flechas.html#a93f4f956fd9adebf8b7311b84a23465a">COpciones_Flechas::~COpciones_Flechas</a>()</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  SDL_FreeSurface(<a class="code" href="class_c_opciones___flechas.html#ae967b44ced15396fc1f3f2448aff890b">fondo</a>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  SDL_FreeSurface(<a class="code" href="class_c_opciones___flechas.html#a57c0d2da383d5f35274bb88c06a17cd7">texto</a>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="class_c_opciones___flechas.html#a98b9dc787f8ba2eb6a4f6b4d36f212fb">    8</a></span>&#160;<a class="code" href="class_c_opciones___flechas.html#a98b9dc787f8ba2eb6a4f6b4d36f212fb">COpciones_Flechas::COpciones_Flechas</a>(TTF_Font* f, <span class="keywordtype">int</span> v_min, <span class="keywordtype">int</span> v_max, <span class="keywordtype">int</span>&amp; v_actual):</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;   fuente(f), val_min(v_min), val_max(v_max), val_actual(v_actual)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="class_c_opciones___flechas.html#ae967b44ced15396fc1f3f2448aff890b">fondo</a> = NULL;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="class_c_opciones___flechas.html#a57c0d2da383d5f35274bb88c06a17cd7">texto</a> = NULL;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_c_opciones___flechas.html#a93f4f956fd9adebf8b7311b84a23465a">   15</a></span>&#160;<a class="code" href="class_c_opciones___flechas.html#a93f4f956fd9adebf8b7311b84a23465a">COpciones_Flechas::~COpciones_Flechas</a>()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  SDL_FreeSurface(<a class="code" href="class_c_opciones___flechas.html#ae967b44ced15396fc1f3f2448aff890b">fondo</a>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  SDL_FreeSurface(<a class="code" href="class_c_opciones___flechas.html#a57c0d2da383d5f35274bb88c06a17cd7">texto</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 26 de Abril de 2013 22:43:12 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Sábado, 27 de Abril de 2013 18:29:32 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -12,5 +12,5 @@ var searchData=
   ['i_5fmj_5fonline_5fclient',['I_MJ_ONLINE_CLIENT',['../globals_8h.html#a7f98c397795c604766c2561073615e53aa4515cefd0cf9d89d245a80d9d1f909c',1,'globals.h']]],
   ['i_5fmj_5fonline_5fserver',['I_MJ_ONLINE_SERVER',['../globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19',1,'globals.h']]],
   ['i_5fsalida',['I_SALIDA',['../globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132',1,'globals.h']]],
-  ['izq',['izq',['../pad__mj__online_8h.html#af5bc57ef0ec2bb356f493207a534bbc2a076b4a12af10603ab565d1ac5669a947',1,'pad_mj_online.h']]]
+  ['izq',['izq',['../pad__mj__online_8h.html#ab8c12683a054f2a05fdfb999f62e66ffa076b4a12af10603ab565d1ac5669a947',1,'pad_mj_online.h']]]
 ];

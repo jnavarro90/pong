@@ -33,7 +33,7 @@ class CPelota_MJ: public CPelota
 	    * @param PJ1 CPad del jugador 1
 	    * @param PJ2 CPad del jugador 2
 	    *
-	    * @return Devuelve un identificador para saber que realizar.
+	    * @return Devuelve un identificador para saber que realizar del tipo #partido_t.
 	    *
 	    * Se debe comprobar si el objeto rebota contra las paredes superiores o contra los pads.
 	    * Además, en función del ángulo de rebote se deben recalcular las velocidades de la pelota por medio

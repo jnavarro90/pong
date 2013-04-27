@@ -89,27 +89,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="title">marcador_online.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="marcador__online_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MARCADOR_ONLINE_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MARCADOR_ONLINE_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../marcador.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="class_c_marcador___online.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_marcador___online.html">CMarcador_Online</a>: <span class="keyword">public</span> <a class="code" href="class_c_marcador.html" title="Clase para representar un marcador.">CMarcador</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_c_marcador___online.html#a5ae8468ead052a96e81e8f7a5d09eed9">CMarcador_Online</a>(TTF_Font* f, SDL_Color* c);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_c_marcador___online.html#a1cfacfa7ab4cebebb04b3e283bc1000c">~CMarcador_Online</a>();</div>
+<a href="marcador__online_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef MARCADOR_ONLINE_H_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MARCADOR_ONLINE_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../marcador.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_marcador___online.html#a56e804db8b72be5ae61f91b8e9d4bcda">setM1</a>(<span class="keywordtype">int</span> n);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_marcador___online.html#aa69f12db846cd20a5280eba4fc7a30f9">setM2</a>(<span class="keywordtype">int</span> n);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MARCADOR_ONLINE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_c_marcador___online.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_marcador___online.html" title="Clase para representar un marcador a nivel de cliente.">CMarcador_Online</a>: <span class="keyword">public</span> <a class="code" href="class_c_marcador.html" title="Clase para representar un marcador.">CMarcador</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_c_marcador___online.html#a5ae8468ead052a96e81e8f7a5d09eed9" title="Constructor principal.">CMarcador_Online</a>(TTF_Font* f, SDL_Color* c);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_c_marcador___online.html#a1cfacfa7ab4cebebb04b3e283bc1000c" title="Destructor.">~CMarcador_Online</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_marcador___online.html#a56e804db8b72be5ae61f91b8e9d4bcda" title="Asignar un valor al marcador del jugador 1 (izquierdo)">setM1</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_marcador___online.html#aa69f12db846cd20a5280eba4fc7a30f9" title="Asignar un valor al marcador del jugador 2 (derecha)">setM2</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MARCADOR_ONLINE_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 26 de Abril de 2013 22:43:12 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Sábado, 27 de Abril de 2013 18:29:32 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

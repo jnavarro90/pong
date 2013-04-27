@@ -1,8 +1,20 @@
+/**
+ * @file
+ * @brief Declaración de CMarcador_Online
+ *
+ */
+
 #ifndef MARCADOR_ONLINE_H_
 #define MARCADOR_ONLINE_H_
 
 #include "../marcador.h"
 
+/**
+ * @brief Clase para representar un marcador a nivel de cliente.
+ *
+ * La clase almacenará el valor de los marcadores (descargados del servidor)
+ * y 2 superficies para guardar el texto de los marcadores.
+ */
 class CMarcador_Online: public CMarcador
 {
   public:

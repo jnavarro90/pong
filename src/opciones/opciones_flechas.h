@@ -1,8 +1,6 @@
-/*
- * opciones_flechas.h
- *
- *  Created on: 11/04/2013
- *      Author: Dani
+/**
+ * @file
+ * @brief Sin implementar
  */
 
 #ifndef OPCIONES_FLECHAS_H_
@@ -10,6 +8,9 @@
 
 #include "../globals.h"
 
+/**
+ * @brief Sin implementar
+ */
 class COpciones_Flechas
 {
   private:

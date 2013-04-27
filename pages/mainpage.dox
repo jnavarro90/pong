@@ -30,4 +30,17 @@ Las opciones con una "x" se han llegado a implementar satisfactoriamente. Además
    En caso de no usar MinGW como compilador, cambiar las librerías necesarias en el fichero makefile (-lmingw32).
 6. Copiar la carpeta "media" y las librerías dinámicas compiladas necesarias en el directorio "bin".
 7. Si el ejecutable no se inicia correctamente, debe de faltar algún archivo. Pruebe a mirar el fichero stdout.txt para buscar errores.
+ *
+ *
+ * \dir src @brief Directorio que contendrá todos los ficheros de código fuente
+ * \dir src/1jugador @brief Directorio que contendrá todos los ficheros de código fuente de los modos de juego 1jugador
+ * \dir src/1jugador/infinito @brief Directorio que contendrá todos los ficheros de código fuente del modo de juego 1jugador-infinito
+ * \dir src/menu @brief Directorio que contendrá todos los ficheros de código fuente de los menues principales del juego
+ * \dir src/menu/submenu @brief Directorio que contendrá todos los ficheros de código fuente de los submenues
+ * \dir src/multijugador @brief Directorio que contendrá todos los ficheros de código fuente de los modos de juego multijugador
+ * \dir src/multijugador/local @brief Directorio que contendrá todos los ficheros de código fuente de los modos de juego multijugador-local y multijugador-cpu
+ * \dir src/multijugador/local/cpu @brief Directorio que contendrá todos los ficheros de código fuente de los modos de juego multijugador-cpu
+ * \dir src/multijugador/online @brief Directorio que contendrá todos los ficheros de código fuente de los modos de juego multijugador-online
+ * \dir src/network @brief Directorio que contendrá todos los ficheros de código fuente de la interfaz de red
+ * \dir src/opciones @brief Directorio que contendrá todos los ficheros de código fuente para las opciones generales del juego
  */

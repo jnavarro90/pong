@@ -1,24 +1,21 @@
+/**
+ * @file
+ * @brief Definición de la clase CTecladoIP
+ */
+
 #include "tecladoIP.h"
 
-CTecladoIP::CTecladoIP(const char* fuente, uint tam, SDL_Color* color, int ax, int ay, uint l)
+CTecladoIP::CTecladoIP(const char* fuente, uint tam, SDL_Color* color, int ax, int ay, uint l):CTeclado(fuente, tam, color, ax, ay, l)
 {
-  ttf_fuente = TTF_OpenFont(fuente, tam);
 
-  str = "";
-  img_texto = NULL;
-
-  length = l;
-
-  color_texto.r = color->r;
-  color_texto.b = color->b;
-  color_texto.g = color->g;
-
-  x = ax;
-  y = ay;
-
-  SDL_EnableUNICODE( SDL_ENABLE );
 }
 
+/**
+ * @brief Gestionar evventos de entrada
+ *
+ * Saca los datos de entrada del teclado desde la estructura #event y sólo acepta y guarda en #str los números y los puntos '.'.
+ * El tamaño máximo especificado de la cadena está puesto por #length.
+ */
 void CTecladoIP::eventuar()
 {
   if(event.type == SDL_KEYDOWN)

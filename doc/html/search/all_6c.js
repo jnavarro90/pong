@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['lado',['lado',['../pad__mj__online_8h.html#af5bc57ef0ec2bb356f493207a534bbc2',1,'pad_mj_online.h']]],
+  ['lado_5ft',['lado_t',['../pad__mj__online_8h.html#ab8c12683a054f2a05fdfb999f62e66ff',1,'pad_mj_online.h']]],
   ['length',['length',['../class_c_teclado.html#a790eeaa08537e236ce7641b4bc7aa0b3',1,'CTeclado']]],
   ['librerias_2edox',['librerias.dox',['../librerias_8dox.html',1,'']]],
   ['librer_c3_adas',['Librerías',['../_librer_xC3_xADas.html',1,'']]],

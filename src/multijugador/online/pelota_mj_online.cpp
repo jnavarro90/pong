@@ -1,5 +1,16 @@
+/**
+ * @file
+ * @brief Definición de CPelota_MJ_Online y CPelota_MJ_Online_Client
+ *
+ */
+
 #include "pelota_mj_online.h"
 
+/**
+ * @brief Constructor principal
+ *
+ * Asigna los valores a las velocidades dependiendo de la estructura #opciones del tipo COpciones.
+ */
 CPelota_MJ_Online::CPelota_MJ_Online(): CPelota_MJ()
 {
   VELOCIDAD_MAX = opciones->PELOTA_VEL;
@@ -8,6 +19,11 @@ CPelota_MJ_Online::CPelota_MJ_Online(): CPelota_MJ()
   MOMENTO_INC = (opciones->PAD_ALTO)/8;
 }
 
+/**
+ * @brief Iniciar la pelota
+ *
+ * Vea CPelota_MJ_Local::empezar() para ver el funcionamiento (parecido) de la función.
+ */
 void CPelota_MJ_Online::empezar()
 {
   lock = false;
@@ -28,12 +44,23 @@ void CPelota_MJ_Online::empezar()
 }
 
 // Vamos a usar un sistema de flags para enviar los "sonidos" al cliente.
-enum fSnd_pelota {fsnd_pong = 0x1, fsnd_pung = 0x2};
+//enum fSnd_pelota {fsnd_pong = 0x1, fsnd_pung = 0x2};
 
+/**
+ * @brief Función de movimiento de la pelota
+ *
+ * @return Devuelve un valor para saber el estado de la partida del tipo #partido_t
+ *
+ * @param A Pad izquierdo a tener en cuenta para los rebotes de la pelota
+ * @param B Pad derecho a tener en cuenta para los rebotes de la pelota
+ * @param f Flags que se enviarán al cliente para saber si debe reproducir algún sonido. vea #fSnd_pelota
+ *
+ * El funcionamiento de la clase es similar a CPelota_MJ_Local::mover() o CPelota_MJ::mover()
+ */
 int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
 {
   if(stop)
-    return 0;
+    return partido_jugando;
 
   // pq no se mueve?
   caja.x += xVel;
@@ -43,7 +70,7 @@ int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
     stop = true;
     Mix_PlayChannel( -1, snd_pung, 0 );
     f = f | fsnd_pung; // Activar flags de sonido "pung" para el cliente
-    return 2;
+    return partido_ganaJ2;
   }
   else if(caja.x + caja.w >= opciones->PANTALLA_ANCHO) // Gana el pad izq (j1)
   {
@@ -51,14 +78,14 @@ int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
     stop = true;
     Mix_PlayChannel( -1, snd_pung, 0 );
     f = f | fsnd_pung;
-    return 1;
+    return partido_ganaJ1;
   }
   // Si la pelota está bloqueada, ignora a los rebotes con los pads. La partida sigue en curso hasta que toque un borde.
   // También ignora el movimiento vertical.
   if(lock)
   {
     yVel = 0;
-    return 0;
+    return partido_jugando;
   }
 
   caja.y += yVel;
@@ -113,7 +140,7 @@ int CPelota_MJ_Online::mover(CPad& A, CPad& B, flags& f)
       f = f | fsnd_pong;
     }
   }
-  return 0;
+  return partido_jugando;
 }
 
 void CPelota_MJ_Online_Client::setXY(int x, int y)

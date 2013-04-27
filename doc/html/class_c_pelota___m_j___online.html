@@ -91,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!--header-->
 <div class="contents">
 
+<p>Clase para representar la pelota del modo de juego multijugador-online desde el servidor.  
+ <a href="class_c_pelota___m_j___online.html#details">Más...</a></p>
+
 <p><code>#include &lt;<a class="el" href="pelota__mj__online_8h_source.html">pelota_mj_online.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de herencias de CPelota_MJ_Online</div>
@@ -107,10 +110,13 @@ Diagrama de herencias de CPelota_MJ_Online</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
 <tr class="memitem:a56024ff802b22e558d140b0b2519ed2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pelota___m_j___online.html#a56024ff802b22e558d140b0b2519ed2f">CPelota_MJ_Online</a> ()</td></tr>
+<tr class="memdesc:a56024ff802b22e558d140b0b2519ed2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor principal.  <a href="#a56024ff802b22e558d140b0b2519ed2f"></a><br/></td></tr>
 <tr class="separator:a56024ff802b22e558d140b0b2519ed2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bde79ba84d05b3eea2219015178f6cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pelota___m_j___online.html#a8bde79ba84d05b3eea2219015178f6cb">empezar</a> ()</td></tr>
+<tr class="memdesc:a8bde79ba84d05b3eea2219015178f6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iniciar la pelota.  <a href="#a8bde79ba84d05b3eea2219015178f6cb"></a><br/></td></tr>
 <tr class="separator:a8bde79ba84d05b3eea2219015178f6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a820d6d010b35960cfa12261ec2af72c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pelota___m_j___online.html#a820d6d010b35960cfa12261ec2af72c5">mover</a> (<a class="el" href="class_c_pad.html">CPad</a> &amp;PJ1, <a class="el" href="class_c_pad.html">CPad</a> &amp;PJ2, <a class="el" href="globals_8h.html#a5ea73ca849ec6b2984f545915c4fc857">flags</a> &amp;f)</td></tr>
+<tr class="memdesc:a820d6d010b35960cfa12261ec2af72c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de movimiento de la pelota.  <a href="#a820d6d010b35960cfa12261ec2af72c5"></a><br/></td></tr>
 <tr class="separator:a820d6d010b35960cfa12261ec2af72c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_pelota___m_j"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_pelota___m_j')"><img src="closed.png" alt="-"/>&#160;Métodos públicos heredados desde <a class="el" href="class_c_pelota___m_j.html">CPelota_MJ</a></td></tr>
 <tr class="memitem:a1f49f8f07b625badc7dfb45ab35db29f inherit pub_methods_class_c_pelota___m_j"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pelota___m_j.html#a1f49f8f07b625badc7dfb45ab35db29f">CPelota_MJ</a> ()</td></tr>
@@ -149,8 +155,10 @@ Otros miembros heredados</h2></td></tr>
 <tr class="separator:a165892581a754e8a7eadd0e6156ed03c inherit pro_attribs_class_c_pelota___m_j"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p>Definición en la línea <a class="el" href="pelota__mj__online_8h_source.html#l00009">9</a> del archivo <a class="el" href="pelota__mj__online_8h_source.html">pelota_mj_online.h</a>.</p>
+<div class="textblock"><p>Clase para representar la pelota del modo de juego multijugador-online desde el servidor. </p>
+<p>Los objetos de esta clase funcionan de forma parecida a los de la clase <a class="el" href="class_c_pelota___m_j___local.html" title="Clase general para definir la pelota de multijugador-local.">CPelota_MJ_Local</a>, salvo que en esta, al mover la pelota, si se debe reproducir algún sonido, se deberá notificar al usuario enviándole una notificación. Véase <a class="el" href="class_c_network___data___server.html#a253ae84bf12b4d7375c4dd2efe3ee21b">CNetwork_Data_Server::fs</a> </p>
+
+<p>Definición en la línea <a class="el" href="pelota__mj__online_8h_source.html#l00024">24</a> del archivo <a class="el" href="pelota__mj__online_8h_source.html">pelota_mj_online.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a class="anchor" id="a56024ff802b22e558d140b0b2519ed2f"></a>
 <div class="memitem">
@@ -165,7 +173,10 @@ Otros miembros heredados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pelota__mj__online_8cpp_source.html#l00003">3</a> del archivo <a class="el" href="pelota__mj__online_8cpp_source.html">pelota_mj_online.cpp</a>.</p>
+<p>Constructor principal. </p>
+<p>Asigna los valores a las velocidades dependiendo de la estructura <a class="el" href="opciones_8h.html#a7f722e3e294cefe6493b795a9df98467">opciones</a> del tipo <a class="el" href="class_c_opciones.html" title="Clase cargar opciones de juego.">COpciones</a>. </p>
+
+<p>Definición en la línea <a class="el" href="pelota__mj__online_8cpp_source.html#l00014">14</a> del archivo <a class="el" href="pelota__mj__online_8cpp_source.html">pelota_mj_online.cpp</a>.</p>
 
 <p>Hace referencia a <a class="el" href="pelota_8cpp_source.html#l00015">MOMENTO_INC</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="opciones_8h_source.html#l00056">COpciones::PAD_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00060">COpciones::PELOTA_VEL</a>, <a class="el" href="pelota_8cpp_source.html#l00013">VELOCIDAD_INC_MAX</a> y <a class="el" href="pelota_8cpp_source.html#l00011">VELOCIDAD_MAX</a>.</p>
 
@@ -185,9 +196,12 @@ Otros miembros heredados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pelota__mj__online_8cpp_source.html#l00011">11</a> del archivo <a class="el" href="pelota__mj__online_8cpp_source.html">pelota_mj_online.cpp</a>.</p>
+<p>Iniciar la pelota. </p>
+<p>Vea <a class="el" href="class_c_pelota___m_j___local.html#a9e74e7607441f8f6ca0292463d739774">CPelota_MJ_Local::empezar()</a> para ver el funcionamiento (parecido) de la función. </p>
 
-<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a>, <a class="el" href="pelota__mj_8h_source.html#l00022">CPelota_MJ::lock</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="globals_8h_source.html#l00074">PANTALLA_MARGEN_INFERIOR</a>, <a class="el" href="globals_8h_source.html#l00073">PANTALLA_MARGEN_SUPERIOR</a>, <a class="el" href="opciones_8h_source.html#l00062">COpciones::PELOTA_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00060">COpciones::PELOTA_VEL</a>, <a class="el" href="pelota__mj_8h_source.html#l00021">CPelota_MJ::stop</a>, <a class="el" href="globals_8h_source.html#l00153">Rect_Float::x</a>, <a class="el" href="pelota__mj_8h_source.html#l00023">CPelota_MJ::xVel</a>, <a class="el" href="globals_8h_source.html#l00153">Rect_Float::y</a> y <a class="el" href="pelota__mj_8h_source.html#l00024">CPelota_MJ::yVel</a>.</p>
+<p>Definición en la línea <a class="el" href="pelota__mj__online_8cpp_source.html#l00027">27</a> del archivo <a class="el" href="pelota__mj__online_8cpp_source.html">pelota_mj_online.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a>, <a class="el" href="pelota__mj_8h_source.html#l00022">CPelota_MJ::lock</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="globals_8h_source.html#l00074">PANTALLA_MARGEN_INFERIOR</a>, <a class="el" href="globals_8h_source.html#l00073">PANTALLA_MARGEN_SUPERIOR</a>, <a class="el" href="opciones_8h_source.html#l00062">COpciones::PELOTA_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00060">COpciones::PELOTA_VEL</a>, <a class="el" href="pelota__mj_8h_source.html#l00021">CPelota_MJ::stop</a>, <a class="el" href="globals_8h_source.html#l00166">Rect_Float::x</a>, <a class="el" href="pelota__mj_8h_source.html#l00023">CPelota_MJ::xVel</a>, <a class="el" href="globals_8h_source.html#l00166">Rect_Float::y</a> y <a class="el" href="pelota__mj_8h_source.html#l00024">CPelota_MJ::yVel</a>.</p>
 
 </div>
 </div>
@@ -199,13 +213,13 @@ Otros miembros heredados</h2></td></tr>
           <td class="memname">int CPelota_MJ_Online::mover </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_c_pad.html">CPad</a> &amp;&#160;</td>
-          <td class="paramname"><em>PJ1</em>, </td>
+          <td class="paramname"><em>A</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_c_pad.html">CPad</a> &amp;&#160;</td>
-          <td class="paramname"><em>PJ2</em>, </td>
+          <td class="paramname"><em>B</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -221,9 +235,21 @@ Otros miembros heredados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pelota__mj__online_8cpp_source.html#l00033">33</a> del archivo <a class="el" href="pelota__mj__online_8cpp_source.html">pelota_mj_online.cpp</a>.</p>
+<p>Función de movimiento de la pelota. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un valor para saber el estado de la partida del tipo <a class="el" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2e" title="Identificador de estado de partida.">partido_t</a></dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Pad izquierdo a tener en cuenta para los rebotes de la pelota </td></tr>
+    <tr><td class="paramname">B</td><td>Pad derecho a tener en cuenta para los rebotes de la pelota </td></tr>
+    <tr><td class="paramname">f</td><td>Flags que se enviarán al cliente para saber si debe reproducir algún sonido. vea <a class="el" href="network__struct_8h.html#a7a27eafa7338ac45a650fb892f111575">fSnd_pelota</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>El funcionamiento de la clase es similar a <a class="el" href="class_c_pelota___m_j___local.html#a7a1dc95723cd77ca07059b8d5e95c26c">CPelota_MJ_Local::mover()</a> o <a class="el" href="class_c_pelota___m_j.html#ade8732119ed3801503177ff9e6921817" title="Mover la pelota.">CPelota_MJ::mover()</a> </p>
 
-<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a>, <a class="el" href="network__struct_8h_source.html#l00022">fsnd_pong</a>, <a class="el" href="network__struct_8h_source.html#l00023">fsnd_pung</a>, <a class="el" href="entidad_8h_source.html#l00040">CEntidad::getCaja()</a>, <a class="el" href="pad_8h_source.html#l00033">CPad::getMomento()</a>, <a class="el" href="pelota_8cpp_source.html#l00149">getPos()</a>, <a class="el" href="globals_8h_source.html#l00154">Rect_Float::h</a>, <a class="el" href="pelota__mj_8h_source.html#l00022">CPelota_MJ::lock</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="pelota_8h_source.html#l00021">OUT_RANGE</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="globals_8h_source.html#l00074">PANTALLA_MARGEN_INFERIOR</a>, <a class="el" href="globals_8h_source.html#l00073">PANTALLA_MARGEN_SUPERIOR</a>, <a class="el" href="opciones_8h_source.html#l00062">COpciones::PELOTA_ANCHO</a>, <a class="el" href="pelota_8cpp_source.html#l00090">setVel()</a>, <a class="el" href="globals_8cpp_source.html#l00015">snd_pong</a>, <a class="el" href="globals_8cpp_source.html#l00016">snd_pung</a>, <a class="el" href="pelota__mj_8h_source.html#l00021">CPelota_MJ::stop</a>, <a class="el" href="globals_8h_source.html#l00154">Rect_Float::w</a>, <a class="el" href="globals_8h_source.html#l00153">Rect_Float::x</a>, <a class="el" href="pelota__mj_8h_source.html#l00023">CPelota_MJ::xVel</a>, <a class="el" href="globals_8h_source.html#l00153">Rect_Float::y</a> y <a class="el" href="pelota__mj_8h_source.html#l00024">CPelota_MJ::yVel</a>.</p>
+<p>Definición en la línea <a class="el" href="pelota__mj__online_8cpp_source.html#l00060">60</a> del archivo <a class="el" href="pelota__mj__online_8cpp_source.html">pelota_mj_online.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a>, <a class="el" href="network__struct_8h_source.html#l00022">fsnd_pong</a>, <a class="el" href="network__struct_8h_source.html#l00023">fsnd_pung</a>, <a class="el" href="entidad_8h_source.html#l00040">CEntidad::getCaja()</a>, <a class="el" href="pad_8h_source.html#l00033">CPad::getMomento()</a>, <a class="el" href="pelota_8cpp_source.html#l00149">getPos()</a>, <a class="el" href="globals_8h_source.html#l00167">Rect_Float::h</a>, <a class="el" href="pelota__mj_8h_source.html#l00022">CPelota_MJ::lock</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="pelota_8h_source.html#l00021">OUT_RANGE</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="globals_8h_source.html#l00074">PANTALLA_MARGEN_INFERIOR</a>, <a class="el" href="globals_8h_source.html#l00073">PANTALLA_MARGEN_SUPERIOR</a>, <a class="el" href="globals_8h_source.html#l00119">partido_ganaJ1</a>, <a class="el" href="globals_8h_source.html#l00120">partido_ganaJ2</a>, <a class="el" href="globals_8h_source.html#l00118">partido_jugando</a>, <a class="el" href="opciones_8h_source.html#l00062">COpciones::PELOTA_ANCHO</a>, <a class="el" href="pelota_8cpp_source.html#l00090">setVel()</a>, <a class="el" href="globals_8cpp_source.html#l00015">snd_pong</a>, <a class="el" href="globals_8cpp_source.html#l00016">snd_pung</a>, <a class="el" href="pelota__mj_8h_source.html#l00021">CPelota_MJ::stop</a>, <a class="el" href="globals_8h_source.html#l00167">Rect_Float::w</a>, <a class="el" href="globals_8h_source.html#l00166">Rect_Float::x</a>, <a class="el" href="pelota__mj_8h_source.html#l00023">CPelota_MJ::xVel</a>, <a class="el" href="globals_8h_source.html#l00166">Rect_Float::y</a> y <a class="el" href="pelota__mj_8h_source.html#l00024">CPelota_MJ::yVel</a>.</p>
 
 </div>
 </div>
@@ -234,7 +260,7 @@ Otros miembros heredados</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Sábado, 27 de Abril de 2013 18:29:33 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

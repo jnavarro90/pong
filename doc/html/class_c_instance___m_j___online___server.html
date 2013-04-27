@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!--header-->
 <div class="contents">
 
+<p>Clase de estancia para representar el modo de juego multijugador-online desde el servidor.  
+ <a href="class_c_instance___m_j___online___server.html#details">Más...</a></p>
+
 <p><code>#include &lt;<a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de herencias de CInstance_MJ_Online_Server</div>
@@ -211,8 +214,20 @@ Atributos protegidos</h2></td></tr>
 <tr class="separator:a01a1e763413795a690c11a5c7e192b50 inherit pro_attribs_class_c_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00097">97</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<div class="textblock"><p>Clase de estancia para representar el modo de juego multijugador-online desde el servidor. </p>
+<p>Básicamente, encapsula algunos objetos (2 pads, 1 pelota y 1 marcador) para trabajar con ellos de una forma más sencilla. El cservidor, primero entrará en un menu desde el que debe esperar la conexión de algún cliente (con el puerto <a class="el" href="globals_8h.html#ac626e65a89ccd8469bd55eec597833e8" title="Puerto a utilizar en la conexión del modo multijugador-online.">NET_MJ_PORT</a>). Una vez realizada la conexión, el usuario enviará la configuración de la partida, ubicada en <a class="el" href="class_c_opciones.html" title="Clase cargar opciones de juego.">COpciones</a>. Posteriormente, el bucle de la partida en el servidor es el siguiente:</p>
+<pre>
+Mientras(ejecutando)
+  Gestionar datos de entrada
+  Recibir datos de entradadel cliente
+  Procesar datos de entrada
+  Enviar datos procesados al cliente
+  Mostrar por pantalla
+FinMientras
+</pre><p>Por defecto, el pad del servidor es el izquierdo.</p>
+<p>Para más información sobre el funcionamiento de las estancias, vea las definiciones de los métodos de esta clase y las clases <a class="el" href="class_c_instance.html" title="Clase base (abstracta) para derivar y declarar las diversas estancias del juego.">CInstance</a>, <a class="el" href="class_c_engine.html" title="Clase principal del juego.">CEngine</a>, <a class="el" href="class_c_menu.html" title="Clase para almacenar conjuntos de botones.">CMenu</a> y <a class="el" href="class_c_boton.html" title="Clase para representar botones.">CBoton</a>. </p>
+
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00159">159</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a class="anchor" id="ae03e8d592b3dcc42e689889468465e8e"></a>
 <div class="memitem">
@@ -227,7 +242,7 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00010">10</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00016">16</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
 </div>
 </div>
@@ -244,7 +259,7 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00032">32</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00038">38</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +289,7 @@ Atributos protegidos</h2></td></tr>
 
 <p>Reimplementado de <a class="el" href="class_c_instance.html#a0ee6f0f361c9f1db193ec03421f673b7">CInstance</a>.</p>
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00151">151</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00157">157</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
 </div>
 </div>
@@ -305,9 +320,9 @@ Atributos protegidos</h2></td></tr>
 
 <p>Reimplementado de <a class="el" href="class_c_instance.html#aeccfa1ca16f2824d9991128785b931e3">CInstance</a>.</p>
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00054">54</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00060">60</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="globals_8h_source.html#l00059">ERROR_STR_NET</a>, <a class="el" href="globals_8h_source.html#l00102">I_SALIDA</a>, <a class="el" href="globals_8h_source.html#l00050">NET_MJ_CLIENTDATA_SIZE</a>, <a class="el" href="globals_8h_source.html#l00046">NET_MJ_PORT</a>, <a class="el" href="globals_8h_source.html#l00049">NET_MJ_SERVERDATA_SIZE</a> y <a class="el" href="globals_8cpp_source.html#l00020">ttf_consolas</a>.</p>
+<p>Hace referencia a <a class="el" href="globals_8h_source.html#l00059">ERROR_STR_NET</a>, <a class="el" href="globals_8h_source.html#l00105">I_SALIDA</a>, <a class="el" href="globals_8h_source.html#l00050">NET_MJ_CLIENTDATA_SIZE</a>, <a class="el" href="globals_8h_source.html#l00046">NET_MJ_PORT</a>, <a class="el" href="globals_8h_source.html#l00049">NET_MJ_SERVERDATA_SIZE</a> y <a class="el" href="globals_8cpp_source.html#l00020">ttf_consolas</a>.</p>
 
 </div>
 </div>
@@ -338,7 +353,7 @@ Atributos protegidos</h2></td></tr>
 
 <p>Reimplementado de <a class="el" href="class_c_instance.html#ad97791759380f24b732aa1659719becd">CInstance</a>.</p>
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00105">105</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00111">111</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
 <p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00064">aplicar_superficie()</a>, <a class="el" href="globals_8h_source.html#l00062">ERROR_STR_FILE</a>, <a class="el" href="globals_8h_source.html#l00063">ERROR_STR_SURFACE</a>, <a class="el" href="globals_8h_source.html#l00046">NET_MJ_PORT</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="globals_8cpp_source.html#l00012">pantalla</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00047">COpciones::PANTALLA_BPP</a>, <a class="el" href="globals_8h_source.html#l00094">TEXTO_MARCADOR_ANCHO</a>, <a class="el" href="globals_8cpp_source.html#l00022">ttf_bitM</a> y <a class="el" href="globals_8cpp_source.html#l00020">ttf_consolas</a>.</p>
 
@@ -357,9 +372,9 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00143">143</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00149">149</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="pad__mj__online_8h_source.html#l00006">der</a>, <a class="el" href="pad__mj__online_8h_source.html#l00006">izq</a> y <a class="el" href="globals_8cpp_source.html#l00022">ttf_bitM</a>.</p>
+<p>Hace referencia a <a class="el" href="pad__mj__online_8h_source.html#l00018">der</a>, <a class="el" href="pad__mj__online_8h_source.html#l00017">izq</a> y <a class="el" href="globals_8cpp_source.html#l00022">ttf_bitM</a>.</p>
 
 </div>
 </div>
@@ -377,9 +392,9 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00320">320</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00326">326</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00011">event</a> y <a class="el" href="globals_8h_source.html#l00102">I_SALIDA</a>.</p>
+<p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00011">event</a> y <a class="el" href="globals_8h_source.html#l00105">I_SALIDA</a>.</p>
 
 </div>
 </div>
@@ -397,9 +412,9 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00203">203</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00209">209</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00011">event</a> y <a class="el" href="globals_8h_source.html#l00102">I_SALIDA</a>.</p>
+<p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00011">event</a> y <a class="el" href="globals_8h_source.html#l00105">I_SALIDA</a>.</p>
 
 </div>
 </div>
@@ -439,9 +454,9 @@ Atributos protegidos</h2></td></tr>
 </div><!-- fragment --> 
 <p>Reimplementado de <a class="el" href="class_c_instance.html#a6950f7c41d34b6071552cd763f6e1a0e">CInstance</a>.</p>
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00263">263</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00269">269</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="temporizador_8cpp_source.html#l00028">CTemporizador::empezar()</a>, <a class="el" href="globals_8h_source.html#l00061">ERROR_STR_INIT</a>, <a class="el" href="globals_8cpp_source.html#l00011">event</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00013">FRAMES_PER_SECOND</a>, <a class="el" href="temporizador_8cpp_source.html#l00058">CTemporizador::getTicks()</a>, <a class="el" href="globals_8h_source.html#l00105">I_MJ_ONLINE</a> y <a class="el" href="globals_8h_source.html#l00102">I_SALIDA</a>.</p>
+<p>Hace referencia a <a class="el" href="temporizador_8cpp_source.html#l00028">CTemporizador::empezar()</a>, <a class="el" href="globals_8h_source.html#l00061">ERROR_STR_INIT</a>, <a class="el" href="globals_8cpp_source.html#l00011">event</a>, <a class="el" href="1jugador_2infinito_2instancia_8cpp_source.html#l00013">FRAMES_PER_SECOND</a>, <a class="el" href="temporizador_8cpp_source.html#l00058">CTemporizador::getTicks()</a>, <a class="el" href="globals_8h_source.html#l00108">I_MJ_ONLINE</a> y <a class="el" href="globals_8h_source.html#l00105">I_SALIDA</a>.</p>
 
 </div>
 </div>
@@ -459,9 +474,9 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00336">336</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00342">342</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00022">iTimeOut</a> y <a class="el" href="globals_8h_source.html#l00050">NET_MJ_CLIENTDATA_SIZE</a>.</p>
+<p>Hace referencia a <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00036">iTimeOut</a> y <a class="el" href="globals_8h_source.html#l00050">NET_MJ_CLIENTDATA_SIZE</a>.</p>
 
 </div>
 </div>
@@ -479,9 +494,9 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00218">218</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00224">224</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00018">eConectado</a>, <a class="el" href="network__struct_8cpp_source.html#l00202">CNetwork_Data_Settings::getBuffer()</a>, <a class="el" href="_c_net_8cpp_source.html#l00172">CNetMessageN::LoadNBytes()</a>, <a class="el" href="network__struct_8cpp_source.html#l00172">CNetwork_Data_Settings::makeBuffer()</a> y <a class="el" href="globals_8h_source.html#l00048">NET_MJ_SETTINGS_SIZE</a>.</p>
+<p>Hace referencia a <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00029">eConectado</a>, <a class="el" href="network__struct_8cpp_source.html#l00202">CNetwork_Data_Settings::getBuffer()</a>, <a class="el" href="_c_net_8cpp_source.html#l00172">CNetMessageN::LoadNBytes()</a>, <a class="el" href="network__struct_8cpp_source.html#l00172">CNetwork_Data_Settings::makeBuffer()</a> y <a class="el" href="globals_8h_source.html#l00048">NET_MJ_SETTINGS_SIZE</a>.</p>
 
 </div>
 </div>
@@ -510,7 +525,7 @@ Atributos protegidos</h2></td></tr>
 
 <p>Reimplementado de <a class="el" href="class_c_instance.html#a970597a9d40bb7b82cb578697d7e32ca">CInstance</a>.</p>
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00421">421</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00427">427</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
 <p>Hace referencia a <a class="el" href="globals_8h_source.html#l00060">ERROR_STR_FLIP</a>, <a class="el" href="tablero_8cpp_source.html#l00102">CTablero::mostrar()</a>, <a class="el" href="globals_8cpp_source.html#l00012">pantalla</a> y <a class="el" href="tablero_8cpp_source.html#l00008">tablero_mp</a>.</p>
 
@@ -530,9 +545,9 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00246">246</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00252">252</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
-<p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00064">aplicar_superficie()</a>, <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00018">eConectado</a>, <a class="el" href="globals_8h_source.html#l00060">ERROR_STR_FLIP</a>, <a class="el" href="instancia__client_8cpp.html#a21005f9f4e2ce7597c5eb4351816d7e2">OFFSET</a> y <a class="el" href="globals_8cpp_source.html#l00012">pantalla</a>.</p>
+<p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00064">aplicar_superficie()</a>, <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00029">eConectado</a>, <a class="el" href="globals_8h_source.html#l00060">ERROR_STR_FLIP</a>, <a class="el" href="instancia__client_8cpp.html#a21005f9f4e2ce7597c5eb4351816d7e2">OFFSET</a> y <a class="el" href="globals_8cpp_source.html#l00012">pantalla</a>.</p>
 
 </div>
 </div>
@@ -561,7 +576,7 @@ Atributos protegidos</h2></td></tr>
 
 <p>Reimplementado de <a class="el" href="class_c_instance.html#a180205570e01d4b2ec37a3e4402832c5">CInstance</a>.</p>
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00186">186</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00192">192</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
 <p>Hace referencia a <a class="el" href="globals_8cpp_source.html#l00022">ttf_bitM</a> y <a class="el" href="globals_8cpp_source.html#l00020">ttf_consolas</a>.</p>
 
@@ -580,7 +595,7 @@ Atributos protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00195">195</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
+<p>Definición en la línea <a class="el" href="instancia__server_8cpp_source.html#l00201">201</a> del archivo <a class="el" href="instancia__server_8cpp_source.html">instancia_server.cpp</a>.</p>
 
 </div>
 </div>
@@ -603,7 +618,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00121">121</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00181">181</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -625,7 +640,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00103">103</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00165">165</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -647,7 +662,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00102">102</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00164">164</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -669,7 +684,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00104">104</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00166">166</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -691,7 +706,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00100">100</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00162">162</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -712,8 +727,9 @@ Atributos protegidos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Estructura de datos del cliente </p>
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00114">114</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00175">175</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -734,8 +750,9 @@ Atributos protegidos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Estructura de datos del servidor </p>
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00113">113</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00174">174</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -756,8 +773,9 @@ Atributos protegidos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Fondo a mostrar en el menú </p>
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00106">106</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00168">168</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -779,7 +797,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00132">132</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00192">192</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -801,7 +819,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00122">122</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00182">182</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -823,7 +841,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00116">116</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00177">177</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -845,7 +863,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00118">118</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00178">178</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -867,7 +885,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00109">109</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00170">170</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -889,7 +907,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00131">131</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00191">191</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -911,7 +929,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00129">129</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00189">189</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -933,7 +951,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00130">130</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00190">190</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -955,7 +973,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00110">110</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00171">171</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -977,7 +995,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00111">111</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00172">172</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -999,7 +1017,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00136">136</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00196">196</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -1021,7 +1039,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00135">135</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00195">195</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1061,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00125">125</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00185">185</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1083,7 @@ Atributos protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00126">126</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
+<p>Definición en la línea <a class="el" href="multijugador_2online_2instancia_8h_source.html#l00186">186</a> del archivo <a class="el" href="multijugador_2online_2instancia_8h_source.html">instancia.h</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1094,7 @@ Atributos protegidos</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Sábado, 27 de Abril de 2013 18:29:33 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -181,55 +181,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">// ------------ VARIOS --------------</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">// ----------------------------------</span></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53">  100</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53">INSTANCES</a></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132">  102</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132">I_SALIDA</a> = -1, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a8f6a1b55511f0873be1bd161c7758ddd">I_MENU_MAIN</a> = 0,</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab">  103</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a79eb0f41c297c91c21ea6016dd0c1591">I_MENU_1J</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53ab9253f5d2ac60df9971d8f3e60b01873">I_MENU_MJ</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab">I_MENU_OPCIONES</a>,</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba">  104</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba">I_1J_INF</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a69b8c1219d43830f16da518e74834e3e">I_1J_HISTORIA</a>,</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19">  105</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53afa7215e6cd720e9dd23bc20c0d5385ac">I_MJ_LOCAL</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a3c536c4744794ef3d07a455e19d723f4">I_MJ_CPU</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53ac71f3ca279fb65e29378e667640fc2e9">I_MJ_ONLINE</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aa4515cefd0cf9d89d245a80d9d1f909c">I_MJ_ONLINE_CLIENT</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19">I_MJ_ONLINE_SERVER</a></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="globals_8h.html#a11928b9796b8606b8005991afdd5e83c">  108</a></span>&#160;<span class="preprocessor">#define N_INSTANCES 12</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">//enum instance_list { error = -1, salir = 0, menu_main, menu_1j, menu_mj, menu_mj_online, modo_1j_inf, modo_mj_local, modo_mj_cpu, modo_mj_online_c, modo_mj_online_s, opciones_};</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">// ___________ESTRUCTURAS____________</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">// ------------ VARIOS --------------</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">// ----------------------------------</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">extern</span> SDL_Event <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">extern</span> SDL_Surface* <a class="code" href="globals_8cpp.html#a58be6bd8478a38995e6c3ce5161a9fbe">pantalla</a>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="globals_8cpp.html#aec2847bd8f78cf4acff4b18d1c68f24c">initPantalla</a>(); </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">//extern void closePantalla(); // inutil</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#a9dc5f1b451127b480b7848098d75ee12">snd_ping</a>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#ac07663d0d9a7e19ed85e62d73cfd804d">snd_pong</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#a49a1a9570706ece8090125625c2e107a">snd_pung</a>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">//extern Uint32 color_blanco;</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">//extern SDL_Color color_blanco_t;</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#a4abc73abc5bb8be9d8bdb55118857120">ttf_consolas</a>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#afe32ab812245ae1f4f1a019a6b034cd3">ttf_consolasM</a>;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#af0c08c970d3c7db160e52ea60722d0de">ttf_bitM</a>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="code" href="struct_rect___float.html">  151</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_rect___float.html" title="Estructura similar a SDL_Rect.">Rect_Float</a></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">  153</a></span>&#160;  <span class="keywordtype">float</span> x, <a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">  154</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">w</a>, h;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;};</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">// Clases</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">// Funciones</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="globals_8cpp.html#ae60125b1d93b5c42be907712c0dd68a7">aplicar_superficie</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, SDL_Surface* entrada, SDL_Surface* destino, SDL_Rect* clip = NULL);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">extern</span> SDL_Surface* <a class="code" href="globals_8cpp.html#a148bd9ec6c2cb1090220d189401e5cbe">cargar_img</a>(std::string s, <span class="keywordtype">bool</span> alphapng = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GLOBALS_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53">  103</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53" title="Identificadores de estancias. Vea CEngine y CInstance.">INSTANCES</a></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132">  105</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a0adb25186aff438a356d2a4e85c93132">I_SALIDA</a> = -1, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a8f6a1b55511f0873be1bd161c7758ddd">I_MENU_MAIN</a> = 0,</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab">  106</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a79eb0f41c297c91c21ea6016dd0c1591">I_MENU_1J</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53ab9253f5d2ac60df9971d8f3e60b01873">I_MENU_MJ</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aabfea21de8271f85d6fad592859c1cab">I_MENU_OPCIONES</a>,</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba">  107</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a46949c3efad071d016fb60aeaf4a04ba">I_1J_INF</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a69b8c1219d43830f16da518e74834e3e">I_1J_HISTORIA</a>,</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19">  108</a></span>&#160;  <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53afa7215e6cd720e9dd23bc20c0d5385ac">I_MJ_LOCAL</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a3c536c4744794ef3d07a455e19d723f4">I_MJ_CPU</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53ac71f3ca279fb65e29378e667640fc2e9">I_MJ_ONLINE</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53aa4515cefd0cf9d89d245a80d9d1f909c">I_MJ_ONLINE_CLIENT</a>, <a class="code" href="globals_8h.html#a7f98c397795c604766c2561073615e53a58aa8857c912cc55558f36b60fbc4a19">I_MJ_ONLINE_SERVER</a></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="globals_8h.html#a11928b9796b8606b8005991afdd5e83c">  111</a></span>&#160;<span class="preprocessor">#define N_INSTANCES 12</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2e">  116</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2e" title="Identificador de estado de partida.">partido_t</a></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2eaece5949385cea0f4d115df3d2085aab6">  118</a></span>&#160;  <a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2eaece5949385cea0f4d115df3d2085aab6">partido_jugando</a> = 0 </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2ea277824558c9d287c7e71504784733456">  119</a></span>&#160;  ,<a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2ea277824558c9d287c7e71504784733456">partido_ganaJ1</a> = 1</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2ea400aa763c17e37dc4c34e45cc1ffd092">  120</a></span>&#160;  ,<a class="code" href="globals_8h.html#a910b64d918b903abc7a977588d79fb2ea400aa763c17e37dc4c34e45cc1ffd092">partido_ganaJ2</a> = 2</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">//enum instance_list { error = -1, salir = 0, menu_main, menu_1j, menu_mj, menu_mj_online, modo_1j_inf, modo_mj_local, modo_mj_cpu, modo_mj_online_c, modo_mj_online_s, opciones_};</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">// ___________ESTRUCTURAS____________</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">// ------------ VARIOS --------------</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">// ----------------------------------</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">extern</span> SDL_Event <a class="code" href="globals_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">extern</span> SDL_Surface* <a class="code" href="globals_8cpp.html#a58be6bd8478a38995e6c3ce5161a9fbe">pantalla</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="globals_8cpp.html#aec2847bd8f78cf4acff4b18d1c68f24c">initPantalla</a>(); </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">//extern void closePantalla(); // inutil</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#a9dc5f1b451127b480b7848098d75ee12">snd_ping</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#ac07663d0d9a7e19ed85e62d73cfd804d">snd_pong</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">extern</span> Mix_Chunk* <a class="code" href="globals_8cpp.html#a49a1a9570706ece8090125625c2e107a">snd_pung</a>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">//extern Uint32 color_blanco;</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">//extern SDL_Color color_blanco_t;</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#a4abc73abc5bb8be9d8bdb55118857120">ttf_consolas</a>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#afe32ab812245ae1f4f1a019a6b034cd3">ttf_consolasM</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">extern</span> TTF_Font* <a class="code" href="globals_8cpp.html#af0c08c970d3c7db160e52ea60722d0de">ttf_bitM</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="code" href="struct_rect___float.html">  164</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_rect___float.html" title="Estructura similar a SDL_Rect.">Rect_Float</a></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">  166</a></span>&#160;  <span class="keywordtype">float</span> x, <a class="code" href="struct_rect___float.html#ac8b56f187ca263cb3c0c3fa77955400f">y</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">  167</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="struct_rect___float.html#a945fa94dd14fc12d6a5141079e0c4e85">w</a>, h;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;};</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">// Clases</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">// Funciones</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="globals_8cpp.html#ae60125b1d93b5c42be907712c0dd68a7">aplicar_superficie</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, SDL_Surface* entrada, SDL_Surface* destino, SDL_Rect* clip = NULL);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">extern</span> SDL_Surface* <a class="code" href="globals_8cpp.html#a148bd9ec6c2cb1090220d189401e5cbe">cargar_img</a>(std::string s, <span class="keywordtype">bool</span> alphapng = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GLOBALS_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 26 de Abril de 2013 22:43:12 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Sábado, 27 de Abril de 2013 18:29:32 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

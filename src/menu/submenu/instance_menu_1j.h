@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief Clase de estancia para el menú de 1 jugador
+ * @brief Declaración de CInstance_Menu_1J
  *
  * Para más información sobre el funcionamiento de las estancias, vea las clases CInstance_Menu_Main, CInstance, CEngine, CMenu y CBoton.
  * Un ejemplo del menú, con un diseño minimalista, es el siguiente:

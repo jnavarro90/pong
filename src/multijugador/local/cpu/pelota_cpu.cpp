@@ -32,7 +32,7 @@ int CPelota_MJ_CPU::mover(CPad& A, CPad& B)
   if(stop)
   {
     B.setCalcular();
-    return 0;
+    return partido_jugando;
   }
 
   caja.x += xVel;
@@ -41,21 +41,21 @@ int CPelota_MJ_CPU::mover(CPad& A, CPad& B)
     caja.x = 0;
     stop = true;
     Mix_PlayChannel( -1, snd_pung, 0 );
-    return 2;
+    return partido_ganaJ2;
   }
   else if(caja.x + caja.w >= opciones->PANTALLA_ANCHO) // Gana el pad izq (j1)
   {
     caja.x = opciones->PANTALLA_ANCHO - opciones->PELOTA_ANCHO;
     stop = true;
     Mix_PlayChannel( -1, snd_pung, 0 );
-    return 1;
+    return partido_ganaJ1;
   }
   // Si la pelota está bloqueada, ignora a los rebotes con los pads. La partida sigue en curso hasta que toque un borde.
   // También ignora el movimiento vertical.
   if(lock)
   {
     yVel = 0;
-    return 0;
+    return partido_jugando;
   }
 
   caja.y += yVel;
@@ -109,7 +109,7 @@ int CPelota_MJ_CPU::mover(CPad& A, CPad& B)
       Mix_PlayChannel( -1, snd_pong, 0 );
     }
   }
-  return 0;
+  return partido_jugando;
 }
 
 

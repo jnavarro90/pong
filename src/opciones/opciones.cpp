@@ -122,7 +122,7 @@ void COpciones::cargarDato(string id, string valor)
         PANTALLA_COMPLETA = defConf_PANTALLA_COMPLETA;
     }
     else
-      PANTALLA_COMPLETA = defConf_PANTALLA_BPP;
+      PANTALLA_COMPLETA = defConf_PANTALLA_COMPLETA;
   }
   else if(id == "pad_vel")
   {

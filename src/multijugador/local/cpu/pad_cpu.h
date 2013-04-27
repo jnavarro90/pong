@@ -58,7 +58,6 @@ class CPad_MJ_CPU : public CPad_MJ
     void setCalcular(bool b = true) {calcular = b;}
 
     void mover(CPelota_MJ_CPU& pelota);
-    //void mostrar();
 };
 
 #endif

@@ -97,6 +97,9 @@ const int TEXTO_MARCADOR_ANCHO = 160;
 // ------------ VARIOS --------------
 // ----------------------------------
 
+/**
+ * @brief Identificadores de estancias. Vea CEngine y CInstance
+ */
 enum INSTANCES
 {
   I_SALIDA = -1, I_MENU_MAIN = 0,
@@ -106,6 +109,16 @@ enum INSTANCES
 };
 
 #define N_INSTANCES 12
+
+/**
+ * @brief Identificador de estado de partida
+ */
+enum partido_t
+{
+  partido_jugando = 0 /**< Partida en curso*/
+  ,partido_ganaJ1 = 1/**< Gana el jugador nº1 (izquierdo)*/
+  ,partido_ganaJ2 = 2/**< Gana el jugador nº2 (derecho)*/
+};
 
 //enum instance_list { error = -1, salir = 0, menu_main, menu_1j, menu_mj, menu_mj_online, modo_1j_inf, modo_mj_local, modo_mj_cpu, modo_mj_online_c, modo_mj_online_s, opciones_};
 

@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Definición de CInstance_MJ_Online_Server
+ *
+ */
+
 #include "instancia.h"
 
 #include "../../temporizador.h"

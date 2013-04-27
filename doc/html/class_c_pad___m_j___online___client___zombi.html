@@ -91,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!--header-->
 <div class="contents">
 
+<p>Clase para representar el pad del cliente en el modo multijugador-online en la estancia del cliente.  
+ <a href="class_c_pad___m_j___online___client___zombi.html#details">Más...</a></p>
+
 <p><code>#include &lt;<a class="el" href="pad__mj__online_8h_source.html">pad_mj_online.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de herencias de CPad_MJ_Online_Client_Zombi</div>
@@ -106,9 +109,11 @@ Diagrama de herencias de CPad_MJ_Online_Client_Zombi</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
-<tr class="memitem:ac1fed9e92959540ce36ffe19753cde34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pad___m_j___online___client___zombi.html#ac1fed9e92959540ce36ffe19753cde34">CPad_MJ_Online_Client_Zombi</a> (enum <a class="el" href="pad__mj__online_8h.html#af5bc57ef0ec2bb356f493207a534bbc2">lado</a>)</td></tr>
-<tr class="separator:ac1fed9e92959540ce36ffe19753cde34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1767006642b2804ecd91b9659cc4c873"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pad___m_j___online___client___zombi.html#a1767006642b2804ecd91b9659cc4c873">CPad_MJ_Online_Client_Zombi</a> (enum <a class="el" href="pad__mj__online_8h.html#ab8c12683a054f2a05fdfb999f62e66ff">lado_t</a> lado)</td></tr>
+<tr class="memdesc:a1767006642b2804ecd91b9659cc4c873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor principal.  <a href="#a1767006642b2804ecd91b9659cc4c873"></a><br/></td></tr>
+<tr class="separator:a1767006642b2804ecd91b9659cc4c873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a926a203de4cdd65dae469f7275fdad72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pad___m_j___online___client___zombi.html#a926a203de4cdd65dae469f7275fdad72">setY</a> (int y)</td></tr>
+<tr class="memdesc:a926a203de4cdd65dae469f7275fdad72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asignar un valor vertical a la estructura <a class="el" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>.  <a href="#a926a203de4cdd65dae469f7275fdad72"></a><br/></td></tr>
 <tr class="separator:a926a203de4cdd65dae469f7275fdad72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_pad___m_j"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_pad___m_j')"><img src="closed.png" alt="-"/>&#160;Métodos públicos heredados desde <a class="el" href="class_c_pad___m_j.html">CPad_MJ</a></td></tr>
 <tr class="memitem:adb8150177d1b0026df54ce867e240d3c inherit pub_methods_class_c_pad___m_j"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_pad___m_j.html#adb8150177d1b0026df54ce867e240d3c">CPad_MJ</a> ()</td></tr>
@@ -146,26 +151,36 @@ Otros miembros heredados</h2></td></tr>
 <tr class="separator:aac80ae92d02be56715680d42fbf30bd4 inherit pro_attribs_class_c_pad___m_j"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p>Definición en la línea <a class="el" href="pad__mj__online_8h_source.html#l00044">44</a> del archivo <a class="el" href="pad__mj__online_8h_source.html">pad_mj_online.h</a>.</p>
+<div class="textblock"><p>Clase para representar el pad del cliente en el modo multijugador-online en la estancia del cliente. </p>
+<p>Esta clase no gestiona los datos de entrada, pues representa un pad remoto. Simplemente, el cliente recibirá los datos del servidor y asignará los del pad del servidor a un objeto de esta clase con la función <a class="el" href="class_c_pad___m_j___online___client___zombi.html#a926a203de4cdd65dae469f7275fdad72" title="Asignar un valor vertical a la estructura caja.">setY()</a>. </p>
+
+<p>Definición en la línea <a class="el" href="pad__mj__online_8h_source.html#l00093">93</a> del archivo <a class="el" href="pad__mj__online_8h_source.html">pad_mj_online.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
-<a class="anchor" id="ac1fed9e92959540ce36ffe19753cde34"></a>
+<a class="anchor" id="a1767006642b2804ecd91b9659cc4c873"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">CPad_MJ_Online_Client_Zombi::CPad_MJ_Online_Client_Zombi </td>
           <td>(</td>
-          <td class="paramtype">enum <a class="el" href="pad__mj__online_8h.html#af5bc57ef0ec2bb356f493207a534bbc2">lado</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">enum <a class="el" href="pad__mj__online_8h.html#ab8c12683a054f2a05fdfb999f62e66ff">lado_t</a>&#160;</td>
+          <td class="paramname"><em>lado</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pad__mj__online_8cpp_source.html#l00171">171</a> del archivo <a class="el" href="pad__mj__online_8cpp_source.html">pad_mj_online.cpp</a>.</p>
+<p>Constructor principal. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lado</td><td>Lado de la pantalla en el que se pondrá el pad </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a>, <a class="el" href="pad__mj__online_8h_source.html#l00006">der</a>, <a class="el" href="globals_8h_source.html#l00154">Rect_Float::h</a>, <a class="el" href="pad__mj__online_8h_source.html#l00006">izq</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="opciones_8h_source.html#l00056">COpciones::PAD_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00057">COpciones::PAD_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="globals_8h_source.html#l00075">PANTALLA_MARGEN_LATERAL</a>, <a class="el" href="globals_8h_source.html#l00154">Rect_Float::w</a>, <a class="el" href="globals_8h_source.html#l00153">Rect_Float::x</a> y <a class="el" href="globals_8h_source.html#l00153">Rect_Float::y</a>.</p>
+<p>Definición en la línea <a class="el" href="pad__mj__online_8cpp_source.html#l00238">238</a> del archivo <a class="el" href="pad__mj__online_8cpp_source.html">pad_mj_online.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a>, <a class="el" href="pad__mj__online_8h_source.html#l00018">der</a>, <a class="el" href="globals_8h_source.html#l00167">Rect_Float::h</a>, <a class="el" href="pad__mj__online_8h_source.html#l00017">izq</a>, <a class="el" href="opciones_8cpp_source.html#l00014">opciones</a>, <a class="el" href="opciones_8h_source.html#l00056">COpciones::PAD_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00057">COpciones::PAD_ANCHO</a>, <a class="el" href="opciones_8h_source.html#l00046">COpciones::PANTALLA_ALTO</a>, <a class="el" href="opciones_8h_source.html#l00045">COpciones::PANTALLA_ANCHO</a>, <a class="el" href="globals_8h_source.html#l00075">PANTALLA_MARGEN_LATERAL</a>, <a class="el" href="globals_8h_source.html#l00167">Rect_Float::w</a>, <a class="el" href="globals_8h_source.html#l00166">Rect_Float::x</a> y <a class="el" href="globals_8h_source.html#l00166">Rect_Float::y</a>.</p>
 
 </div>
 </div>
@@ -184,9 +199,17 @@ Otros miembros heredados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definición en la línea <a class="el" href="pad__mj__online_8cpp_source.html#l00187">187</a> del archivo <a class="el" href="pad__mj__online_8cpp_source.html">pad_mj_online.cpp</a>.</p>
+<p>Asignar un valor vertical a la estructura <a class="el" href="class_c_entidad.html#a1ae8b574683ebc7938c04c85eed309de">caja</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>Nueva coordenada vertical del pad </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a> y <a class="el" href="globals_8h_source.html#l00153">Rect_Float::y</a>.</p>
+<p>Definición en la línea <a class="el" href="pad__mj__online_8cpp_source.html#l00258">258</a> del archivo <a class="el" href="pad__mj__online_8cpp_source.html">pad_mj_online.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="entidad_8h_source.html#l00031">CEntidad::caja</a> y <a class="el" href="globals_8h_source.html#l00166">Rect_Float::y</a>.</p>
 
 </div>
 </div>
@@ -197,7 +220,7 @@ Otros miembros heredados</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 26 de Abril de 2013 22:43:13 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Sábado, 27 de Abril de 2013 18:29:33 para Pong++ por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

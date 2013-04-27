@@ -1,7 +1,20 @@
+/**
+ * @file
+ * @brief Definición de CPad_MJ_Online, CPad_MJ_Online_Zombi, CPad_MJ_Online_Client y CPad_MJ_Online_Client_Zombi
+ *
+ */
+
 #include "pad_mj_online.h"
 #include "../../globals.h"
 
-CPad_MJ_Online::CPad_MJ_Online(enum lado lado, SDLKey U, SDLKey D): CPad_MJ()
+/**
+ * @brief Constructor principal
+ *
+ * @param lado Lado de la pantalla en el que se pondrá el pad
+ * @param U Tecla para hacer subir el pad
+ * @param D Tecla para hacer bajar el pad
+ */
+CPad_MJ_Online::CPad_MJ_Online(lado_t lado, SDLKey U, SDLKey D): CPad_MJ()
 {
   if(lado == izq)
   {
@@ -28,6 +41,11 @@ CPad_MJ_Online::CPad_MJ_Online(enum lado lado, SDLKey U, SDLKey D): CPad_MJ()
   }
 }
 
+/**
+ * @brief Destructor
+ *
+ * Asigna valores nulos
+ */
 CPad_MJ_Online::~CPad_MJ_Online()
 {
 
@@ -35,32 +53,38 @@ CPad_MJ_Online::~CPad_MJ_Online()
   yVel = momento = 0;
 }
 
+/**
+ * @brief Gestionar datos de entrada
+ */
 void CPad_MJ_Online::eventuar()
 {
   if(event.type == SDL_KEYDOWN)
   {
-	if(event.key.keysym.sym == KUp)
-	{
-	  yVel -= opciones->PAD_VEL;
-	}
-	else if(event.key.keysym.sym == KDown)
-	{
-	  yVel += opciones->PAD_VEL;
-	}
+	   if(event.key.keysym.sym == KUp)
+	   {
+	     yVel -= opciones->PAD_VEL;
+   	}
+   	else if(event.key.keysym.sym == KDown)
+	   {
+	     yVel += opciones->PAD_VEL;
+   	}
   }
   if(event.type == SDL_KEYUP)
   {
-	if(event.key.keysym.sym == KUp)
-	{
-	  yVel += opciones->PAD_VEL;
-	}
-	else if(event.key.keysym.sym == KDown)
-	{
-	  yVel -= opciones->PAD_VEL;
-	}
+   	if(event.key.keysym.sym == KUp)
+	   {
+	     yVel += opciones->PAD_VEL;
+	   }
+	   else if(event.key.keysym.sym == KDown)
+	   {
+	     yVel -= opciones->PAD_VEL;
+	   }
   }
 }
 
+/**
+ * @brief Gestionar datos y mover el pad
+ */
 void CPad_MJ_Online::mover()
 {
   caja.y += yVel;
@@ -70,7 +94,12 @@ void CPad_MJ_Online::mover()
   }
 }
 
-CPad_MJ_Online_Zombi::CPad_MJ_Online_Zombi(enum lado lado):CPad_MJ()
+/**
+ * @brief Constructor principal
+ *
+ * @param lado Lado de la pantalla en el que se pondrá el pad
+ */
+CPad_MJ_Online_Zombi::CPad_MJ_Online_Zombi(lado_t lado):CPad_MJ()
 {
   if(lado == izq)
   {
@@ -85,11 +114,24 @@ CPad_MJ_Online_Zombi::CPad_MJ_Online_Zombi(enum lado lado):CPad_MJ()
   caja.w = opciones->PAD_ANCHO;
 }
 
+/**
+ * @brief Destructor
+ *
+ * Asigna valores nulos
+ */
 CPad_MJ_Online_Zombi::~CPad_MJ_Online_Zombi()
 {
   caja.x = caja.y = caja.w = caja.h = 0;
 }
 
+/**
+ * @brief Gestionar datos y mover el pad
+ *
+ * @param mov Entrada del cliente remoto
+ *
+ * Dependiendo del tipo de movimiento especificado en los parámetros, el pad se moverá hacia arriba, hacia abajo o se queará quieto.
+ * Incrementa el valor "y" en #caja y le da el valor oportuno a #momento.
+ */
 void CPad_MJ_Online_Zombi::mover(int8 mov)
 {
   if(mov == arriba)
@@ -99,13 +141,13 @@ void CPad_MJ_Online_Zombi::mover(int8 mov)
   }
   else if(mov == abajo)
   {
-	yVel = opciones->PAD_VEL;
-	momento = abajo;
+   	yVel = opciones->PAD_VEL;
+	   momento = abajo;
   }
   else if(mov == quieto)
   {
-	yVel = 0;
-	momento = 0;
+	   yVel = 0;
+	   momento = 0;
   }
 
   caja.y += yVel;
@@ -115,7 +157,14 @@ void CPad_MJ_Online_Zombi::mover(int8 mov)
   }
 }
 
-CPad_MJ_Online_Client::CPad_MJ_Online_Client(enum lado lado, SDLKey U, SDLKey D)
+/**
+ * @brief Constructor principal
+ *
+ * @param lado Lado de la pantalla en el que se pondrá el pad
+ * @param U Tecla para hacer subir el pad
+ * @param D Tecla para hacer bajar el pad
+ */
+CPad_MJ_Online_Client::CPad_MJ_Online_Client(lado_t lado, SDLKey U, SDLKey D)
 {
   // esto funciona (de momento). Cuidado con yVel y momento
   if(lado == izq)
@@ -136,39 +185,57 @@ CPad_MJ_Online_Client::CPad_MJ_Online_Client(enum lado lado, SDLKey U, SDLKey D)
   momento = 0;
 }
 
+/**
+ * @brief Gestionar datos de entrada del cliente
+ *
+ * @param mov Valor para enviar al servidor y que lo procese.
+ *
+ * Esto se usará en el cliente. Dependiendo de la entrada del teclado especificada en #event,
+ * se le dará un valor u otro al parámetro de salida mov.
+ */
 void CPad_MJ_Online_Client::eventuar(int8& mov)
 {
   if(event.type == SDL_KEYDOWN)
   {
-	if(event.key.keysym.sym == KUp)
-	{
-	  mov += 1;
-	}
-	else if(event.key.keysym.sym == KDown)
-	{
-	  mov -= 1;
-	}
+   	if(event.key.keysym.sym == KUp)
+	   {
+	     mov += 1;
+	   }
+	   else if(event.key.keysym.sym == KDown)
+	   {
+	     mov -= 1;
+	   }
   }
   else if(event.type == SDL_KEYUP)
   {
-	if(event.key.keysym.sym == KUp)
-	{
-	  mov -= 1;
-	}
-	else if(event.key.keysym.sym == KDown)
-	{
-	  mov += 1;
-	}
+	   if(event.key.keysym.sym == KUp)
+	   {
+	     mov -= 1;
+	   }
+	   else if(event.key.keysym.sym == KDown)
+	   {
+	     mov += 1;
+	   }
   }
 }
 
+/**
+ * @brief Asignar un valor vertical a la estructura #caja.
+ *
+ * @param y Nueva coordenada vertical del pad
+ */
 void CPad_MJ_Online_Client::setY(int y)
 {
   caja.y = y;
 }
 
 
-CPad_MJ_Online_Client_Zombi::CPad_MJ_Online_Client_Zombi(enum lado lado)
+/**
+ * @brief Constructor principal
+ *
+ * @param lado Lado de la pantalla en el que se pondrá el pad
+ */
+CPad_MJ_Online_Client_Zombi::CPad_MJ_Online_Client_Zombi(lado_t lado)
 {
   if(lado == izq)
   {
@@ -183,7 +250,11 @@ CPad_MJ_Online_Client_Zombi::CPad_MJ_Online_Client_Zombi(enum lado lado)
   caja.w = opciones->PAD_ANCHO;
 }
 
-
+/**
+ * @brief Asignar un valor vertical a la estructura #caja.
+ *
+ * @param y Nueva coordenada vertical del pad
+ */
 void CPad_MJ_Online_Client_Zombi::setY(int y)
 {
   caja.y = y;

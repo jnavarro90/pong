@@ -50,5 +50,5 @@ var searchData=
   ['itimeout',['iTimeOut',['../multijugador_2online_2instancia_8h.html#a7ac34976551a4c68c1ec7fb4763e8e0a',1,'instancia.h']]],
   ['itriesout',['iTriesOut',['../multijugador_2online_2instancia_8h.html#a70c9b3d17593e6ad4f283bda489a635c',1,'instancia.h']]],
   ['itriestimeout',['iTriesTimeOut',['../multijugador_2online_2instancia_8h.html#abe85d1aaf8b540c86fb3faa1df6ac70e',1,'instancia.h']]],
-  ['izq',['izq',['../pad__mj__online_8h.html#af5bc57ef0ec2bb356f493207a534bbc2a076b4a12af10603ab565d1ac5669a947',1,'pad_mj_online.h']]]
+  ['izq',['izq',['../pad__mj__online_8h.html#ab8c12683a054f2a05fdfb999f62e66ffa076b4a12af10603ab565d1ac5669a947',1,'pad_mj_online.h']]]
 ];
