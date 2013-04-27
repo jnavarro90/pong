@@ -47,7 +47,7 @@ void CPelota_MJ_Online::empezar()
 //enum fSnd_pelota {fsnd_pong = 0x1, fsnd_pung = 0x2};
 
 /**
- * @brief Función de movimiento de la pelota
+ * @brief Mover la pelota
  *
  * @return Devuelve un valor para saber el estado de la partida del tipo #partido_t
  *
